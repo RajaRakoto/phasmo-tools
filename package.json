@@ -24,6 +24,7 @@
 		"@types/react-dom": "^18.0.9",
 		"@vitejs/plugin-react": "^2.2.0",
 		"grunt": "^1.5.3",
+		"grunt-contrib-compress": "^2.0.0",
 		"grunt-contrib-sass": "^2.0.0",
 		"grunt-contrib-watch": "^1.1.0",
 		"grunt-shell": "^4.0.0",
