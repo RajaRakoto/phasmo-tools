@@ -1,0 +1,36 @@
+{
+	"name": "phasmo-tools",
+	"description": "All kinds of useful tools to be pro in Phasmophobia game",
+	"author": "Raja RAKOTONIRINAs",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"backups-all": "grunt compress-all",
+		"backups-quick": "grunt compress-quick",
+		"sasseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
+		"sasseo-basics": "grunt --gruntfile sass-eo-cli.js sseo",
+		"sasseo-magic": "grunt --gruntfile sass-eo-cli.js magic-docs"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@raja_rakoto/sass-eo": "^1.7.3",
+		"@types/react": "^18.0.25",
+		"@types/react-dom": "^18.0.9",
+		"@vitejs/plugin-react": "^2.2.0",
+		"grunt": "^1.5.3",
+		"grunt-contrib-compress": "^2.0.0",
+		"grunt-contrib-sass": "^2.0.0",
+		"grunt-contrib-watch": "^1.1.0",
+		"grunt-shell": "^4.0.0",
+		"load-grunt-tasks": "^5.1.0",
+		"sassdoc": "^2.7.4",
+		"typescript": "^4.9.3",
+		"vite": "^3.2.4"
+	}
+}
