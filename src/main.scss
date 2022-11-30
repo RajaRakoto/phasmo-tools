@@ -5,3 +5,12 @@
 
 @include normalize();
 @include loadify(init);
+
+* {
+	color: #eee;
+	font-size: __convertToRem($value: 18px);
+}
+
+body {
+	background-color: #333;
+}
