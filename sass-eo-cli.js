@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 	// sass files path (destination: source)
 	const sassPath = {
 		'./src/main.min.css': './src/main.scss',
-		'./src/components/phasmo.min.css': './src/components/phasmo.scss',
+		'./src/app.min.css': './src/app.scss',
 	};
 
 	grunt.initConfig({

@@ -4,22 +4,31 @@
 	"author": "Raja RAKOTONIRINAs",
 	"private": true,
 	"version": "1.0.0",
+	"repository": "https://github.com/RajaRakoto/phasmo-tools",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
+		"tauri": "tauri",
+		"tauri-dev": "tauri dev",
+		"tauri-build": "tauri build",
+		"tauri-info": "tauri info",
 		"backups-all": "grunt compress-all",
+		"backups-all-tauri": "grunt compress-all-tauri",
 		"backups-quick": "grunt compress-quick",
-		"sasseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
-		"sasseo-basics": "grunt --gruntfile sass-eo-cli.js sseo",
-		"sasseo-magic": "grunt --gruntfile sass-eo-cli.js magic-docs"
+		"sseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
+		"sseo-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
+		"sseo-magic": "grunt --gruntfile sass-eo-cli.js magic-docs"
 	},
 	"dependencies": {
+		"@tauri-apps/api": "^1.2.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@raja_rakoto/sass-eo": "^1.7.3",
+		"@tauri-apps/cli": "^1.2.1",
+		"@types/node": "^18.11.10",
 		"@types/react": "^18.0.25",
 		"@types/react-dom": "^18.0.9",
 		"@vitejs/plugin-react": "^2.2.0",
