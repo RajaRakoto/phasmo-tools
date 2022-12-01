@@ -59,6 +59,24 @@ module.exports = function (grunt) {
 				src: includeAllFiles,
 				dest: 'src',
 			},
+			src_tauri_all: {
+				options: {
+					archive: backupsDestination + 'src-tauri-all.tar.gz',
+				},
+				expand: true,
+				cwd: './src-tauri/',
+				src: includeAllFiles,
+				dest: 'src-tauri-all',
+			},
+			src_tauri_src: {
+				options: {
+					archive: backupsDestination + 'src-tauri-src.tar.gz',
+				},
+				expand: true,
+				cwd: './src-tauri/src/',
+				src: includeAllFiles,
+				dest: 'src-tauri-src',
+			},
 		},
 
 		/**
@@ -80,19 +98,24 @@ module.exports = function (grunt) {
 		'compress:public',
 		'compress:src',
 	]);
+	grunt.registerTask('compress-all-tauri', [
+		'compress:src_tauri_all',
+	]);
 	grunt.registerTask('compress-quick', [
 		'compress:main',
 		'compress:public',
 		'compress:src',
+		'compress:src_tauri_src',
 	]);
 
 	// all tasks lists
-	const myTasksNames = ['compress-all', 'compress-quick'];
+	const myTasksNames = ['compress-all', 'compress-all-tauri', 'compress-quick'];
 
 	// tasks status (description)
 	const myTasksStatus = [
 		'compress: main | node_modules | public | src',
-		'compress: main | public | src',
+		'compress: src_tauri',
+		'compress: main | public | src | src_tauri_src',
 	];
 
 	// default tasks
