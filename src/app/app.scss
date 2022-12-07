@@ -1,1 +1,60 @@
 @charset "UTF-8";
+
+@import 'sass-eo-basics';
+@import '../sass/mixins';
+
+@include loadify(init);
+
+/* banner styles */
+#banner {
+	height: 100vh;
+	padding-top: 6rem;
+
+	header {
+		@include loadify(0.3s);
+		margin-bottom: 3.8rem;
+
+		.logo {
+			@include image-responsive($height: auto);
+			max-width: __convertToRem($value: 330px);
+			margin: 1rem;
+		}
+
+		.version_author {
+			margin-top: 1rem;
+			font-size: 0.9rem;
+			padding: 0.5rem;
+			@include box-props();
+		}
+
+		.description {
+			text-align: center;
+		}
+	}
+
+	button {
+		@include position-center($axis: horizontal);
+		@include breakpoint(max, 414px) {
+			margin-left: 0.85rem;
+		}
+		margin-bottom: 6rem;
+	}
+}
+
+/* swiper styles */
+.swiper {
+	width: __convertToRem($value: 250px);
+	height: __convertToRem($value: 350px);
+}
+
+.swiper-slide {
+	@include box-props();
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* core styles */
+main {
+	height: 100vh;
+}
