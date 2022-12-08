@@ -2,6 +2,7 @@
 
 @import 'sass-eo-basics';
 @import '../sass/mixins';
+@import '../sass/colors';
 
 @include loadify(init);
 
@@ -30,28 +31,76 @@
 		.description {
 			text-align: center;
 		}
-	}
 
-	button {
-		@include position-center($axis: horizontal);
-		@include breakpoint(max, 414px) {
-			margin-left: 0.85rem;
+		.enter-btn {
+			@include position-flex-center();
+			@include loadify(0.3s);
 		}
-		margin-bottom: 6rem;
 	}
 }
 
 /* swiper styles */
 .swiper {
-	width: __convertToRem($value: 250px);
-	height: __convertToRem($value: 350px);
-}
+	max-width: __convertToRem($value: 350px);
+	margin-top: 2rem;
+	margin-bottom: 3.2rem;
 
-.swiper-slide {
-	@include box-props();
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	&-item {
+		@include position-flex-center();
+		flex-direction: column;
+		padding: 2rem;
+		padding-top: 3rem;
+		height: auto;
+		min-height: __convertToRem($value: 400px);
+
+		h2 {
+			text-align: center;
+		}
+
+		hr {
+			width: __convertToRem($value: 280px);
+			height: __convertToRem($value: 1.2px);
+			border: 0;
+			background-image: -webkit-linear-gradient(
+				left,
+				#f0f0f011,
+				#8c8b8b,
+				#f0f0f011
+			);
+			background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+			background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+			background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+		}
+
+		ul {
+			list-style-type: none;
+
+			li {
+				font-size: __convertToRem($value: 16px) !important;
+				line-height: 1.2rem;
+				margin-top: 1.2rem;
+			}
+
+			li::before {
+				list-style-type: none;
+				content: '\2022';
+				color: $theme1;
+				font-weight: bolder;
+				display: inline-block;
+				width: 1em;
+				margin-left: -1em;
+			}
+		}
+	}
+
+	&-icon {
+		@include position-flex-center();
+	}
+
+	&-slide {
+		@include box-props();
+		@include position-flex-center();
+	}
 }
 
 /* core styles */
