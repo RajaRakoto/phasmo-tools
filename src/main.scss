@@ -2,7 +2,6 @@
 
 @import 'sass-eo-basics';
 @import 'sass-eo-bootstrap-grid';
-@import './sass/anim';
 @import './sass/btn';
 @import './sass/colors';
 
@@ -19,7 +18,7 @@
 	font-size: __convertToRem($value: 16px);
 	font-family: IndieFlower;
 	font-weight: regular;
-	font-size: __convertToRem($value: 22px);
+	font-size: __convertToRem($value: 20px);
 }
 
 html {
