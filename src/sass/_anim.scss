@@ -1,7 +1,0 @@
-@charset "UTF-8";
-
-@import 'sass-eo-basics';
-
-.anim--bounce {
-	@include animation-bounce();
-}
