@@ -91,10 +91,14 @@ function Navbar() {
 			<nav>
 				<ul>
 					<li>
-						<Link to="entities">Entities</Link>
+						<button>
+							<Link to="entities">Entities</Link>
+						</button>
 					</li>
 					<li>
-						<Link to="objects">Objects</Link>
+						<button>
+							<Link to="objects">Objects</Link>
+						</button>
 					</li>
 				</ul>
 			</nav>
@@ -115,7 +119,7 @@ export default function Home() {
 
 	const EnterBtn = () => {
 		return (
-			<button className="enter-btn phasmo--btn" onClick={handleBanner}>
+			<button className="enter-btn phasmo-btn--enter" onClick={handleBanner}>
 				ENTRER
 			</button>
 		);
