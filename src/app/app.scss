@@ -6,6 +6,36 @@
 
 @include loadify(init);
 
+/* navbar styles */
+nav {
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		list-style-type: none;
+
+		li {
+			button {
+				background-color: $theme3;
+				padding: 0.5rem 1rem;
+				border-radius: 10px;
+				border: none;
+				transition: 0.2s;
+
+				a {
+					text-decoration: none;
+				}
+
+				&:hover {
+					@include animation-scale($scaleValue: 1.1);
+					background-color: $theme1;
+				}
+			}
+		}
+	}
+}
+
 /* banner styles */
 #banner {
 	height: 100vh;
@@ -101,9 +131,4 @@
 		@include box-props();
 		@include position-flex-center();
 	}
-}
-
-/* core styles */
-main {
-	height: 100vh;
 }
