@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-/* components */
-import App from './app/app';
-
 /* styles */
 import './main.min.css';
 
+/* components */
+import Home from './app/app';
+
+// ================================================
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<App />
+		<Home />
 	</React.StrictMode>,
 );
