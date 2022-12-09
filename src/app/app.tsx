@@ -3,18 +3,23 @@ import React, { useState } from 'react';
 /* libs */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from 'swiper';
+import { BrowserRouter, Routes, Route, Outlet, Link } from 'react-router-dom';
 
 /* assets */
 import phasmo_logo from '../assets/phasmo-logo.png';
-import * as pack from '../../package.json';
 
 /* data */
+import * as pack from '../../package.json';
 import { banner } from '../data/_banner';
 
 /* styles */
 import './app.min.css';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
+
+/* components */
+import Entities from './_entities';
+import Objects from './_objects';
 
 /* interfaces */
 interface FeaturesProps {
@@ -25,6 +30,9 @@ interface FeaturesProps {
 
 // ================================================
 
+/**
+ * @returns - banner component
+ */
 function Banner({ enterBtn }: any) {
 	return (
 		<header className="container d-flex justify-content-center flex-column align-items-center">
@@ -74,19 +82,31 @@ function Banner({ enterBtn }: any) {
 	);
 }
 
-// TODO: add router
-function Core() {
+/**
+ * @returns - navbar component with links to sections
+ */
+function Navbar() {
 	return (
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aspernatur
-			deleniti in dolorum excepturi nobis omnis aliquam doloremque,
-			reprehenderit nulla laborum incidunt. Repellendus odio quia rem nesciunt
-			aliquid nam expedita.
-		</p>
+		<>
+			<nav>
+				<ul>
+					<li>
+						<Link to="entities">Entities</Link>
+					</li>
+					<li>
+						<Link to="objects">Objects</Link>
+					</li>
+				</ul>
+			</nav>
+			<Outlet />
+		</>
 	);
 }
 
-export default function App() {
+/**
+ * @returns - home component (banner + all routes)
+ */
+export default function Home() {
 	const [bannerVisibility, setBannerVisibility] = useState(true);
 
 	const handleBanner = () => {
@@ -108,7 +128,15 @@ export default function App() {
 					<Banner enterBtn={<EnterBtn />} />
 				</div>
 			) : (
-				<Core />
+				<BrowserRouter>
+					<Routes>
+						<Route path="/" element={<Navbar />}>
+							<Route index element={<Entities />} />
+							<Route path="entities" element={<Entities />} />
+							<Route path="objects" element={<Objects />} />
+						</Route>
+					</Routes>
+				</BrowserRouter>
 			)}
 		</React.Fragment>
 	);
