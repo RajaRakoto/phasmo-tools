@@ -5,6 +5,8 @@
 @import '../sass/colors';
 
 @include loadify(init);
+@include check-style($theme1);
+@include input-style($theme1, $theme1);
 
 /* navbar styles */
 nav {
@@ -86,6 +88,77 @@ section {
 			margin-top: 1rem;
 		}
 	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 3rem;
+	}
+}
+
+/* todo styles */
+.todo {
+	@include box-props();
+	width: fit-content;
+	max-width: __convertToRem($value: 800px);
+	height: auto;
+	padding: 1.5rem;
+	margin: 1.5rem;
+	padding-right: 2.8rem;
+
+	ul {
+		@include position-flex-center();
+		font-size: __convertToRem($value: 12px) !important;
+		flex-direction: column;
+		list-style-type: none;
+
+		li {
+			border: solid #eee 1px;
+			width: fit-content;
+			max-width: __convertToRem($value: 400px);
+			margin: 0.5rem;
+			padding-top: 0.8rem;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+			border-radius: 10px;
+			transition: all 0.3s;
+
+			&:hover {
+				@include animation-scale($scaleValue: 1.05);
+				background-color: rgba(65, 61, 58, 0.637);
+			}
+		}
+	}
+
+	hr {
+		@include hr-style();
+	}
+
+	&-header {
+		@include position-flex-center();
+		margin-left: 1.3rem;
+		flex-direction: column;
+	}
+
+	&-list {
+		margin-right: 1rem;
+	}
+
+	&-footer {
+		@include position-flex-center();
+		flex-direction: column;
+		gap: 1.8rem;
+		margin-top: 1rem;
+		margin-left: -3.5rem;
+
+		button {
+			@include btn-style();
+			margin-left: 3.8rem;
+		}
+	}
 }
 
 /* swiper styles */
@@ -107,18 +180,7 @@ section {
 		}
 
 		hr {
-			width: __convertToRem($value: 280px);
-			height: __convertToRem($value: 1.2px);
-			border: 0;
-			background-image: -webkit-linear-gradient(
-				left,
-				#f0f0f011,
-				#8c8b8b,
-				#f0f0f011
-			);
-			background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-			background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-			background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+			@include hr-style();
 		}
 
 		ul {
@@ -150,4 +212,26 @@ section {
 		@include box-props();
 		@include position-flex-center();
 	}
+}
+
+/* react-icons styles */
+.delete-icon {
+	float: right;
+	background-color: rgba(255, 68, 0, 0.24);
+	border-radius: 50%;
+	font-size: 32px;
+	margin-left: 0.3rem;
+	transition: all 0.3s;
+
+	&:hover {
+		background-color: rgba(255, 68, 0, 0.541);
+	}
+}
+
+.note-icon {
+	font-size: 32px;
+}
+
+.section-icon {
+	font-size: 45px;
 }
