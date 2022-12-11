@@ -1,5 +1,8 @@
 import { FaObjectGroup, FaGhost } from 'react-icons/fa';
 
+/* common */
+import { IconSectionRender } from '../common/icons';
+
 // typing - banner
 type FeaturesType = {
 	title: String;
@@ -19,7 +22,7 @@ export const banner: BannerType = {
 	features: [
 		{
 			title: 'Objets maudits',
-			icon: <FaObjectGroup />,
+			icon: IconSectionRender({ icon: <FaObjectGroup /> }),
 			lists: [
 				'Trouvez leurs emplacements sur toutes les maps',
 				'Découvrez leurs effets',
@@ -28,7 +31,7 @@ export const banner: BannerType = {
 		},
 		{
 			title: 'Entités',
-			icon: <FaGhost />,
+			icon: IconSectionRender({ icon: <FaGhost /> }),
 			lists: [
 				'Trouver des indices sur chaque entité et différentes stratégies pour les traquer',
 				'Découvrez leurs faiblesses et leurs points forts',
