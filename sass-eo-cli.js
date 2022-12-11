@@ -2,12 +2,12 @@ module.exports = function (grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	// node-glob syntax
-	const includeAllSassFiles = ['./src/*.scss', './src/components/**/*.scss'];
+	const includeAllSassFiles = ['./src/*.scss', './src/app/**/*.scss'];
 
 	// sass files path (destination: source)
 	const sassPath = {
 		'./src/main.min.css': './src/main.scss',
-		'./src/app.min.css': './src/app.scss',
+		'./src/app/app.min.css': './src/app/app.scss',
 	};
 
 	grunt.initConfig({

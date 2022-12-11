@@ -1,7 +1,7 @@
 {
 	"name": "phasmo-tools",
 	"description": "All kinds of useful tools to be pro in Phasmophobia game",
-	"author": "Raja RAKOTONIRINAs",
+	"author": "Raja RAKOTONIRINA",
 	"private": true,
 	"version": "1.0.0",
 	"repository": "https://github.com/RajaRakoto/phasmo-tools",
@@ -18,12 +18,19 @@
 		"backups-quick": "grunt compress-quick",
 		"sseo-watch": "grunt --gruntfile sass-eo-cli.js watch-sass",
 		"sseo-basics": "grunt --gruntfile sass-eo-cli.js sseo-docs",
-		"sseo-magic": "grunt --gruntfile sass-eo-cli.js magic-docs"
+		"sseo-magic": "grunt --gruntfile sass-eo-cli.js magic-docs",
+		"sseo-btn": "grunt --gruntfile sass-eo-cli.js buttons-maker"
 	},
 	"dependencies": {
+		"@reduxjs/toolkit": "^1.9.1",
 		"@tauri-apps/api": "^1.2.0",
+		"axios": "^1.2.1",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.7.1",
+		"react-redux": "^8.0.5",
+		"react-router-dom": "^6.4.5",
+		"swiper": "^8.4.5"
 	},
 	"devDependencies": {
 		"@raja_rakoto/sass-eo": "^1.7.3",

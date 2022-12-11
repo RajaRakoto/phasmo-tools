@@ -2,15 +2,50 @@
 
 @import 'sass-eo-basics';
 @import 'sass-eo-bootstrap-grid';
+@import './sass/btn';
+@import './sass/colors';
 
 @include normalize();
 @include loadify(init);
 
-* {
-	color: #eee;
-	font-size: __convertToRem($value: 18px);
+@font-face {
+	font-family: 'IndieFlower';
+	src: url('./assets/font/IndieFlower-Regular.ttf') format('truetype');
 }
 
-body {
-	background-color: #333;
+* {
+	color: #eee;
+	font-family: IndieFlower;
+	font-weight: regular;
+	font-size: __convertToRem($value: 16px);
+}
+
+html {
+	background: linear-gradient(
+			0deg,
+			rgba(60, 60, 60, 0.548),
+			rgba(60, 60, 60, 0.548)
+		),
+		url(./assets/phasmo-bg.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	@include bar-scrolling(
+		$bar-color: $theme1,
+		$bar-color-hover: $theme2,
+		$bg-color: rgb(129, 129, 129)
+	);
+	@include breakpoint(min, small) {
+		overflow-x: hidden;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $theme1;
 }
