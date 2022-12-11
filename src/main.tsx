@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 /* styles */
 import './main.min.css';
 
-/* components */
+/* core */
 import App from './app/app';
 
 /* store */

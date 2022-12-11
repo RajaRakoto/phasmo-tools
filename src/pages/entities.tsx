@@ -1,10 +1,13 @@
 import React from 'react';
 
-/* assets */
+/* common */
+import { IconSectionRender } from '../common/icons';
+
+/* libs */
 import { FaGhost } from 'react-icons/fa';
 
 /* components */
-import TodoList from '../components/todo';
+import Todo from '../components/todo';
 
 // ================================================
 
@@ -13,17 +16,12 @@ export default function Entities() {
 		<React.Fragment>
 			<section>
 				<div className="header">
-					<FaGhost />
+					<IconSectionRender icon={<FaGhost />} />
 					<h1>Entités</h1>
 				</div>
-				<div className="body">
-					<TodoList
-						title="General todo"
-						todoID="todo-general"
-						addInput
-						deleteBtn
-					/>
-					<TodoList title="Temp todo" todoID="todo-temp" />
+				<div className="content">
+					<Todo title="General todo" todoID="todo-general" addInput deleteBtn />
+					{/* <Todo title="Temp todo" todoID="todo-temp" /> */}
 				</div>
 			</section>
 		</React.Fragment>
