@@ -10,7 +10,7 @@ import phasmo_logo from '../assets/phasmo-logo.png';
 
 /* data */
 import * as pack from '../../package.json';
-import { banner } from '../data/_banner';
+import { banner } from '../data/banner';
 
 /* styles */
 import './app.min.css';
@@ -21,18 +21,8 @@ import 'swiper/css/effect-creative';
 import Entities from '../pages/entities';
 import Objects from '../pages/objects';
 
-/* interfaces */
-interface FeaturesProps {
-	title: string;
-	lists: string[];
-	icon: any;
-}
-
 // ================================================
 
-/**
- * @returns - banner component
- */
 function Banner({ enterBtn }: any) {
 	return (
 		<header className="container d-flex justify-content-center flex-column align-items-center">
@@ -63,14 +53,14 @@ function Banner({ enterBtn }: any) {
 				}}
 				modules={[EffectCreative, Autoplay]}
 			>
-				{banner.features.map((feature: FeaturesProps, index: number) => (
+				{banner.features.map((feature: any, index: number) => (
 					<SwiperSlide key={'feat-card-' + index}>
 						<div className="swiper-item">
 							<span className="swiper-icon">{feature.icon}</span>
 							<h2>{feature.title}</h2>
 							<hr />
 							<ul>
-								{feature.lists.map((list, index) => (
+								{feature.lists.map((list: any, index: number) => (
 									<li key={'feat-list-' + index}>{list}</li>
 								))}
 							</ul>
@@ -82,9 +72,6 @@ function Banner({ enterBtn }: any) {
 	);
 }
 
-/**
- * @returns - navbar component with links to sections
- */
 function Navbar() {
 	return (
 		<>
@@ -107,9 +94,6 @@ function Navbar() {
 	);
 }
 
-/**
- * @returns - home component (banner + all routes)
- */
 export default function App() {
 	const [bannerVisibility, setBannerVisibility] = useState(true);
 
