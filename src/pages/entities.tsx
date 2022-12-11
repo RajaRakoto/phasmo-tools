@@ -4,7 +4,7 @@ import React from 'react';
 import { FaGhost } from 'react-icons/fa';
 
 /* components */
-import TodoList from '../components/_todo';
+import TodoList from '../components/todo';
 
 // ================================================
 

@@ -1,5 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+/* json data */
+import __todoGeneralData__ from './json/_todogeneraldata.json';
+import __todoTempData__ from './json/_temp.json';
+
 // types - todo
 type todoArrayType = {
 	id: number;
@@ -17,43 +21,6 @@ type initialStateType = {
 	id: string;
 	todo: todoArrayType;
 }[];
-
-// initial state - todo
-const __todoGeneralData__: todoArrayType = [
-	{
-		id: 1,
-		text: 'Savoir la taille de la map (petite, moyenne, grande)',
-		completed: false,
-	},
-	{
-		id: 2,
-		text: 'Allume toute les lumieres (en respectant le nombre max)',
-		completed: false,
-	},
-	{
-		id: 3,
-		text: 'Garder toute les portes fermées',
-		completed: false,
-	},
-	{
-		id: 4,
-		text: 'Touver toute les chachettes possibles',
-		completed: false,
-	},
-];
-
-const __todoTempData__: todoArrayType = [
-	{
-		id: 1,
-		text: 'Savoir la taille de la map (petite, moyenne, grande)',
-		completed: false,
-	},
-	{
-		id: 2,
-		text: 'Allume toute les lumieres (en respectant le nombre max)',
-		completed: false,
-	},
-];
 
 // id -> todoID
 const initialState: initialStateType = [
