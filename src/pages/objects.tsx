@@ -1,12 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
+/* assets */
+import { FaObjectGroup } from 'react-icons/fa';
 
 // ================================================
 
 export default function Objects() {
 	return (
 		<section>
-			<h1>Objects</h1>
+			<div className="header">
+				<FaObjectGroup />
+				<h1>Objets</h1>
+			</div>
 		</section>
 	);
 }

@@ -17,9 +17,9 @@ import './app.min.css';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 
-/* components */
-import Entities from './_entities';
-import Objects from './_objects';
+/* pages */
+import Entities from '../pages/entities';
+import Objects from '../pages/objects';
 
 /* interfaces */
 interface FeaturesProps {
@@ -92,12 +92,12 @@ function Navbar() {
 				<ul>
 					<li>
 						<button>
-							<Link to="entities">Entities</Link>
+							<Link to="entities">Entités</Link>
 						</button>
 					</li>
 					<li>
 						<button>
-							<Link to="objects">Objects</Link>
+							<Link to="objects">Objets</Link>
 						</button>
 					</li>
 				</ul>
@@ -110,7 +110,7 @@ function Navbar() {
 /**
  * @returns - home component (banner + all routes)
  */
-export default function Home() {
+export default function App() {
 	const [bannerVisibility, setBannerVisibility] = useState(true);
 
 	const handleBanner = () => {
