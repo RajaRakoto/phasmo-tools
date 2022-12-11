@@ -14,9 +14,13 @@ import {
 export default function TodoList({
 	title,
 	todoID,
+	deleteBtn,
+	addInput,
 }: {
 	title: string;
 	todoID: string;
+	deleteBtn?: boolean;
+	addInput?: boolean;
 }) {
 	const todoStore = useStoreSelector(state => state.todo);
 	const REDUX = useStoreDispatch();
@@ -42,7 +46,13 @@ export default function TodoList({
 		);
 	};
 
-	const TaskItem = ({ task }: { task: any }) => {
+	const TaskItem = ({
+		task,
+		deleteBtn,
+	}: {
+		task: any;
+		deleteBtn: boolean | undefined;
+	}) => {
 		return (
 			<>
 				<input
@@ -51,12 +61,15 @@ export default function TodoList({
 					onChange={() => REDUX(toggle__task([todoID, task]))}
 				/>
 				<span>{task.text}</span>
-				<button onClick={() => REDUX(delete__task([todoID, task]))}>X</button>
+
+				{deleteBtn && (
+					<button onClick={() => REDUX(delete__task([todoID, task]))}>X</button>
+				)}
 			</>
 		);
 	};
 
-	const TaskFooter = () => {
+	const TaskFooter = ({ addInput }: { addInput: boolean | undefined }) => {
 		const [text, setText] = useState('');
 
 		const handleSubmit = (e: any) => {
@@ -67,16 +80,18 @@ export default function TodoList({
 
 		return (
 			<>
-				<form onSubmit={handleSubmit}>
-					<input
-						type="text"
-						placeholder="Ajouter une tâche"
-						value={text}
-						onChange={e => setText(e.target.value)}
-						required
-					/>
-					<button type="submit">Ajouter</button>
-				</form>
+				{addInput && (
+					<form onSubmit={handleSubmit}>
+						<input
+							type="text"
+							placeholder="Ajouter une tâche"
+							value={text}
+							onChange={e => setText(e.target.value)}
+							required
+						/>
+						<button type="submit">Ajouter</button>
+					</form>
+				)}
 
 				<button onClick={() => REDUX(reset__task([todoID]))}>Reset</button>
 			</>
@@ -92,13 +107,15 @@ export default function TodoList({
 				<div className="todo-list">
 					<ul>
 						{tasks.map((task: any) => (
-							<li key={'todo-' + task.id}>{<TaskItem task={task} />}</li>
+							<li key={'todo-' + task.id}>
+								{<TaskItem task={task} deleteBtn={deleteBtn} />}
+							</li>
 						))}
 					</ul>
 				</div>
 				<hr />
 				<div className="todo-footer">
-					<TaskFooter />
+					<TaskFooter addInput={addInput} />
 				</div>
 			</div>
 		</React.Fragment>

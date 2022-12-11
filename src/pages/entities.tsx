@@ -17,7 +17,12 @@ export default function Entities() {
 					<h1>Entités</h1>
 				</div>
 				<div className="body">
-					<TodoList title="General todo" todoID="todo-general" />
+					<TodoList
+						title="General todo"
+						todoID="todo-general"
+						addInput
+						deleteBtn
+					/>
 					<TodoList title="Temp todo" todoID="todo-temp" />
 				</div>
 			</section>
