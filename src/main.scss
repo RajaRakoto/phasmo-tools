@@ -41,6 +41,16 @@ html {
 	}
 }
 
+body {
+	button {
+		transition: all 0.3s;
+
+		&:hover {
+			@include animation-scale($scaleValue: 1.035);
+		}
+	}
+}
+
 h1,
 h2,
 h3,
