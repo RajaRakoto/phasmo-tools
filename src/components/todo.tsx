@@ -26,7 +26,7 @@ function TaskHeader({
 }) {
 	return (
 		<>
-			<IconContext.Provider value={{ className: 'note-icon' }}>
+			<IconContext.Provider value={{ size: '42' }}>
 				<SlNotebook />
 			</IconContext.Provider>
 			<h2 style={{ fontSize: 26, textDecoration: 'underline' }}>{title}</h2>
@@ -115,7 +115,10 @@ function TaskFooter({
 					</div>
 				</form>
 			)}
-			<button onClick={() => REDUX(reset__task([todoID]))}>
+			<button
+				style={{ backgroundColor: ' rgb(78, 160, 122)' }}
+				onClick={() => REDUX(reset__task([todoID]))}
+			>
 				Reset <RxReset />
 			</button>
 		</>
