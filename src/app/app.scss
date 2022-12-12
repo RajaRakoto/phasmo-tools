@@ -128,7 +128,7 @@ section {
 
 			&:hover {
 				@include animation-scale($scaleValue: 1.05);
-				background-color: rgba(65, 61, 58, 0.637);
+				background-color: $theme-bg;
 			}
 		}
 	}
@@ -157,6 +157,79 @@ section {
 		button {
 			@include btn-style();
 			margin-left: 3.8rem;
+		}
+	}
+}
+
+/* traker styles */
+.tracker {
+	&-header {
+		min-width: __convertToRem($value: 215px);
+		padding: 1rem;
+		@include box-props();
+
+		h2 {
+			font-size: __convertToRem($value: 23px);
+			text-align: center;
+		}
+
+		div {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+
+			button {
+				@include btn-style($theme: $theme3);
+				margin: 0.5rem;
+				transition: all 0.3s;
+
+				&:hover {
+					@include animation-scale($scaleValue: 1.035);
+				}
+			}
+
+			.btn-clicked {
+				background-color: $theme1;
+			}
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
+		.item {
+			@include box-props();
+			width: fit-content;
+			padding: 1rem;
+			margin: 1rem;
+
+			h3 {
+				text-align: center;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				gap: 0.5rem;
+				flex-wrap: wrap;
+				list-style-type: none;
+				margin-left: -2rem;
+				margin-right: 0.2rem;
+
+				li {
+					background-color: $theme-bg;
+					padding: 0.3rem;
+					border-radius: 5px;
+				}
+			}
 		}
 	}
 }

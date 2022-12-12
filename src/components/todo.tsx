@@ -29,7 +29,7 @@ function TaskHeader({
 			<IconContext.Provider value={{ className: 'note-icon' }}>
 				<SlNotebook />
 			</IconContext.Provider>
-			<h2 style={{ fontSize: 36, textDecoration: 'underline' }}>{title}</h2>
+			<h2 style={{ fontSize: 26, textDecoration: 'underline' }}>{title}</h2>
 			<hr />
 			<h3 style={{ fontSize: 22 }}>
 				Tâches à faire : <span>{uncompletedTasks}</span>

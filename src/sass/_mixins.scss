@@ -156,8 +156,8 @@
 	}
 }
 
-@mixin btn-style() {
-	background-color: $theme1;
+@mixin btn-style($theme: $theme1) {
+	background-color: $theme;
 	padding: 0.2rem 1rem;
 	border-radius: 7px;
 }
