@@ -3,7 +3,7 @@ import { IconContext } from 'react-icons';
 export function HeaderSection({ icon, title }: { icon: any; title: string }) {
 	return (
 		<div className="header">
-			<IconContext.Provider value={{ className: 'section-icon' }}>
+			<IconContext.Provider value={{ size: '77' }}>
 				{icon}
 			</IconContext.Provider>
 			<h1>{title}</h1>
