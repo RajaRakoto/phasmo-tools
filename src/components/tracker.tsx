@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+/* libs */
+import { RxReset } from 'react-icons/rx';
+
 /* store */
 import { useStoreSelector, useStoreDispatch } from '../data/hooks';
 import { filter__tracker, reset__tracker } from '../data/tracker';
@@ -91,10 +94,10 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 					Edvidence 5
 				</button>
 				<button
-					style={{ backgroundColor: 'green' }}
+					style={{ backgroundColor: ' rgb(78, 160, 122)' }}
 					onClick={() => REDUX(reset__tracker())}
 				>
-					reset state
+					Reset <RxReset />
 				</button>
 			</div>
 		</>
