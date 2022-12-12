@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 /* json data */
-import __entitiesData_ from './json/_entitiesdata.json';
+import __entitiesData_ from './json/_entities.json';
 
 // types - tracker
 type entitiesArrayType = {

@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 /* libs */
 import { RxReset } from 'react-icons/rx';
 
+/* json data */
+import evd from '../data/json/_edvidences.json';
+
 /* store */
 import { useStoreSelector, useStoreDispatch } from '../data/hooks';
 import { filter__tracker, reset__tracker } from '../data/tracker';
@@ -10,28 +13,7 @@ import { filter__tracker, reset__tracker } from '../data/tracker';
 // ================================================
 
 function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
-	const [isClicked, setIsClicked] = useState([
-		{
-			id: 'evd1',
-			status: false,
-		},
-		{
-			id: 'evd2',
-			status: false,
-		},
-		{
-			id: 'evd3',
-			status: false,
-		},
-		{
-			id: 'evd4',
-			status: false,
-		},
-		{
-			id: 'evd5',
-			status: false,
-		},
-	]);
+	const [isClicked, setIsClicked] = useState(evd);
 
 	// active edvidence getter from isClicked state
 	const getActiveEdvidence = () => {

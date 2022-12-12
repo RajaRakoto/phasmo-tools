@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 /* json data */
-import __todoGeneralData__ from './json/_todogeneraldata.json';
+import __todoGeneralData__ from './json/_todogeneral.json';
 import __todoTempData__ from './json/_temp.json';
 
 // types - todo
