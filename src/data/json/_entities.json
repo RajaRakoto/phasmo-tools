@@ -22,5 +22,17 @@
 		"name": "entity 4",
 		"edvidencesID": ["evd1", "evd3", "evd5"],
 		"edvidences": ["1", "3", "5"]
+	},
+	{
+		"id": "e5",
+		"name": "entity 5",
+		"edvidencesID": ["evd7", "evd1", "evd5"],
+		"edvidences": ["7", "1", "5"]
+	},
+	{
+		"id": "e6",
+		"name": "entity 6",
+		"edvidencesID": ["evd6", "evd2", "evd3"],
+		"edvidences": ["6", "2", "3"]
 	}
 ]
