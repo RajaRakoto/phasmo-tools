@@ -76,7 +76,25 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 					Edvidence 5
 				</button>
 				<button
-					style={{ backgroundColor: ' rgb(78, 160, 122)' }}
+					className={isClicked[5].status ? 'btn-clicked' : ''}
+					onClick={() => handleClick('evd6')}
+				>
+					Edvidence 6
+				</button>
+				<button
+					className={isClicked[6].status ? 'btn-clicked' : ''}
+					onClick={() => handleClick('evd7')}
+				>
+					Edvidence 7
+				</button>
+			</div>
+			<div className="d-flex justify-content-center">
+				<button
+					style={{
+						backgroundColor: ' rgb(78, 160, 122)',
+						borderRadius: 7,
+						padding: '0.2rem 1rem',
+					}}
 					onClick={() => REDUX(reset__tracker())}
 				>
 					Reset <RxReset />
@@ -99,7 +117,7 @@ function TrackerItem({
 				<h3>{name}</h3>
 				<ul>
 					{edvidences.map((edvidence, index) => (
-						<li key={'edv-' + index}>{edvidence}</li>
+						<li key={'evd-' + index}>{edvidence}</li>
 					))}
 				</ul>
 			</div>
