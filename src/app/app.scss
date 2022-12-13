@@ -113,6 +113,10 @@ section {
 	margin: 1.5rem;
 	padding-right: 2.8rem;
 
+	@include breakpoint(min, 720px) {
+		min-width: __convertToRem($value: 558px);
+	}
+
 	ul {
 		@include position-flex-center();
 		font-size: __convertToRem($value: 12px) !important;
@@ -163,6 +167,7 @@ section {
 
 /* traker styles */
 .tracker {
+	max-width: __convertToRem($value: 904px);
 	min-width: __convertToRem($value: 845px);
 	@include breakpoint(max, 845px) {
 		min-width: 100%;
@@ -237,6 +242,24 @@ section {
 					background-color: $theme-bg;
 					padding: 0.3rem;
 					border-radius: 5px;
+				}
+			}
+
+			button {
+				opacity: 50%;
+				border-radius: 100%;
+				padding-top: 0.3rem;
+				border: none;
+				margin: 0.3rem;
+				
+				&:hover {
+					opacity: 85%;
+				}
+				
+				&:active {
+					transition: 0.02s;
+					transform: scale(0.95);
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 				}
 			}
 		}

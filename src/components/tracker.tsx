@@ -2,9 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 /* libs */
 import { RxReset } from 'react-icons/rx';
+import { FiInfo } from 'react-icons/fi';
+import { FaRegCheckCircle } from 'react-icons/fa';
+import { CgCloseO } from 'react-icons/cg';
 
 /* json data */
 import evd from '../data/json/_edvidences.json';
+
+/* common */
+import { IconRender } from '../common/icons';
 
 /* store */
 import { useStoreSelector, useStoreDispatch } from '../data/hooks';
@@ -138,7 +144,7 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 			<div className="d-flex justify-content-center">
 				<button
 					style={{
-						backgroundColor: ' rgb(78, 160, 122)',
+						backgroundColor: ' rgb(194, 154, 67)',
 						borderRadius: 7,
 						padding: '0.2rem 1rem',
 					}}
@@ -162,6 +168,17 @@ function TrackerItem({
 		<>
 			<div className="item">
 				<h3>{name}</h3>
+				<div>
+					<button style={{ backgroundColor: '#6bc6f0' }}>
+						{IconRender({ icon: <FiInfo />, size: '25' })}
+					</button>
+					<button style={{ backgroundColor: '#72b686' }}>
+						{IconRender({ icon: <FaRegCheckCircle />, size: '25' })}
+					</button>
+					<button style={{ backgroundColor: '#bd654a' }}>
+						{IconRender({ icon: <CgCloseO />, size: '25' })}
+					</button>
+				</div>
 				<ul>
 					{edvidences.map((edvidence, index) => (
 						<li key={'evd-' + index}>{edvidence}</li>
