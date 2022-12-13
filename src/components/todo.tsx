@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 /* libs */
 import { IconContext } from 'react-icons';
-import { TiDeleteOutline } from 'react-icons/ti';
+import { RiDeleteBin5Fill } from 'react-icons/ri';
 import { SlNotebook } from 'react-icons/sl';
 import { RxReset } from 'react-icons/rx';
 
@@ -58,7 +58,7 @@ function TaskItem({
 						onClick={() => REDUX(delete__task([todoID, task]))}
 					>
 						<IconContext.Provider value={{ className: 'delete-icon' }}>
-							<TiDeleteOutline />
+							<RiDeleteBin5Fill />
 						</IconContext.Provider>
 					</span>
 				)}

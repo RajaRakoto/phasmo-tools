@@ -300,9 +300,10 @@ section {
 .delete-icon {
 	float: right;
 	background-color: rgba(255, 68, 0, 0.24);
-	border-radius: 50%;
-	font-size: 32px;
+	border-radius: 5px;
+	font-size: 22px;
 	margin-left: 0.3rem;
+	padding: 0.2rem;
 	transition: all 0.3s;
 
 	&:hover {
