@@ -341,3 +341,21 @@ section {
 		background-color: rgba(255, 68, 0, 0.541);
 	}
 }
+
+/* swal styles */
+.swal2-popup {
+	background-color: rgba(68, 68, 68, 0.96) !important;
+}
+
+.swal2-title {
+	color: $theme1 !important;
+}
+
+.swal2-confirm {
+	display: none !important;
+}
+
+body.swal2-shown > [aria-hidden='true'] {
+	transition: 0.1s filter;
+	filter: blur(10px);
+}
