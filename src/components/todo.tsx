@@ -116,7 +116,7 @@ function TaskFooter({
 				</form>
 			)}
 			<button
-				style={{ backgroundColor: ' rgb(78, 160, 122)' }}
+				style={{ backgroundColor: 'rgb(194, 154, 67)' }}
 				onClick={() => REDUX(reset__task([todoID]))}
 			>
 				Reset <RxReset />

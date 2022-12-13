@@ -1,9 +1,9 @@
 import { IconContext } from 'react-icons';
 
-export function IconRender({ icon }: any) {
+export function IconRender({ icon, size }: any) {
 	return (
-		<IconContext.Provider value={{ size: '77' }}>
-			{icon}
-		</IconContext.Provider>
+		<>
+			<IconContext.Provider value={{ size: size }}>{icon}</IconContext.Provider>
+		</>
 	);
 }

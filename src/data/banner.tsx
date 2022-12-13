@@ -22,7 +22,7 @@ export const banner: BannerType = {
 	features: [
 		{
 			title: 'Entités',
-			icon: IconRender({ icon: <FaGhost /> }),
+			icon: IconRender({ icon: <FaGhost />, size: '77' }),
 			lists: [
 				'Trouver des indices sur chaque entité et différentes stratégies pour les traquer',
 				'Découvrez leurs faiblesses et leurs points forts',
@@ -32,7 +32,7 @@ export const banner: BannerType = {
 		},
 		{
 			title: 'Objets',
-			icon: IconRender({ icon: <FaObjectGroup /> }),
+			icon: IconRender({ icon: <FaObjectGroup />, size: '77' }),
 			lists: [
 				'Trouvez les emplacements des objets maudits sur toutes les maps',
 				'Découvrez leurs effets',
