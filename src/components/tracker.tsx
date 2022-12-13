@@ -10,7 +10,48 @@ import evd from '../data/json/_edvidences.json';
 import { useStoreSelector, useStoreDispatch } from '../data/hooks';
 import { filter__tracker, reset__tracker } from '../data/tracker';
 
+/* assets */
+import closedbook_icon from '../assets/icons/closedbook_icon.png';
+import dots_icon from '../assets/icons/dots_icon.png';
+import emf_icon from '../assets/icons/emf_icon.png';
+import fingerprint_icon from '../assets/icons/fingerprint_icon.png';
+import orb_icon from '../assets/icons/orb_icon.png';
+import spiritbox_icon from '../assets/icons/spiritbox_icon.png';
+import thermometer_icon from '../assets/icons/thermometer_icon.png';
+
 // ================================================
+
+function EvdButton({
+	isClickedState,
+	callback,
+	icon,
+	notif,
+}: {
+	isClickedState: boolean;
+	callback: any;
+	icon: any;
+	notif: string;
+}) {
+	const [showNotify, setShowNotify] = useState(false);
+
+	return (
+		<>
+			<button
+				className={isClickedState ? 'notify btn-clicked' : 'notify'}
+				onMouseOver={() => setShowNotify(true)}
+				onMouseOut={() => setShowNotify(false)}
+				onClick={callback}
+			>
+				<img src={icon} alt="evd icon" />
+				{showNotify && (
+					<span className="notifytext show" id="my-notify">
+						{notif}
+					</span>
+				)}
+			</button>
+		</>
+	);
+}
 
 function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 	const [isClicked, setIsClicked] = useState(evd);
@@ -43,51 +84,57 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 
 	return (
 		<>
-			<h2 style={{ fontSize: 26, textDecoration: 'underline' }}>{title}</h2>
+			<h2
+				style={{ fontSize: 26, textDecoration: 'underline', marginBottom: 40 }}
+			>
+				{title}
+			</h2>
+			<hr />
 			<div>
-				<button
-					className={isClicked[0].status ? 'btn-clicked' : ''}
-					onClick={() => handleClick('evd1')}
-				>
-					Edvidence 1
-				</button>
-				<button
-					className={isClicked[1].status ? 'btn-clicked' : ''}
-					onClick={() => handleClick('evd2')}
-				>
-					Edvidence 2
-				</button>
-				<button
-					className={isClicked[2].status ? 'btn-clicked' : ''}
-					onClick={() => handleClick('evd3')}
-				>
-					Edvidence 3
-				</button>
-				<button
-					className={isClicked[3].status ? 'btn-clicked' : ''}
-					onClick={() => handleClick('evd4')}
-				>
-					Edvidence 4
-				</button>
-				<button
-					className={isClicked[4].status ? 'btn-clicked' : ''}
-					onClick={() => handleClick('evd5')}
-				>
-					Edvidence 5
-				</button>
-				<button
-					className={isClicked[5].status ? 'btn-clicked' : ''}
-					onClick={() => handleClick('evd6')}
-				>
-					Edvidence 6
-				</button>
-				<button
-					className={isClicked[6].status ? 'btn-clicked' : ''}
-					onClick={() => handleClick('evd7')}
-				>
-					Edvidence 7
-				</button>
+				<EvdButton
+					isClickedState={isClicked[0].status}
+					callback={() => handleClick('evd1')}
+					icon={closedbook_icon}
+					notif={'Ecriture fantômatique'}
+				/>
+				<EvdButton
+					isClickedState={isClicked[1].status}
+					callback={() => handleClick('evd2')}
+					icon={dots_icon}
+					notif={'Projecteur D.O.T.S'}
+				/>
+				<EvdButton
+					isClickedState={isClicked[2].status}
+					callback={() => handleClick('evd3')}
+					icon={emf_icon}
+					notif={'EMF 5'}
+				/>
+				<EvdButton
+					isClickedState={isClicked[3].status}
+					callback={() => handleClick('evd4')}
+					icon={fingerprint_icon}
+					notif={'Empreinte digitale'}
+				/>
+				<EvdButton
+					isClickedState={isClicked[4].status}
+					callback={() => handleClick('evd5')}
+					icon={orb_icon}
+					notif={'Orbe'}
+				/>
+				<EvdButton
+					isClickedState={isClicked[5].status}
+					callback={() => handleClick('evd6')}
+					icon={spiritbox_icon}
+					notif={'Spirit Box'}
+				/>
+				<EvdButton
+					isClickedState={isClicked[6].status}
+					callback={() => handleClick('evd7')}
+					icon={thermometer_icon}
+					notif={'Température glaciale'}
+				/>
 			</div>
+			<hr />
 			<div className="d-flex justify-content-center">
 				<button
 					style={{
