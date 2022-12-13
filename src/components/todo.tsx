@@ -6,6 +6,9 @@ import { RiDeleteBin5Fill } from 'react-icons/ri';
 import { SlNotebook } from 'react-icons/sl';
 import { RxReset } from 'react-icons/rx';
 
+/* common */
+import { IconRender } from '../common/icons';
+
 /* store */
 import { useStoreSelector, useStoreDispatch } from '../data/hooks';
 import {
@@ -26,9 +29,7 @@ function TaskHeader({
 }) {
 	return (
 		<>
-			<IconContext.Provider value={{ size: '42' }}>
-				<SlNotebook />
-			</IconContext.Provider>
+			{IconRender({ icon: <SlNotebook />, size: '42' })}
 			<h2 style={{ fontSize: 26, textDecoration: 'underline' }}>{title}</h2>
 			<hr />
 			<h3 style={{ fontSize: 22 }}>
