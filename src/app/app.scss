@@ -3,10 +3,12 @@
 @import 'sass-eo-basics';
 @import '../sass/mixins';
 @import '../sass/colors';
+@import '../sass/notify';
 
 @include loadify(init);
 @include check-style($theme1);
 @include input-style($theme1, $theme1);
+@include notify();
 
 /* navbar styles */
 nav {
@@ -135,10 +137,6 @@ section {
 		}
 	}
 
-	hr {
-		@include hr-style();
-	}
-
 	&-header {
 		@include position-flex-center();
 		margin-left: 1.3rem;
@@ -185,6 +183,11 @@ section {
 			button {
 				@include btn-style($theme: $theme3);
 				margin: 0.5rem;
+				padding: 0.5rem;
+
+				img {
+					@include image-responsive($height: 50px);
+				}
 			}
 
 			.btn-clicked {
