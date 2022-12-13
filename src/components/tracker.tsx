@@ -1,16 +1,18 @@
 import React, { useState, useEffect, ReactElement } from 'react';
 
 /* libs */
-import { RxReset } from 'react-icons/rx';
-import { FiInfo } from 'react-icons/fi';
-import { FaRegCheckCircle } from 'react-icons/fa';
-import { CgCloseO } from 'react-icons/cg';
-import { TbFilePencil } from 'react-icons/tb';
-import { GoSearch } from 'react-icons/go';
+import { Provider } from 'react-redux';
 import { Line } from 'rc-progress';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import { Provider } from 'react-redux';
+import { RxReset } from 'react-icons/rx';
+import { FiInfo } from 'react-icons/fi';
+import { FaRegCheckCircle, FaSadTear } from 'react-icons/fa';
+import { CgCloseO } from 'react-icons/cg';
+import { TbFilePencil } from 'react-icons/tb';
+import { GoSearch } from 'react-icons/go';
+import { BsChatDots } from 'react-icons/bs';
+import { GiPerspectiveDiceSixFacesOne, GiGhost } from 'react-icons/gi';
 
 /* json data */
 import evd from '../data/json/_edvidences.json';
@@ -223,11 +225,13 @@ function TrackerItem({
 	const EntityInformation = () => {
 		return (
 			<>
+				<IconRender icon={<BsChatDots />} size={47} />
 				<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
 					Description
 				</h3>
 				<p>{description}</p>
 				<hr />
+				<IconRender icon={<GiPerspectiveDiceSixFacesOne />} size={47} />
 				<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>Capacités</h3>
 				<ul>
 					<p>{behaviors}</p>
@@ -236,6 +240,7 @@ function TrackerItem({
 				<div className="container" style={{ paddingBottom: 30 }}>
 					<div className="row">
 						<div className="col-md-6 col-sm-12">
+							<IconRender icon={<GiGhost />} size={47} />
 							<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
 								Forces
 							</h3>
@@ -246,6 +251,7 @@ function TrackerItem({
 							</ul>
 						</div>
 						<div className="col-md-6 col-sm-12">
+							<IconRender icon={<FaSadTear />} size={47} />
 							<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
 								Faiblesses
 							</h3>
