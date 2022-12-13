@@ -46,11 +46,13 @@ function EvdButton({
 	callback,
 	icon,
 	notif,
+	notation,
 }: {
 	isClickedState: boolean;
 	callback: any;
 	icon: any;
 	notif: string;
+	notation: string;
 }) {
 	const [showNotify, setShowNotify] = useState(false);
 
@@ -68,6 +70,8 @@ function EvdButton({
 						{notif}
 					</span>
 				)}
+				<br />
+				<span>{notation}</span>
 			</button>
 		</>
 	);
@@ -112,48 +116,55 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 				{title}
 			</h2>
 			<hr />
-			<div>
+			<div className='evd-btn'>
 				<EvdButton
 					isClickedState={isClicked[0].status}
 					callback={() => handleClick('evd1')}
 					icon={closedbook_icon}
-					notif={'Ecriture fantômatique (1)'}
+					notif={'Ecriture fantômatique'}
+					notation={'1'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[1].status}
 					callback={() => handleClick('evd2')}
 					icon={dots_icon}
-					notif={'Projecteur D.O.T.S (2)'}
+					notif={'Projecteur D.O.T.S'}
+					notation={'2'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[2].status}
 					callback={() => handleClick('evd3')}
 					icon={emf_icon}
-					notif={'EMF 5 (3)'}
+					notif={'EMF 5'}
+					notation={'3'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[3].status}
 					callback={() => handleClick('evd4')}
 					icon={fingerprint_icon}
-					notif={'Empreinte digitale (4)'}
+					notif={'Empreinte digitale'}
+					notation={'4'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[4].status}
 					callback={() => handleClick('evd5')}
 					icon={orb_icon}
-					notif={'Orbe (5)'}
+					notif={'Orbe'}
+					notation={'5'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[5].status}
 					callback={() => handleClick('evd6')}
 					icon={spiritbox_icon}
-					notif={'Spirit Box (6)'}
+					notif={'Spirit Box'}
+					notation={'6'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[6].status}
 					callback={() => handleClick('evd7')}
 					icon={thermometer_icon}
-					notif={'Température glaciale (7)'}
+					notif={'Température glaciale'}
+					notation={'7'}
 				/>
 			</div>
 			<hr />

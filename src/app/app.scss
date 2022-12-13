@@ -219,7 +219,10 @@ section {
 			button {
 				@include btn-style($theme: $theme3);
 				margin: 0.5rem;
-				padding: 0.5rem;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				padding-left: 1.3rem;
+				padding-right: 1.3rem;
 
 				img {
 					@include image-responsive($height: 50px);
