@@ -194,6 +194,8 @@ function TrackerItem({
 	weaknesses: string[];
 	edvidences: string[];
 }) {
+	const [isHighlighted, setIsHighlighted] = useState(false);
+
 	const reactSwal = withReactContent(Swal);
 
 	const ProgressBar = ({
@@ -296,10 +298,19 @@ function TrackerItem({
 		});
 	};
 
+	const handleClick = (status: boolean) => {
+		status ? setIsHighlighted(true) : setIsHighlighted(false);
+	};
+
 	return (
 		<>
 			<div className="item">
-				<h3>{name}</h3>
+				<h3
+					className={isHighlighted ? 'highlighted' : ''}
+					style={{ fontSize: 20.2 }}
+				>
+					{name}
+				</h3>
 				<hr />
 				<div className="d-flex justify-content-center">
 					<button
@@ -314,10 +325,16 @@ function TrackerItem({
 					>
 						{IconRender({ icon: <FiInfo />, size: '25' })}
 					</button>
-					<button style={{ backgroundColor: '#72b686' }}>
+					<button
+						style={{ backgroundColor: '#72b686' }}
+						onClick={() => handleClick(false)}
+					>
 						{IconRender({ icon: <FaRegCheckCircle />, size: '25' })}
 					</button>
-					<button style={{ backgroundColor: '#bd654a' }}>
+					<button
+						style={{ backgroundColor: '#bd654a' }}
+						onClick={() => handleClick(true)}
+					>
 						{IconRender({ icon: <CgCloseO />, size: '25' })}
 					</button>
 					<button
