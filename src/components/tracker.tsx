@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactElement } from 'react';
 
 /* libs */
 import { RxReset } from 'react-icons/rx';
@@ -8,6 +8,8 @@ import { CgCloseO } from 'react-icons/cg';
 import { TbFilePencil } from 'react-icons/tb';
 import { GoSearch } from 'react-icons/go';
 import { Line } from 'rc-progress';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 /* json data */
 import evd from '../data/json/_edvidences.json';
@@ -169,6 +171,8 @@ function TrackerItem({
 	name: string;
 	edvidences: string[];
 }) {
+	const reactSwal = withReactContent(Swal);
+
 	const ProgressBar = ({
 		label,
 		percent,
@@ -195,6 +199,33 @@ function TrackerItem({
 		);
 	};
 
+	const TestComponent = () => {
+		return (
+			<>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quod
+					numquam sequi voluptatum incidunt, dolor quae neque, reprehenderit
+					officia animi optio et ad, possimus quos accusantium voluptas.
+					Quaerat, natus obcaecati?
+				</p>
+			</>
+		);
+	};
+
+	const SweetAlert = async ({
+		title,
+		subComponent,
+	}: {
+		title: string;
+		subComponent: ReactElement<any, any>;
+	}) => {
+		reactSwal.fire({
+			title: title,
+			html: subComponent,
+			showCloseButton: true,
+		});
+	};
+
 	return (
 		<>
 			<div className="item">
@@ -210,7 +241,12 @@ function TrackerItem({
 					<button style={{ backgroundColor: '#bd654a' }}>
 						{IconRender({ icon: <CgCloseO />, size: '25' })}
 					</button>
-					<button style={{ backgroundColor: '#c299c0' }}>
+					<button
+						style={{ backgroundColor: '#c299c0' }}
+						onClick={() =>
+							SweetAlert({ title: 'test', subComponent: <TestComponent /> })
+						}
+					>
 						{IconRender({ icon: <TbFilePencil />, size: '25' })}
 					</button>
 				</div>
