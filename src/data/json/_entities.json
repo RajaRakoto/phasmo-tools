@@ -2,37 +2,43 @@
 	{
 		"id": "e1",
 		"name": "entity 1",
+		"description": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
+		"behaviors": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
+		"attackSM": 25,
+		"agressivity": 62,
+		"speed": 70,
+		"strengths": [
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		],
+		"weaknesses": [
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		],
 		"edvidencesID": ["evd1", "evd2", "evd3"],
 		"edvidences": ["1", "2", "3"]
 	},
 	{
 		"id": "e2",
 		"name": "entity 2",
+		"description": "[entity 2] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
+		"behaviors": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
+		"attackSM": 71,
+		"agressivity": 12,
+		"speed": 23,
+		"strengths": [
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		],
+		"weaknesses": [
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
+			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		],
 		"edvidencesID": ["evd1", "evd2", "evd4"],
 		"edvidences": ["1", "2", "4"]
-	},
-	{
-		"id": "e3",
-		"name": "entity 3",
-		"edvidencesID": ["evd4", "evd5", "evd6"],
-		"edvidences": ["4", "5", "6"]
-	},
-	{
-		"id": "e4",
-		"name": "entity 4",
-		"edvidencesID": ["evd1", "evd3", "evd5"],
-		"edvidences": ["1", "3", "5"]
-	},
-	{
-		"id": "e5",
-		"name": "entity 5",
-		"edvidencesID": ["evd7", "evd1", "evd5"],
-		"edvidences": ["7", "1", "5"]
-	},
-	{
-		"id": "e6",
-		"name": "entity 6",
-		"edvidencesID": ["evd6", "evd2", "evd3"],
-		"edvidences": ["6", "2", "3"]
 	}
 ]
