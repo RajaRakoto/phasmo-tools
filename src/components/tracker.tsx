@@ -30,6 +30,9 @@ import orb_icon from '../assets/icons/orb_icon.png';
 import spiritbox_icon from '../assets/icons/spiritbox_icon.png';
 import thermometer_icon from '../assets/icons/thermometer_icon.png';
 
+/* components */
+import Todo from '../components/todo';
+
 // ================================================
 
 function EvdButton({
@@ -166,9 +169,23 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 
 function TrackerItem({
 	name,
+	description,
+	attackSM,
+	agressivity,
+	speed,
+	strengths,
+	weaknesses,
+	behaviors,
 	edvidences,
 }: {
 	name: string;
+	description: string;
+	behaviors: string;
+	attackSM: number;
+	agressivity: number;
+	speed: number;
+	strengths: string[];
+	weaknesses: string[];
 	edvidences: string[];
 }) {
 	const reactSwal = withReactContent(Swal);
@@ -199,30 +216,73 @@ function TrackerItem({
 		);
 	};
 
-	const TestComponent = () => {
+	const EntityInformation = () => {
 		return (
 			<>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quod
-					numquam sequi voluptatum incidunt, dolor quae neque, reprehenderit
-					officia animi optio et ad, possimus quos accusantium voluptas.
-					Quaerat, natus obcaecati?
-				</p>
+				<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
+					Description
+				</h3>
+				<p>{description}</p>
+				<hr />
+				<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>Capacités</h3>
+				<ul>
+					<p>{behaviors}</p>
+				</ul>
+				<hr />
+				<div className="container" style={{ paddingBottom: 30 }}>
+					<div className="row">
+						<div className="col-md-6 col-sm-12">
+							<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
+								Forces
+							</h3>
+							<ul>
+								{strengths.map((strength, index) => (
+									<li key={'strength-' + index}>{strength}</li>
+								))}
+							</ul>
+						</div>
+						<div className="col-md-6 col-sm-12">
+							<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
+								Faiblesses
+							</h3>
+							<ul>
+								{weaknesses.map((weakness, index) => (
+									<li key={'weakness-' + index}>{weakness}</li>
+								))}
+							</ul>
+						</div>
+					</div>
+				</div>
 			</>
 		);
 	};
 
 	const SweetAlert = async ({
 		title,
+		subTitle,
 		subComponent,
 	}: {
 		title: string;
+		subTitle: string;
 		subComponent: ReactElement<any, any>;
 	}) => {
 		reactSwal.fire({
-			title: title,
+			title:
+				"<h2 style='font-size: 35px'>" +
+				title +
+				"<br><span style='color: gray; font-size: 22px; margin-left: 10px'>(" +
+				subTitle +
+				')<span/>' +
+				'</h2>' +
+				"<hr style='margin-top: 1.2rem'>",
 			html: subComponent,
 			showCloseButton: true,
+			showClass: {
+				popup: 'swal--anim-show',
+			},
+			hideClass: {
+				popup: 'swal--anim-hide',
+			},
 		});
 	};
 
@@ -232,7 +292,16 @@ function TrackerItem({
 				<h3>{name}</h3>
 				<hr />
 				<div className="d-flex justify-content-center">
-					<button style={{ backgroundColor: '#6bc6f0' }}>
+					<button
+						style={{ backgroundColor: '#6bc6f0' }}
+						onClick={() =>
+							SweetAlert({
+								title: name,
+								subTitle: 'informations',
+								subComponent: <EntityInformation />,
+							})
+						}
+					>
 						{IconRender({ icon: <FiInfo />, size: '25' })}
 					</button>
 					<button style={{ backgroundColor: '#72b686' }}>
@@ -244,16 +313,20 @@ function TrackerItem({
 					<button
 						style={{ backgroundColor: '#c299c0' }}
 						onClick={() =>
-							SweetAlert({ title: 'test', subComponent: <TestComponent /> })
+							SweetAlert({
+								title: name,
+								subTitle: 'informations',
+								subComponent: <EntityInformation />,
+							})
 						}
 					>
 						{IconRender({ icon: <TbFilePencil />, size: '25' })}
 					</button>
 				</div>
 				<div style={{ marginTop: 8 }}>
-					<ProgressBar percent={40} label={'Speed'} />
-					<ProgressBar percent={20} label={'agressivity'} />
-					<ProgressBar percent={70} label={'attack SM'} />
+					<ProgressBar percent={speed} label={'Speed'} />
+					<ProgressBar percent={agressivity} label={'agressivity'} />
+					<ProgressBar percent={attackSM} label={'attack SM'} />
 				</div>
 				<ul>
 					{edvidences.map((edvidence, index) => (
@@ -280,6 +353,13 @@ export default function Tracker() {
 						<TrackerItem
 							key={item.id}
 							name={item.name}
+							description={item.description}
+							behaviors={item.behaviors}
+							attackSM={item.attackSM}
+							agressivity={item.agressivity}
+							speed={item.speed}
+							strengths={item.strengths}
+							weaknesses={item.weaknesses}
 							edvidences={item.edvidences}
 						/>
 					))}
