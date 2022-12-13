@@ -48,9 +48,10 @@ body {
 
 		&:hover {
 			@include animation-scale($scaleValue: 1.035);
+			cursor: pointer;
 		}
 	}
-	
+
 	hr {
 		@include hr-style();
 	}
