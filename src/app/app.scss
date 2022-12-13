@@ -163,6 +163,15 @@ section {
 
 /* traker styles */
 .tracker {
+	min-width: __convertToRem($value: 845px);
+	@include breakpoint(max, 845px) {
+		min-width: 100%;
+	}
+
+	@include breakpoint(max, 444px) {
+		min-width: __convertToRem($value: 348px);
+	}
+
 	&-header {
 		min-width: __convertToRem($value: 215px);
 		padding: 1rem;
