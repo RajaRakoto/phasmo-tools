@@ -5,6 +5,9 @@ import { RxReset } from 'react-icons/rx';
 import { FiInfo } from 'react-icons/fi';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import { CgCloseO } from 'react-icons/cg';
+import { TbFilePencil } from 'react-icons/tb';
+import { GoSearch } from 'react-icons/go';
+import { Line } from 'rc-progress';
 
 /* json data */
 import evd from '../data/json/_edvidences.json';
@@ -93,6 +96,8 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 			<h2
 				style={{ fontSize: 26, textDecoration: 'underline', marginBottom: 40 }}
 			>
+				{IconRender({ icon: <GoSearch />, size: '42' })}
+				<br />
 				{title}
 			</h2>
 			<hr />
@@ -101,43 +106,43 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 					isClickedState={isClicked[0].status}
 					callback={() => handleClick('evd1')}
 					icon={closedbook_icon}
-					notif={'Ecriture fantômatique'}
+					notif={'Ecriture fantômatique (1)'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[1].status}
 					callback={() => handleClick('evd2')}
 					icon={dots_icon}
-					notif={'Projecteur D.O.T.S'}
+					notif={'Projecteur D.O.T.S (2)'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[2].status}
 					callback={() => handleClick('evd3')}
 					icon={emf_icon}
-					notif={'EMF 5'}
+					notif={'EMF 5 (3)'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[3].status}
 					callback={() => handleClick('evd4')}
 					icon={fingerprint_icon}
-					notif={'Empreinte digitale'}
+					notif={'Empreinte digitale (4)'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[4].status}
 					callback={() => handleClick('evd5')}
 					icon={orb_icon}
-					notif={'Orbe'}
+					notif={'Orbe (5)'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[5].status}
 					callback={() => handleClick('evd6')}
 					icon={spiritbox_icon}
-					notif={'Spirit Box'}
+					notif={'Spirit Box (6)'}
 				/>
 				<EvdButton
 					isClickedState={isClicked[6].status}
 					callback={() => handleClick('evd7')}
 					icon={thermometer_icon}
-					notif={'Température glaciale'}
+					notif={'Température glaciale (7)'}
 				/>
 			</div>
 			<hr />
@@ -164,11 +169,38 @@ function TrackerItem({
 	name: string;
 	edvidences: string[];
 }) {
+	const ProgressBar = ({
+		label,
+		percent,
+	}: {
+		label: string;
+		percent: number;
+	}) => {
+		const percentShow = <span style={{ color: 'gray' }}>{percent}%</span>;
+
+		return (
+			<>
+				<span>
+					<strong style={{ fontSize: 'smaller' }}>
+						{label} {percentShow}
+					</strong>
+					<Line
+						percent={percent}
+						strokeWidth={2}
+						strokeColor="#ff7426"
+						trailColor="#eee"
+					/>
+				</span>
+			</>
+		);
+	};
+
 	return (
 		<>
 			<div className="item">
 				<h3>{name}</h3>
-				<div>
+				<hr />
+				<div className="d-flex justify-content-center">
 					<button style={{ backgroundColor: '#6bc6f0' }}>
 						{IconRender({ icon: <FiInfo />, size: '25' })}
 					</button>
@@ -178,6 +210,14 @@ function TrackerItem({
 					<button style={{ backgroundColor: '#bd654a' }}>
 						{IconRender({ icon: <CgCloseO />, size: '25' })}
 					</button>
+					<button style={{ backgroundColor: '#c299c0' }}>
+						{IconRender({ icon: <TbFilePencil />, size: '25' })}
+					</button>
+				</div>
+				<div style={{ marginTop: 8 }}>
+					<ProgressBar percent={40} label={'Speed'} />
+					<ProgressBar percent={20} label={'agressivity'} />
+					<ProgressBar percent={70} label={'attack SM'} />
 				</div>
 				<ul>
 					{edvidences.map((edvidence, index) => (
