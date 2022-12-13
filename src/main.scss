@@ -4,6 +4,7 @@
 @import 'sass-eo-bootstrap-grid';
 @import './sass/btn';
 @import './sass/colors';
+@import './sass/mixins';
 
 @include normalize();
 @include loadify(init);
@@ -48,6 +49,10 @@ body {
 		&:hover {
 			@include animation-scale($scaleValue: 1.035);
 		}
+	}
+	
+	hr {
+		@include hr-style();
 	}
 }
 
