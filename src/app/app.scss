@@ -345,6 +345,17 @@ section {
 /* swal styles */
 .swal2-popup {
 	background-color: rgba(68, 68, 68, 0.96) !important;
+	width: fit-content !important;
+	min-width: __convertToRem($value: 222px) !important;
+	max-width: __convertToRem($value: 1000px) !important;
+	animation-duration: 0.4s !important;
+
+	ul {
+		all: initial;
+		li {
+			margin-left: 2rem;
+		}
+	}
 }
 
 .swal2-title {
@@ -358,4 +369,12 @@ section {
 body.swal2-shown > [aria-hidden='true'] {
 	transition: 0.1s filter;
 	filter: blur(10px);
+}
+
+.swal--anim-show {
+	@include animation-zoom($in-out: in);
+}
+
+.swal--anim-hide {
+	@include animation-zoom($in-out: out);
 }
