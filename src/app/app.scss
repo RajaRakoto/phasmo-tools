@@ -4,6 +4,7 @@
 @import '../sass/mixins';
 @import '../sass/colors';
 @import '../sass/notify';
+@import 'sass-eo-lib-magic';
 
 @include loadify(init);
 @include check-style($theme1);
@@ -178,6 +179,25 @@ section {
 
 	@include breakpoint(max, 444px) {
 		min-width: __convertToRem($value: 348px);
+	}
+
+	.highlighted {
+		position: relative;
+		background-color: transparent;
+	}
+
+	.highlighted:before {
+		@include magic-spaceInLeft($duration: 0.3s);
+		width: 50%;
+		content: '';
+		position: absolute;
+		top: 40%;
+		left: 25%;
+		right: 25%;
+		height: 3px;
+		background-color: rgba(194, 194, 194, 0.533);
+		z-index: 1;
+		border-radius: 70%;
 	}
 
 	&-header {
