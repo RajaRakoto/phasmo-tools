@@ -167,6 +167,9 @@ section {
 
 /* traker styles */
 .tracker {
+	@include box-props();
+	padding: 2rem;
+	border-radius: 10px;
 	max-width: __convertToRem($value: 904px);
 	min-width: __convertToRem($value: 845px);
 	@include breakpoint(max, 845px) {
@@ -180,7 +183,6 @@ section {
 	&-header {
 		min-width: __convertToRem($value: 215px);
 		padding: 1rem;
-		@include box-props();
 
 		h2 {
 			font-size: __convertToRem($value: 23px);
@@ -218,10 +220,17 @@ section {
 		align-items: center;
 
 		.item {
-			@include box-props();
+			border: solid #eee 1px;
+			border-radius: 10px;
 			width: fit-content;
 			padding: 1rem;
 			margin: 1rem;
+			transition: all 0.3s;
+
+			&:hover {
+				@include animation-scale($scaleValue: 1.03);
+				background-color: $theme-bg;
+			}
 
 			h3 {
 				text-align: center;
@@ -239,8 +248,7 @@ section {
 				margin-right: 0.2rem;
 
 				li {
-					background-color: $theme-bg;
-					padding: 0.3rem;
+					padding: 0.5rem;
 					border-radius: 5px;
 				}
 			}
@@ -251,11 +259,11 @@ section {
 				padding-top: 0.3rem;
 				border: none;
 				margin: 0.3rem;
-				
+
 				&:hover {
 					opacity: 85%;
 				}
-				
+
 				&:active {
 					transition: 0.02s;
 					transform: scale(0.95);
