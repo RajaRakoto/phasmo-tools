@@ -116,7 +116,7 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 				{title}
 			</h2>
 			<hr />
-			<div className='evd-btn'>
+			<div className="evd-btn">
 				<EvdButton
 					isClickedState={isClicked[0].status}
 					callback={() => handleClick('evd1')}
@@ -309,10 +309,6 @@ function TrackerItem({
 		});
 	};
 
-	const handleClick = (status: boolean) => {
-		status ? setIsHighlighted(true) : setIsHighlighted(false);
-	};
-
 	return (
 		<>
 			<div className="item">
@@ -338,13 +334,13 @@ function TrackerItem({
 					</button>
 					<button
 						style={{ backgroundColor: '#72b686' }}
-						onClick={() => handleClick(false)}
+						onClick={() => setIsHighlighted(false)}
 					>
 						{IconRender({ icon: <FaRegCheckCircle />, size: '25' })}
 					</button>
 					<button
 						style={{ backgroundColor: '#bd654a' }}
-						onClick={() => handleClick(true)}
+						onClick={() => setIsHighlighted(true)}
 					>
 						{IconRender({ icon: <CgCloseO />, size: '25' })}
 					</button>
