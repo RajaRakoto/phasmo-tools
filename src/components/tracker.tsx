@@ -10,6 +10,7 @@ import { GoSearch } from 'react-icons/go';
 import { Line } from 'rc-progress';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { Provider } from 'react-redux';
 
 /* json data */
 import evd from '../data/json/_edvidences.json';
@@ -32,6 +33,9 @@ import thermometer_icon from '../assets/icons/thermometer_icon.png';
 
 /* components */
 import Todo from '../components/todo';
+
+/* store */
+import store from '../data/store';
 
 // ================================================
 
@@ -275,7 +279,7 @@ function TrackerItem({
 				')<span/>' +
 				'</h2>' +
 				"<hr style='margin-top: 1.2rem'>",
-			html: subComponent,
+			html: <Provider store={store}>{subComponent}</Provider>,
 			showCloseButton: true,
 			showClass: {
 				popup: 'swal--anim-show',
@@ -315,8 +319,15 @@ function TrackerItem({
 						onClick={() =>
 							SweetAlert({
 								title: name,
-								subTitle: 'informations',
-								subComponent: <EntityInformation />,
+								subTitle: 'stratégies',
+								subComponent: (
+									<Todo
+										title="Temp todo"
+										todoID="todo-temp"
+										addInput
+										deleteBtn
+									/>
+								),
 							})
 						}
 					>
