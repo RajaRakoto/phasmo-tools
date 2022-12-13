@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 
 /* libs */
 import { IconContext } from 'react-icons';
-import { TiDeleteOutline } from 'react-icons/ti';
+import { RiDeleteBin5Fill } from 'react-icons/ri';
 import { SlNotebook } from 'react-icons/sl';
 import { RxReset } from 'react-icons/rx';
+
+/* common */
+import { IconRender } from '../common/icons';
 
 /* store */
 import { useStoreSelector, useStoreDispatch } from '../data/hooks';
@@ -26,10 +29,8 @@ function TaskHeader({
 }) {
 	return (
 		<>
-			<IconContext.Provider value={{ className: 'note-icon' }}>
-				<SlNotebook />
-			</IconContext.Provider>
-			<h2 style={{ fontSize: 36, textDecoration: 'underline' }}>{title}</h2>
+			{IconRender({ icon: <SlNotebook />, size: '42' })}
+			<h2 style={{ fontSize: 26, textDecoration: 'underline' }}>{title}</h2>
 			<hr />
 			<h3 style={{ fontSize: 22 }}>
 				Tâches à faire : <span>{uncompletedTasks}</span>
@@ -58,7 +59,7 @@ function TaskItem({
 						onClick={() => REDUX(delete__task([todoID, task]))}
 					>
 						<IconContext.Provider value={{ className: 'delete-icon' }}>
-							<TiDeleteOutline />
+							<RiDeleteBin5Fill />
 						</IconContext.Provider>
 					</span>
 				)}
@@ -115,7 +116,10 @@ function TaskFooter({
 					</div>
 				</form>
 			)}
-			<button onClick={() => REDUX(reset__task([todoID]))}>
+			<button
+				style={{ backgroundColor: 'rgb(194, 154, 67)' }}
+				onClick={() => REDUX(reset__task([todoID]))}
+			>
 				Reset <RxReset />
 			</button>
 		</>

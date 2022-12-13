@@ -4,6 +4,7 @@
 @import 'sass-eo-bootstrap-grid';
 @import './sass/btn';
 @import './sass/colors';
+@import './sass/mixins';
 
 @include normalize();
 @include loadify(init);
@@ -38,6 +39,21 @@ html {
 	);
 	@include breakpoint(min, small) {
 		overflow-x: hidden;
+	}
+}
+
+body {
+	button {
+		transition: all 0.3s;
+
+		&:hover {
+			@include animation-scale($scaleValue: 1.035);
+			cursor: pointer;
+		}
+	}
+
+	hr {
+		@include hr-style();
 	}
 }
 

@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 
 /* store list */
 import todoReducer from './todo';
+import trackerReducer from './tracker';
 
 // gobal store
 const store = configureStore({
 	reducer: {
 		todo: todoReducer,
+		tracker: trackerReducer,
 	},
 });
 

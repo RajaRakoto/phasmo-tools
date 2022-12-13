@@ -3,10 +3,13 @@
 @import 'sass-eo-basics';
 @import '../sass/mixins';
 @import '../sass/colors';
+@import '../sass/notify';
+@import 'sass-eo-lib-magic';
 
 @include loadify(init);
 @include check-style($theme1);
 @include input-style($theme1, $theme1);
+@include notify();
 
 /* navbar styles */
 nav {
@@ -19,7 +22,9 @@ nav {
 		justify-content: space-evenly;
 		align-items: center;
 		list-style-type: none;
-		width: max-content;
+		min-width: __convertToRem($value: 200px);
+		max-width: max-content;
+		height: min-content;
 		padding: 2rem;
 
 		li {
@@ -30,13 +35,13 @@ nav {
 				border: none;
 				transition: 0.2s;
 				margin: 1rem;
+				border: solid $theme1 3px;
 
 				a {
 					text-decoration: none;
 				}
 
 				&:hover {
-					@include animation-scale($scaleValue: 1.1);
 					background-color: $theme1;
 				}
 			}
@@ -109,6 +114,10 @@ section {
 	margin: 1.5rem;
 	padding-right: 2.8rem;
 
+	@include breakpoint(min, 720px) {
+		min-width: __convertToRem($value: 558px);
+	}
+
 	ul {
 		@include position-flex-center();
 		font-size: __convertToRem($value: 12px) !important;
@@ -128,13 +137,9 @@ section {
 
 			&:hover {
 				@include animation-scale($scaleValue: 1.05);
-				background-color: rgba(65, 61, 58, 0.637);
+				background-color: $theme-bg;
 			}
 		}
-	}
-
-	hr {
-		@include hr-style();
 	}
 
 	&-header {
@@ -157,6 +162,137 @@ section {
 		button {
 			@include btn-style();
 			margin-left: 3.8rem;
+		}
+	}
+}
+
+/* traker styles */
+.tracker {
+	@include box-props();
+	padding: 2rem;
+	border-radius: 10px;
+	max-width: __convertToRem($value: 904px);
+	min-width: __convertToRem($value: 845px);
+	@include breakpoint(max, 845px) {
+		min-width: 100%;
+	}
+
+	@include breakpoint(max, 444px) {
+		min-width: __convertToRem($value: 348px);
+	}
+
+	.highlighted {
+		position: relative;
+		background-color: transparent;
+	}
+
+	.highlighted:before {
+		@include magic-spaceInLeft($duration: 0.3s);
+		width: 50%;
+		content: '';
+		position: absolute;
+		top: 40%;
+		left: 25%;
+		right: 25%;
+		height: 3px;
+		background-color: rgba(194, 194, 194, 0.533);
+		z-index: 1;
+		border-radius: 70%;
+	}
+
+	&-header {
+		min-width: __convertToRem($value: 215px);
+		padding: 1rem;
+
+		h2 {
+			font-size: __convertToRem($value: 23px);
+			text-align: center;
+		}
+
+		div {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+
+			button {
+				@include btn-style($theme: $theme3);
+				margin: 0.5rem;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				padding-left: 1.3rem;
+				padding-right: 1.3rem;
+
+				img {
+					@include image-responsive($height: 50px);
+				}
+			}
+
+			.btn-clicked {
+				background-color: $theme1;
+			}
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
+		.item {
+			border: solid #eee 1px;
+			border-radius: 10px;
+			width: fit-content;
+			padding: 1rem;
+			margin: 1rem;
+			transition: all 0.3s;
+
+			&:hover {
+				@include animation-scale($scaleValue: 1.03);
+				background-color: $theme-bg;
+			}
+
+			h3 {
+				text-align: center;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				gap: 0.5rem;
+				flex-wrap: wrap;
+				list-style-type: none;
+				margin-left: -2rem;
+				margin-right: 0.2rem;
+
+				li {
+					padding: 0.5rem;
+					border-radius: 5px;
+				}
+			}
+
+			button {
+				opacity: 50%;
+				border-radius: 100%;
+				padding-top: 0.3rem;
+				border: none;
+				margin: 0.3rem;
+
+				&:hover {
+					opacity: 85%;
+				}
+
+				&:active {
+					transition: 0.02s;
+					transform: scale(0.95);
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+				}
+			}
 		}
 	}
 }
@@ -218,9 +354,10 @@ section {
 .delete-icon {
 	float: right;
 	background-color: rgba(255, 68, 0, 0.24);
-	border-radius: 50%;
-	font-size: 32px;
+	border-radius: 5px;
+	font-size: 22px;
 	margin-left: 0.3rem;
+	padding: 0.2rem;
 	transition: all 0.3s;
 
 	&:hover {
@@ -228,10 +365,38 @@ section {
 	}
 }
 
-.note-icon {
-	font-size: 32px;
+/* swal styles */
+.swal2-popup {
+	background-color: rgba(68, 68, 68, 0.96) !important;
+	width: fit-content !important;
+	min-width: __convertToRem($value: 222px) !important;
+	max-width: __convertToRem($value: 1000px) !important;
+	animation-duration: 0.4s !important;
+
+	ul {
+		li {
+			width: 100%;
+		}
+	}
 }
 
-.section-icon {
-	font-size: 45px;
+.swal2-title {
+	color: $theme1 !important;
+}
+
+.swal2-confirm {
+	display: none !important;
+}
+
+body.swal2-shown > [aria-hidden='true'] {
+	transition: 0.1s filter;
+	filter: blur(10px);
+}
+
+.swal--anim-show {
+	@include animation-zoom($in-out: in);
+}
+
+.swal--anim-hide {
+	@include animation-zoom($in-out: out);
 }

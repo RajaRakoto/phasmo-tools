@@ -1,10 +1,9 @@
-import React from 'react';
 import { IconContext } from 'react-icons';
 
-export function IconSectionRender({ icon }: any) {
+export function IconRender({ icon, size }: any) {
 	return (
-		<IconContext.Provider value={{ className: 'section-icon' }}>
-			{icon}
-		</IconContext.Provider>
+		<>
+			<IconContext.Provider value={{ size: size }}>{icon}</IconContext.Provider>
+		</>
 	);
 }
