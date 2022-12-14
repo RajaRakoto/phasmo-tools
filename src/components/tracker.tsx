@@ -78,7 +78,27 @@ function EvdButton({
 }
 
 function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
+	// get local storage and set it to isClicked state
 	const [isClicked, setIsClicked] = useState(evd);
+	const local = JSON.parse(localStorage.getItem('tracker__isclicked')!);
+
+	// set local storage to isClicked state
+	useEffect(() => {
+		localStorage.setItem('tracker__isclicked', JSON.stringify(isClicked));
+	}, [isClicked]);
+
+	// get local storage and set it to isClicked state if component mount
+	useEffect(() => {
+		if (local) {
+			setIsClicked(local);
+		}
+	}, []);
+
+	// reset isClicked state to default and reset store
+	const handleReset = () => {
+		setIsClicked(evd);
+		REDUX(reset__tracker());
+	};
 
 	// active edvidence getter from isClicked state
 	const getActiveEdvidence = () => {
@@ -175,7 +195,7 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 						borderRadius: 7,
 						padding: '0.2rem 1rem',
 					}}
-					onClick={() => REDUX(reset__tracker())}
+					onClick={() => handleReset()}
 				>
 					Reset <RxReset />
 				</button>
