@@ -347,6 +347,11 @@ section {
 		button {
 			@include btn-style($theme: $theme1);
 			margin-top: 1rem;
+
+			span {
+				@include position-flex-center();
+				gap: 0.5rem;
+			}
 		}
 
 		input[type='file'] {

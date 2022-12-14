@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 /* libs */
 import { saveAs } from 'file-saver';
+import { FiSave } from 'react-icons/fi';
 
 // ================================================
 
@@ -62,7 +63,11 @@ export default function Editor() {
 					<textarea value={text} onChange={handleTextChange} />
 				</div>
 				<div className="editor-footer">
-					<button onClick={handleSave}>Save</button>
+					<button onClick={handleSave}>
+						<span>
+							Save <FiSave />
+						</span>
+					</button>
 					<input type="file" onChange={handleFileChange} />
 				</div>
 			</div>
