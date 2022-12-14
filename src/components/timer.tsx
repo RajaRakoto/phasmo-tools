@@ -104,11 +104,15 @@ export default function Timer() {
 
 	const handlePresetClick = (second: number) => {
 		setDuration(second);
-		setCoreRender(true);
 		setBtnProps(
 			btnProps.map(btn => {
 				if (btn.second === second) {
 					btn.status = !btn.status;
+					if (btn.status === false) {
+						setCoreRender(false);
+					} else {
+						setCoreRender(true);
+					}
 				} else {
 					btn.status = false;
 				}
