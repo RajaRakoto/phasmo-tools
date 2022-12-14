@@ -10,6 +10,7 @@ import { FaGhost } from 'react-icons/fa';
 import Todo from '../components/todo';
 import Tracker from '../components/tracker';
 import Editor from '../components/editor';
+import Timer from '../components/timer';
 
 // ================================================
 
@@ -19,9 +20,10 @@ export default function Entities() {
 			<section>
 				<HeaderSection icon={<FaGhost />} title="Entités" />
 				<div className="content">
-					<Todo title="General todo" todoID="todo-general" addInput deleteBtn />
-					<Tracker />
-					<Editor />
+					{/* <Todo title="General todo" todoID="todo-general" addInput deleteBtn /> */}
+					{/* <Tracker /> */}
+					{/* <Editor />  */}
+					<Timer />
 				</div>
 			</section>
 		</React.Fragment>
