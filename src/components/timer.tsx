@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 /* libs */
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
+import { RxReset } from 'react-icons/rx';
 
 /* assets */
 import ding_audio from '../assets/ding.mp3';
@@ -142,15 +143,28 @@ export default function Timer() {
 				</div>
 				<div className="timer-options">
 					{btnProps.map((btn, index) => (
-						<button
-							className={btn.status ? 'btn-preset' : ''}
-							key={index}
-							onClick={() => handlePresetClick(btn.second)}
-						>
-							{btn.text}
-						</button>
+						<>
+							<button
+								className={btn.status ? 'btn-preset' : ''}
+								key={index}
+								onClick={() => handlePresetClick(btn.second)}
+							>
+								{btn.text}
+							</button>
+							{(index % 2) + 1 === 0 && <br />}
+						</>
 					))}
-					<button onClick={() => handleReset()}>Reset</button>
+				</div>
+				<div
+					className="d-flex justify-content-center"
+					style={{ marginTop: 12 }}
+				>
+					<button
+						style={{ backgroundColor: 'rgb(194, 154, 67)', borderRadius: 5 }}
+						onClick={() => handleReset()}
+					>
+						Reset <RxReset />
+					</button>
 				</div>
 			</div>
 		</React.Fragment>
