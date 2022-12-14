@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 /* libs */
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import { RxReset } from 'react-icons/rx';
+import uuid from 'react-uuid';
 
 /* assets */
 import ding_audio from '../assets/ding.mp3';
@@ -143,16 +144,15 @@ export default function Timer() {
 				</div>
 				<div className="timer-options">
 					{btnProps.map((btn, index) => (
-						<>
+						<div key={uuid()}>
 							<button
 								className={btn.status ? 'btn-preset' : ''}
-								key={index}
 								onClick={() => handlePresetClick(btn.second)}
 							>
 								{btn.text}
 							</button>
 							{(index % 2) + 1 === 0 && <br />}
-						</>
+						</div>
 					))}
 				</div>
 				<div
