@@ -22,6 +22,14 @@ function RenderTime({ remainingTime }: { remainingTime: any }) {
 		isNewTimeFirstTick.current = false;
 	}
 
+	if (remainingTime === -1) {
+		return (
+			<>
+				<h4 style={{ fontSize: 23 }}>-</h4>
+			</>
+		);
+	}
+
 	if (remainingTime === 0) {
 		setTimeout(() => {
 			setOneLastRerender((val: any) => val + 1);
@@ -74,16 +82,18 @@ export default function Timer() {
 		}
 	}, []);
 
-	const CountdownCore = ({
-		isPlaying,
-		duration,
-	}: {
-		isPlaying: boolean;
-		duration: number;
-	}) => {
+	const CountdownModel = () => {
+		return (
+			<CountdownCircleTimer isPlaying={false} duration={-1} colors={'#cfcfcf'}>
+				{RenderTime}
+			</CountdownCircleTimer>
+		);
+	};
+
+	const CountdownCore = ({ duration }: { duration: number }) => {
 		return (
 			<CountdownCircleTimer
-				isPlaying={isPlaying}
+				isPlaying={true}
 				duration={duration}
 				colors={'#ff7426'}
 			>
@@ -94,7 +104,7 @@ export default function Timer() {
 
 	const handlePresetClick = (second: number) => {
 		setDuration(second);
-		setCoreRender(!coreRender);
+		setCoreRender(true);
 		setBtnProps(
 			btnProps.map(btn => {
 				if (btn.second === second) {
@@ -115,9 +125,9 @@ export default function Timer() {
 				</div>
 				<div className="timer-content">
 					{coreRender ? (
-						<CountdownCore isPlaying={true} duration={duration} />
+						<CountdownCore duration={duration} />
 					) : (
-						<CountdownCore isPlaying={false} duration={1} />
+						<CountdownModel />
 					)}
 				</div>
 				<div className="timer-options">
