@@ -8,15 +8,12 @@ import { FiSave } from 'react-icons/fi';
 
 export default function Editor() {
 	const [text, setText] = useState(localStorage.getItem('editor__text') || '');
-	const [error, setError] = useState(
-		localStorage.getItem('editor__error') || '',
-	);
+	const [error, setError] = useState('');
 	const OutputFileName = 'phasmo-notes';
 
 	useEffect(() => {
 		localStorage.setItem('editor__text', text);
-		localStorage.setItem('editor__error', error);
-	}, [text, error]);
+	}, [text]);
 
 	const handleTextChange = (e: any) => {
 		setText(e.target.value);
