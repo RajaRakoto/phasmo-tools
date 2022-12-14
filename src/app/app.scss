@@ -297,6 +297,65 @@ section {
 	}
 }
 
+/* editor styles */
+.editor {
+	@include box-props();
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	min-width: __convertToRem($value: 500px);
+
+	@include breakpoint(max, 585px) {
+		width: 90%;
+		min-width: __convertToRem($value: 200px);
+	}
+
+	&-header {
+		h2 {
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+	&-content {
+		width: 100%;
+
+		textarea {
+			resize: vertical;
+			width: 100%;
+			min-height: __convertToRem($value: 100px);
+			max-height: __convertToRem($value: 250px);
+			padding: 12px 20px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			background-color: rgb(212, 212, 212);
+			color: #444;
+		}
+	}
+
+	&-footer {
+		@include position-flex-center();
+		margin-left: 3.8rem;
+		align-items: baseline;
+		width: 80%;
+
+		button {
+			@include btn-style($theme: $theme1);
+			margin-top: 1rem;
+		}
+
+		input[type='file'] {
+			appearance: button;
+			width: 100%;
+		}
+	}
+}
+
 /* swiper styles */
 .swiper {
 	max-width: __convertToRem($value: 350px);
