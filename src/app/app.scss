@@ -365,6 +365,8 @@ section {
 .timer {
 	@include box-props();
 	padding: 2rem;
+	width: __convertToRem($value: 330px);
+	max-width: __convertToRem($value: 400px);
 
 	&-header {
 		h2 {
@@ -418,8 +420,12 @@ section {
 	}
 
 	&-options {
+		margin-top: 2rem;
+		text-align: center;
+
 		button {
 			@include btn-style($theme: $theme3);
+			margin: 0.35rem;
 
 			&:hover {
 				background-color: $theme1;
