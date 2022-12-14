@@ -6,6 +6,9 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 /* assets */
 import ding_audio from '../assets/ding.mp3';
 
+/* json data */
+import times from '../data/json/_times.json';
+
 // ================================================
 
 function RenderTime({ remainingTime }: { remainingTime: any }) {
@@ -66,10 +69,7 @@ function RenderTime({ remainingTime }: { remainingTime: any }) {
 export default function Timer() {
 	const [duration, setDuration] = useState(0);
 	const [coreRender, setCoreRender] = useState(false);
-	const [btnProps, setBtnProps] = useState([
-		{ text: '5s', second: 5, status: false },
-		{ text: '3s', second: 3, status: false },
-	]);
+	const [btnProps, setBtnProps] = useState(times);
 	const local = JSON.parse(localStorage.getItem('timer__btnprops')!);
 
 	useEffect(() => {
@@ -121,6 +121,12 @@ export default function Timer() {
 		);
 	};
 
+	const handleReset = () => {
+		localStorage.removeItem('timer__btnprops');
+		setBtnProps(times);
+		setCoreRender(false);
+	};
+
 	return (
 		<React.Fragment>
 			<div className="timer">
@@ -144,6 +150,7 @@ export default function Timer() {
 							{btn.text}
 						</button>
 					))}
+					<button onClick={() => handleReset()}>Reset</button>
 				</div>
 			</div>
 		</React.Fragment>
