@@ -1,22 +1,22 @@
 [
 	{
 		"id": "evd1",
-		"name": "D.O.T.S",
+		"name": "Ecriture fantômatique",
 		"status": false
 	},
 	{
 		"id": "evd2",
-		"name": "EMF 5",
+		"name": "D.O.T.S",
 		"status": false
 	},
 	{
 		"id": "evd3",
-		"name": "Empreintes Digitales",
+		"name": "EMF 5",
 		"status": false
 	},
 	{
 		"id": "evd4",
-		"name": "Température glaciale",
+		"name": "Empreintes Digitales",
 		"status": false
 	},
 	{
@@ -26,12 +26,12 @@
 	},
 	{
 		"id": "evd6",
-		"name": "Ecriture fantômatique",
+		"name": "Spirit Box",
 		"status": false
 	},
 	{
 		"id": "evd7",
-		"name": "Spirit Box",
+		"name": "Température glaciale",
 		"status": false
 	}
 ]
