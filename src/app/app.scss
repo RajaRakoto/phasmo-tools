@@ -49,6 +49,72 @@ nav {
 	}
 }
 
+/* float nav styles */
+.float {
+	&-nav {
+		@include box-props();
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5rem;
+		width: __convertToRem($value: 62px);
+		height: 90%;
+		padding: 1rem;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1 !important;
+		background: rgb(126, 126, 126);
+		background: linear-gradient(
+			90deg,
+			rgba(126, 126, 126, 1) 0%,
+			rgba(65, 65, 65, 1) 0%,
+			rgba(78, 78, 78, 1) 56%,
+			rgba(102, 102, 102, 1) 100%
+		);
+		@include position-center($axis: vertical);
+
+		&-btn {
+			background-color: #444;
+			color: #eee;
+			padding: 1rem;
+			width: 100%;
+			height: __convertToRem($value: 62px);
+			border-radius: 10px;
+
+			&:hover {
+				background-color: $theme1;
+			}
+		}
+
+		@include breakpoint(max, 1157px) {
+			flex-direction: row;
+			width: 50%;
+			min-width: __convertToRem($value: 331px);
+			height: __convertToRem($value: 62px);
+			top: unset;
+			bottom: 0 !important;
+			margin-bottom: 0.3rem;
+			@include position-center($axis: horizontal);
+			gap: 1rem;
+			background: rgb(126, 126, 126);
+			background: linear-gradient(
+				0deg,
+				rgba(126, 126, 126, 1) 0%,
+				rgba(65, 65, 65, 1) 0%,
+				rgba(78, 78, 78, 1) 56%,
+				rgba(102, 102, 102, 1) 100%
+			);
+
+			&-btn {
+				height: 100%;
+				width: __convertToRem($value: 62px);
+			}
+		}
+	}
+}
+
 /* banner styles */
 #banner {
 	height: 100vh;
@@ -101,6 +167,10 @@ section {
 		align-items: center;
 		flex-wrap: wrap;
 		padding: 3rem;
+
+		@include breakpoint(max, 1159px) {
+			padding-bottom: 10rem;
+		}
 	}
 }
 
@@ -297,14 +367,15 @@ section {
 	}
 }
 
-/* editor styles */
-.editor {
+/* note styles */
+.note {
 	@include box-props();
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
+	margin: 2rem;
 	min-width: __convertToRem($value: 500px);
 
 	@include breakpoint(max, 585px) {
