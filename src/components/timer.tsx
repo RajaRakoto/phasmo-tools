@@ -133,6 +133,22 @@ export default function Timer() {
 		setCoreRender(false);
 	};
 
+	const handleSubmit = (e: any) => {
+		e.preventDefault();
+		const input = document.querySelector('#timer-input') as HTMLInputElement;
+		if (input.value) {
+			setDuration(parseInt(input.value));
+			setCoreRender(true);
+		}
+	};
+
+	const handleMinuteConverter = () => {
+		const input = document.querySelector('#timer-input') as HTMLInputElement;
+		if (input.value) {
+			input.value = (parseInt(input.value) * 60).toString();
+		}
+	};
+
 	return (
 		<React.Fragment>
 			<div id="timer-link" className="timer">
@@ -147,6 +163,7 @@ export default function Timer() {
 						Timer
 					</h2>
 				</div>
+				<hr />
 				<div className="timer-content">
 					{coreRender ? (
 						<CountdownCore duration={duration} />
@@ -154,9 +171,38 @@ export default function Timer() {
 						<CountdownModel />
 					)}
 				</div>
+				<hr />
 				<div className="timer-options">
+					<form action="" onSubmit={handleSubmit}>
+						<input
+							id="timer-input"
+							name="timer-input"
+							type="number"
+							min={0}
+							max={18000} // max 5h
+							placeholder="sec(s) / min(s)"
+						/>
+						<button
+							style={{
+								backgroundColor: 'rgb(96, 157, 198)',
+								borderRadius: 5,
+							}}
+							type="submit"
+						>
+							Set sec(s)
+						</button>
+						<button
+							style={{
+								backgroundColor: 'rgb(80, 165, 121)',
+								borderRadius: 5,
+							}}
+							onClick={() => handleMinuteConverter()}
+						>
+							Set min(s)
+						</button>
+					</form>
 					<ul>
-						{btnProps.map((btn) => (
+						{btnProps.map(btn => (
 							<li key={uuid()}>
 								<button
 									className={btn.status ? 'btn-preset-toggle' : ''}

@@ -451,6 +451,7 @@ section {
 	}
 
 	&-content {
+		margin: 1rem;
 		display: flex;
 		justify-content: center;
 
@@ -494,6 +495,29 @@ section {
 	}
 
 	&-options {
+		form {
+			margin-top: 1rem;
+			@include position-flex-center();
+
+			input {
+				width: 60%;
+				padding: 0.2rem;
+				padding-left: 0.5rem;
+				border-radius: 5px;
+				background-color: #cac8c8;
+				color: #525252;
+				font-size: __convertToRem($value: 16px);
+				text-align: center;
+				transition: all 0.2s;
+			}
+			
+			input:focus {
+				outline: none;
+				font-size: __convertToRem($value: 18px);
+				font-weight: bold;
+			}
+		}
+
 		ul {
 			display: flex;
 			justify-content: center;
