@@ -21,6 +21,11 @@
 	font-size: __convertToRem($value: 16px);
 }
 
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 html {
 	background: linear-gradient(
 			0deg,
