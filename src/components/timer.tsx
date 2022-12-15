@@ -4,6 +4,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import { RxReset } from 'react-icons/rx';
 import uuid from 'react-uuid';
+import { TfiTimer } from 'react-icons/tfi';
+
+/* common */
+import { IconRender } from '../common/icons';
 
 /* assets */
 import ding_audio from '../assets/ding.mp3';
@@ -133,6 +137,7 @@ export default function Timer() {
 		<React.Fragment>
 			<div className="timer">
 				<div className="timer-header">
+					{IconRender({ icon: <TfiTimer />, size: '42' })}
 					<h2>Timer</h2>
 				</div>
 				<div className="timer-content">
