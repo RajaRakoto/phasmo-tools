@@ -2,6 +2,7 @@ import React from 'react';
 
 /* common */
 import { HeaderSection } from '../common/header';
+import ScrollUp from '../common/scrollup/_scrollup';
 
 /* libs */
 import { FaGhost } from 'react-icons/fa';
@@ -26,6 +27,7 @@ export default function Entities() {
 					<Timer />
 				</div>
 			</section>
+			<ScrollUp />
 		</React.Fragment>
 	);
 }
