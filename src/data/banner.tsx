@@ -11,14 +11,16 @@ type FeaturesType = {
 }[];
 
 type BannerType = {
-	bannerInformation: String;
+	bannerInformation: String[];
 	features: FeaturesType;
 };
 
 // exportation - banner
 export const banner: BannerType = {
-	bannerInformation:
+	bannerInformation: [
+		"Phasmophobia est un jeu réalisé par Kinetic Games sorti le 18 septempre 2020 sur Steam en accès anticipé. C'est un jeu d'horreur psychologique en ligne coopératif à 4 joueurs où vous et vos coéquipiers enquêteurs dans le paranormal explorerez des lieux hantés remplis d'activité paranormale et rassemblerez autant de preuves du paranormal que possible. Vous utiliserez votre équipement de chasse aux fantômes pour rechercher et enregistrer les preuves de toute entité qui hante les lieux et les vendre à une équipe d'extermination des fantômes.",
 		"Phasmophobia tools vous aidera à trouver des indices, des stratégies contre les entités, connaître les emplacements d'objets maudits et bien d'autres astuces et outils utiles pour devenir un chasseur de fantômes professionnel... Découvrez tout cela en cliquant sur le bouton ci-dessous !",
+	],
 	features: [
 		{
 			title: 'Entités',
