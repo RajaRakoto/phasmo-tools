@@ -56,7 +56,7 @@ export default function Note() {
 
 	return (
 		<React.Fragment>
-			<div className="note">
+			<div id="note-link" className="note">
 				<div className="note-header"></div>
 				{IconRender({ icon: <GoNote />, size: '42' })}
 				<h2 style={{ fontSize: 26 }}>Notes</h2>

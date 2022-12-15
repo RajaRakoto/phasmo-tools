@@ -135,7 +135,7 @@ export default function Timer() {
 
 	return (
 		<React.Fragment>
-			<div className="timer">
+			<div id="timer-link" className="timer">
 				<div className="timer-header">
 					{IconRender({ icon: <TfiTimer />, size: '42' })}
 					<h2>Timer</h2>

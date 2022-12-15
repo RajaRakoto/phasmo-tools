@@ -279,7 +279,7 @@ function TrackerItem({
 								Forces
 							</h3>
 							<ul>
-								{strengths.map((strength) => (
+								{strengths.map(strength => (
 									<li key={uuid()}>{strength}</li>
 								))}
 							</ul>
@@ -290,7 +290,7 @@ function TrackerItem({
 								Faiblesses
 							</h3>
 							<ul>
-								{weaknesses.map((weakness) => (
+								{weaknesses.map(weakness => (
 									<li key={uuid()}>{weakness}</li>
 								))}
 							</ul>
@@ -391,7 +391,7 @@ function TrackerItem({
 					<ProgressBar percent={attackSM} label={'attack SM'} />
 				</div>
 				<ul>
-					{edvidences.map((edvidence) => (
+					{edvidences.map(edvidence => (
 						<li key={uuid()}>{edvidence}</li>
 					))}
 				</ul>
@@ -406,7 +406,7 @@ export default function Tracker() {
 
 	return (
 		<React.Fragment>
-			<div className="tracker">
+			<div id="tracker-link" className="tracker">
 				<div className="tracker-header">
 					<TrackerHeader title="Tracker tools" REDUX={REDUX} />
 				</div>
