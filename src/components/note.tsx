@@ -3,10 +3,14 @@ import React, { useState, useEffect } from 'react';
 /* libs */
 import { saveAs } from 'file-saver';
 import { FiSave } from 'react-icons/fi';
+import { GoNote } from 'react-icons/go';
+
+/* common */
+import { IconRender } from '../common/icons';
 
 // ================================================
 
-export default function Editor() {
+export default function Note() {
 	const [text, setText] = useState(localStorage.getItem('editor__text') || '');
 	const [error, setError] = useState('');
 	const OutputFileName = 'phasmo-notes';
@@ -54,6 +58,7 @@ export default function Editor() {
 		<React.Fragment>
 			<div className="editor">
 				<div className="editor-header"></div>
+				{IconRender({ icon: <GoNote />, size: '42' })}
 				<h2 style={{ fontSize: 26 }}>Notes</h2>
 				{error && <p className="error">{error}</p>}
 				<div className="editor-content">
