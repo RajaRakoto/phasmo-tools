@@ -34,6 +34,7 @@
 		"react-redux": "^8.0.5",
 		"react-router-dom": "^6.4.5",
 		"react-uuid": "^2.0.0",
+		"styled-components": "^5.3.6",
 		"sweetalert2": "^11.6.15",
 		"sweetalert2-react-content": "^5.0.7",
 		"swiper": "^8.4.5"
@@ -45,6 +46,7 @@
 		"@types/node": "^18.11.10",
 		"@types/react": "^18.0.25",
 		"@types/react-dom": "^18.0.9",
+		"@types/styled-components": "^5.1.26",
 		"@vitejs/plugin-react": "^2.2.0",
 		"grunt": "^1.5.3",
 		"grunt-contrib-compress": "^2.0.0",
