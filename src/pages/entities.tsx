@@ -12,6 +12,7 @@ import Todo from '../components/todo';
 import Tracker from '../components/tracker';
 import Note from '../components/note';
 import Timer from '../components/timer';
+import FloatNav from '../components/floatnav';
 
 // ================================================
 
@@ -19,6 +20,7 @@ export default function Entities() {
 	return (
 		<React.Fragment>
 			<section>
+				<FloatNav />
 				<HeaderSection icon={<FaGhost />} title="Entités" />
 				<div className="content">
 					<Todo title="General todo" todoID="todo-general" addInput deleteBtn />
