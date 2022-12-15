@@ -31,8 +31,11 @@ function Banner({ enterBtn }: any) {
 			<span className="version_author">
 				version {pack.version} - by {pack.author.split(' ')[0]}
 			</span>
-			<h1>Bienvenue</h1>
-			<p className="description">{banner.bannerInformation}</p>
+			<h1 style={{ marginBottom: 25, fontSize: 50 }}>Bienvenue</h1>
+			<p className="description">{banner.bannerInformation[0]}</p>
+			<p style={{ marginBottom: 50 }} className="description">
+				{banner.bannerInformation[1]}
+			</p>
 			{enterBtn}
 			<Swiper
 				className="swiper-container"
