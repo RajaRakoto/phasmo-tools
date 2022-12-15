@@ -392,6 +392,7 @@ section {
 			text-align: center;
 		}
 	}
+
 	&-content {
 		width: 100%;
 
@@ -416,8 +417,15 @@ section {
 		width: 80%;
 
 		button {
-			@include btn-style($theme: $theme1);
+			background-color: #646464;
+			border-radius: 10px;
 			margin-top: 1rem;
+			padding: 0.5rem;
+			margin: 0.8rem;
+
+			&:hover {
+				background-color: $theme1;
+			}
 
 			span {
 				@include position-flex-center();
@@ -510,7 +518,7 @@ section {
 				text-align: center;
 				transition: all 0.2s;
 			}
-			
+
 			input:focus {
 				outline: none;
 				font-size: __convertToRem($value: 18px);
