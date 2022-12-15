@@ -11,6 +11,7 @@ import { IconRender } from '../common/icons';
 
 /* assets */
 import ding_audio from '../assets/ding.mp3';
+import ticking_audio from '../assets/ticking.mp3';
 
 /* json data */
 import times from '../data/json/_times.json';
@@ -22,6 +23,26 @@ function RenderTime({ remainingTime }: { remainingTime: any }) {
 	const prevTime = useRef(null);
 	const isNewTimeFirstTick = useRef(false);
 	const [OneLastRerender, setOneLastRerender] = useState(0);
+	const isTimeUp = isNewTimeFirstTick.current;
+
+	const TimeCore = () => {
+		return (
+			<div className="time-content">
+				<div key={remainingTime} className={`time ${isTimeUp ? 'up' : ''}`}>
+					{remainingTime}
+					<span>s</span>
+				</div>
+				{prevTime.current !== null && (
+					<div
+						key={prevTime.current}
+						className={`time ${!isTimeUp ? 'down' : ''}`}
+					>
+						{prevTime.current}
+					</div>
+				)}
+			</div>
+		);
+	};
 
 	if (currentTime.current !== remainingTime) {
 		isNewTimeFirstTick.current = true;
@@ -52,23 +73,19 @@ function RenderTime({ remainingTime }: { remainingTime: any }) {
 		);
 	}
 
-	const isTimeUp = isNewTimeFirstTick.current;
+	if (remainingTime <= 10 && remainingTime > 0) {
+		return (
+			<>
+				<audio src={ticking_audio} autoPlay />
+				<TimeCore />
+			</>
+		);
+	}
 
 	return (
-		<div className="time-content">
-			<div key={remainingTime} className={`time ${isTimeUp ? 'up' : ''}`}>
-				{remainingTime}
-				<span>s</span>
-			</div>
-			{prevTime.current !== null && (
-				<div
-					key={prevTime.current}
-					className={`time ${!isTimeUp ? 'down' : ''}`}
-				>
-					{prevTime.current}
-				</div>
-			)}
-		</div>
+		<>
+			<TimeCore />
+		</>
 	);
 }
 
