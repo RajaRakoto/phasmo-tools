@@ -59,7 +59,14 @@ export default function Note() {
 			<div id="note-link" className="note">
 				<div className="note-header"></div>
 				{IconRender({ icon: <GoNote />, size: '42' })}
-				<h2 style={{ fontSize: 26 }}>Notes</h2>
+				<h2
+					style={{
+						fontSize: 26,
+						textDecoration: 'underline',
+					}}
+				>
+					Notes
+				</h2>
 				{error && <p className="error">{error}</p>}
 				<div className="note-content">
 					<textarea value={text} onChange={handleTextChange} />

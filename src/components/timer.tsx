@@ -138,7 +138,14 @@ export default function Timer() {
 			<div id="timer-link" className="timer">
 				<div className="timer-header">
 					{IconRender({ icon: <TfiTimer />, size: '42' })}
-					<h2>Timer</h2>
+					<h2
+						style={{
+							fontSize: 26,
+							textDecoration: 'underline',
+						}}
+					>
+						Timer
+					</h2>
 				</div>
 				<div className="timer-content">
 					{coreRender ? (
