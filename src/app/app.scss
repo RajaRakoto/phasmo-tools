@@ -370,6 +370,8 @@ section {
 	max-width: __convertToRem($value: 400px);
 
 	&-header {
+		text-align: center;
+
 		h2 {
 			font-size: __convertToRem($value: 26px);
 			text-align: center;
