@@ -56,15 +56,15 @@ export default function Note() {
 
 	return (
 		<React.Fragment>
-			<div className="editor">
-				<div className="editor-header"></div>
+			<div className="note">
+				<div className="note-header"></div>
 				{IconRender({ icon: <GoNote />, size: '42' })}
 				<h2 style={{ fontSize: 26 }}>Notes</h2>
 				{error && <p className="error">{error}</p>}
-				<div className="editor-content">
+				<div className="note-content">
 					<textarea value={text} onChange={handleTextChange} />
 				</div>
-				<div className="editor-footer">
+				<div className="note-footer">
 					<button onClick={handleSave}>
 						<span>
 							Save <FiSave />
