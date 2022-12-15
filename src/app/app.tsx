@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from 'swiper';
 import { BrowserRouter, Routes, Route, Outlet, Link } from 'react-router-dom';
+import uuid from 'react-uuid';
 
 /* assets */
 import phasmo_logo from '../assets/phasmo-logo.png';
@@ -53,15 +54,15 @@ function Banner({ enterBtn }: any) {
 				}}
 				modules={[EffectCreative, Autoplay]}
 			>
-				{banner.features.map((feature: any, index: number) => (
-					<SwiperSlide key={'feat-card-' + index}>
+				{banner.features.map((feature: any) => (
+					<SwiperSlide key={uuid()}>
 						<div className="swiper-item">
 							<span className="swiper-icon">{feature.icon}</span>
 							<h2>{feature.title}</h2>
 							<hr />
 							<ul>
-								{feature.lists.map((list: any, index: number) => (
-									<li key={'feat-list-' + index}>{list}</li>
+								{feature.lists.map((list: any) => (
+									<li key={uuid()}>{list}</li>
 								))}
 							</ul>
 						</div>

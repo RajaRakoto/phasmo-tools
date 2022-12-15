@@ -5,6 +5,7 @@ import { IconContext } from 'react-icons';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import { SlNotebook } from 'react-icons/sl';
 import { RxReset } from 'react-icons/rx';
+import uuid from 'react-uuid';
 
 /* common */
 import { IconRender } from '../common/icons';
@@ -156,7 +157,7 @@ export default function Todo({
 				<div className="todo-list">
 					<ul>
 						{tasks.map((task: any) => (
-							<li key={'todo-' + task.id}>
+							<li key={uuid()}>
 								{
 									<TaskItem
 										task={task}

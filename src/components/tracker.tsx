@@ -13,6 +13,7 @@ import { TbFilePencil } from 'react-icons/tb';
 import { GoSearch } from 'react-icons/go';
 import { BsChatDots } from 'react-icons/bs';
 import { GiPerspectiveDiceSixFacesOne, GiGhost } from 'react-icons/gi';
+import uuid from 'react-uuid';
 
 /* json data */
 import evd from '../data/json/_edvidences.json';
@@ -278,8 +279,8 @@ function TrackerItem({
 								Forces
 							</h3>
 							<ul>
-								{strengths.map((strength, index) => (
-									<li key={'strength-' + index}>{strength}</li>
+								{strengths.map((strength) => (
+									<li key={uuid()}>{strength}</li>
 								))}
 							</ul>
 						</div>
@@ -289,8 +290,8 @@ function TrackerItem({
 								Faiblesses
 							</h3>
 							<ul>
-								{weaknesses.map((weakness, index) => (
-									<li key={'weakness-' + index}>{weakness}</li>
+								{weaknesses.map((weakness) => (
+									<li key={uuid()}>{weakness}</li>
 								))}
 							</ul>
 						</div>
@@ -390,8 +391,8 @@ function TrackerItem({
 					<ProgressBar percent={attackSM} label={'attack SM'} />
 				</div>
 				<ul>
-					{edvidences.map((edvidence, index) => (
-						<li key={'evd-' + index}>{edvidence}</li>
+					{edvidences.map((edvidence) => (
+						<li key={uuid()}>{edvidence}</li>
 					))}
 				</ul>
 			</div>
