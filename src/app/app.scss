@@ -494,15 +494,23 @@ section {
 	}
 
 	&-options {
-		margin-top: 2rem;
-		text-align: center;
+		ul {
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			list-style-type: none;
+			margin-right: 2.5rem;
+		}
 
 		button {
 			@include btn-style($theme: $theme3);
 			margin: 0.35rem;
 		}
 
-		.btn-preset {
+		.btn-preset-toggle {
 			background-color: $theme1;
 		}
 	}

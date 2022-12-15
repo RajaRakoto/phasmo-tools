@@ -155,17 +155,18 @@ export default function Timer() {
 					)}
 				</div>
 				<div className="timer-options">
-					{btnProps.map((btn, index) => (
-						<div key={uuid()}>
-							<button
-								className={btn.status ? 'btn-preset' : ''}
-								onClick={() => handlePresetClick(btn.second)}
-							>
-								{btn.text}
-							</button>
-							{(index % 2) + 1 === 0 && <br />}
-						</div>
-					))}
+					<ul>
+						{btnProps.map((btn) => (
+							<li key={uuid()}>
+								<button
+									className={btn.status ? 'btn-preset-toggle' : ''}
+									onClick={() => handlePresetClick(btn.second)}
+								>
+									{btn.text}
+								</button>
+							</li>
+						))}
+					</ul>
 				</div>
 				<div
 					className="d-flex justify-content-center"
