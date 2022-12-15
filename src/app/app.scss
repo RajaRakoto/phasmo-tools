@@ -58,7 +58,7 @@ nav {
 		align-items: center;
 		justify-content: center;
 		gap: 5rem;
-		width: __convertToRem($value: 62px);
+		width: __convertToRem($value: 72px);
 		height: 90%;
 		padding: 1rem;
 		position: fixed;
@@ -76,6 +76,7 @@ nav {
 		@include position-center($axis: vertical);
 
 		&-btn {
+			text-align: center;
 			background-color: #444;
 			color: #eee;
 			padding: 1rem;
@@ -95,7 +96,6 @@ nav {
 			height: __convertToRem($value: 62px);
 			top: unset;
 			bottom: 0 !important;
-			margin-bottom: 0.3rem;
 			@include position-center($axis: horizontal);
 			gap: 1rem;
 			background: rgb(126, 126, 126);
@@ -109,7 +109,7 @@ nav {
 
 			&-btn {
 				height: 100%;
-				width: __convertToRem($value: 62px);
+				width: __convertToRem($value: 72px);
 			}
 		}
 	}
