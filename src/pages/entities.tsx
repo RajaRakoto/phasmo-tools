@@ -20,9 +20,9 @@ export default function Entities() {
 			<section>
 				<HeaderSection icon={<FaGhost />} title="Entités" />
 				<div className="content">
-					{/* <Todo title="General todo" todoID="todo-general" addInput deleteBtn /> */}
-					{/* <Tracker /> */}
-					{/* <Editor />  */}
+					<Todo title="General todo" todoID="todo-general" addInput deleteBtn />
+					<Tracker />
+					<Editor />
 					<Timer />
 				</div>
 			</section>
