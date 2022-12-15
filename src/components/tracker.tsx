@@ -408,7 +408,7 @@ export default function Tracker() {
 		<React.Fragment>
 			<div id="tracker-link" className="tracker">
 				<div className="tracker-header">
-					<TrackerHeader title="Tracker tools" REDUX={REDUX} />
+					<TrackerHeader title="Tracker" REDUX={REDUX} />
 				</div>
 				<div className="tracker-content">
 					{trackerStore.map((item: any) => (

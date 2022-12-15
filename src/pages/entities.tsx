@@ -22,21 +22,21 @@ export default function Entities() {
 			<section>
 				<FloatNav>
 					<a href="#note-link">
-						<button className="float-nav-btn">note</button>
+						<button className="float-nav-btn">Note</button>
 					</a>
 					<a href="#todo-link">
-						<button className="float-nav-btn">todo</button>
+						<button className="float-nav-btn">Todo</button>
 					</a>
 					<a href="#tracker-link">
-						<button className="float-nav-btn">tracker</button>
+						<button className="float-nav-btn">Tracker</button>
 					</a>
 					<a href="#timer-link">
-						<button className="float-nav-btn">timer</button>
+						<button className="float-nav-btn">Timer</button>
 					</a>
 				</FloatNav>
 				<HeaderSection icon={<FaGhost />} title="Entités" />
 				<div className="content">
-					<Todo title="General todo" todoID="todo-general" addInput deleteBtn />
+					<Todo title="Todo" todoID="todo-general" addInput deleteBtn />
 					<Tracker />
 					<Note />
 					<Timer />

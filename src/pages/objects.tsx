@@ -16,7 +16,7 @@ export default function Objects() {
 			<section>
 				<FloatNav>
 					<a href="#lorem-link">
-						<button className="float-nav-btn">lorem</button>
+						<button className="float-nav-btn">Lorem</button>
 					</a>
 				</FloatNav>
 				<HeaderSection icon={<FaObjectGroup />} title="Objets" />
