@@ -13,6 +13,7 @@ import Todo from '../components/todo';
 import Tracker from '../components/tracker';
 import Note from '../components/note';
 import Timer from '../components/timer';
+import Questions from '../components/questions';
 
 /* extras */
 import Chrono from '../extras/chrono/chrono';
@@ -39,6 +40,9 @@ export default function Entities() {
 					<a href="#chrono-link">
 						<button className="float-nav-btn">Chrono</button>
 					</a>
+					<a href="#questions-link">
+						<button className="float-nav-btn">Questions</button>
+					</a>
 				</FloatNav>
 				<HeaderSection icon={<FaGhost />} title="Entités" />
 				<div className="content">
@@ -47,6 +51,7 @@ export default function Entities() {
 					<Chrono />
 					<Tracker />
 					<Note />
+					<Questions />
 				</div>
 			</section>
 			<ScrollUp />
