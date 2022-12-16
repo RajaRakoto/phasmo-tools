@@ -43,13 +43,15 @@ import store from '../data/store';
 // ================================================
 
 function EvdButton({
-	status,
+	status_include,
+	status_exclude,
 	callback,
 	icon,
 	notif,
 	notation,
 }: {
-	status: boolean;
+	status_include: boolean;
+	status_exclude: boolean;
 	callback: any;
 	icon: any;
 	notif: string;
@@ -60,7 +62,13 @@ function EvdButton({
 	return (
 		<>
 			<button
-				className={status ? 'notify btn-clicked' : 'notify'}
+				className={
+					status_include
+						? 'notify btn-clicked-include'
+						: status_exclude
+						? 'notify btn-clicked-exclude'
+						: 'notify'
+				}
 				onMouseOver={() => setShowNotify(true)}
 				onMouseOut={() => setShowNotify(false)}
 				onClick={callback}
@@ -97,19 +105,28 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 
 	// reset edvidences state to default and reset store
 	const handleReset = () => {
+		localStorage.removeItem('tracker__edvidences');
 		setEdvidences(evd);
 		REDUX(reset__tracker());
 	};
 
-	// active edvidence getter from edvidences state
-	const getActiveEdvidence = () => {
-		const clicked = edvidences.filter(item => item.isClicked === true);
+	// exclude edvidence getter from edvidences state
+	const getExcludeEdvidence = () => {
+		const clicked = edvidences.filter(item => item.isClicked_exclude === true);
+		return clicked.map(item => item.id);
+	};
+
+	// include edvidence getter from edvidences state
+	const getIncludeEdvidence = () => {
+		const clicked = edvidences.filter(item => item.isClicked_include === true);
 		return clicked.map(item => item.id);
 	};
 
 	// update tracker store when edvidences state change
 	useEffect(() => {
-		REDUX(filter__tracker(getActiveEdvidence()));
+		// REDUX(filter__tracker(getIncludeEdvidence()));
+		console.log('EXLCUDE -> ' + getExcludeEdvidence());
+		console.log('INCLUDE -> ' + getIncludeEdvidence());
 	}, [edvidences]);
 
 	// update edvidences state when click on button
@@ -117,10 +134,25 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 		setEdvidences(
 			edvidences.map(item => {
 				if (item.id === id) {
-					return {
-						...item,
-						isClicked: !item.isClicked,
-					};
+					if (item.isClicked_include) {
+						return {
+							...item,
+							isClicked_include: false,
+							isClicked_exclude: true,
+						};
+					} else if (item.isClicked_exclude) {
+						return {
+							...item,
+							isClicked_include: false,
+							isClicked_exclude: false,
+						};
+					} else {
+						return {
+							...item,
+							isClicked_include: true,
+							isClicked_exclude: false,
+						};
+					}
 				}
 				return item;
 			}),
@@ -139,49 +171,56 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 			<hr />
 			<div className="evd-btn">
 				<EvdButton
-					status={edvidences[0].isClicked}
+					status_include={edvidences[0].isClicked_include}
+					status_exclude={edvidences[0].isClicked_exclude}
 					callback={() => handleClick(edvidences[0].id)}
 					icon={closedbook_icon}
 					notif={edvidences[0].name}
 					notation={'1'}
 				/>
 				<EvdButton
-					status={edvidences[1].isClicked}
+					status_include={edvidences[1].isClicked_include}
+					status_exclude={edvidences[1].isClicked_exclude}
 					callback={() => handleClick(edvidences[1].id)}
 					icon={dots_icon}
 					notif={edvidences[1].name}
 					notation={'2'}
 				/>
 				<EvdButton
-					status={edvidences[2].isClicked}
+					status_include={edvidences[2].isClicked_include}
+					status_exclude={edvidences[2].isClicked_exclude}
 					callback={() => handleClick(edvidences[2].id)}
 					icon={emf_icon}
 					notif={edvidences[2].name}
 					notation={'3'}
 				/>
 				<EvdButton
-					status={edvidences[3].isClicked}
+					status_include={edvidences[3].isClicked_include}
+					status_exclude={edvidences[3].isClicked_exclude}
 					callback={() => handleClick(edvidences[3].id)}
 					icon={fingerprint_icon}
 					notif={edvidences[3].name}
 					notation={'4'}
 				/>
 				<EvdButton
-					status={edvidences[4].isClicked}
+					status_include={edvidences[4].isClicked_include}
+					status_exclude={edvidences[4].isClicked_exclude}
 					callback={() => handleClick(edvidences[4].id)}
 					icon={orb_icon}
 					notif={edvidences[4].name}
 					notation={'5'}
 				/>
 				<EvdButton
-					status={edvidences[5].isClicked}
+					status_include={edvidences[5].isClicked_include}
+					status_exclude={edvidences[5].isClicked_exclude}
 					callback={() => handleClick(edvidences[5].id)}
 					icon={spiritbox_icon}
 					notif={edvidences[5].name}
 					notation={'6'}
 				/>
 				<EvdButton
-					status={edvidences[6].isClicked}
+					status_include={edvidences[6].isClicked_include}
+					status_exclude={edvidences[6].isClicked_exclude}
 					callback={() => handleClick(edvidences[6].id)}
 					icon={thermometer_icon}
 					notif={edvidences[6].name}
