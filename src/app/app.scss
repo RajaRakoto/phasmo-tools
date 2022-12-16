@@ -621,26 +621,38 @@ section {
 }
 
 /* swal styles */
-.swal2-popup {
-	background-color: rgba(68, 68, 68, 0.96) !important;
-	width: fit-content !important;
-	min-width: __convertToRem($value: 222px) !important;
-	max-width: __convertToRem($value: 1000px) !important;
-	animation-duration: 0.4s !important;
+.swal2 {
+	&-popup {
+		background-color: rgba(68, 68, 68, 0.96) !important;
+		width: fit-content !important;
+		min-width: __convertToRem($value: 222px) !important;
+		max-width: __convertToRem($value: 1000px) !important;
+		animation-duration: 0.4s !important;
 
-	ul {
-		li {
-			width: 100%;
+		ul {
+			li {
+				width: 100%;
+			}
 		}
+	}
+
+	&-title {
+		color: $theme1 !important;
+	}
+
+	&-confirm {
+		display: none !important;
 	}
 }
 
-.swal2-title {
-	color: $theme1 !important;
-}
+.swal--anim {
+	&-show {
+		@include animation-zoom($in-out: in);
+	}
 
-.swal2-confirm {
-	display: none !important;
+	&-hide {
+		@include animation-zoom($in-out: out);
+	}
 }
 
 body.swal2-shown > [aria-hidden='true'] {
@@ -648,10 +660,66 @@ body.swal2-shown > [aria-hidden='true'] {
 	filter: blur(10px);
 }
 
-.swal--anim-show {
-	@include animation-zoom($in-out: in);
-}
+/* chrono styles (extras) */
+.chrono {
+	@include box-props();
+	padding: 2rem;
+	margin: 2rem;
 
-.swal--anim-hide {
-	@include animation-zoom($in-out: out);
+	h3 {
+		font-size: __convertToRem($value: 20px);
+	}
+
+	.stopwatch {
+		@include position-flex-center();
+		flex-direction: column;
+		text-align: center;
+
+		button {
+			@include btn-style($theme: $theme1);
+			margin: 0.35rem;
+			padding: 0.5rem;
+			background-color: #696969;
+		}
+
+		&__display {
+			font-size: 30px;
+			border: solid 10px $theme1;
+			border-radius: 100%;
+			padding: 1rem;
+			margin: 1.5rem;
+			max-width: __convertToRem($value: 150px);
+		}
+
+		&__history {
+			font-size: larger;
+			font-weight: bolder;
+
+			button {
+				&:hover {
+					background-color: $theme1;
+				}
+			}
+		}
+	}
+
+	ul {
+		margin-top: __convertToRem($value: 20px);
+		list-style-type: none;
+		padding: 0;
+		max-height: __convertToRem($value: 100px);
+		overflow-y: scroll;
+		border: solid 2px $theme1;
+		border-radius: 10px;
+	}
+
+	li {
+		padding: 5px;
+		border-bottom: 1px solid #b66646;
+		font-size: __convertToRem($value: 21px);
+	}
+
+	li:last-child {
+		display: none;
+	}
 }
