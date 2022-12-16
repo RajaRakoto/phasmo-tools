@@ -43,13 +43,13 @@ import store from '../data/store';
 // ================================================
 
 function EvdButton({
-	isClickedState,
+	status,
 	callback,
 	icon,
 	notif,
 	notation,
 }: {
-	isClickedState: boolean;
+	status: boolean;
 	callback: any;
 	icon: any;
 	notif: string;
@@ -60,7 +60,7 @@ function EvdButton({
 	return (
 		<>
 			<button
-				className={isClickedState ? 'notify btn-clicked' : 'notify'}
+				className={status ? 'notify btn-clicked' : 'notify'}
 				onMouseOver={() => setShowNotify(true)}
 				onMouseOut={() => setShowNotify(false)}
 				onClick={callback}
@@ -79,47 +79,47 @@ function EvdButton({
 }
 
 function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
-	// get local storage and set it to isClicked state
-	const [isClicked, setIsClicked] = useState(evd);
-	const local = JSON.parse(localStorage.getItem('tracker__isclicked')!);
+	// get local storage and set it to edvidences state
+	const [edvidences, setEdvidences] = useState(evd);
+	const local = JSON.parse(localStorage.getItem('tracker__edvidences')!);
 
-	// set local storage to isClicked state
+	// set local storage to edvidences state
 	useEffect(() => {
-		localStorage.setItem('tracker__isclicked', JSON.stringify(isClicked));
-	}, [isClicked]);
+		localStorage.setItem('tracker__edvidences', JSON.stringify(edvidences));
+	}, [edvidences]);
 
-	// get local storage and set it to isClicked state if component mount
+	// get local storage and set it to edvidences state if component mount
 	useEffect(() => {
 		if (local) {
-			setIsClicked(local);
+			setEdvidences(local);
 		}
 	}, []);
 
-	// reset isClicked state to default and reset store
+	// reset edvidences state to default and reset store
 	const handleReset = () => {
-		setIsClicked(evd);
+		setEdvidences(evd);
 		REDUX(reset__tracker());
 	};
 
-	// active edvidence getter from isClicked state
+	// active edvidence getter from edvidences state
 	const getActiveEdvidence = () => {
-		const clicked = isClicked.filter(item => item.status === true);
+		const clicked = edvidences.filter(item => item.isClicked === true);
 		return clicked.map(item => item.id);
 	};
 
-	// update tracker store when isClicked state change
+	// update tracker store when edvidences state change
 	useEffect(() => {
 		REDUX(filter__tracker(getActiveEdvidence()));
-	}, [isClicked]);
+	}, [edvidences]);
 
-	// update isClicked state when click on button
+	// update edvidences state when click on button
 	const handleClick = (id: string) => {
-		setIsClicked(
-			isClicked.map(item => {
+		setEdvidences(
+			edvidences.map(item => {
 				if (item.id === id) {
 					return {
 						...item,
-						status: !item.status,
+						isClicked: !item.isClicked,
 					};
 				}
 				return item;
@@ -139,52 +139,52 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 			<hr />
 			<div className="evd-btn">
 				<EvdButton
-					isClickedState={isClicked[0].status}
-					callback={() => handleClick('evd1')}
+					status={edvidences[0].isClicked}
+					callback={() => handleClick(edvidences[0].id)}
 					icon={closedbook_icon}
-					notif={'Ecriture fantômatique'}
+					notif={edvidences[0].name}
 					notation={'1'}
 				/>
 				<EvdButton
-					isClickedState={isClicked[1].status}
-					callback={() => handleClick('evd2')}
+					status={edvidences[1].isClicked}
+					callback={() => handleClick(edvidences[1].id)}
 					icon={dots_icon}
-					notif={'Projecteur D.O.T.S'}
+					notif={edvidences[1].name}
 					notation={'2'}
 				/>
 				<EvdButton
-					isClickedState={isClicked[2].status}
-					callback={() => handleClick('evd3')}
+					status={edvidences[2].isClicked}
+					callback={() => handleClick(edvidences[2].id)}
 					icon={emf_icon}
-					notif={'EMF 5'}
+					notif={edvidences[2].name}
 					notation={'3'}
 				/>
 				<EvdButton
-					isClickedState={isClicked[3].status}
-					callback={() => handleClick('evd4')}
+					status={edvidences[3].isClicked}
+					callback={() => handleClick(edvidences[3].id)}
 					icon={fingerprint_icon}
-					notif={'Empreinte digitale'}
+					notif={edvidences[3].name}
 					notation={'4'}
 				/>
 				<EvdButton
-					isClickedState={isClicked[4].status}
-					callback={() => handleClick('evd5')}
+					status={edvidences[4].isClicked}
+					callback={() => handleClick(edvidences[4].id)}
 					icon={orb_icon}
-					notif={'Orbe'}
+					notif={edvidences[4].name}
 					notation={'5'}
 				/>
 				<EvdButton
-					isClickedState={isClicked[5].status}
-					callback={() => handleClick('evd6')}
+					status={edvidences[5].isClicked}
+					callback={() => handleClick(edvidences[5].id)}
 					icon={spiritbox_icon}
-					notif={'Spirit Box'}
+					notif={edvidences[5].name}
 					notation={'6'}
 				/>
 				<EvdButton
-					isClickedState={isClicked[6].status}
-					callback={() => handleClick('evd7')}
+					status={edvidences[6].isClicked}
+					callback={() => handleClick(edvidences[6].id)}
 					icon={thermometer_icon}
-					notif={'Température glaciale'}
+					notif={edvidences[6].name}
 					notation={'7'}
 				/>
 			</div>
