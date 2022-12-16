@@ -274,6 +274,10 @@ section {
 		min-width: __convertToRem($value: 215px);
 		padding: 1rem;
 
+		svg {
+			margin-top: -3rem;
+		}
+
 		h2 {
 			font-size: __convertToRem($value: 23px);
 			text-align: center;
@@ -700,6 +704,10 @@ section {
 		@include position-flex-center();
 		flex-direction: column;
 		text-align: center;
+
+		svg {
+			margin-top: -3rem;
+		}
 
 		h2 {
 			font-size: __convertToRem($value: 30px);
