@@ -2,36 +2,43 @@
 	{
 		"id": "evd1",
 		"name": "Ecriture fantômatique",
-		"isClicked": false
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd2",
 		"name": "D.O.T.S",
-		"isClicked": false
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd3",
 		"name": "EMF 5",
-		"isClicked": false
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd4",
 		"name": "Empreintes Digitales",
-		"isClicked": false
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd5",
 		"name": "Orbe",
-		"isClicked": false
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd6",
 		"name": "Spirit Box",
-		"isClicked": false
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd7",
 		"name": "Température glaciale",
-		"isClicked": false
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	}
 ]

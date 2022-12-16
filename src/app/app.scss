@@ -299,8 +299,12 @@ section {
 				}
 			}
 
-			.btn-clicked {
-				background-color: $theme1;
+			.btn-clicked-include {
+				background-color: #46b678;
+			}
+
+			.btn-clicked-exclude {
+				background-color: #b66646;
 			}
 		}
 	}
