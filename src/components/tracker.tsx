@@ -124,9 +124,7 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 
 	// update tracker store when edvidences state change
 	useEffect(() => {
-		// REDUX(filter__tracker(getIncludeEdvidence()));
-		console.log('EXLCUDE -> ' + getExcludeEdvidence());
-		console.log('INCLUDE -> ' + getIncludeEdvidence());
+		REDUX(filter__tracker([getIncludeEdvidence(), getExcludeEdvidence()]));
 	}, [edvidences]);
 
 	// update edvidences state when click on button
