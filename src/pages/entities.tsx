@@ -14,6 +14,9 @@ import Tracker from '../components/tracker';
 import Note from '../components/note';
 import Timer from '../components/timer';
 
+/* extras */
+import Chrono from '../extras/chrono/chrono';
+
 // ================================================
 
 export default function Entities() {
@@ -22,7 +25,7 @@ export default function Entities() {
 			<section>
 				<FloatNav>
 					<a href="#note-link">
-						<button className="float-nav-btn">Note</button>
+						<button className="float-nav-btn">Notes</button>
 					</a>
 					<a href="#todo-link">
 						<button className="float-nav-btn">Todo</button>
@@ -33,6 +36,9 @@ export default function Entities() {
 					<a href="#timer-link">
 						<button className="float-nav-btn">Timer</button>
 					</a>
+					<a href="#chrono-link">
+						<button className="float-nav-btn">Chrono</button>
+					</a>
 				</FloatNav>
 				<HeaderSection icon={<FaGhost />} title="Entités" />
 				<div className="content">
@@ -40,6 +46,7 @@ export default function Entities() {
 					<Tracker />
 					<Note />
 					<Timer />
+					<Chrono />
 				</div>
 			</section>
 			<ScrollUp />
