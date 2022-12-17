@@ -586,8 +586,9 @@ section {
 			font-size: 30px;
 			border: solid 10px $theme1;
 			border-radius: 100%;
-			padding: 1rem;
+			padding: 2rem;
 			margin: 1.5rem;
+			min-width: __convertToRem($value: 150px);
 			max-width: __convertToRem($value: 150px);
 		}
 
