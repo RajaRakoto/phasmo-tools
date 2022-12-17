@@ -1,0 +1,5 @@
+[
+	{ "text": "10s", "second": 10, "status": false },
+	{ "text": "20s", "second": 20, "status": false },
+	{ "text": "30s", "second": 30, "status": false }
+]

@@ -21,6 +21,11 @@
 	font-size: __convertToRem($value: 16px);
 }
 
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 html {
 	background: linear-gradient(
 			0deg,
@@ -64,4 +69,13 @@ h4,
 h5,
 h6 {
 	color: $theme1;
+}
+
+/* scrollup styles */
+.sc-dkrFOg,
+.buoFnq {
+	svg {
+		font-size: __convertToRem($value: 35px) !important;
+		color: $theme1 !important;
+	}
 }

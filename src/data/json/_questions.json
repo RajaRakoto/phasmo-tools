@@ -1,0 +1,56 @@
+[
+	{
+		"title": "ÂGE",
+		"lists": [
+			"Quel âge-avez vous ?",
+			"Êtes-vous jeune ?",
+			"Êtes-vous âgé ?",
+			"Êtes-vous un enfant ?",
+			"Quand êtes-vous né ?"
+		],
+		"responses": ["Old", "Child", "Kid", "Adult"]
+	},
+	{
+		"title": "ÉTAT D'ESPRIT",
+		"lists": [
+			"Qu'est-ce que vous voulez ?",
+			"Pourquoi êtes vous ici ?",
+			"Êtes-vous fâché ?",
+			"Êtes-vous méchant ?",
+			"Voulez-vous nous faire du mal ?",
+			"Voulez-vous qu'on parte ?",
+			"Nous voulez-vous ici ?",
+			"Pouvons-nous aider ?",
+			"Quelque chose ne va pas ?"
+		],
+		"responses": [
+			"Attack",
+			"Catch",
+			"Kill",
+			"Death",
+			"Die",
+			"Hate",
+			"Hurt",
+			"Leave"
+		]
+	},
+	{
+		"title": "EMPLACEMENT",
+		"lists": [
+			"Où êtes-vous ?",
+			"Êtes-vous proche ?",
+			"Pouvez-vous vous montrer ?",
+			"Pouvez-vous parler ?",
+			"Êtes-vous là ?",
+			"Quelqu'un est là ? / Quelqu'un est-il dans la pièce ?",
+			"Y-a-t-il un esprit/fantôme ici ?",
+			"Quel est votre emplacement ?",
+			"Donne-nous un signe / Faite nous un signe",
+			"Parlez-nous"
+		],
+		"responses": [
+			"Dans la meme pièce: Behind, Close, Here",
+			"Dans la piece d'a coté: Next, Awaym, Far"
+		]
+	}
+]

@@ -1,37 +1,44 @@
 [
 	{
 		"id": "evd1",
-		"name": "D.O.T.S",
-		"status": false
+		"name": "Ecriture fantômatique",
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd2",
-		"name": "EMF 5",
-		"status": false
+		"name": "D.O.T.S",
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd3",
-		"name": "Empreintes Digitales",
-		"status": false
+		"name": "EMF 5",
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd4",
-		"name": "Température glaciale",
-		"status": false
+		"name": "Empreintes Digitales",
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd5",
 		"name": "Orbe",
-		"status": false
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd6",
-		"name": "Ecriture fantômatique",
-		"status": false
+		"name": "Spirit Box",
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	},
 	{
 		"id": "evd7",
-		"name": "Spirit Box",
-		"status": false
+		"name": "Température glaciale",
+		"isClicked_include": false,
+		"isClicked_exclude": false
 	}
 ]
