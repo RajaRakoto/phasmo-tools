@@ -3,8 +3,8 @@ import React, { useState, useRef, useEffect } from 'react';
 /* libs */
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import { RxReset } from 'react-icons/rx';
-import uuid from 'react-uuid';
 import { TfiTimer } from 'react-icons/tfi';
+import uuid from 'react-uuid';
 
 /* common */
 import { IconRender } from '../common/icons';
