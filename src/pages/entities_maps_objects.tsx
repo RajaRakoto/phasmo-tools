@@ -7,7 +7,7 @@ import FloatNav from '../common/floatnav';
 
 /* libs */
 import { FaGhost } from 'react-icons/fa';
-import { FaObjectGroup } from 'react-icons/fa';
+import { FaObjectGroup, FaMapMarkerAlt } from 'react-icons/fa';
 
 /* components */
 import Generals from '../components/generals';
@@ -22,7 +22,7 @@ import Chrono from '../extras/chrono/chrono';
 
 // ================================================
 
-export default function Entities_Objects() {
+export default function Entities_Maps_Objects() {
 	return (
 		<React.Fragment>
 			<FloatNav>
@@ -77,6 +77,17 @@ export default function Entities_Objects() {
 				</div>
 			</section>
 			<section>
+				<HeaderSection icon={FaMapMarkerAlt} title="Maps" />
+				<div className="content">
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
+						voluptas numquam odit non ducimus nisi iusto. Est excepturi, ad,
+						nemo sit doloribus voluptatem cumque quis, repudiandae aliquam amet
+						et architecto!
+					</p>
+				</div>
+			</section>
+			{/* <section>
 				<HeaderSection icon={<FaObjectGroup />} title="Objets" />
 				<div className="content">
 					<p>
@@ -86,7 +97,7 @@ export default function Entities_Objects() {
 						ipsa blanditiis distinctio?
 					</p>
 				</div>
-			</section>
+			</section> */}
 			<ScrollUp />
 		</React.Fragment>
 	);
