@@ -43,6 +43,20 @@ export default function Entities_Objects() {
 				<a href="#questions-link">
 					<button className="float-nav-btn">Questions</button>
 				</a>
+				<hr />
+				<a href="#">
+					<button className="float-nav-btn">N/A</button>
+				</a>
+				<a href="#">
+					<button className="float-nav-btn">N/A</button>
+				</a>
+				<a href="#">
+					<button className="float-nav-btn">N/A</button>
+				</a>
+				<hr />
+				<a href="#">
+					<button className="float-nav-btn">N/A</button>
+				</a>
 			</FloatNav>
 			<section>
 				<HeaderSection icon={<FaGhost />} title="Entités" />
