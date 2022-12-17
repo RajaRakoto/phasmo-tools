@@ -16,9 +16,9 @@ nav {
 	@include position-flex-center();
 	margin-left: 7.2rem;
 	margin-right: 2rem;
+	margin-top: -1.95rem;
 
 	ul {
-		@include box-props();
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
@@ -28,20 +28,32 @@ nav {
 		max-width: max-content;
 		height: min-content;
 		padding: 2rem;
+		padding-bottom: 1rem;
+		background: rgb(126, 126, 126);
+		background: linear-gradient(
+			180deg,
+			rgba(126, 126, 126, 1) 0%,
+			rgba(65, 65, 65, 1) 0%,
+			rgba(78, 78, 78, 1) 56%,
+			rgba(102, 102, 102, 1) 100%
+		);
+		border-radius: 20px;
 
 		li {
-			button {
-				background-color: $theme3;
-				padding: 0.5rem 1rem;
-				border-radius: 10px;
-				border: none;
-				transition: 0.2s;
-				margin: 1rem;
-				border: solid $theme1 3px;
+			margin: 0.5rem;
 
-				a {
-					text-decoration: none;
-				}
+			a {
+				text-decoration: none;
+			}
+
+			button {
+				text-align: center;
+				background-color: #444;
+				color: #eee;
+				padding: 0.5rem;
+				width: 100%;
+				height: __convertToRem($value: 52px);
+				border-radius: 10px;
 
 				&:hover {
 					background-color: $theme1;
@@ -62,7 +74,6 @@ nav {
 /* float nav styles */
 .float {
 	&-nav {
-		@include box-props();
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -78,6 +89,8 @@ nav {
 		left: 0;
 		z-index: 1 !important;
 		background: rgb(126, 126, 126);
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
 		background: linear-gradient(
 			90deg,
 			rgba(126, 126, 126, 1) 0%,
@@ -125,6 +138,8 @@ nav {
 			@include position-center($axis: horizontal);
 			gap: 0.7rem;
 			background: rgb(126, 126, 126);
+			border-top-right-radius: 0px;
+			border-top-left-radius: 10px;
 			background: linear-gradient(
 				0deg,
 				rgba(126, 126, 126, 1) 0%,
