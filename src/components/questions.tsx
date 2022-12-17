@@ -35,42 +35,44 @@ export default function Questions() {
 					</h2>
 					<hr />
 				</div>
-				<div className="questions-content">
-					<Accordion allowMultipleExpanded={true} preExpanded={['fix']}>
-						<div style={{ display: 'none' }}>
-							<AccordionItem uuid={'fix'}>
-								<AccordionItemHeading>
-									<AccordionItemButton>
+				<div className="overflow-fix">
+					<div className="questions-content">
+						<Accordion allowMultipleExpanded={true} preExpanded={['fix']}>
+							<div style={{ display: 'none' }}>
+								<AccordionItem uuid={'fix'}>
+									<AccordionItemHeading>
+										<AccordionItemButton>
+											<span></span>
+										</AccordionItemButton>
+									</AccordionItemHeading>
+									<AccordionItemPanel>
 										<span></span>
-									</AccordionItemButton>
-								</AccordionItemHeading>
-								<AccordionItemPanel>
-									<span></span>
-								</AccordionItemPanel>
-							</AccordionItem>
-						</div>
-						{questions.map(question => (
-							<AccordionItem key={uuid()}>
-								<AccordionItemHeading>
-									<AccordionItemButton>{question.title}</AccordionItemButton>
-								</AccordionItemHeading>
-								<AccordionItemPanel>
-									<h3>Question possibles </h3>
-									<ul>
-										{question.lists.map(list => (
-											<li key={uuid()}>{list}</li>
-										))}
-									</ul>
-									<h3>Reponses possibles </h3>
-									<ul>
-										{question.responses.map(response => (
-											<li key={uuid()}>{response}</li>
-										))}
-									</ul>
-								</AccordionItemPanel>
-							</AccordionItem>
-						))}
-					</Accordion>
+									</AccordionItemPanel>
+								</AccordionItem>
+							</div>
+							{questions.map(question => (
+								<AccordionItem key={uuid()}>
+									<AccordionItemHeading>
+										<AccordionItemButton>{question.title}</AccordionItemButton>
+									</AccordionItemHeading>
+									<AccordionItemPanel>
+										<h3>Question possibles </h3>
+										<ul>
+											{question.lists.map(list => (
+												<li key={uuid()}>{list}</li>
+											))}
+										</ul>
+										<h3>Reponses possibles </h3>
+										<ul>
+											{question.responses.map(response => (
+												<li key={uuid()}>{response}</li>
+											))}
+										</ul>
+									</AccordionItemPanel>
+								</AccordionItem>
+							))}
+						</Accordion>
+					</div>{' '}
 				</div>
 			</div>
 		</React.Fragment>

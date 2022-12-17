@@ -191,10 +191,14 @@ section {
 	}
 
 	ul {
-		@include position-flex-center();
 		font-size: __convertToRem($value: 12px) !important;
 		flex-direction: column;
 		list-style-type: none;
+		max-height: __convertToRem($value: 200px);
+		overflow-y: scroll;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
 
 		li {
 			border: solid #eee 1px;
@@ -321,6 +325,9 @@ section {
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+		box-sizing: border-box;
+		max-height: __convertToRem($value: 500px);
+		overflow-y: scroll;
 
 		.item {
 			border: solid #eee 1px;
@@ -703,6 +710,13 @@ section {
 	width: auto;
 	min-width: __convertToRem($value: 400px);
 
+	.overflow-fix {
+		max-height: __convertToRem($value: 400px);
+		box-sizing: border-box;
+		overflow-y: scroll;
+		padding-right: 1rem;
+	}
+
 	&-header {
 		@include position-flex-center();
 		flex-direction: column;
@@ -722,9 +736,11 @@ section {
 	}
 
 	&-content {
+		width: __convertToRem($value: 430px);
+
 		.accordion {
 			border-radius: 10px;
-			max-width: __convertToRem($value: 350px);
+			max-width: __convertToRem($value: 370px);
 
 			h3 {
 				font-size: __convertToRem($value: 20px);
