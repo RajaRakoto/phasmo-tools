@@ -35,7 +35,7 @@ import spiritbox_icon from '../assets/icons/spiritbox_icon.png';
 import thermometer_icon from '../assets/icons/thermometer_icon.png';
 
 /* components */
-import Todo from '../components/todo';
+import Todo from './todo';
 
 /* store */
 import store from '../data/store';
