@@ -57,10 +57,10 @@ nav {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 5rem;
+		gap: 2rem;
 		width: __convertToRem($value: 72px);
 		height: 90%;
-		padding: 1rem;
+		padding: 2rem;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -91,8 +91,8 @@ nav {
 
 		@include breakpoint(max, 1157px) {
 			flex-direction: row;
-			width: 50%;
-			min-width: __convertToRem($value: 331px);
+			width: 70%;
+			min-width: __convertToRem($value: 700px);
 			height: __convertToRem($value: 62px);
 			top: unset;
 			bottom: 0 !important;
@@ -109,7 +109,7 @@ nav {
 
 			&-btn {
 				height: 100%;
-				width: __convertToRem($value: 72px);
+				width: auto;
 			}
 		}
 	}
@@ -167,9 +167,11 @@ section {
 		align-items: center;
 		flex-wrap: wrap;
 		padding: 3rem;
+		margin-left: 8rem;
 
 		@include breakpoint(max, 1159px) {
 			padding-bottom: 10rem;
+			margin-left: unset;
 		}
 	}
 }

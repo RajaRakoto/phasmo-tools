@@ -50,8 +50,10 @@ export default function Entities() {
 					<Timer />
 					<Chrono />
 					<Tracker />
-					<Note />
-					<Questions />
+					<div>
+						<Note />
+						<Questions />
+					</div>
 				</div>
 			</section>
 			<ScrollUp />
