@@ -10,6 +10,7 @@ import { FaGhost } from 'react-icons/fa';
 import { FaObjectGroup } from 'react-icons/fa';
 
 /* components */
+import General from '../components/general';
 import Todo from '../components/todo';
 import Tracker from '../components/tracker';
 import Note from '../components/note';
@@ -25,6 +26,9 @@ export default function Entities_Objects() {
 	return (
 		<React.Fragment>
 			<FloatNav>
+				<a href="#general-link">
+					<button className="float-nav-btn">Généralité</button>
+				</a>
 				<a href="#note-link">
 					<button className="float-nav-btn">Notes</button>
 				</a>
@@ -61,6 +65,7 @@ export default function Entities_Objects() {
 			<section>
 				<HeaderSection icon={<FaGhost />} title="Entités" />
 				<div className="content">
+					<General />
 					<Todo title="Todo" todoID="todo-general" addInput deleteBtn />
 					<Timer />
 					<Chrono />

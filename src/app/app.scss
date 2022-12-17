@@ -223,6 +223,24 @@ section {
 	}
 }
 
+/* general styles */
+.general {
+	@include box-props();
+	width: 100%;
+	height: auto;
+	padding: 1.5rem;
+	margin-left: 1.5rem;
+
+	&-header {
+		@include position-flex-center();
+		margin-left: 1.3rem;
+		flex-direction: column;
+	}
+
+	&-content {
+	}
+}
+
 /* todo styles */
 .todo {
 	@include box-props();
