@@ -19,8 +19,8 @@ import 'swiper/css';
 import 'swiper/css/effect-creative';
 
 /* pages */
-import Entities from '../pages/entities';
-import Objects from '../pages/objects';
+import Entities_Objects from '../pages/entities_objects';
+import Report from '../pages/report';
 
 // ================================================
 
@@ -83,12 +83,12 @@ function Navbar() {
 				<ul>
 					<li>
 						<button>
-							<Link to="entities">Entités</Link>
+							<Link to="entities_objects">Entités & Objets</Link>
 						</button>
 					</li>
 					<li>
 						<button>
-							<Link to="objects">Objets</Link>
+							<Link to="report">Report</Link>
 						</button>
 					</li>
 				</ul>
@@ -123,9 +123,9 @@ export default function App() {
 				<BrowserRouter>
 					<Routes>
 						<Route path="/" element={<Navbar />}>
-							<Route index element={<Entities />} />
-							<Route path="entities" element={<Entities />} />
-							<Route path="objects" element={<Objects />} />
+							<Route index element={<Entities_Objects />} />
+							<Route path="entities_objects" element={<Entities_Objects />} />
+							<Route path="report" element={<Report />} />
 						</Route>
 					</Routes>
 				</BrowserRouter>
