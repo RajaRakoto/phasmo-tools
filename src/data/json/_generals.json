@@ -89,7 +89,7 @@
 		"post": "Après avoir choisi un état autre que Idle, l’entité est forcée à revenir dans l’état Idle dès que son action est terminée. Occasionnellement, l’entité émettra un son paranormal audible avec le microphone parabolique. Le Myling sera plus enclin à en faire, tandis que la Banshee aura son propre cri."
 	},
 	{
-		"title": "En-chasse",
+		"title": "En chasse",
 		"description": "L’entité ne peut pas chasser durant la phase d’introduction, qui est une phase de préparation à l’enquête. Ce temps est de 5mn en amateur, 2mn en intermédiaire, tandis qu’il est de 0s en Professionnel et en Cauchemar. Durant la chasse, les objets électroniques et les lumières de bâtiment dysfonctionnent à 10 mètres de l’entité au même étage, et les bruits de pas de l’entité sont audibles à 20 mètres de l’entité. Tout contact avec l’entité tuera le joueur ! La chasse dure entre 20 et 60 secondes selon les paramètres de la partie, et d’un facteur aléatoire. En difficulté Cauchemar ou si la personnalisation de la partie l’autorise, l’entité peut continuer de chasser avec un temps accru après avoir tué un joueur, sinon la chasse prend fin à la mort d’un des joueurs, peu importe le temps de chasse restant. Lors du déclenchement de la chasse, l’entité suit trois étapes :",
 		"lists": [
 			{
