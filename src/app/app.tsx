@@ -116,7 +116,7 @@ export default function App() {
 	return (
 		<React.Fragment>
 			{bannerVisibility ? (
-				<div id="banner">
+				<div className="banner">
 					<Banner enterBtn={<EnterBtn />} />
 				</div>
 			) : (
