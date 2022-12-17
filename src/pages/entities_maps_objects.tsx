@@ -66,18 +66,20 @@ export default function Entities_Maps_Objects() {
 				<HeaderSection icon={<FaGhost />} title="Entités" />
 				<div className="content">
 					<Generals />
-					<Todo title="Todo" todoID="todo-general" addInput deleteBtn />
-					<Timer />
-					<Chrono />
+					<div className="d-flex flex-row flex-wrap align-content-center justify-content-center">
+						<Todo title="Todo" todoID="todo-general" addInput deleteBtn />
+						<Timer />
+						<Chrono />
+					</div>
 					<Tracker />
-					<div>
+					<div className="d-flex flex-row flex-wrap align-content-center justify-content-center">
 						<Note />
 						<Questions />
 					</div>
 				</div>
 			</section>
 			<section>
-				<HeaderSection icon={FaMapMarkerAlt} title="Maps" />
+				<HeaderSection icon={<FaObjectGroup />} title="Maps" />
 				<div className="content">
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
