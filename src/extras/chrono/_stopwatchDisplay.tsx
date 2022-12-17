@@ -2,7 +2,7 @@
 import React from 'react';
 
 /* assets */
-import ping_audio from '../../assets/ping.mp3';
+import ping_audio from '../../assets/sounds/ping.mp3';
 
 export default class StopwatchDisplay extends React.Component {
 	secondInterval = ['10', '20', '30', '40', '50', '59'];

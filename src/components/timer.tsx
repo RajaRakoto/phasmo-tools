@@ -10,8 +10,8 @@ import { TfiTimer } from 'react-icons/tfi';
 import { IconRender } from '../common/icons';
 
 /* assets */
-import ding_audio from '../assets/ding.mp3';
-import ticking_audio from '../assets/ticking.mp3';
+import ding_audio from '../assets/sounds/ding.mp3';
+import ticking_audio from '../assets/sounds/ticking.mp3';
 
 /* json data */
 import times from '../data/json/_times.json';
