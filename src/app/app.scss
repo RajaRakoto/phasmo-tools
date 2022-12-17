@@ -67,9 +67,11 @@ nav {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 2rem;
+		flex-wrap: wrap;
+		gap: 1rem;
 		width: __convertToRem($value: 72px);
-		height: 90%;
+		min-height: 65%;
+		height: auto;
 		padding: 2rem;
 		position: fixed;
 		top: 0;
@@ -89,9 +91,9 @@ nav {
 			text-align: center;
 			background-color: #444;
 			color: #eee;
-			padding: 1rem;
+			padding: 0.5rem;
 			width: 100%;
-			height: __convertToRem($value: 62px);
+			height: __convertToRem($value: 52px);
 			border-radius: 10px;
 
 			&:hover {
@@ -99,15 +101,29 @@ nav {
 			}
 		}
 
+		hr {
+			all: initial;
+			width: 100%;
+			border: solid 2px $theme1;
+			border-radius: 10px;
+
+			@include breakpoint(max, 1157px) {
+				display: block;
+				width: 0.2px;
+				height: 100%;
+			}
+		}
+
 		@include breakpoint(max, 1157px) {
 			flex-direction: row;
-			width: 70%;
-			min-width: __convertToRem($value: 700px);
+			width: auto;
 			height: __convertToRem($value: 62px);
+			min-height: unset;
 			top: unset;
 			bottom: 0 !important;
+			padding: 1rem;
 			@include position-center($axis: horizontal);
-			gap: 1rem;
+			gap: 0.7rem;
 			background: rgb(126, 126, 126);
 			background: linear-gradient(
 				0deg,
@@ -116,6 +132,7 @@ nav {
 				rgba(78, 78, 78, 1) 56%,
 				rgba(102, 102, 102, 1) 100%
 			);
+			overflow-y: scroll;
 
 			&-btn {
 				height: 100%;
