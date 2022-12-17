@@ -9,7 +9,13 @@ export default class StopwatchDisplay extends React.Component {
 
 	render() {
 		return (
-			<div className={'stopwatch__display'}>
+			<div
+				className={
+					this.props.runningStatus
+						? 'stopwatch__display--runing'
+						: 'stopwatch__display'
+				}
+			>
 				{this.secondInterval.includes(
 					this.props.formatTime(this.props.currentTimeSec),
 				) && <audio src={ping_audio} autoPlay />}
