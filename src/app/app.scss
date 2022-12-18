@@ -1098,6 +1098,22 @@ section {
 	}
 }
 
+.swal--hiding-tips {
+	h2 {
+		display: none;
+	}
+
+	h5 {
+		text-align: start;
+		border-bottom: solid 3px #b66646;
+	}
+
+	ul {
+		text-align: start;
+		margin-top: -2rem;
+	}
+}
+
 body.swal2-shown > [aria-hidden='true'] {
 	transition: 0.1s filter;
 	filter: blur(10px);
