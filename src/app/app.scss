@@ -1114,6 +1114,33 @@ section {
 	}
 }
 
+.swal--details {
+	.schemas {
+		margin: 0.5rem;
+
+		h5 {
+			margin: 0.2rem;
+		}
+	}
+
+	.legends {
+		background-color: #97614c;
+		padding: 0.3rem;
+		margin: 0.5rem;
+		width: __convertToRem($value: 100px);
+		border-radius: 5px;
+	}
+	
+	h6 {
+		margin: 0 auto;
+		margin-top: 2rem;
+		max-width: 70%;
+		border-bottom: solid 3px #9b624b;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
 body.swal2-shown > [aria-hidden='true'] {
 	transition: 0.1s filter;
 	filter: blur(10px);
