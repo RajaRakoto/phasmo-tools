@@ -1,7 +1,7 @@
 [
 	{
 		"title": "Debut du jeu",
-		"description": "",
+		"description": "Au tout debut du jeu",
 		"lists": [
 			{
 				"subtitle": "Debut 1",
@@ -103,6 +103,21 @@
 			{
 				"subtitle": "Phase de poursuite ",
 				"item": "Cette phase commence au moment où au moins un joueur est à portée de vue de l’entité. L’entité pourchassera tout joueur dans son champ de vision, en priorisant le joueur le plus proche. Certaines entités peuvent cependant avoir un comportement différent, comme la Banshee. Lorsqu’elle pourchasse un joueur, l’entité accélère progressivement jusqu’à obtenir un maximum de 65% de vitesse bonus. Si l’entité perd le joueur de vue, elle se rend immédiatement à l’endroit où il a disparu, et si elle ne le retrouve pas, elle place plusieurs points de passage autour de cet endroit. Ensuite, elle repasse en Phase de recherche, diminuant à nouveau progressivement sa vitesse de déplacement."
+			}
+		],
+		"post": ""
+	},
+	{
+		"title": "Les maps",
+		"description": "Ce que vous devez savoir sur les maps de Phasmophobia (en générale).",
+		"lists": [
+			{
+				"subtitle": "Les éléments de boucle",
+				"item": "Les éléments de boucle sont utiles contre les entités lentes n’accélérant pas, un Hantu dans la chaleur par exemple. Ils sont TOUJOURS à garder en tête contre un Deogen."
+			},
+			{
+				"subtitle": "Les portes",
+				"item": "Attention, vous cacher derrière des portes est extrêmement risqué car l’entité a 50% de chances de regarder derrière la porte lorsqu’il passe à côté, et 100% de chances s’il vous a vu disparaître à proximité."
 			}
 		],
 		"post": ""
