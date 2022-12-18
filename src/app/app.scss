@@ -723,8 +723,15 @@ section {
 		}
 
 		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+			flex-wrap: wrap;
 			list-style-type: none;
 			margin-right: 2rem;
+			min-width: __convertToRem($value: 300px);
 		}
 
 		.items {
@@ -767,7 +774,8 @@ section {
 					padding: 0.2rem;
 					height: __convertToRem($value: 100px);
 					max-width: __convertToRem($value: 300px);
-					font-size: medium;					overflow-y: scroll;
+					font-size: medium;
+					overflow-y: scroll;
 				}
 
 				img {
