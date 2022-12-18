@@ -156,6 +156,7 @@ function MapsWrapper({
 								<img src={map.cover} alt="map cover" />
 								<p>{map.description}</p>
 							</div>
+							<hr />
 							<div className="body">
 								<button
 									className="btn-1"
@@ -194,6 +195,7 @@ function MapsWrapper({
 									Details
 								</button>
 							</div>
+							<hr />
 							<div className="footer">
 								<ProgressBar percent={map.stat.size} label={'Taille'} />
 								<ProgressBar percent={map.stat.level} label={'Difficulté'} />

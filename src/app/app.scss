@@ -196,7 +196,7 @@ section {
 		@include position-flex-center();
 		margin-top: 1rem;
 		flex-direction: column;
-		margin-left: 6.5rem;
+		margin-left: 5rem;
 
 		h1 {
 			margin-top: 1rem;
@@ -315,6 +315,7 @@ section {
 	border-radius: 10px;
 	max-width: __convertToRem($value: 904px);
 	min-width: __convertToRem($value: 845px);
+	margin: 2.2rem;
 	@include breakpoint(max, 845px) {
 		min-width: 100%;
 	}
@@ -481,6 +482,7 @@ section {
 
 	&-content {
 		width: 100%;
+		margin-top: 1.6rem;
 
 		textarea {
 			resize: vertical;

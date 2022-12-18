@@ -126,7 +126,7 @@ export default function Entities_Maps_Objects() {
 					<button className="float-nav-btn">N/A</button>
 				</a>
 			</FloatNav>
-			{/* <Entities_Section /> */}
+			<Entities_Section />
 			<Maps_Section />
 			{/* <Objects_Section /> */}
 			<ScrollUp />

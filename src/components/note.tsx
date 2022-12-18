@@ -69,6 +69,7 @@ export default function Note() {
 					</h2>
 					{error && <p className="error">{error}</p>}
 				</div>
+				<hr />
 				<div className="note-content">
 					<textarea value={text} onChange={handleTextChange} />
 				</div>
