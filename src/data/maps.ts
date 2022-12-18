@@ -521,4 +521,160 @@ export const middle_maps = [
 		details: school_details,
 		legends: excludeElementsInObject(legends, []),
 	},
+	{
+		name: 'Prison',
+		cover: prison_cover,
+		description:
+			'La Prison est une des maps de moyenne taille avec un grand nombre de couloirs et des cellules de prison. Complexe de par son architecture, il est très facile de se perdre dans ce lieu. Contrairement à High School, des casiers sont à disposition à proximité des objets maudits, rendant leur utilisation moins risquée. Les plus grands espaces et également les plus dangereux sont les blocs A (à l’ouest) et B (à l’est), contenant des lignes de cellules, ainsi que la Cafeteria, ces emplacements ne disposant que de peu d’options pour se cacher de l’entité.',
+		prime: 30,
+		stat: {
+			size: 78,
+			level: 85,
+			accessibility: 30,
+		},
+		hiding_places: [
+			{
+				title: 'Placards et casiers',
+				lists: ['2 casiers dans Entrance', '2 casiers dans Infirmary'],
+			},
+			{
+				title: 'Obstructeurs',
+				lists: [
+					'Bibliothèques (Library)',
+					'Poubelles (Cafeteria)',
+					'Murets (Bathroom A & B)',
+					'Murets de cellule (attention, bien se cacher derrière les murets pour fermer la portière sans bouger si elle est ouverte par l’entité, sinon elle vous verra et viendra vous tuer)',
+				],
+			},
+			{
+				title: 'Éléments de boucle',
+				lists: [
+					'Couloirs en général (pièces « Hallway ») sauf Infirmary Hallway',
+				],
+			},
+			{
+				title: 'Portes',
+				lists: [
+					'Inspection',
+					'Bathroom B',
+					'A-Block bottom right (cabine de contrôle)',
+					'B-Block bottom right (cabine de contrôle)',
+					'Main Office (porte sud / de droite)',
+				],
+			},
+		],
+		tips: [
+			{
+				title:
+					"Évitez les blocs de cellules et les etages durant la chasse & La Cafeteria est l'endroit le plus dangereux de la prison",
+				lists: [
+					'La Prison est une map assez grande, mais il est facile d’en faire rapidement le tour en séparant les tâches et l’exploration entre les joueurs. Un seul joueur suffit pour contrôler l’étage, quand trois sont nécessaires pour l’ensemble du rez-de-chaussée.',
+					'Bien que l’étage des blocs soit situé dans la partie « étage », leur seul moyen d’accès est depuis le bloc en lui même.',
+					'Lorsque l’entité débute une chasse dans les blocs de cellules, il est assez difficile de s’en sortir, car il existe peu de cachettes à l’intérieur et à proximité des blocs. Dans cette situation, entrer très rapidement dans une cellule, la fermer et se cacher derrière le muret est une solution alternative viable, puisque l’entité aura une chance de ne pas passer vous voir dans votre cellule.',
+					'Au rez-de-chaussée, il y a de nombreuses façon d’échapper à l’entité en tournant dans les coins pour se réfugier dans les casiers. En revanche, à l’étage, il est beaucoup plus difficile de se cacher.',
+					'L’endroit le plus dangereux de toute la prison est la cafétéria. Bien qu’il y a des poubelles comme bloqueurs, il est probable qu’elles n’y soient pas dans les difficultés supérieures. Prenez garde si l’entité s’y trouve, car cela complexifiera grandement votre enquête.',
+				],
+			},
+		],
+		details: prison_details,
+		legends: excludeElementsInObject(legends, []),
+	},
+	{
+		name: 'Maple Lodge Campsite',
+		cover: camp_cover,
+		description:
+			'Il s’agit d’une carte de taille moyenne dans laquelle plusieurs tentes sont réparties à l’extérieur. De plus, une maison se trouve en retrait. Elle est composée d’un rez-de-chaussée et d’un étage.',
+		prime: 30,
+		stat: {
+			size: 68,
+			level: 70,
+			accessibility: 45,
+		},
+		hiding_places: [
+			{
+				title: 'Placards et casiers',
+				lists: [''],
+			},
+			{
+				title: 'Obstructeurs',
+				lists: [''],
+			},
+			{
+				title: 'Éléments de boucle',
+				lists: ['Au feu de camp (Fire Pit)'],
+			},
+			{
+				title: 'Portes',
+				lists: ['Dans toutes les tentes'],
+			},
+		],
+		tips: [
+			{
+				title:
+					"Attention à la lumière et à l'alimentation du terrain de camping & Fermez bien la tente",
+				lists: [
+					"Si l'alimentation du terrain de camping est coupée, assurez-vous d'emporter un briquet ou une bougie pour utiliser le feu de camp et obtenir la lumière dont vous avez vraiment besoin.",
+					"Fermeture éclair d'une tente peut être délicate au début. Assurez-vous de cliquer et de faire glisser le rabat de la tente en diagonale pour le fermer.",
+					"Cette carte comprend également une cabane à deux étages. Vous pouvez trouver la clé pour entrer sous le tapis devant la porte d'entrée de la cabine.",
+					"Si vous recherchez des empreintes digitales , assurez-vous de vérifier les murs à l'intérieur des tentes elles-mêmes, ainsi que les plafonniers des tentes blanches et les interrupteurs qui actionnent les guirlandes lumineuses.",
+					"Aventurez-vous dans la cabine et regardez sous les marches pour une surprise amusante. Si vous avez été tué par le fantôme lors d'une chasse, assurez-vous de visiter à nouveau cette zone.",
+					"Dirigez-vous vers le lac et marchez jusqu'au bout de la jetée pour un œuf de Pâques : flottant dans le lac se trouve le masque de Jason Voorheen.",
+					"Soyez conscient de votre environnement : si vous regardez la route à gauche dès que vous sortez de la camionnette, vous pourrez peut-être apercevoir Slenderman qui se tient là... d'un air menaçant.",
+				],
+			},
+		],
+		details: camp_details,
+		legends: excludeElementsInObject(legends, [
+			'cercle',
+			'musique',
+			'miroir',
+			'tarot',
+		]),
+	},
+];
+
+export const big_maps = [
+	{
+		name: 'Sunny Meadows - Asylum [En cours de refonte]',
+		cover: azile_cover,
+		description:
+			'L’asile est la plus grande carte du jeu Phasmophobia. De ce fait, il est plus difficile d’y mener une enquête. Elle est composée de deux étages avec des dizaines de pièces de part et d’autre. L’ambiance, les longs couloirs, le décor… tout est mis en œuvre pour faire sentir au joueur qu’il est minuscule par rapport à l’immensité du lieu.',
+		prime: 50,
+		stat: {
+			size: 95,
+			level: 92,
+			accessibility: 35,
+		},
+		hiding_places: [
+			{
+				title: 'Placards et casiers',
+				lists: [''],
+			},
+			{
+				title: 'Obstructeurs',
+				lists: [''],
+			},
+			{
+				title: 'Éléments de boucle',
+				lists: [''],
+			},
+			{
+				title: 'Portes',
+				lists: [''],
+			},
+		],
+		tips: [
+			{
+				title: [''],
+				lists: [''],
+			},
+		],
+		details: azile_details,
+		legends: excludeElementsInObject(legends, [
+			'cercle',
+			'musique',
+			'miroir',
+			'tarot',
+		]),
+	},
 ];
