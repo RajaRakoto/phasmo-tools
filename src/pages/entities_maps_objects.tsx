@@ -16,6 +16,7 @@ import Tracker from '../components/tracker';
 import Note from '../components/note';
 import Timer from '../components/timer';
 import Questions from '../components/questions';
+import Maps from '../components/maps';
 
 /* extras */
 import Chrono from '../extras/chrono/chrono';
@@ -66,7 +67,7 @@ export default function Entities_Maps_Objects() {
 					<button className="float-nav-btn">N/A</button>
 				</a>
 			</FloatNav>
-			<section>
+			{/* <section>
 				<HeaderSection
 					icon={<FaGhost />}
 					title="Entités"
@@ -85,7 +86,7 @@ export default function Entities_Maps_Objects() {
 						<Questions />
 					</div>
 				</div>
-			</section>
+			</section> */}
 			<section>
 				<HeaderSection
 					icon={<FaObjectGroup />}
@@ -93,12 +94,7 @@ export default function Entities_Maps_Objects() {
 					description={mapsDescription}
 				/>
 				<div className="content">
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
-						voluptas numquam odit non ducimus nisi iusto. Est excepturi, ad,
-						nemo sit doloribus voluptatem cumque quis, repudiandae aliquam amet
-						et architecto!
-					</p>
+					<Maps />
 				</div>
 			</section>
 			{/* <section>

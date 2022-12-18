@@ -707,6 +707,19 @@ section {
 	}
 }
 
+/* maps styles */
+.maps {
+	&-wrapper {
+		@include box-props();
+		padding: 2rem;
+		margin: 2rem;
+	}
+
+	&-items {
+		background-color: $theme-bg;
+	}
+}
+
 /* swiper styles (banner) */
 .banner {
 	.swiper {
