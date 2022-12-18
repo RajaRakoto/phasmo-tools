@@ -115,7 +115,7 @@ function MapsWrapper({
 							</div>
 						))}
 					</div>
-					<h6 style={{ fontSize: 20 }}>Legendes: </h6>
+					<h6 style={{ fontSize: 20 }}>Legendes</h6>
 					<div className="d-flex justify-content-center align-items-center flex-wrap">
 						{obj[1].map((item: any) => (
 							<div key={uuid()} className="legends">
@@ -193,12 +193,12 @@ function MapsWrapper({
 								</button>
 							</div>
 							<div className="footer">
+								<ProgressBar percent={map.stat.size} label={'Taille'} />
+								<ProgressBar percent={map.stat.level} label={'Difficulté'} />
 								<ProgressBar
 									percent={map.stat.accessibility}
-									label={'Accessibility'}
+									label={'Accessibilité des cachettes'}
 								/>
-								<ProgressBar percent={map.stat.level} label={'Level'} />
-								<ProgressBar percent={map.stat.size} label={'Size'} />
 							</div>
 						</div>
 					</li>
