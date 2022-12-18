@@ -22,7 +22,13 @@ function getFileName(input: string): string {
 	return file.split('.')[0];
 }
 
-export default function Maps() {
+function MapsWrapper({
+	category,
+	maps,
+}: {
+	category: string;
+	maps: any;
+}): ReactElement {
 	const reactSwal = withReactContent(Swal);
 
 	const SweetAlert__HidingTips = async ({
@@ -135,72 +141,78 @@ export default function Maps() {
 	};
 
 	return (
+		<div className="maps-wrapper">
+			{IconRender({ icon: <FaMapMarkerAlt />, size: '42' })}
+			<h2> {category} </h2>
+			<ul>
+				{maps.map((map: any) => (
+					<li key={uuid()}>
+						<div className="items">
+							<div className="header">
+								<h3>{map.name}</h3>
+								<h4>Prime: {map.prime}$</h4>
+								<img src={map.cover} alt="map cover" />
+								<p>{map.description}</p>
+							</div>
+							<div className="body">
+								<button
+									className="btn-1"
+									onClick={() =>
+										SweetAlert__HidingTips({
+											title: 'Cachettes',
+											subject: map.name,
+											obj: map.hiding_places,
+										})
+									}
+								>
+									Cachettes
+								</button>
+								<button
+									className="btn-2"
+									onClick={() =>
+										SweetAlert__HidingTips({
+											title: 'Tips',
+											subject: map.name,
+											obj: map.tips,
+										})
+									}
+								>
+									Tips
+								</button>
+								<button
+									className="btn-3"
+									onClick={() =>
+										SweetAlert__Details({
+											title: 'Details',
+											subject: map.name,
+											obj: [map.details, map.legends],
+										})
+									}
+								>
+									Details
+								</button>
+							</div>
+							<div className="footer">
+								<ProgressBar
+									percent={map.stat.accessibility}
+									label={'Accessibility'}
+								/>
+								<ProgressBar percent={map.stat.level} label={'Level'} />
+								<ProgressBar percent={map.stat.size} label={'Size'} />
+							</div>
+						</div>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
+}
+
+export default function Maps() {
+	return (
 		<React.Fragment>
 			<div id="map-link" className="maps">
-				<div className="maps-wrapper">
-					{IconRender({ icon: <FaMapMarkerAlt />, size: '42' })}
-					<h2> PETITES MAPS </h2>
-					<ul>
-						{maps_little.map(map => (
-							<li key={uuid()}>
-								<div className="items">
-									<div className="header">
-										<h3>{map.name}</h3>
-										<h4>Prime: {map.prime}$</h4>
-										<p>{map.description}</p>
-										<img src={map.cover} alt="map cover" />
-									</div>
-									<div className="body">
-										<button
-											className="btn-1"
-											onClick={() =>
-												SweetAlert__HidingTips({
-													title: 'Cachettes',
-													subject: map.name,
-													obj: map.hiding_places,
-												})
-											}
-										>
-											Cachettes
-										</button>
-										<button
-											className="btn-2"
-											onClick={() =>
-												SweetAlert__HidingTips({
-													title: 'Tips',
-													subject: map.name,
-													obj: map.tips,
-												})
-											}
-										>
-											Tips
-										</button>
-										<button
-											className="btn-3"
-											onClick={() =>
-												SweetAlert__Details({
-													title: 'Details',
-													subject: map.name,
-													obj: [map.details, map.legends],
-												})
-											}
-										>
-											Details
-										</button>
-									</div>
-									<div className="footer">
-										<ProgressBar
-											percent={map.stat.accessibility}
-											label={'Accessibility'}
-										/>
-										<ProgressBar percent={map.stat.level} label={'Level'} />
-										<ProgressBar percent={map.stat.size} label={'Size'} />
-									</div>
-								</div>
-							</li>
-						))}
-					</ul>
-				</div>
+				<MapsWrapper category="PETITES MAPS" maps={maps_little} />
 			</div>
 		</React.Fragment>
 	);
