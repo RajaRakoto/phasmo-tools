@@ -7,7 +7,7 @@ import withReactContent from 'sweetalert2-react-content';
 import uuid from 'react-uuid';
 
 /* data */
-import { maps_little } from '../data/maps';
+import { little_maps, middle_maps } from '../data/maps';
 
 /* common */
 import { IconRender } from '../common/icons';
@@ -212,7 +212,8 @@ export default function Maps() {
 	return (
 		<React.Fragment>
 			<div id="map-link" className="maps">
-				<MapsWrapper category="PETITES MAPS" maps={maps_little} />
+				<MapsWrapper category="PETITES MAPS" maps={little_maps} />
+				<MapsWrapper category="MOYENNES MAPS" maps={middle_maps} />
 			</div>
 		</React.Fragment>
 	);
