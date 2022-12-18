@@ -79,7 +79,11 @@ export default class Stopwatch extends React.Component {
 					Chrono
 				</h2>
 				<hr />
-				<StopwatchDisplay {...this.state} formatTime={this.formatTime} />
+				<StopwatchDisplay
+					{...this.state}
+					formatTime={this.formatTime}
+					runningStatus={this.state.running}
+				/>
 				<hr />
 				<span>
 					{this.state.running === false && (

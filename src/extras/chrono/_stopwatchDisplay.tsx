@@ -2,14 +2,20 @@
 import React from 'react';
 
 /* assets */
-import ping_audio from '../../assets/ping.mp3';
+import ping_audio from '../../assets/sounds/ping.mp3';
 
 export default class StopwatchDisplay extends React.Component {
 	secondInterval = ['10', '20', '30', '40', '50', '59'];
 
 	render() {
 		return (
-			<div className={'stopwatch__display'}>
+			<div
+				className={
+					this.props.runningStatus
+						? 'stopwatch__display--runing'
+						: 'stopwatch__display'
+				}
+			>
 				{this.secondInterval.includes(
 					this.props.formatTime(this.props.currentTimeSec),
 				) && <audio src={ping_audio} autoPlay />}

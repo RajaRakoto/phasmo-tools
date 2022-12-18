@@ -2,7 +2,6 @@ import React, { useState, useEffect, ReactElement } from 'react';
 
 /* libs */
 import { Provider } from 'react-redux';
-import { Line } from 'rc-progress';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import { RxReset } from 'react-icons/rx';
@@ -20,6 +19,7 @@ import evd from '../data/json/_edvidences.json';
 
 /* common */
 import { IconRender } from '../common/icons';
+import ProgressBar from '../common/progress';
 
 /* store */
 import { useStoreSelector, useStoreDispatch } from '../data/hooks';
@@ -35,7 +35,7 @@ import spiritbox_icon from '../assets/icons/spiritbox_icon.png';
 import thermometer_icon from '../assets/icons/thermometer_icon.png';
 
 /* components */
-import Todo from '../components/todo';
+import Todo from './todo';
 
 /* store */
 import store from '../data/store';
@@ -266,32 +266,6 @@ function TrackerItem({
 	const [isHighlighted, setIsHighlighted] = useState(false);
 
 	const reactSwal = withReactContent(Swal);
-
-	const ProgressBar = ({
-		label,
-		percent,
-	}: {
-		label: string;
-		percent: number;
-	}) => {
-		const percentShow = <span style={{ color: 'gray' }}>{percent}%</span>;
-
-		return (
-			<>
-				<span>
-					<strong style={{ fontSize: 'smaller' }}>
-						{label} {percentShow}
-					</strong>
-					<Line
-						percent={percent}
-						strokeWidth={2}
-						strokeColor="#ff7426"
-						trailColor="#eee"
-					/>
-				</span>
-			</>
-		);
-	};
 
 	const EntityInformation = () => {
 		return (

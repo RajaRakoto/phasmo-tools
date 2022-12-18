@@ -19,7 +19,7 @@ import 'swiper/css';
 import 'swiper/css/effect-creative';
 
 /* pages */
-import Entities_Objects from '../pages/entities_objects';
+import Entities_Maps_Objects from '../pages/entities_maps_objects';
 import Report from '../pages/report';
 
 // ================================================
@@ -83,7 +83,7 @@ function Navbar() {
 				<ul>
 					<li>
 						<button>
-							<Link to="entities_objects">Entités & Objets</Link>
+							<Link to="entities_maps_objects">Entités & Maps & Objets</Link>
 						</button>
 					</li>
 					<li>
@@ -116,15 +116,18 @@ export default function App() {
 	return (
 		<React.Fragment>
 			{bannerVisibility ? (
-				<div id="banner">
+				<div className="banner">
 					<Banner enterBtn={<EnterBtn />} />
 				</div>
 			) : (
 				<BrowserRouter>
 					<Routes>
 						<Route path="/" element={<Navbar />}>
-							<Route index element={<Entities_Objects />} />
-							<Route path="entities_objects" element={<Entities_Objects />} />
+							<Route index element={<Entities_Maps_Objects />} />
+							<Route
+								path="entities_maps_objects"
+								element={<Entities_Maps_Objects />}
+							/>
 							<Route path="report" element={<Report />} />
 						</Route>
 					</Routes>

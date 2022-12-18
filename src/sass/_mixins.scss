@@ -170,3 +170,8 @@
 		rgba(115, 115, 115, 0.31416316526610644) 100%
 	);
 }
+
+@mixin inset-shadow() {
+	-webkit-box-shadow: inset 0px 0px 21px -6px #1d1d1d;
+	box-shadow: inset 0px 0px 21px -6px #1d1d1d;
+}
