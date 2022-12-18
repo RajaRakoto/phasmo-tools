@@ -277,6 +277,7 @@ section {
 			transition: all 0.3s;
 
 			&:hover {
+				@include inset-shadow();
 				@include animation-scale($scaleValue: 1.05);
 				background-color: $theme-bg;
 			}
@@ -403,6 +404,7 @@ section {
 			transition: all 0.3s;
 
 			&:hover {
+				@include inset-shadow();
 				@include animation-scale($scaleValue: 1.03);
 				background-color: $theme-bg;
 			}
@@ -713,10 +715,100 @@ section {
 		@include box-props();
 		padding: 2rem;
 		margin: 2rem;
-	}
+		text-align: center;
 
-	&-items {
-		background-color: $theme-bg;
+		h2 {
+			font-size: __convertToRem($value: 26px);
+			font-weight: bolder;
+			text-align: center;
+			text-decoration: underline;
+		}
+
+		ul {
+			list-style-type: none;
+			margin-right: 2rem;
+		}
+
+		.items {
+			border: solid 1px #eee;
+			padding: 2rem;
+			margin: 2rem;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+			flex-wrap: wrap;
+			transition: all 0.35s;
+
+			&:hover {
+				@include inset-shadow();
+				@include animation-scale($scaleValue: 1.03);
+				background-color: $theme-bg;
+			}
+
+			.header {
+				margin: 0 auto;
+
+				h3 {
+					font-size: __convertToRem($value: 20px);
+					margin-bottom: -0.3rem;
+				}
+
+				h4 {
+					color: #eee;
+					background-color: #a8a8a867;
+					border-radius: 3px;
+					padding: 0.3rem;
+				}
+
+				img {
+					@include image-responsive($height: 200px);
+					border: double 5px gray;
+					border-radius: 5px;
+				}
+			}
+
+			.body {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				gap: 0.2rem;
+				flex-wrap: wrap;
+				padding: 0.2rem;
+
+				button {
+					@include btn-style($theme: $theme1);
+					margin: 0.35rem;
+					padding: 0.5rem;
+					background-color: #696969;
+				}
+
+				.btn-1 {
+					background-color: rgb(80, 165, 121);
+				}
+
+				.btn-2 {
+					background-color: rgb(96, 157, 198);
+				}
+
+				.btn-3 {
+					background-color: rgb(194, 154, 67);
+				}
+			}
+
+			.footer {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				gap: 0.2rem;
+				padding: 0.5rem;
+				width: 90%;
+				text-align: start;
+			}
+		}
 	}
 }
 
