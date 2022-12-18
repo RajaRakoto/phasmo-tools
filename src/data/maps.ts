@@ -131,7 +131,7 @@ const ridgeview_details = [
 const tanglewood_details = [tanglewood_0_detail, tanglewood_1_detail];
 const willow_details = [willow_0_detail, willow_1_detail];
 
-export const maps_little = [
+export const little_maps = [
 	{
 		name: 'Bleasdale Farmhouse',
 		cover: bleasdale_cover,
@@ -465,6 +465,60 @@ export const maps_little = [
 			},
 		],
 		details: willow_details,
+		legends: excludeElementsInObject(legends, []),
+	},
+];
+
+export const middle_maps = [
+	{
+		name: 'Brownstone High School',
+		cover: school_cover,
+		description:
+			'L’école nommée Brownstone High School est une map de taille moyenne, comportant de nombreuses salles de classe, un gymnase et de très longs couloirs. Il n’y a aucune cachette naturelle dans cet endroit, ce qui rend chaque chasse particulièrement dangereuse. Aucun des couloirs et presqu’aucune des salles de classe ne sont safe contre une entité en chasse, et il est souvent préférable d’être loin de l’entité. L’utilisation des objets maudits dans ces lieux est extrêmement risquée de par le manque de cachettes.',
+		prime: 30,
+		stat: {
+			size: 85,
+			level: 90,
+			accessibility: 16,
+		},
+		hiding_places: [
+			{
+				title: 'Placards et casiers',
+				lists: [''],
+			},
+			{
+				title: 'Obstructeurs',
+				lists: [
+					'Bibliothèques (Library)',
+					'Dernière cabine (Toutes les salles Toilettes)',
+					'Etagère inclinée (Salles de classe « Classroom » 6, 13, 26, 32)',
+				],
+			},
+			{
+				title: 'Éléments de boucle',
+				lists: ['Couloirs', 'Salles de classe'],
+			},
+			{
+				title: 'Portes',
+				lists: [
+					'Salles de science (porte du stockage)',
+					'Portes du dernier toilette pour hommes (partie gauche de la map, Boys Bathroom, Boys Teachers Bathroom, Upstairs Boys Bathroom [UBB] et Upstairs Boys Teachers Bathroom [UBTB])',
+					'Certaines salles de classe',
+				],
+			},
+		],
+		tips: [
+			{
+				title:
+					'Évitez les couloirs durant la chasse & Le dernier cabinet des toilettes est un grand avantage pour se cacher',
+				lists: [
+					'L’entité, lorsqu’elle commence sa chasse, passe souvent son temps à courir dans les couloirs. Attention cependant, il n’est pas du tout rare de la voir se balader de salle en salle.',
+					'Afin d’avoir le plus possible de chances de s’en sortir, se cacher dans le dernier cabinet des toilettes est un grand avantage, car l’entité, lorsqu’elle rentre dans les toilettes, se déplace rarement jusqu’au fond. De plus, la porte du dernier cabinet peut servir d’obstructeur de vision très efficace contre le mur.',
+					'Évitez les couloirs durant la chasse, bien qu’ils permettent facilement de se faire repérer de loin par l’entité et de la repousser en chasse grâce à de l’encens. N’oubliez pas que si votre visibilité est limitée, celle de l’entité est illimitée tant qu’aucun élément du décor n’obstrue sa vision.',
+				],
+			},
+		],
+		details: school_details,
 		legends: excludeElementsInObject(legends, []),
 	},
 ];
