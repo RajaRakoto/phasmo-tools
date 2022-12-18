@@ -771,7 +771,7 @@ section {
 				p {
 					@include inset-shadow();
 					border-radius: 7px;
-					padding: 0.2rem;
+					padding: 0.5rem;
 					height: __convertToRem($value: 100px);
 					max-width: __convertToRem($value: 300px);
 					font-size: medium;
