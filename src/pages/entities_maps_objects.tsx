@@ -7,7 +7,8 @@ import FloatNav from '../common/floatnav';
 
 /* libs */
 import { FaGhost } from 'react-icons/fa';
-import { FaObjectGroup, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaObjectGroup } from 'react-icons/fa';
+import { TfiMapAlt } from 'react-icons/tfi';
 
 /* components */
 import Generals from '../components/generals';
@@ -67,7 +68,7 @@ export default function Entities_Maps_Objects() {
 					<button className="float-nav-btn">N/A</button>
 				</a>
 			</FloatNav>
-			{/* <section>
+			<section>
 				<HeaderSection
 					icon={<FaGhost />}
 					title="Entités"
@@ -86,10 +87,10 @@ export default function Entities_Maps_Objects() {
 						<Questions />
 					</div>
 				</div>
-			</section> */}
+			</section>
 			<section>
 				<HeaderSection
-					icon={<FaObjectGroup />}
+					icon={<TfiMapAlt />}
 					title="Maps"
 					description={mapsDescription}
 				/>
