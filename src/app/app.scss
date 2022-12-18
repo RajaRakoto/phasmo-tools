@@ -709,11 +709,19 @@ section {
 
 /* maps styles */
 .maps {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 0.2rem;
+	flex-wrap: wrap;
+
 	&-wrapper {
 		@include box-props();
 		padding: 2rem;
 		margin: 2rem;
 		text-align: center;
+		width: fit-content;
 
 		h2 {
 			font-size: __convertToRem($value: 26px);
