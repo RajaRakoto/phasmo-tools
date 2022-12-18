@@ -7,7 +7,7 @@ import withReactContent from 'sweetalert2-react-content';
 import uuid from 'react-uuid';
 
 /* data */
-import { little_maps, middle_maps } from '../data/maps';
+import { little_maps, middle_maps, big_maps } from '../data/maps';
 
 /* common */
 import { IconRender } from '../common/icons';
@@ -105,7 +105,9 @@ function MapsWrapper({
 						alors <strong>2</strong> est le premier étage et <strong>1</strong>{' '}
 						est le deuxième étage. Ainsi, le dernier étage est toujours le plus
 						petit nombre qui est le <strong>1</strong> (car nous avons mis le{' '}
-						<strong>0</strong> pour le sous-sol).
+						<strong>0</strong> pour le sous-sol) Attention la map "Maple Lodge
+						Campsite" n'a pas de sous-sol, donc le chiffre <strong>0</strong>{' '}
+						represente l'exterieur.
 					</p>
 					<div className="d-flex justify-content-center align-items-center flex-wrap">
 						{obj[0].map((item: any, index: number) => (
@@ -214,6 +216,7 @@ export default function Maps() {
 			<div id="map-link" className="maps">
 				<MapsWrapper category="PETITES MAPS" maps={little_maps} />
 				<MapsWrapper category="MOYENNES MAPS" maps={middle_maps} />
+				<MapsWrapper category="GRANDES MAPS" maps={big_maps} />
 			</div>
 		</React.Fragment>
 	);
