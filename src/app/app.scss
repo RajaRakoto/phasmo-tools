@@ -761,6 +761,15 @@ section {
 					padding: 0.3rem;
 				}
 
+				p {
+					@include inset-shadow();
+					border-radius: 7px;
+					padding: 0.2rem;
+					height: __convertToRem($value: 100px);
+					max-width: __convertToRem($value: 300px);
+					font-size: medium;					overflow-y: scroll;
+				}
+
 				img {
 					@include image-responsive($height: 200px);
 					border: double 5px gray;
@@ -1130,7 +1139,7 @@ section {
 		width: __convertToRem($value: 100px);
 		border-radius: 5px;
 	}
-	
+
 	h6 {
 		margin: 0 auto;
 		margin-top: 2rem;
