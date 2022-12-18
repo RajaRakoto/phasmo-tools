@@ -47,7 +47,7 @@ import tarot_legend from '../assets/maps/legends/tarot.png';
 import vaudou_legend from '../assets/maps/legends/vaudou.png';
 
 // utils
-function excludeElements(arr: any[], elementsToExclude: any[]) {
+function excludeElementsInArray(arr: any[], elementsToExclude: any[]) {
 	if (elementsToExclude.length === 0) {
 		return arr;
 	}
@@ -56,17 +56,56 @@ function excludeElements(arr: any[], elementsToExclude: any[]) {
 	});
 }
 
-// global
+function excludeElementsInObject(obj: any, idsToExclude: string[]): any {
+	return obj.filter((element: any) => !idsToExclude.includes(element.id));
+}
+
 const legends = [
-	cercle_legend,
-	cle_legend,
-	disjoncteur_legend,
-	lavabo_legend,
-	miroir_legend,
-	musique_legend,
-	ouija_legend,
-	tarot_legend,
-	vaudou_legend,
+	{
+		id: 'cercle',
+		name: 'Cercle d’invocation',
+		image: cercle_legend,
+	},
+	{
+		id: 'cle',
+		name: 'Clé de voiture',
+		image: cle_legend,
+	},
+	{
+		id: 'disjoncteur',
+		name: 'Disjoncteur',
+		image: disjoncteur_legend,
+	},
+	{
+		id: 'lavabo',
+		name: 'Lavabo',
+		image: lavabo_legend,
+	},
+	{
+		id: 'miroir',
+		name: 'Miroir hanté',
+		image: miroir_legend,
+	},
+	{
+		id: 'musique',
+		name: 'Boîte à musique',
+		image: musique_legend,
+	},
+	{
+		id: 'ouija',
+		name: 'Planche de Ouija',
+		image: ouija_legend,
+	},
+	{
+		id: 'tarot',
+		name: 'Cartes de tarot',
+		image: tarot_legend,
+	},
+	{
+		id: 'vaudou',
+		name: 'Poupée vaudou',
+		image: vaudou_legend,
+	},
 ];
 
 const camp_details = [camp_0_detail, camp_1_detail, camp_2_detail];
@@ -91,11 +130,6 @@ const ridgeview_details = [
 ];
 const tanglewood_details = [tanglewood_0_detail, tanglewood_1_detail];
 const willow_details = [willow_0_detail, willow_1_detail];
-
-export const maps_general = [
-	'Les éléments de boucle sont utiles contre les entités lentes n’accélérant pas, un Hantu dans la chaleur par exemple. Ils sont TOUJOURS à garder en tête contre un Deogen.',
-	'Attention, vous cacher derrière des portes est extrêmement risqué car l’entité a 50% de chances de regarder derrière la porte lorsqu’il passe à côté, et 100% de chances s’il vous a vu disparaître à proximité.',
-];
 
 export const maps_little = [
 	{
@@ -154,7 +188,7 @@ export const maps_little = [
 				],
 			},
 		],
-		legends: excludeElements(legends, []),
 		details: edgefield_details,
+		legends: excludeElementsInObject(legends, []),
 	},
 ];
