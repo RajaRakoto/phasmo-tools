@@ -1,86 +1,58 @@
 [
 	{
 		"id": "e1",
-		"name": "entity 1",
-		"description": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"behaviors": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"attackSM": 25,
-		"agressivity": 62,
-		"speed": 70,
-		"strengths": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
-		],
-		"weaknesses": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
-		],
-		"edvidencesID": ["evd1", "evd2", "evd3"],
-		"edvidences": ["1", "2", "3"]
-	},
-	{
-		"id": "e2",
-		"name": "entity 2",
-		"description": "[entity 2] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"behaviors": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"attackSM": 71,
-		"agressivity": 12,
-		"speed": 23,
-		"strengths": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
-		],
-		"weaknesses": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
-		],
-		"edvidencesID": ["evd1", "evd2", "evd4"],
-		"edvidences": ["1", "2", "4"]
-	},
-	{
-		"id": "e3",
-		"name": "entity 3",
-		"description": "[entity 3] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"behaviors": "[entity 3] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"attackSM": 21,
-		"agressivity": 10,
-		"speed": 3,
-		"strengths": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
-		],
-		"weaknesses": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
-		],
-		"edvidencesID": ["evd5", "evd2", "evd6"],
-		"edvidences": ["5", "2", "6"]
-	},
-	{
-		"id": "e4",
-		"name": "entity 4",
-		"description": "[entity 4] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"behaviors": "[entity 4] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
+		"name": "Banshee",
+		"description": "La sirène chantante, connue pour attirer ses victimes avec ses chansons. On dit qu’elle identifie précisément sa proie avant de porter le coup fatal. La Banshee est un type d’entité qui choisit une cible et la poursuit sans relâche durant ses chasses. Si sa cible est à l’extérieur, elle s’attaquera alors à tous les autres chasseurs. La Banshee chassera en ne prenant en compte que la santé mentale de sa cible. Elle ne changera de cible que lorsqu’elle sera décédée.",
+		"difficulty": 35,
+		"power": 35,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 20,
 		"attackSM": 50,
-		"agressivity": 78,
-		"speed": 13,
-		"strengths": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"edvidencesID": ["evd4", "evd5", "evd2"],
+		"edvidences": ["4", "5", "2"],
+		"datas": [
+			"Santé mentale max de la cible avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8",
+			"Nombre de personnes pourchassées en chasse (tant qu’elle se trouve dans le bâtiment): 1 ",
+			"Baisse de santé mentale sur une Apparition chantante (cible): 5%"
 		],
-		"weaknesses": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"strategies": [
+			"La Banshee a pour capacité à ne cibler qu’un seul joueur.",
+			"Si sa cible est à l'intérieur d'un bâtiment, la Banshee ignore les autres joueurs et se concentre sur sa cible unique.",
+			"Si sa cible est à l'extérieur du bâtiment, la Banshee s'en prend à tous les joueurs qu'elle trouve.",
+			"Si sa cible entre à nouveau dans le bâtiment, elle reprendra son comportement initial.",
+			"La Banshee aime chanter, et sa cible subira davantage de dégâts sur sa santé mentale lorsqu’elle le fait.",
+			"Lorsqu’elle vagabonde, la Banshee aura également tendance à rester proche de sa cible.",
+			"La santé mentale de la cible détermine si une chasse peut être initiée avec la Banshee. On peut déterminer la cible en utilisant des objets maudits ou des pilules.",
+			"Si en pleine chasse, une entité semble vous ignorer totalement alors même que vous vous situez juste devant elle et pas caché, il y a de fortes chances qu’il s’agit d’une Banshee.",
+			"La Banshee vous traverse sans vous tuer si vous n’êtes pas sa cible.",
+			"La cible de la Banshee ne change que lorsque sa précédente cible est décédée.",
+			"Pendant qu’elle chasse, la voix de la Banshee sera audible depuis un peu plus loin que les autres entités.",
+			"Pour accomplir la mission de l'encens pendant la chasse, il faut être la cible ou que la cible soit à l'extérieur, sinon la mission ne pourra pas être terminée.",
+			"Prendre la photo d’une Banshee en chasse est beaucoup moins risqué si la cible est à l’intérieur et bien cachée.",
+			"Lors de ses apparitions, la Banshee aura une très grande préférence pour les événements paranormaux chantants, où l’entité se matérialise en chantant.",
+			"Si vous avez un microphone parabolique, vous pourrez entendre un son unique que seule la Banshee peut émettre (une sorte de voix plaintive).",
+			"Si vous tombez sur la combinaison Orbe + Empreintes, prenez garde, il peut en effet s’agir d’un Mimic qui cache bien son jeu. Cette combinaison est l’une des plus difficiles du jeu et elle mérite d’utiliser astucieusement le matériel à votre disposition. ",
+			"L’Obake devrait vous laisser au moins une empreinte à 6 doigts vous permettant de le différencier, et la vitesse d’un Hantu devrait vous aider à le sortir de l’équation.",
+			"Si vous obtenez un grand nombre d’apparitions chantantes, cet élément devrait également vous donner une indication que vous avez affaire à la Banshee.",
+			"Depuis que la Banshee ne peut plus chasser à 100% de santé mentale, elle est devenue beaucoup plus faible mais également plus difficile à déterminer.",
+			"La faiblesse au crucifix n’est également plus du tout un moyen de reconnaître cette entité car cette faiblesse a été retirée."
 		],
-		"edvidencesID": ["evd2", "evd7", "evd4", "evd1"],
-		"edvidences": ["2", "7", "4", "1"]
+		"todoID": "todo-banshee",
+		"todo": [
+			"Test de la cible intérieur/extérieur (en utilisant des objets maudits/pilules)",
+			"Verification de la SM apres un event chantant",
+			"Etre ignoré pendant une chasse",
+			"L'entité traverse sans tuer",
+			"L'entité spawn toujours pres de la cible",
+			"L'entité se matérialise en chantant",
+			"Un grand nombre d'apparitions chantantes",
+			"Voix audible depuis un peu plus loin que les autres entités",
+			"Test microphone parabolique (voix plaintive)",
+			"Elimination du Mimic",
+			"Elimination de l'Obake (empreintes a 6 doigts)",
+			"Elimination de l'Hantu (vitesse)"
+		]
 	}
 ]
