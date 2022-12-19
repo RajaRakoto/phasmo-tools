@@ -412,7 +412,7 @@ function TrackerItem({
 				<div style={{ marginTop: 8 }}>
 					<ProgressBar percent={difficulty} label={'Difficulté (preuves)'} />
 					<ProgressBar percent={attackCL} label={'Attaque classique'} />
-					<ProgressBar percent={attackSM} label={'Attaque SM'} />
+					<ProgressBar percent={attackSM} label={'Attaque SM (générale)'} />
 					<ProgressBar percent={power} label={'Dangerosité du pouvoir'} />
 					<ProgressBar percent={speed} label={'Vitesse (générale)'} />
 					<ProgressBar
