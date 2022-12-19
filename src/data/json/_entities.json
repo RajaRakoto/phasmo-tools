@@ -235,6 +235,56 @@
 		]
 	},
 	{
+		"id": "e5",
+		"name": "Esprit",
+		"description": "Les Esprits sont des entités très banales. Ils sont puissants mais passifs et attaquent seulement lorsqu’ils y sont obligés. Ils défendent le lieu de leur décès coûte que coûte, tuant quiconque abuserait de leur hospitalité. L’Esprit est un type d’entité très commun. Il est plus sensible à l’encens que les autres entités, et n’a aucun pouvoir particulier, ce qui le rend plus difficile à identifier.",
+		"anecdote": "L’Esprit est une incarnation spirituelle basique utilisée comme base pour décrire certaines autres entités paranormales. Bien que le journal nous informe qu’il s’agit d’une entité commune, il y a en réalité autant de chances que l’entité soit un Esprit que n’importe quelle autre.",
+		"difficulty": 50,
+		"power": 5,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 15,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd6", "evd1"],
+		"edvidences": ["3", "6", "1"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Efficacité de l’encens hors chasse: 180s (par defaut : 90s)"
+		],
+		"strategies": [
+			"L’Esprit est l’unique entité ne disposant d’aucune particularité ni d’aucun pouvoir.",
+			"L’Esprit est faible à l’encens, donc en dehors d’une chasse, la durée des effets de celui-ci est doublée.",
+			"L’Esprit fera donc davantage d’interactions durant trois minutes et ne pourra pas initier de chasse durant de temps.",
+			"Une stratégie courante pour déterminer un Esprit est de se positionner dans une fourchette de santé mentale suffisamment faible pour déclencher potentiellement une chasse (moins de 50% de santé mentale).",
+			"Il s’agit en réalité d’une des entités les plus simples à déterminer, grâce au test du bâton d’encens.",
+			"N’hésitez pas à vous mettre très bas en santé mentale avant d’effectuer le test, afin d’être certain que l’entité attaquera dès que l’encens ne fera plus effet et avoir les résultats les plus précis possibles."
+		],
+		"todoID": "todo-esprit",
+		"todo": [
+			"Identification par la diminution provoquee de la SM et l'utilisation de l'encens en comptant le temps de l'effet, si celui-ci dure plus de 180s (de protection | sans chasse) il s'agit forcement d'un Esprit (N'oublier pas de debarrasser tout crucifix et bougie avant de faire l'identification pour avoir le bon timing)",
+			"Elimination si l'entité attaque entre 90 et 180s après l’utilisation de l’encens"
+		]
+	},
+	{
+		"id": "e",
+		"name": "",
+		"description": "",
+		"anecdote": "",
+		"difficulty": 0,
+		"power": 0,
+		"tools": 0,
+		"speed": 0,
+		"attackCL": 0,
+		"attackSM": 0,
+		"edvidencesID": ["evd", "evd", "evd"],
+		"edvidences": ["", "", ""],
+		"datas": ["", "", "", ""],
+		"strategies": ["", "", "", ""],
+		"todoID": "todo-",
+		"todo": ["", "", "", ""]
+	},
+	{
 		"id": "e",
 		"name": "",
 		"description": "",
