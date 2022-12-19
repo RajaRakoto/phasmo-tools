@@ -61,6 +61,10 @@
 			{
 				"subtitle": "Commune 10",
 				"item": "Les apparences des entités ne déterminent pas leur nature."
+			},
+			{
+				"subtitle": "Commune 11",
+				"item": "On n'a que 2 preuves (3 par défaut) en difficulté cauchemar pour tout les entitEs sauf le mimic qui en a 3 preuves dans ce level. (4 par défaut)"
 			}
 		],
 		"post": ""
