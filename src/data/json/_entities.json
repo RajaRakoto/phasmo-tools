@@ -169,7 +169,7 @@
 		"edvidences": ["6", "1", "2"],
 		"datas": [
 			"Santé mentale max. avant chasse (tradive): 40%",
-			"Vitesse fixe en chasse (joueur ciblé à plus de 3m): 3m/s (le plus rapide du jeu)",
+			"Vitesse fixe en chasse (joueur ciblé à plus de 3m): 3m/s (le 2e plus rapide du jeu apres le Moroi)",
 			"Vitesse fixe en chasse (joueur ciblé à moins de 2.5m): 0.4m/s (le plus lent du jeu)",
 			"Probabilité de réponse essoufflement (spirit box): 33%",
 			"Distance maximale pour une réponse essoufflement (spirit box): 1m"
@@ -464,6 +464,84 @@
 			"Identification par le changement d'etat en utilisant un timer (30 ~ 120s)",
 			"Identification par le nombre de preuve (3) en difficulté cauchemar (4 oar défaut)"
 		]
+	},
+	{
+		"id": "e11",
+		"name": "Moroï",
+		"description": "Le Moroï a émergé d’outre-monde afin de siphonner l’énergie des vivants. Ils maudissent leurs victimes et celles-ci ne peuvent guérir qu’avec des antidotes ou en déménageant très loin. Le Moroï est une entité capable de placer des malédictions sur un chasseur en lui parlant directement. Une fois une malédiction posée, le joueur atteint est condamné à perdre de la santé mentale de manière plus importante. Un chasseur maudit peut se soigner avec des médicaments.",
+		"anecdote": "Le Moroï (prononcé « mo-roy ») est un type de vampire dans le folklore roumain, qui pratiquait le vampirisme tout en étant encore en vie (par opposition au « Strigoï », qui est devenu un vampire après sa mort).",
+		"difficulty": 50,
+		"power": 72,
+		"tools": 75,
+		"speed": 95,
+		"attackCL": 20,
+		"attackSM": 45,
+		"edvidencesID": ["evd6", "evd1", "evd7"],
+		"edvidences": ["6", "1", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse: 1.5 ~ 3.7m/s (augmente graduellement tous les 5% de perte de SM moyenne de l'equipe, dès 45%). Ce qui fait l'entitE le plus rapide du jeu lorsqu'il atteint le max de sa vitesse",
+			"Perte de santé mentale supplémentaire si maudit: La même quantité que la perte passive de santé mentale",
+			"Durée de l’effet de l’encens en chasse: 12s (par defaut: 6s)"
+		],
+		"strategies": [
+			"Le Moroï est capable de placer une malédiction sur tout joueur à qui il parle via la Spirit Box ou le Microphone Parabolique.",
+			"Un joueur maudit perdra davantage de santé mentale tout au long de la partie.",
+			"Le Moroï accélère également quand la santé mentale moyenne des chasseurs diminue.",
+			"La malédiction d’un Moroï prend fin lorsque le joueur maudit prend une pilule calmante (mais elles ne vous évitent pas de vous faire maudire à nouveau).",
+			"La malédiction s’abattra sur tout joueur qui l’entendra à la Spirit Box ou au Microphone Parabolique.",
+			"Il est également possible de mettre l’effet de la malédiction en pause en sortant du bâtiment.",
+			"La malédiction vous fera également perdre de la santé mentale même si vous êtes dans la lumière ou tenez une bougie allumée.",
+			"Le Moroï sera désorienté pendant davantage de temps que les autres types d’entité si un bâton d’encens est brûlé à proximité de lui durant une chasse.",
+			"Le Moroï aura toujours la Spirit Box parmi ses deux preuves.",
+			"Le Moroï est parmi les plus difficiles à déterminer, mais il peut sembler que l’entité chasse très tôt dans la partie à cause de la santé mentale qui descend rapidement, sans (ou presque) moyen de vérifier sa santé mentale. (A ne pas confondre avec un Demon)",
+			"Le meilleur strategie contre le Moroi est de jouer avec sa SM et de determiner son effet par rapport a la malediction."
+		],
+		"todoID": "todo-moroi",
+		"todo": [
+			"Identification par la baisse de la SM apres avoir obtenir la Spirit Box ou Microphone Parabolique (malediction) -> chasse tres tot",
+			"Identification par l'augmentation de la vitesse de deplacement en chasse (augmente graduellement tous les 5% de perte de SM moyenne de l'equipe, dès 45%), puis prendre quelques pilules (vous récupérez 25% en difficulté cauchemar), et réécouter le rythme, qui devrait en conséquence être réduit.",
+			"Identification par la mise en pause de la malédiction en sortant du bâtiment (test collaboratif)",
+			"Identification par la destabilisation de l'entitE grace a un bâton d'encens brûlé à proximité de lui durant une chasse (12s au lieu de 6s)",
+			"Identification par la presence de la Spirit Box (obligatoire) parmi les preuves (2) en difficulté cauchemar",
+			"Identification par le declanchement de la malédiction en mettant la SM a 100% puis en parlant a l'entitE via Spirit Box ou Microphone Parabolique, puis se mettre a l'abri avec une bougie allumée pour voir si l'entitE attaque, et si oui, ce sera fort probablement un Moroï (test collaboratif)"
+		]
+	},
+	{
+		"id": "e",
+		"name": "",
+		"description": "",
+		"anecdote": "",
+		"difficulty": 0,
+		"power": 0,
+		"tools": 0,
+		"speed": 0,
+		"attackCL": 0,
+		"attackSM": 0,
+		"edvidencesID": ["evd", "evd", "evd"],
+		"edvidences": ["", "", ""],
+		"datas": ["", "", "", ""],
+		"strategies": ["", "", "", ""],
+		"todoID": "todo-",
+		"todo": ["", "", "", ""]
+	},
+	{
+		"id": "e",
+		"name": "",
+		"description": "",
+		"anecdote": "",
+		"difficulty": 0,
+		"power": 0,
+		"tools": 0,
+		"speed": 0,
+		"attackCL": 0,
+		"attackSM": 0,
+		"edvidencesID": ["evd", "evd", "evd"],
+		"edvidences": ["", "", ""],
+		"datas": ["", "", "", ""],
+		"strategies": ["", "", "", ""],
+		"todoID": "todo-",
+		"todo": ["", "", "", ""]
 	},
 	{
 		"id": "e",
