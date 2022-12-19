@@ -267,22 +267,44 @@
 		]
 	},
 	{
-		"id": "e",
-		"name": "",
-		"description": "",
-		"anecdote": "",
-		"difficulty": 0,
-		"power": 0,
-		"tools": 0,
-		"speed": 0,
-		"attackCL": 0,
-		"attackSM": 0,
-		"edvidencesID": ["evd", "evd", "evd"],
-		"edvidences": ["", "", ""],
-		"datas": ["", "", "", ""],
-		"strategies": ["", "", "", ""],
-		"todoID": "todo-",
-		"todo": ["", "", "", ""]
+		"id": "e6",
+		"name": "Fantôme",
+		"description": "Un Fantôme peut posséder les vivants, le plus souvent invoqué par une planche Ouija. Il induit également la peur chez ceux qui l’entourent. Le Fantôme est une entité qui fait perdre beaucoup de santé mentale si on le regarde lorsqu’il apparaît.  Cependant, si le Fantôme est pris en photo, il disparaîtra instantanément.",
+		"anecdote": "D‘un point de vue étymologique, le Fantôme tire son nom de la Grèce avec le mot « φᾰντᾰ́ζω », ou « phantasma », qui signifie « apparition » ou « fantôme ». Cela pourrait aussi être traduit en quelque chose qui n’est pas réel en général, comme un rêve ou une illusion.",
+		"difficulty": 50,
+		"power": 60,
+		"tools": 20,
+		"speed": 50,
+		"attackCL": 15,
+		"attackSM": 50,
+		"edvidencesID": ["evd6", "evd4", "evd2"],
+		"edvidences": ["6", "4", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Fréquence d’apparition de l’entité durant la chasse (rapide): 0.5 à 1 fois/s"
+		],
+		"strategies": [
+			"Le Fantôme est une entité capable de se déplacer à proximité d’un des joueurs présents dans le bâtiment, sans avertissement. ",
+			"Durant ses apparitions, le Fantôme draine davantage la santé mentale des joueurs à proximité.",
+			"Le Fantôme n’aime pas être pris en photo, et disparaîtra visuellement immédiatement si l’un des joueurs le photographie.",
+			"Le Fantôme est connu pour être l’entité qui est la plus difficile à voir durant une chasse : elle a tendance à apparaître visuellement beaucoup moins souvent que les autres entités. ",
+			"Attention! Si vous êtes relativement proches de lui, dans les 10 à 15 mètres, le Fantôme peut se déplacer très discrètement jusqu’à vous et vous chasser depuis un endroit inattendu. ",
+			"Le Fantôme ne pourra pas se déplacer à proximité de vous si vous vous trouvez suffisamment loin (si le bâtiment le permet, évidemment), contrairement au Spectre.",
+			"Le Fantôme est souvent de pair avec le Poltergeist, une fois le Mimic écarté par l’absence d’orbe.",
+			"Effectuer un tas pour déterminer le Poltergeist par son kick est une stratégie viable, mais l’observer en chasse est une stratégie encore meilleure sur des plus grands bâtiments, ou si vous disposez d’un couloir assez long et d’un bâton d’encens.",
+			"Si l’entité semble être souvent autour de vous ou vous faire tourner en bourrique, essayez de faire le test du sel pour éliminer le Spectre, et donc différencier ces deux entités.",
+			"Le plus difficile est de le différencier de la Banshee et du Yokai.",
+			"Pour la Banshee, tenter d’obtenir son cri spécifique au micro parabolique est une option, mais pour le Yokai, le plus prudent est d’attendre une chasse et d’observer la fréquence d’apparition visuelle de l’entité."
+		],
+		"todoID": "todo-fantome",
+		"todo": [
+			"Identification par l'utilisation d'un appareil photo (invisible), durant la chasse ou pendant un evennement",
+			"Identification par son clignotement pendant la chasse (rapide/difficile a voir)",
+			"Elimination par le test de multithrows (si ce dernier est positif, il s'agit forcement d'un Poltergeist)",
+			"Elimination par le test de sel (si ce dernier ne laisse pas de trace, il s'agit forcement d'un Spectre)",
+			"Elimination par le test de micro parabolique (si ce dernier donne un effet de cri, il s'agit forcement d'un Banshee)"
+		]
 	},
 	{
 		"id": "e",
