@@ -89,6 +89,10 @@ const initialState: initialStateType = [
 		id: 'todo-jumeaux',
 		todo: getTodoFormat(__entitiesTodo__[9].todo),
 	},
+	{
+		id: 'todo-mimic',
+		todo: getTodoFormat(__entitiesTodo__[10].todo),
+	},
 ];
 
 // slice - todo

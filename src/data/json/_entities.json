@@ -431,22 +431,39 @@
 		]
 	},
 	{
-		"id": "e",
-		"name": "",
-		"description": "",
-		"anecdote": "",
-		"difficulty": 0,
-		"power": 0,
-		"tools": 0,
-		"speed": 0,
-		"attackCL": 0,
-		"attackSM": 0,
-		"edvidencesID": ["evd", "evd", "evd"],
-		"edvidences": ["", "", ""],
-		"datas": ["", "", "", ""],
-		"strategies": ["", "", "", ""],
-		"todoID": "todo-",
-		"todo": ["", "", "", ""]
+		"id": "e10",
+		"name": "Le Mimic",
+		"description": "« Le Mimic est une entité insaisissable et mystérieuse qui imite les traits et comportements des autres, y compris d’autres entités. » Le Mimic est une entité capable de copier le comportement et les pouvoirs d’un autre type d’entité. Il est connu pour avoir des Orbes fantômatiques en plus de ses preuves habituelles. Face à ces maîtres des faux-semblants, un chasseur avisé prendra toujours garde à ne pas avoir affaire à un Mimic durant ses contrats.",
+		"anecdote": "Le Mimic semble tirer son inspiration du Doppelgänger, une entité prenant la forme d’une copie conforme d’un autre individu. Bien que ce concept d’alter ego maléfique est très commun dans de nombreuses cultures et croyances, sa présence est surtout notable dans la mythologie germanique et nordique. Le Doppelgänger est connu pour reproduire le comportement, l’apparence et les actions de sa cible afin de lui annoncer un mauvais présage, généralement des grands malheurs voire la mort de l’individu qui a le malheur de le croiser. On l’associe également au concept de « contrefacteur » dans le gnosticisme.",
+		"difficulty": 45,
+		"power": 100,
+		"tools": 50,
+		"speed": 50,
+		"attackCL": 25,
+		"attackSM": 50,
+		"edvidencesID": ["evd6", "evd4", "evd7", "evd5"],
+		"edvidences": ["6", "4", "7", "5"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50% (note: le Mimic copiera les caractéristiques de chasse de l’entité imitée)",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8 (note: le Mimic copiera les caractéristiques de vitesse de l’entité imitée)",
+			"Changement de pouvoir toutes les: 30 ~ 120s"
+		],
+		"strategies": [
+			"Le Mimic est capable de changer de pouvoir au fil de la partie.",
+			"Il dispose forcement d’une fausse Orbe Fantômatique dans sa pièce favorite (sur tout les difficultés du jeu), ce preuve est exclu dans le journal.",
+			"Pensez à vérifier l’entièreté des preuves du Mimic si vos seules preuves sont d’autres preuves du Mimic.",
+			"Vous n’aurez pas affaire au Mimic dans le cas où vous obtenez EMF5, Ecriture dans le livre fantômatique, ou DOTS, ou si vous n’avez aucune Orbe.",
+			"Au debut de la partie, le mimic ne copie aucun entitE avant déverrouillage de la porte (état), changera d'état a un autre quand la porte sera déverrouillée (toutes les 30 à 120s environ)",
+			"Il s’agit de l’entité la plus simple à déterminer en Cauchemar, puisqu’il dispose toujours de 3 preuves au lieu de 2."
+		],
+		"todoID": "todo-mimic",
+		"todo": [
+			"Identification par la presence d'une fausse Orbe Fantômatique (comme 4e preuve | 3e preuve en difficulté cauchemar)",
+			"Elimination si on a: EMF5 | Ecriture fantômatique | D.O.T.S | Absence d'une Orbe Fantômatique",
+			"Utiliser le [RESUME] est le meilleur moyen de faire face a un mimic",
+			"Identification par le changement d'etat en utilisant un timer (30 ~ 120s)",
+			"Identification par le nombre de preuve (3) en difficulté cauchemar (4 oar défaut)"
+		]
 	},
 	{
 		"id": "e",
