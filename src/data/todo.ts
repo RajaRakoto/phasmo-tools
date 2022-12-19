@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 /* json data */
-import __todoGeneralData__ from './json/_todo-general.json';
-import __todoTempData__ from './json/_todo-temp.json';
+import __generalTodo__ from './json/_general-todo.json';
+import __entitiesTodo__ from './json/_entities.json';
 
 // types - todo
 type todoArrayType = {
@@ -22,18 +22,7 @@ type initialStateType = {
 	todo: todoArrayType;
 }[];
 
-// id -> todoID
-const initialState: initialStateType = [
-	{
-		id: 'todo-general',
-		todo: __todoGeneralData__,
-	},
-	{
-		id: 'todo-temp',
-		todo: __todoTempData__,
-	},
-];
-
+// utils - todo
 function getConcernedTodo(
 	state: initialStateType,
 	action:
@@ -45,6 +34,26 @@ function getConcernedTodo(
 	// @ts-ignore
 	return state.find(todo => todo.id === action.payload[0]);
 }
+
+function getTodoFormat(todoList: String[]): todoArrayType {
+	return todoList.map((todo, index) => ({
+		id: index + 1,
+		text: todo,
+		completed: false,
+	}));
+}
+
+// id -> todoID
+const initialState: initialStateType = [
+	{
+		id: 'todo-general',
+		todo: getTodoFormat(__generalTodo__.todo),
+	},
+	{
+		id: 'todo-banshee',
+		todo: getTodoFormat(__entitiesTodo__[0].todo),
+	},
+];
 
 // slice - todo
 const todoSlice = createSlice({
