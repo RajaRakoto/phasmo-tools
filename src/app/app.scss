@@ -313,7 +313,7 @@ section {
 	@include box-props();
 	padding: 2rem;
 	border-radius: 10px;
-	max-width: __convertToRem($value: 904px);
+	max-width: 95%;
 	min-width: __convertToRem($value: 845px);
 	margin: 2.2rem;
 	@include breakpoint(max, 845px) {
@@ -395,11 +395,13 @@ section {
 		box-sizing: border-box;
 		max-height: __convertToRem($value: 500px);
 		overflow-y: scroll;
+		width: 100%;
 
 		.item {
 			border: solid #eee 1px;
 			border-radius: 10px;
 			width: fit-content;
+			max-width: __convertToRem($value: 300px);
 			padding: 1rem;
 			margin: 1rem;
 			transition: all 0.3s;
