@@ -1,8 +1,7 @@
 {
 	"todo": [
-		"Savoir la taille de la map (petite, moyenne, grande)",
-		"Allume toute les lumieres (en respectant le nombre max)",
-		"Garder toute les portes fermées",
-		"Touver toute les chachettes possibles"
+		"Savoir des le debut du jeu le strategie a adopter dans la map (cachettes possibles, emplacement des objets maudits, etc...)",
+		"Garder toute les portes fermées pour savoir quelle porte a ete ouverte (par l'entité)",
+		"Elimination du mimic par l'absence d'orbe"
 	]
 }
