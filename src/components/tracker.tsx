@@ -13,6 +13,7 @@ import { GoSearch } from 'react-icons/go';
 import { BsChatDots } from 'react-icons/bs';
 import { GiPerspectiveDiceSixFacesOne } from 'react-icons/gi';
 import { BsClipboardData } from 'react-icons/bs';
+import { GiDeathSkull } from 'react-icons/gi';
 import uuid from 'react-uuid';
 
 /* json data */
@@ -244,6 +245,7 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 function TrackerItem({
 	name,
 	description,
+	anecdote,
 	difficulty,
 	power,
 	tools,
@@ -257,6 +259,7 @@ function TrackerItem({
 }: {
 	name: string;
 	description: string;
+	anecdote: string;
 	difficulty: number;
 	power: number;
 	tools: number;
@@ -281,6 +284,16 @@ function TrackerItem({
 						Déscription
 					</h3>
 					<p>{description}</p>
+				</div>
+				<br />
+				<hr />
+				<br />
+				<div className="info-anecdote">
+					<IconRender icon={<GiDeathSkull />} size={47} />
+					<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
+						Anecdote
+					</h3>
+					<p>{anecdote}</p>
 				</div>
 				<br />
 				<hr />
@@ -433,6 +446,7 @@ export default function Tracker() {
 							key={uuid()}
 							name={item.name}
 							description={item.description}
+							anecdote={item.anecdote}
 							difficulty={item.difficulty}
 							power={item.power}
 							tools={item.tools}
