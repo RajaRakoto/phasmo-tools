@@ -195,22 +195,44 @@
 		]
 	},
 	{
-		"id": "e",
-		"name": "",
-		"description": "",
-		"anecdote": "",
-		"difficulty": 0,
-		"power": 0,
-		"tools": 0,
-		"speed": 0,
-		"attackCL": 0,
-		"attackSM": 0,
-		"edvidencesID": ["evd", "evd", "evd"],
-		"edvidences": ["", "", ""],
-		"datas": ["", "", "", ""],
-		"strategies": ["", "", "", ""],
-		"todoID": "todo-",
-		"todo": ["", "", "", ""]
+		"id": "e5",
+		"name": "Djinn",
+		"description": "Le Djinn est un fantôme territorial qui attaque lorsqu’il est menacé. Il est également connu pour pouvoir se déplacer à une vitesse significative. Le Djinn est une entité qui se nourrit de la puissance électrique du disjoncteur.  Tant que le courant est activé, il peut menacer toute personne trop proche de lui, et chasser à une vitesse plus élevée. Désactiver le disjoncteur empêchera le Djinn d’utiliser ses capacités.",
+		"anecdote": "Dans la mythologie, le Djinn est une sorte d’être du désert créé avant l’humanité à partir d’un feu sans fumée. Ils se présentent sous de nombreuses formes telles que des serpents, des êtres ailés, des géants, des insectes ou des humanoïdes et ils peuvent également posséder des humains vivants. Comme les humains d’après la mythologie, les Djinn ont été créés pour adorer Dieu, mais la plupart d’entre eux ont choisi de ne pas le faire.",
+		"difficulty": 50,
+		"power": 72,
+		"tools": 80,
+		"speed": 75,
+		"attackCL": 20,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd4", "evd7"],
+		"edvidences": ["3", "4", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse fixe en chasse (joueur visible à plus de 3m): 2.5m/s",
+			"Vitesse en chasse (pas de joueur visible ou joueur visible à moins de 3m): 1.7 ~ 2.5m/s",
+			"Portée du pouvoir de drain de santé mentale: 3m OU joueur dans la même pièce",
+			"Perte de santé mentale perdue à l’activation du drain de santé mentale (tous les joueurs dans la zone): 25%"
+		],
+		"strategies": [
+			"Le Djinn est capable de réduire la santé mentale de tous les joueurs à proximité de lui d’un important montant, laissant une trace EMF au niveau du disjoncteur.",
+			"Le Djinn se déplace également beaucoup plus vite en direction des joueurs qu’il repère, tant qu’ils sont loin de lui.",
+			"Désactiver le disjoncteur désactivera en même temps tous les pouvoirs du Djinn.",
+			"Le Djinn ne désactivera jamais de lui-même le disjoncteur.",
+			"Attention, le Djinn n’éteindra pas un disjoncteur allumé, mais peut provoquer son extinction en allumant l’interrupteur de trop.",
+			"Le « Trio de l’Ennui », symbolisé par le Djinn, l’Ombre et l’Oni (combinaison EMF5 + Températures Glaciales avec absence de Spirit Box) comporte trois entités assez difficiles à déterminer. armi ces trois entités, le Djinn est la plus grande menace, de part ses capacités. Si vous avez cette combinaison de preuves, pensez à désactiver le disjoncteur par sécurité.",
+			"Prenez garde car il a une fâcheuse tendance à pourchasser sa cible sans répit",
+			"Utiliser de l’encens ne l’empêchera pas d’utiliser son drain de santé mentale.",
+			"Se rendre dans sa pièce en conservant le disjoncteur allumé pour observer une potentielle coupure est le moyen le plus rapide d’obtenir les preuves pour le déterminer, et faire la différence entre cette entité et l’Oni."
+		],
+		"todoID": "todo-djinn",
+		"todo": [
+			"Identification par baise de santé mentale considerable sans chasse",
+			"Identification de l'EMF au niveau du disjoncteur, si celui-ci sonne sans que le disjoncteur ne saute, il s’agira forcément d’un Djinn (gardez l'EMF sur place pour confirmer)",
+			"Identification par sa vitesse de deplacement lorsqu'il a de l'electricite",
+			"Identification par sa faiblesse en cas de coupure d'electricite (perd ses pouvoirs)",
+			"Elimination si l'entité etteigne le disjoncteur en gardant en tete que le Djinn peut etteindre le disjoncteur en allumant l'interrupteur de trop (si c'est le cas, il peut s'agit d'un Oni)"
+		]
 	},
 	{
 		"id": "e",
