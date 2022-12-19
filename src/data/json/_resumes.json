@@ -1,0 +1,207 @@
+[
+	{
+		"name": "Le Mimic",
+		"resume": [
+			"Le Mimic commencera toujours la partie avec ce pouvoir",
+			"Aucun effet ni pouvoir particulier"
+		]
+	},
+	{
+		"name": "Banshee",
+		"resume": [
+			"Choisit une cible et ne chasse qu’en fonction de la santé mentale de la cible",
+			"Ne tuera que sa cible si elle est à l’intérieur du bâtiment durant la chasse",
+			"Pourra chasser normalement si la cible est à l’extérieur du bâtiment durant la chasse",
+			"Peut imiter le cri spécifique de la Banshee au micro parabolique",
+			"Drainera 5% de santé mentale supplémentaires à sa cible s’il fait un événement paranormal chantant",
+			"Aura davantage de chances d’effectuer des apparitions chantantes"
+		]
+	},
+	{
+		"name": "Cauchemar",
+		"resume": [
+			"Ne pourra plus allumer le disjoncteur ni les lumières",
+			"Aura davantage de chances d’éteindre les lumières",
+			"Aura davantage de chances d’effectuer des apparitions cassant les ampoules",
+			"Se déplacera davantage et sera plus actif dans le noir",
+			"Pourra chasser à une moyenne de 60% dans le noir et de 40% dans la lumière"
+		]
+	},
+	{
+		"name": "Démon",
+		"resume": [
+			"Peut utiliser son pouvoir pour chasser à n’importe quelle moyenne de santé mentale",
+			"Peut chasser naturellement sous 70% de santé mentale moyenne",
+			" Est sensible au crucifix, la portée de celuii passant à 5m au lieu de 3m",
+			"Durée de la période d’attente entre deux chass réduite à 20 secondes au lieu de 25",
+			"Durée d’efficacité de l’encens hors chasse réite à 60 secondes au lieu de 90"
+		]
+	},
+	{
+		"name": "Deogen",
+		"resume": [
+			"Peut répondre par un essoufflement à la Spirit Box",
+			"Peut chasser naturellement sous 40% de santé mentale",
+			"Est omniscient sur la localisation de tous les joueurs",
+			"Trouvera toujours les joueurs en chasse même cachés",
+			"En chasse, foncera sur le joueur le plus proche et ralentira quand il sera proche de lui"
+		]
+	},
+	{
+		"name": "Djinn",
+		"resume": [
+			"Dispose d’une faculté de poursuite améliorée (plus rapide loin de sa victime)",
+			"Peut drainer la santé mentale de tous les joueurs à moins de 3m de lui de 25% sans avertissement",
+			"Ne pourra plus éteindre le disjoncteur",
+			"Eteindre le disjoncteur lui fera perdre ses possibilités"
+		]
+	},
+	{
+		"name": "Esprit",
+		"resume": [
+			"Durée d’efficacité de l’encens hors chasse augmentée à 180 secondes au lieu de 90"
+		]
+	},
+	{
+		"name": "Fantôme",
+		"resume": [
+			"Disparaîtra s’il est pris en photo",
+			"Apparaitra visuellement moins souvent en chasse",
+			" Peut se déplacer à proximité d’un joueur suffisamment proche sans avertissement",
+			"Draine davantage de santé mentale aux joueurs l’observant durant ses apparitions"
+		]
+	},
+	{
+		"name": "Goryo",
+		"resume": ["Cesse de se déplacer loin de sa pièce de résidence"]
+	},
+	{
+		"name": "Hantu",
+		"resume": [
+			"Se déplace davantage vers les zones proches où la température est plus élevée",
+			"Ne pourra plus allumer le disjoncteur",
+			"Aura davantage de chances d’éteindre le disjoncteur",
+			"Ne pourra plus accélérer quand il voit un joueur en chasse",
+			"Sera plus rapide en chasse dans les températures froides",
+			"Sera plus lent en chasse dans les températures chaudes",
+			"Peut effectuer un souffle glacial lors de ses apparitions"
+		]
+	},
+	{
+		"name": "Les Jumeaux",
+		"resume": [
+			"Ne créera pas de jumeau secondaire contrairement à ce qu’on pourrait le penser",
+			"Sera 10% plus lent en chasse (vitesse du Jumeau principal)"
+		]
+	},
+	{
+		"name": "Moroï",
+		"resume": [
+			"Peut maudire tout joueur à qui il répond à la Spirit Box ou parle au microphone parabolique",
+			"Un joueur maudit perdra davantage de santé mentale chaque seconde tant qu’il est dans le bâtiment",
+			"Un joueur maudit peut prendre une pilule pour se purger",
+			"Aura une vitesse de base en chasse plus élevée inversement proportionnelle à la santé mentale moyenne des joueurs, entre 1.5 (50%) et 2.25 (0%)",
+			"Durée de désorientation par l’encens en chasse doublée (12 secondes)"
+		]
+	},
+	{
+		"name": "Myling",
+		"resume": [
+			"Emettra des sons paranormaux plus fréquents pour le micro parabolique",
+			"Ses pas seront audibles de deux fois moins loin en chasse, 10 mètres au lieu de 20"
+		]
+	},
+	{
+		"name": "Obake",
+		"resume": [
+			"Pourra camoufler ses empreintes ",
+			"Pourra laisser une empreinte spéciale (6 doigts, 2 doigts sur interrupteur, 5 doigts sur grille…)"
+		]
+	},
+	{
+		"name": "Ombre",
+		"resume": [
+			"Ne chassera qu’à moins de 35% de santé mentale moyenne",
+			"Réduira ses chances d’apparition au dessus de 50% de santé mentale moyenne",
+			"Tendance accrue d’apparaitre sous forme ombragée ou translucide",
+			"Moins probable d’apparaître sous forme complète ",
+			"Ne lancera plus d’objet quand un joueur est dans la même pièce que lui"
+		]
+	},
+	{
+		"name": "Oni",
+		"resume": [
+			" Apparait plus régulièrement",
+			" Ne peut plus produire de nuage de fumée en tant qu’événement paranormal",
+			" Ne fera de souffle malsain que s’il est apparu préalablement",
+			" Draine davantage de santé mentale aux joueurs l’observant durant ses apparitions",
+			" Sera plus souvent visible durant la chasse",
+			" Tendance accrue d’apparaître sous forme complète",
+			" Moins probable d’apparaître sous forme ombragée ou translucide"
+		]
+	},
+	{
+		"name": "Onryo",
+		"resume": [
+			"Dispose de 50% de chances de chasser à n’importe quelle santé mentale quand une flamme s’éteint près de lui",
+			"Les flammes allumées empêchent la chasse si à 4 mètres maximum quand il tente de chasser",
+			"Peut chasser à partir de 60% de santé mentale moyenne et en dessous",
+			"Sera moins actif si des joueurs parlent à proximité de lui"
+		]
+	},
+	{
+		"name": "Poltergeist",
+		"resume": [
+			"A une tendance légèrement plus élevée à lancer des objets",
+			"Peut effectuer le Kick de Poltergeist (jet simultané d’un grand nombre d’objets dans un rayon limité)",
+			"Les lancers d’objets ont un impact plus grand sur la santé mentale des joueurs à proximité",
+			"Lancera beaucoup d’objets durant la chasse",
+			"Pourra lancer les objets plus fort"
+		]
+	},
+	{
+		"name": "Raiju",
+		"resume": [
+			"Peut chasser à partir de 65% de santé mentale moyenne avec des objets électroniques à proximité",
+			"Peut atteindre une très haute vitesse en chasse avec des objets électroniques à proximité"
+		]
+	},
+	{
+		"name": "Revenant",
+		"resume": [
+			"Vitesse de déplacement deux fois moins élevée que la normale durant la chasse s’il ne voit personne",
+			"Vitesse de déplacement deux fois plus élevée que la normale durant la chasse s’il voit un joueur"
+		]
+	},
+	{
+		"name": "Spectre",
+		"resume": [
+			"Peut se téléporter à un joueur aléatoire dans le bâtiment en émettant un signal EMF de niveau 2 (zone EMF +1 « interaction »)",
+			"Ne laissera plus de traces de pas à l’UV après avoir marché dans un tas de sel"
+		]
+	},
+	{
+		"name": "Thayé",
+		"resume": [
+			"Se verra attribuer une valeur de vieillissement aléatoire, influant sur sa vitesse de chasse, la moyenne de santé mentale maximale pour qu’il puisse chasser, et son taux d’activité",
+			"Pourra chasser sous une valeur comprise entre 75% et 15% de santé mentale moyenne ",
+			"S’il doit vieillir, le Mimic changera de type d’entité copié"
+		]
+	},
+	{
+		"name": "Yokai",
+		"resume": [
+			"Sera plus actif si des joueurs parlent à proximité de lui",
+			"Peut chasser à partir de 80% si son niveau d’activité est suffisamment élevé et qu’un joueur parle à proximité",
+			"Sera moins sensible aux voix et aux objets électroniques en chasse, sa portée d’écoute passe à 2 mètres au lieu de 8"
+		]
+	},
+	{
+		"name": "Yurei",
+		"resume": [
+			"Draine la santé mentale des joueurs proches deux fois plus rapidement sur les interactions, les apparitions et passivement",
+			"Peut fermer entièrement une porte sans événement paranormal (y compris la porte d’entrée) pour drainer 15% de santé mentale au joueur le plus proche",
+			"Aura tendance à se déplacer souvent dans les pièces adjacentes"
+		]
+	}
+]
