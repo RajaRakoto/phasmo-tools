@@ -1168,6 +1168,36 @@ section {
 	}
 }
 
+.swal--informations {
+	@mixin infoRender($bulletType: disc, $maxheight: 100px) {
+		ul {
+			@include position-block-center();
+			@include inset-shadow();
+			list-style-type: $bulletType;
+			padding: 3rem;
+			width: fit-content;
+			max-height: __convertToRem($maxheight);
+			border-radius: 7px;
+			overflow-y: scroll;
+
+			li {
+				text-align: start;
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	.info {
+		&-datas {
+			@include infoRender();
+		}
+
+		&-strategies {
+			@include infoRender(square, 300px);
+		}
+	}
+}
+
 body.swal2-shown > [aria-hidden='true'] {
 	transition: 0.1s filter;
 	filter: blur(10px);
