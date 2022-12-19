@@ -113,6 +113,10 @@ const initialState: initialStateType = [
 		id: 'todo-oni',
 		todo: getTodoFormat(__entitiesTodo__[15].todo),
 	},
+	{
+		id: 'todo-onryo',
+		todo: getTodoFormat(__entitiesTodo__[16].todo),
+	},
 ];
 
 // slice - todo
