@@ -81,6 +81,10 @@ const initialState: initialStateType = [
 		id: 'todo-goryo',
 		todo: getTodoFormat(__entitiesTodo__[7].todo),
 	},
+	{
+		id: 'todo-hantu',
+		todo: getTodoFormat(__entitiesTodo__[8].todo),
+	},
 ];
 
 // slice - todo
