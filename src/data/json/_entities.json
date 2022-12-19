@@ -508,22 +508,37 @@
 		]
 	},
 	{
-		"id": "e",
-		"name": "",
-		"description": "",
-		"anecdote": "",
-		"difficulty": 0,
-		"power": 0,
-		"tools": 0,
-		"speed": 0,
-		"attackCL": 0,
-		"attackSM": 0,
-		"edvidencesID": ["evd", "evd", "evd"],
-		"edvidences": ["", "", ""],
-		"datas": ["", "", "", ""],
-		"strategies": ["", "", "", ""],
-		"todoID": "todo-",
-		"todo": ["", "", "", ""]
+		"id": "e12",
+		"name": "Myling",
+		"description": "Le Myling est une entité très active et bavarde. La rumeur prétend cependant qu’il devient silencieux quand il chasse. Le Myling est une entité qui sera plus encline à effectuer des bruits paranormaux, audibles au microphone parabolique. Lors d’une chasse, bien que sa voix soit toujours aussi audible, ses bruits de pas seront, en revanche, davantage étouffés.",
+		"anecdote": "Dans le folklore scandinave, les Myling (« mew-leeng ») sont des fantômes d’enfants non désirés tués par leurs parents. Puisqu’ils n’ont pas été baptisés, les Myling ne peuvent pas trouver le repos et sont obligés d’errer jusqu’à ce qu’ils puissent persuader un être vivant de les transporter, eux ou leur corps, vers des terres sacrées où ils pourront trouver un repos paisible. Une autre façon pour le Myling de trouver la paix est de trouver et de tuer sa mère.",
+		"difficulty": 100,
+		"power": 5,
+		"tools": 20,
+		"speed": 50,
+		"attackCL": 16,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd4", "evd1"],
+		"edvidences": ["3", "4", "1"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Distance des pas audibles en chasse: 10m (par defaut: 20m)",
+			"Volume des bruits de pas en chasse: plus faible que la normale (ex. 50% à 5m au lieu de 75%, 10% à 9m au lieu de 55%)"
+		],
+		"strategies": [
+			"Le Myling fera davantage de bruit dans le micro parabolique, et les valeurs obtenues seront plus élevées.",
+			"Il aura également davantage de chances de murmurer des paroles dans le micro parabolique. Cet outil vous permettra un peu plus facilement de repérer un Myling, car les sons paranormaux sont plus fréquents et mieux captés quand l’entité est un Myling.",
+			"Un meilleur strategie contre le Myling se fait comme suit: Préparez un EMF allumé aux étages où vous ne vous cacherez pas, de préférence immédiatement au dessus ou en dessous de la cachette où vous vous cacherez. Cachez-vous dans votre cachette, et laissez une lampe torche allumée à vos pieds. Attendez le début de la chasse. Si vous n’entendez aucun EMF, que vous entendez les bruits de pas, et que votre lampe torche ne grésille pas alors il ne s’agira PAS d’un Myling. En revanche, si vous n’entendez aucun EMF, mais que vous entendez les bruits de pas au moment où votre lampe torche commence à grésiller alors il s’agira d’un Myling",
+			"Le Myling dispose de l’une des pires combinaisons de preuves possibles. Si en difficulté Professionnel, vous n’obtenez aucune Orbe, aucune température glaciale, aucune Spirit box, et que vous galérez à trouver des empreintes (généralement, il s’agira de votre seule preuve), alors vous pouvez supposer avoir affaire à un Myling."
+		],
+		"todoID": "todo-myling",
+		"todo": [
+			"Identification par la distance des pas audibles en chasse (10m au lieu de 20m) et le volume des bruits de pas en chasse (plus faible que la normale) en utilisant le micro parabolique",
+			"Identification par le fait que le Myling murmure des paroles dans le micro parabolique (cet outil est tres utile pour repérer un Myling)",
+			"Identification par le test de l'EMF & Lampe Torche (voir strategies - faiblesse)",
+			"Identification par la difficulté à trouver des preuves (Orbes, température glaciale, Spirit box), seulement des empreintes (généralement, il s’agira de votre seule preuve)"
+		]
 	},
 	{
 		"id": "e",
