@@ -2,6 +2,7 @@
 	"todo": [
 		"Savoir des le debut du jeu le strategie a adopter dans la map (cachettes possibles, emplacement des objets maudits, etc...)",
 		"Garder toute les portes fermées pour savoir quelle porte a ete ouverte (par l'entité)",
-		"Elimination du mimic par l'absence d'orbe"
+		"Elimination du mimic par l'absence d'orbe",
+		"Proceder par elimination en cas de difficultE a trouver la bonne preuve"
 	]
 }
