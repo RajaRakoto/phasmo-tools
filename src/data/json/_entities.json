@@ -155,6 +155,46 @@
 		]
 	},
 	{
+		"id": "e4",
+		"name": "Deogen",
+		"description": "Parfois entourés d’un brouillard sans fin, les Deogen ont échappés aux chasseurs de fantômes pendant des années. Ces entités arrivent à trouver les proies les plus insaisissables avant de les traquer jusqu’à l’épuisement. Deogen, « De Ogen » signifiant « Les Yeux », portent bien leur nom. En effet, ils sont capables de repérer TOUS les joueurs dans le bâtiment, peu importe la distance ou là où ils se cachent. Ils deviennent cependant très lents une fois proches de leur victime.",
+		"anecdote": "Le Deogen est une entité du conte flamand (belge) de la fin du XVIIIe siècle appelé De Ogen (« les yeux » en néerlandais). Il s’agit de l’histoire d’un étrange brouillard aux yeux jaunes qui hante la forêt de Soignies et qui aime traquer ses victimes la nuit, se déplaçant lentement lorsqu’on le regarde et rapidement lorsque l’on détourne le regard.",
+		"difficulty": 60,
+		"power": 76,
+		"tools": 50,
+		"speed": 98,
+		"attackCL": 15,
+		"attackSM": 40,
+		"edvidencesID": ["evd6", "evd1", "evd2"],
+		"edvidences": ["6", "1", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (tradive): 40%",
+			"Vitesse fixe en chasse (joueur ciblé à plus de 3m): 3m/s (le plus rapide du jeu)",
+			"Vitesse fixe en chasse (joueur ciblé à moins de 2.5m): 0.4m/s (le plus lent du jeu)",
+			"Probabilité de réponse essoufflement (spirit box): 33%",
+			"Distance maximale pour une réponse essoufflement (spirit box): 1m"
+		],
+		"strategies": [
+			"Le Deogen est une entité capable de repérer l’ensemble des joueurs dans le bâtiment, y compris s’ils sont cachés et sans objet électronique allumé.",
+			"Il vous sera beaucoup plus facile d’obtenir les preuves Projecteur DOTS et Ecriture avec un Deogen.",
+			"Trouvez un endroit où vous pourrez tourner autour d’un élément du décor (élément de boucle) lors de la chasse.",
+			"Utilisez astucieusement les capteurs de mouvement, le sel, l’UV ou les apparitions pour vous assurer d’être sur l’entité quand vous lui posez la question sur la spirit box",
+			"Gardez en tête que le Deogen chassera plus tardivement que la plupart des entités.",
+			"Si vous entendez au loin une entité extrêmement rapide qui se rapproche à grand pas, sortez de votre cachette immédiatement (se cacher n’a aucun effet, gardez vos distances.). Vous pouvez le déterminer avec sa vitesse qui devient bien plus lent que l’entièreté des entités une fois proche de vous, preparez de l’encens pour vous sortir d’un cul-de-sac au cas ou il ne s'agit pas d'un Deogen.",
+			"Vous aurez donc la possibilité de deviner directement qu’il s’agit du Deogen s’il vous répond par un essoufflement (au spirit box)",
+			"Le Deogen aura toujours la preuve spirit box (en difficulte cauchemar)",
+			"Le joueur ciblé lors d’une chasse d’un Deogen est aléatoire quand la chasse commence, et le Deogen changera aléatoirement pour la personne la plus proche durant sa chasse."
+		],
+		"todoID": "todo-deogen",
+		"todo": [
+			"Preuves Projecteur DOTS et Ecriture (trouvés plus facilement)",
+			"Identification par l'utilisation du spirit box (essoufflement)",
+			"Utilisation des capteurs de mouvement, du sel, de l'UV ou des apparitions pour vous assurer d'être sur l'entité quand vous lui posez la question sur la spirit box",
+			"Chasse plus tardive que la plupart des entités",
+			"Identification par sa vitesse rapide qui devient très lente une fois proche"
+		]
+	},
+	{
 		"id": "e",
 		"name": "",
 		"description": "",
