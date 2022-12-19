@@ -57,6 +57,10 @@ const initialState: initialStateType = [
 		id: 'todo-cauchemar',
 		todo: getTodoFormat(__entitiesTodo__[1].todo),
 	},
+	{
+		id: 'todo-demon',
+		todo: getTodoFormat(__entitiesTodo__[2].todo),
+	},
 ];
 
 // slice - todo
