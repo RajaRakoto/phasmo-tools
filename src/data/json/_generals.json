@@ -24,7 +24,7 @@
 		"lists": [
 			{
 				"subtitle": "Commune 1",
-				"item": "La plupart des entités ne peuvent chasser qu’à partir du moment où la santé mentale moyenne de tous les joueurs vivants passe sous la barre de 50%."
+				"item": "La plupart des entités ne peuvent chasser qu’à partir du moment où la santé mentale moyenne de tous les joueurs vivants passe sous la barre de 50%. Plus la SM est basse, plus les entités deviennent forts, plus vous risquez d'etre chassé par l'un d'eux"
 			},
 			{
 				"subtitle": "Commune 2",
@@ -49,6 +49,18 @@
 			{
 				"subtitle": "Commune 7",
 				"item": "Les bruits de pas accompagnant les entités en chasse sont audibles à 20 mètres de toute entité, et frappent à un rythme régulier de plus ou moins 2 pas par seconde si l’entité est à une vitesse de 1.7m/s."
+			},
+			{
+				"subtitle": "Commune 8",
+				"item": "Les entitEs ne peuvent pas attaquer pendant l'utilisation d'une protection (encens, crucifix, etc ...). La durée de la protection est de 5~7 secondes environ selon l'objet"
+			},
+			{
+				"subtitle": "Commune 9",
+				"item": "Si une lampe torche commence a clignoter lors d'une chasse, c'est que le fantome est a peu pres a 10m de sa cible."
+			},
+			{
+				"subtitle": "Commune 10",
+				"item": "Les apparences des entités ne déterminent pas leur nature."
 			}
 		],
 		"post": ""
@@ -59,7 +71,7 @@
 		"lists": [
 			{
 				"subtitle": "Immobilité (Idle)",
-				"item": "L’entité s’immobilise durant un temps aléatoire, et choisit sa prochaine action selon ses probabilités propres, dépendantes des paramètres de la partie."
+				"item": "L’entité s’immobilise durant un temps aléatoire, et choisit sa prochaine action selon ses probabilités propres, dépendantes des paramètres de la partie. Toute entité a part le démon a un countdown de 25s avant d'attaquer a nouveau sa proie."
 			},
 			{
 				"subtitle": "Déplacement (Wander)",
@@ -75,7 +87,7 @@
 			},
 			{
 				"subtitle": "Événement (GhostEvent)",
-				"item": "L’entité effectue une apparition ou une brume maudite. Le type d’apparition ou d’événement, ainsi que son apparence (translucide, ombre, complète) durant cet événement, dépendent de son type d’entité & d’un facteur aléatoire."
+				"item": "L’entité effectue une apparition ou une brume maudite. Le type d’apparition ou d’événement, ainsi que son apparence (translucide, ombre, complète) durant cet événement, dépendent de son type d’entité & d’un facteur aléatoire. L'apparition d'une fantome (sans attaquer) signifie une avertissement (periode de grace)"
 			},
 			{
 				"subtitle": "Pouvoir (GhostAbility)",
@@ -118,6 +130,10 @@
 			{
 				"subtitle": "Les portes",
 				"item": "Attention, vous cacher derrière des portes est extrêmement risqué car l’entité a 50% de chances de regarder derrière la porte lorsqu’il passe à côté, et 100% de chances s’il vous a vu disparaître à proximité."
+			},
+			{
+				"subtitle": "Le courant",
+				"item": "On ne peut allumer que 9 lumieres sur les petites maps, 8 lumieres pour les moyennes maps et 7 lumieres pour les grandes maps. Attention, le courant est très important, il faut donc bien le gérer pour ne pas se retrouver dans le noir."
 			}
 		],
 		"post": ""
