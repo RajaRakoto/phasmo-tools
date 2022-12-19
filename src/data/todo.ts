@@ -53,6 +53,10 @@ const initialState: initialStateType = [
 		id: 'todo-banshee',
 		todo: getTodoFormat(__entitiesTodo__[0].todo),
 	},
+	{
+		id: 'todo-cauchemar',
+		todo: getTodoFormat(__entitiesTodo__[1].todo),
+	},
 ];
 
 // slice - todo
