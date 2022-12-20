@@ -192,6 +192,8 @@ nav {
 
 /* sections styles */
 section {
+	@include animation-fade($in-out: in);
+
 	.header {
 		@include position-flex-center();
 		margin-top: 1rem;
