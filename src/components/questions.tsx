@@ -31,7 +31,7 @@ export default function Questions() {
 							textDecoration: 'underline',
 						}}
 					>
-						Questions
+						Questions/Réponses
 					</h2>
 					<hr />
 				</div>
