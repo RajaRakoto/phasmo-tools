@@ -192,11 +192,13 @@ nav {
 
 /* sections styles */
 section {
+	@include animation-fade($in-out: in);
+
 	.header {
 		@include position-flex-center();
 		margin-top: 1rem;
 		flex-direction: column;
-		margin-left: 6.5rem;
+		margin-left: 5rem;
 
 		h1 {
 			margin-top: 1rem;
@@ -313,8 +315,9 @@ section {
 	@include box-props();
 	padding: 2rem;
 	border-radius: 10px;
-	max-width: __convertToRem($value: 904px);
+	max-width: 95%;
 	min-width: __convertToRem($value: 845px);
+	margin: 2.2rem;
 	@include breakpoint(max, 845px) {
 		min-width: 100%;
 	}
@@ -394,11 +397,13 @@ section {
 		box-sizing: border-box;
 		max-height: __convertToRem($value: 500px);
 		overflow-y: scroll;
+		width: 100%;
 
 		.item {
 			border: solid #eee 1px;
 			border-radius: 10px;
 			width: fit-content;
+			max-width: __convertToRem($value: 300px);
 			padding: 1rem;
 			margin: 1rem;
 			transition: all 0.3s;
@@ -481,6 +486,7 @@ section {
 
 	&-content {
 		width: 100%;
+		margin-top: 1.6rem;
 
 		textarea {
 			resize: vertical;
@@ -839,6 +845,7 @@ section {
 .banner {
 	.swiper {
 		max-width: __convertToRem($value: 350px);
+		height: __convertToRem($value: 800px);
 		margin-top: 2rem;
 		margin-bottom: 3.2rem;
 
@@ -1163,6 +1170,76 @@ section {
 		border-bottom: solid 3px #9b624b;
 		padding-bottom: 1rem;
 		margin-bottom: 1rem;
+	}
+}
+
+.swal--informations {
+	@mixin infoRender($bulletType: disc, $maxheight: 100px) {
+		ul {
+			@include position-block-center();
+			@include inset-shadow();
+			list-style-type: $bulletType;
+			padding: 3rem;
+			width: fit-content;
+			max-height: __convertToRem($maxheight);
+			border-radius: 7px;
+			overflow-y: scroll;
+
+			li {
+				text-align: start;
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	.info {
+		&-datas {
+			@include infoRender();
+		}
+
+		&-strategies {
+			@include infoRender(square, 300px);
+		}
+	}
+}
+
+.swal--table {
+	#table-core {
+		@include position-flex-center();
+
+		table {
+			border-collapse: collapse;
+			width: fit-content !important;
+			max-width: __convertToRem($value: 900px);
+			color: $theme1;
+			border: 1px solid $theme1;
+		}
+
+		th,
+		td {
+			padding: 10px;
+			text-align: center;
+			border: 1px solid $theme1;
+
+			h3 {
+				font-size: larger;
+				font-weight: bolder;
+			}
+		}
+
+		td:last-child {
+			text-align: left;
+		}
+
+		td:first-child {
+			width: fit-content;
+			min-width: __convertToRem($value: 100px);
+		}
+
+		th {
+			background-color: $theme1;
+			color: #eee;
+		}
 	}
 }
 

@@ -6,24 +6,24 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import { RxReset } from 'react-icons/rx';
 import { FiInfo } from 'react-icons/fi';
-import { FaRegCheckCircle, FaSadTear } from 'react-icons/fa';
+import { FaRegCheckCircle } from 'react-icons/fa';
 import { CgCloseO } from 'react-icons/cg';
 import { TbFilePencil } from 'react-icons/tb';
 import { GoSearch } from 'react-icons/go';
 import { BsChatDots } from 'react-icons/bs';
-import { GiPerspectiveDiceSixFacesOne, GiGhost } from 'react-icons/gi';
+import { GiPerspectiveDiceSixFacesOne } from 'react-icons/gi';
+import { BsClipboardData } from 'react-icons/bs';
+import { GiDeathSkull } from 'react-icons/gi';
 import uuid from 'react-uuid';
 
 /* json data */
 import evd from '../data/json/_edvidences.json';
+import attacksm from '../data/json/_attacksm.json';
+import resumes from '../data/json/_resumes.json';
 
 /* common */
 import { IconRender } from '../common/icons';
 import ProgressBar from '../common/progress';
-
-/* store */
-import { useStoreSelector, useStoreDispatch } from '../data/hooks';
-import { filter__tracker, reset__tracker } from '../data/tracker';
 
 /* assets */
 import closedbook_icon from '../assets/icons/closedbook_icon.png';
@@ -36,8 +36,11 @@ import thermometer_icon from '../assets/icons/thermometer_icon.png';
 
 /* components */
 import Todo from './todo';
+import { TableAttackSM, TableResume } from './table';
 
 /* store */
+import { useStoreSelector, useStoreDispatch } from '../data/hooks';
+import { filter__tracker, reset__tracker } from '../data/tracker';
 import store from '../data/store';
 
 // ================================================
@@ -90,6 +93,7 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 	// get local storage and set it to edvidences state
 	const [edvidences, setEdvidences] = useState(evd);
 	const local = JSON.parse(localStorage.getItem('tracker__edvidences')!);
+	const reactSwal = withReactContent(Swal);
 
 	// set local storage to edvidences state
 	useEffect(() => {
@@ -155,6 +159,42 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 				return item;
 			}),
 		);
+	};
+
+	// modal for 2 specs tracker btn (RESUME + SM PALETTE)
+	const SweetAlert = async ({
+		title,
+		description,
+		subComponent,
+	}: {
+		title: string;
+		description: string;
+		subComponent: ReactElement<any, any>;
+	}) => {
+		reactSwal.fire({
+			title:
+				"<h2 style='font-size: 35px'>" +
+				title +
+				'</h2>' +
+				"<hr style='margin-top: 1.2rem'>" +
+				'<br>' +
+				'<center>' +
+				'<p>' +
+				description +
+				'</p>' +
+				'</center>',
+			html: <>{subComponent}</>,
+			showCloseButton: true,
+			showClass: {
+				popup: 'swal--anim-show',
+			},
+			hideClass: {
+				popup: 'swal--anim-hide',
+			},
+			customClass: {
+				container: 'swal--table',
+			},
+		});
 	};
 
 	return (
@@ -226,6 +266,32 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 				/>
 			</div>
 			<hr />
+			<div>
+				<button
+					onClick={() =>
+						SweetAlert({
+							title: 'RESUME',
+							description:
+								'Resumer sur les specificités (forces | faiblesses) de chaque entité',
+							subComponent: <TableResume data={resumes} />,
+						})
+					}
+				>
+					RESUME
+				</button>
+				<button
+					onClick={() =>
+						SweetAlert({
+							title: 'SM PALETTE',
+							description:
+								"Liste de toute les SM max (moyenne) pour qu'un entité effectue sa première chasse (en fonction d'un certain nombre de critères)",
+							subComponent: <TableAttackSM data={attacksm} />,
+						})
+					}
+				>
+					SM PALETTE
+				</button>
+			</div>
 			<div className="d-flex justify-content-center">
 				<button
 					style={{
@@ -245,23 +311,31 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 function TrackerItem({
 	name,
 	description,
-	attackSM,
-	agressivity,
+	anecdote,
+	difficulty,
+	power,
+	tools,
 	speed,
-	strengths,
-	weaknesses,
-	behaviors,
+	attackCL,
+	attackSM,
 	edvidences,
+	datas,
+	strategies,
+	todoID,
 }: {
 	name: string;
 	description: string;
-	behaviors: string;
-	attackSM: number;
-	agressivity: number;
+	anecdote: string;
+	difficulty: number;
+	power: number;
+	tools: number;
 	speed: number;
-	strengths: string[];
-	weaknesses: string[];
+	attackCL: number;
+	attackSM: number;
 	edvidences: string[];
+	datas: string[];
+	strategies: string[];
+	todoID: string;
 }) {
 	const [isHighlighted, setIsHighlighted] = useState(false);
 
@@ -269,46 +343,53 @@ function TrackerItem({
 
 	const EntityInformation = () => {
 		return (
-			<>
-				<IconRender icon={<BsChatDots />} size={47} />
-				<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
-					Description
-				</h3>
-				<p>{description}</p>
-				<hr />
-				<IconRender icon={<GiPerspectiveDiceSixFacesOne />} size={47} />
-				<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>Capacités</h3>
-				<ul>
-					<p>{behaviors}</p>
-				</ul>
-				<hr />
-				<div className="container" style={{ paddingBottom: 30 }}>
-					<div className="row">
-						<div className="col-md-6 col-sm-12">
-							<IconRender icon={<GiGhost />} size={47} />
-							<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
-								Forces
-							</h3>
-							<ul>
-								{strengths.map(strength => (
-									<li key={uuid()}>{strength}</li>
-								))}
-							</ul>
-						</div>
-						<div className="col-md-6 col-sm-12">
-							<IconRender icon={<FaSadTear />} size={47} />
-							<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
-								Faiblesses
-							</h3>
-							<ul>
-								{weaknesses.map(weakness => (
-									<li key={uuid()}>{weakness}</li>
-								))}
-							</ul>
-						</div>
-					</div>
+			<div className="info">
+				<div className="info-description">
+					<IconRender icon={<BsChatDots />} size={47} />
+					<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
+						Déscription
+					</h3>
+					<p>{description}</p>
 				</div>
-			</>
+				<br />
+				<hr />
+				<br />
+				<div className="info-anecdote">
+					<IconRender icon={<GiDeathSkull />} size={47} />
+					<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
+						Anecdote
+					</h3>
+					<p>{anecdote}</p>
+				</div>
+				<br />
+				<hr />
+				<br />
+				<div className="info-datas">
+					<IconRender icon={<BsClipboardData />} size={47} />
+					<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
+						Données utiles
+					</h3>
+					<ul>
+						{datas.map(data => (
+							<li key={uuid()}>{data}</li>
+						))}
+					</ul>
+				</div>
+				<br />
+				<hr />
+				<br />
+				<div className="info-strategies">
+					<IconRender icon={<GiPerspectiveDiceSixFacesOne />} size={47} />
+					<h3 style={{ fontSize: 20, textDecoration: 'underline' }}>
+						Capacités - Pouvoirs - Point faible évident
+					</h3>
+					<ul>
+						{strategies.map(strategy => (
+							<li key={uuid()}>{strategy}</li>
+						))}
+					</ul>
+				</div>
+			</div>
 		);
 	};
 
@@ -337,6 +418,9 @@ function TrackerItem({
 			},
 			hideClass: {
 				popup: 'swal--anim-hide',
+			},
+			customClass: {
+				container: 'swal--informations',
 			},
 		});
 	};
@@ -383,12 +467,7 @@ function TrackerItem({
 								title: name,
 								subTitle: 'stratégies',
 								subComponent: (
-									<Todo
-										title="Temp todo"
-										todoID="todo-temp"
-										addInput
-										deleteBtn
-									/>
+									<Todo title="Todo" todoID={todoID} addInput deleteBtn />
 								),
 							})
 						}
@@ -397,9 +476,18 @@ function TrackerItem({
 					</button>
 				</div>
 				<div style={{ marginTop: 8 }}>
-					<ProgressBar percent={speed} label={'Speed'} />
-					<ProgressBar percent={agressivity} label={'agressivity'} />
-					<ProgressBar percent={attackSM} label={'attack SM'} />
+					<ProgressBar percent={difficulty} label={'Difficulté (preuves)'} />
+					<ProgressBar percent={attackCL} label={'Attaque classique'} />
+					<ProgressBar
+						percent={attackSM}
+						label={'Attaque SM (naturellement)'}
+					/>
+					<ProgressBar percent={power} label={'Dangerosité du pouvoir'} />
+					<ProgressBar percent={speed} label={'Vitesse (naturellement)'} />
+					<ProgressBar
+						percent={tools}
+						label={'Outils de poursuite en chasse'}
+					/>
 				</div>
 				<ul>
 					{edvidences.map(edvidence => (
@@ -424,16 +512,20 @@ export default function Tracker() {
 				<div className="tracker-content">
 					{trackerStore.map((item: any) => (
 						<TrackerItem
-							key={item.id}
+							key={uuid()}
 							name={item.name}
 							description={item.description}
-							behaviors={item.behaviors}
-							attackSM={item.attackSM}
-							agressivity={item.agressivity}
+							anecdote={item.anecdote}
+							difficulty={item.difficulty}
+							power={item.power}
+							tools={item.tools}
 							speed={item.speed}
-							strengths={item.strengths}
-							weaknesses={item.weaknesses}
+							attackCL={item.attackCL}
+							attackSM={item.attackSM}
 							edvidences={item.edvidences}
+							datas={item.datas}
+							strategies={item.strategies}
+							todoID={item.todoID}
 						/>
 					))}
 				</div>

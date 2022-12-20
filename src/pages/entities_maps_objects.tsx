@@ -93,14 +93,8 @@ export default function Entities_Maps_Objects() {
 				<a href="#generals-link">
 					<button className="float-nav-btn">Généralités</button>
 				</a>
-				<a href="#note-link">
-					<button className="float-nav-btn">Notes</button>
-				</a>
 				<a href="#todo-link">
 					<button className="float-nav-btn">Todo</button>
-				</a>
-				<a href="#tracker-link">
-					<button className="float-nav-btn">Tracker</button>
 				</a>
 				<a href="#timer-link">
 					<button className="float-nav-btn">Timer</button>
@@ -108,25 +102,27 @@ export default function Entities_Maps_Objects() {
 				<a href="#chrono-link">
 					<button className="float-nav-btn">Chrono</button>
 				</a>
+				<a href="#tracker-link">
+					<button className="float-nav-btn">Tracker</button>
+				</a>
+				<a href="#note-link">
+					<button className="float-nav-btn">Notes</button>
+				</a>
 				<a href="#questions-link">
-					<button className="float-nav-btn">Questions</button>
+					<button className="float-nav-btn">Q/R</button>
 				</a>
 				<hr />
-				<a href="#">
-					<button className="float-nav-btn">N/A</button>
+				<a href="#littlemap-link">
+					<button className="float-nav-btn">L/map</button>
 				</a>
-				<a href="#">
-					<button className="float-nav-btn">N/A</button>
+				<a href="#middlemap-link">
+					<button className="float-nav-btn">M/map</button>
 				</a>
-				<a href="#">
-					<button className="float-nav-btn">N/A</button>
-				</a>
-				<hr />
-				<a href="#">
-					<button className="float-nav-btn">N/A</button>
+				<a href="#bigmap-link">
+					<button className="float-nav-btn">B/map</button>
 				</a>
 			</FloatNav>
-			{/* <Entities_Section /> */}
+			<Entities_Section />
 			<Maps_Section />
 			{/* <Objects_Section /> */}
 			<ScrollUp />

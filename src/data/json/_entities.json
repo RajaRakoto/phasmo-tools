@@ -1,86 +1,1011 @@
 [
 	{
 		"id": "e1",
-		"name": "entity 1",
-		"description": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"behaviors": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"attackSM": 25,
-		"agressivity": 62,
-		"speed": 70,
-		"strengths": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"name": "Banshee",
+		"description": "La sirène chantante, connue pour attirer ses victimes avec ses chansons. On dit qu’elle identifie précisément sa proie avant de porter le coup fatal. La Banshee est un type d’entité qui choisit une cible et la poursuit sans relâche durant ses chasses. Si sa cible est à l’extérieur, elle s’attaquera alors à tous les autres chasseurs. La Banshee chassera en ne prenant en compte que la santé mentale de sa cible. Elle ne changera de cible que lorsqu’elle sera décédée.",
+		"anecdote": "La Banshee est un esprit féminin du folklore irlandais qui annonce la mort d’un membre de la famille, généralement en gémissant ou en hurlant. Banshee se traduit par « femme du monticule des fées » ou « femme féérique » dans ses racines irlandaises.",
+		"difficulty": 35,
+		"power": 35,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 20,
+		"attackSM": 50,
+		"edvidencesID": ["evd4", "evd5", "evd2"],
+		"edvidences": ["4", "5", "2"],
+		"datas": [
+			"Santé mentale max. de la cible avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Nombre de personnes pourchassées en chasse (tant qu’elle se trouve dans le bâtiment): 1 ",
+			"Baisse de santé mentale sur une Apparition chantante (cible): 5%"
 		],
-		"weaknesses": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"strategies": [
+			"La Banshee a pour capacité à ne cibler qu’un seul joueur.",
+			"Si sa cible est à l'intérieur d'un bâtiment, la Banshee ignore les autres joueurs et se concentre sur sa cible unique.",
+			"Si sa cible est à l'extérieur du bâtiment, la Banshee s'en prend à tous les joueurs qu'elle trouve.",
+			"Si sa cible entre à nouveau dans le bâtiment, elle reprendra son comportement initial.",
+			"La Banshee aime chanter, et sa cible subira davantage de dégâts sur sa santé mentale lorsqu’elle le fait.",
+			"Lorsqu’elle vagabonde, la Banshee aura également tendance à rester proche de sa cible.",
+			"La santé mentale de la cible détermine si une chasse peut être initiée avec la Banshee. On peut déterminer la cible en utilisant des objets maudits ou des pilules.",
+			"Si en pleine chasse, une entité semble vous ignorer totalement alors même que vous vous situez juste devant elle et pas caché, il y a de fortes chances qu’il s’agit d’une Banshee.",
+			"La Banshee vous traverse sans vous tuer si vous n’êtes pas sa cible.",
+			"La cible de la Banshee ne change que lorsque sa précédente cible est décédée.",
+			"Pendant qu’elle chasse, la voix de la Banshee sera audible depuis un peu plus loin que les autres entités.",
+			"Pour accomplir la mission de l'encens pendant la chasse, il faut être la cible ou que la cible soit à l'extérieur, sinon la mission ne pourra pas être terminée.",
+			"Prendre la photo d’une Banshee en chasse est beaucoup moins risqué si la cible est à l’intérieur et bien cachée.",
+			"Lors de ses apparitions, la Banshee aura une très grande préférence pour les événements paranormaux chantants, où l’entité se matérialise en chantant.",
+			"Si vous avez un microphone parabolique, vous pourrez entendre un son unique que seule la Banshee peut émettre (une sorte de voix plaintive).",
+			"Si vous tombez sur la combinaison Orbe + Empreintes, prenez garde, il peut en effet s’agir d’un Mimic qui cache bien son jeu. Cette combinaison est l’une des plus difficiles du jeu et elle mérite d’utiliser astucieusement le matériel à votre disposition. ",
+			"L’Obake devrait vous laisser au moins une empreinte à 6 doigts vous permettant de le différencier, et la vitesse d’un Hantu devrait vous aider à le sortir de l’équation.",
+			"Si vous obtenez un grand nombre d’apparitions chantantes, cet élément devrait également vous donner une indication que vous avez affaire à la Banshee.",
+			"Depuis que la Banshee ne peut plus chasser à 100% de santé mentale, elle est devenue beaucoup plus faible mais également plus difficile à déterminer.",
+			"La faiblesse au crucifix n’est également plus du tout un moyen de reconnaître cette entité car cette faiblesse a été retirée."
 		],
-		"edvidencesID": ["evd1", "evd2", "evd3"],
-		"edvidences": ["1", "2", "3"]
+		"todoID": "todo-banshee",
+		"todo": [
+			"Test de la cible intérieur/extérieur (en utilisant des objets maudits/pilules)",
+			"Verification de la SM apres un event chantant",
+			"Etre ignoré pendant une chasse",
+			"L'entité traverse sans tuer",
+			"L'entité spawn toujours pres de la cible",
+			"L'entité se matérialise en chantant",
+			"Un grand nombre d'apparitions chantantes",
+			"Voix audible depuis un peu plus loin que les autres entités",
+			"Test microphone parabolique (voix plaintive)",
+			"Elimination du Mimic",
+			"Elimination de l'Obake (empreintes a 6 doigts)",
+			"Elimination de l'Hantu (vitesse)"
+		]
 	},
 	{
 		"id": "e2",
-		"name": "entity 2",
-		"description": "[entity 2] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"behaviors": "[entity 1] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"attackSM": 71,
-		"agressivity": 12,
-		"speed": 23,
-		"strengths": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"name": "Cauchemar",
+		"description": "Le Cauchemar est la source de tous les mauvais rêves, ce qui le rend plus puissant dans l’obscurité. Le Cauchemar est un type d’entité qui attaquera plus tôt dans l’obscurité. En contrepartie, la lumière retardera fortement le moment de sa chasse. Cette entité adore éteindre les lumières et se balader dans l’obscurité. ",
+		"anecdote": "Le Cauchemar est basé sur la créature mythologique scandinave et germanique « Mara ». Le Cauchemar, dans la mythologie, n’était pas techniquement une entité, mais plutôt une femme normale qui s’est transformée la nuit en raison d’une malédiction appliquée par les circonstances de sa naissance. Cette malédiction appliquée à un homme créerait une sorte de loup-garou. Le Mara entrait dans les maisons des gens la nuit et se plaçait ensuite sur la poitrine de leurs victimes, les paralysant et leur donnant une sensation d’étouffement. Elle était également responsable de cauchemars et a donné son nom à ce phénomène.",
+		"difficulty": 52,
+		"power": 40,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 45,
+		"attackSM": 60,
+		"edvidencesID": ["evd6", "evd5", "evd1"],
+		"edvidences": ["6", "5", "1"],
+		"datas": [
+			"Santé mentale max. avant chasse (lumière éteinte - anticipée): 60%",
+			"Santé mentale max. avant chasse (lumière allumée - tardive): 40%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s"
 		],
-		"weaknesses": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"strategies": [
+			"Le Cauchemar est une entité qui adore l’obscurité.",
+			"Quand les lumières sont éteintes là où il se situe, il pourra chasser plus tôt que la normale.",
+			"Cependant, allumer les lumières autour d’un Cauchemar le fera chasser plus tardivement.",
+			"Le Cauchemar a davantage l’habitude de se balader dans le noir, et de se rendre dans les pièces sombres proches.",
+			"Le Cauchemar est la seule entité incapable d’allumer par lui-même un interrupteur ou le Disjoncteur.",
+			"Si votre entité a allumé une lumière ou le Disjoncteur, vous pouvez être sûrs que ce n’est pas un Cauchemar.",
+			"Pour compenser ce point faible, le Cauchemar aura davantage tendance à faire des apparitions pour casser les lumières de la pièce.",
+			"Lorsque vous obtenez la combinaison de preuves Orbe + Spirit Box, preuves faciles à obtenir, vous vous retrouverez avec le Cauchemar ainsi que le Yokai et l’Onryo. Ces trois entités sont connues pour chasser plus tôt que la normale. Si l’entité allume la lumière, vous pourrez éliminer le Cauchemar de la liste. Dans le cas contraire, maintenez allumées les lumières et mettez-vous un peu en dessous des 50% de santé mentale moyenne, s’il attaque depuis un lieu dans la lumière, il ne s’agira pas d’un Cauchemar.",
+			"Tant que vous n’avez pas eu l’Ecriture fantômatique, ou la confirmation d’absence d’empreintes digitales, vous ne serez pas en mesure de déterminer s’il s’agit d’un Mimic.",
+			"N’oubliez pas qu’allumer un grand nombre de lumières peut faire sauter le Disjoncteur. (respectez les limites de puissance)",
+			"Avec la combinaison Orbe + Ecriture fantômatique, il vous sera encore plus simple de déterminer la nature de l’entité en écoutant les pas en chasse : si lorsque vous êtes cachés le rythme des pas est normal, il s’agira d’un Cauchemar, et s’ils sont peu fréquents, il s’agira d’un Revenant.",
+			"Conserver les lumières allumées pour éviter une chasse anticipée peut être une stratégie viable, mais conserver le Disjoncteur allumé et les lumières alentours éteintes peut vous permettre d’observer l’entité allumer un interrupteur, et de retirer le Cauchemar de votre liste.",
+			"Dans les grandes maps telles que la High School ou l’Asile, et particulièrement en difficultés plus élevées, repérez le Disjoncteur afin de le rétablir si l’entité le fait disjoncter.",
+			"Il est également utile de noter qu’il arrive parfois que le Cauchemar cherche à éteindre un interrupteur à l’instant où il est allumé, si cela vous arrive, il faudra que vous vous intéressiez à vérifier le Cauchemar."
 		],
-		"edvidencesID": ["evd1", "evd2", "evd4"],
-		"edvidences": ["1", "2", "4"]
+		"todoID": "todo-cauchemar",
+		"todo": [
+			"Attaque anticipée dans le noir (SM max. 60%)",
+			"Attaque tardive dans la lumière (SM max. 40%)",
+			"Plus d'interaction dans les pièces sombres",
+			"Ne peut pas allumer les lumières/disjoncteur",
+			"Elimination si l'entité allume une lumière/disjoncteur",
+			"Elimination si l'entité attaque depuis un lieu dans la lumière",
+			"Identification si l'entité etteint un interrupteur à l’instant où il est allumé (test à faire plsieurs fois)",
+			"Peut casser les lumières",
+			"Peut faire sauter le disjoncteur",
+			"Indentification du Mimic si l'entité écrit et n'a pas d'empreintes",
+			"Indentification du Revenant par le rythme des pas en chasse"
+		]
 	},
 	{
 		"id": "e3",
-		"name": "entity 3",
-		"description": "[entity 3] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"behaviors": "[entity 3] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"attackSM": 21,
-		"agressivity": 10,
-		"speed": 3,
-		"strengths": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"name": "Démon",
+		"description": "Le Démon est l’une des pires entités que vous puissiez rencontrer puisqu’on sait qu’ils attaquent sans raison apparente. Un Démon chassera plus tôt et plus souvent que les autres types d’entité. Le Démon craint le crucifix, sa portée d’action est plus grande contre lui.",
+		"anecdote": "Dans la mythologie, les démons ont tendance à avoir des formes horrifiantes, étant généralement représentés avec des cornes, des queues, des griffes et d’autres appendices inhumains.",
+		"difficulty": 62,
+		"power": 98,
+		"tools": 5,
+		"speed": 52,
+		"attackCL": 95,
+		"attackSM": 70,
+		"edvidencesID": ["evd4", "evd1", "evd7"],
+		"edvidences": ["4", "1", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (sans contrainte): 70%",
+			"Santé mentale max. avant chasse (avec son pouvoir): 100%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Efficacité de l’encens hors chasse: 60s (par defaut: 90s)",
+			"Portée du crucifix: 5m (par defaut: 3m)",
+			"Durée d’attente entre les chasses (countdown): 20s (par defaut: 25s)"
 		],
-		"weaknesses": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"strategies": [
+			"Le Démon est capable d’attaquer très tôt dans la partie.",
+			"Sa fréquence de chasse est plus élevée que celle des autres entités, l’amenant à souvent initier des chasses quand il en a la possibilité.",
+			"Le Démon peut également activer son pouvoir, et initier une chasse sans prendre en compte la santé mentale moyenne des joueurs.",
+			"Les crucifix sont l’unique faiblesse du Démon. Placez-les dans des endroits stratégiques afin de couvrir tout une pièce, ou de vous assurer une sortie de secours vers votre cachette.",
+			"Au cas où vous ne le localisez pas assez tôt, préparez-vous à courir vous réfugier dans votre cachette s’il démarre une chasse.",
+			"Le Démon n’a aucun outil pouvant faciliter sa poursuite durant la chasse.",
+			"Une fois la première chasse terminée, pensez à aller voir votre santé mentale moyenne de l’équipe, car une chasse engagée à une santé mentale moyenne très élevée (plus haute que 70%) est souvent (mais pas obligatoirement) le signe que vous avez affaire à un Démon. ",
+			"Les preuves du Démon comprennent l’écriture fantomatique, une preuve difficile à obtenir durant la partie.",
+			"Restez prudents et attendez-vous à une potentielle chasse anticipée lorsque vous obtenez une température glaciale sans réponse à la Spirit Box.",
+			"Une chasse anticipée combinée aux preuves température glaciale + empreintes digitales est une info déterminante que vous avez affaire à un Démon.",
+			"Une chasse anticipée combinée à une température glaciale et une absence d’orbe peut vous amener également à cette même conclusion.",
+			"Repérez rapidement les cachettes sans bloqueurs.",
+			"La combinaison des preuves Empreintes + Température devrait permettre une identification facile du Démon à l’aide des bougies, de la Ouija (questions sur la santé mentale) et des pilules car il s’agirait de la seule entité capable de chasser de manière anticipée ayant cette combinaison.",
+			"Un bon contrôle de votre santé mentale est la clé pour déterminer le Démon."
 		],
-		"edvidencesID": ["evd5", "evd2", "evd6"],
-		"edvidences": ["5", "2", "6"]
+		"todoID": "todo-demon",
+		"todo": [
+			"Identification par la verification reguilière de la SM (surtout apres la premiere chasse)",
+			"Identiication par la frequence des chasses (plus rapide que les autres)",
+			"Identification par la frequence des chasses (faiblesse au crucifix)",
+			"Identification par la durée countdown apres chasse (20s)",
+			"Identification par l'utilisation de la Ouija (questions sur la SM)",
+			"Identification par l'utilisation de l'encens (60s)",
+			"Une chasse anticipée combinée aux preuves température glaciale + empreintes digitales",
+			"Une chasse anticipée combinée à une température glaciale et une absence d’orbe"
+		]
 	},
 	{
 		"id": "e4",
-		"name": "entity 4",
-		"description": "[entity 4] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
-		"behaviors": "[entity 4] -> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus architecto incidunt recusandae ut assumenda reprehenderit nesciunt, exercitationem alias corrupti beatae dignissimos facilis ipsa quis quisquam ad repudiandae quaerat cupiditate quod",
+		"name": "Deogen",
+		"description": "Parfois entourés d’un brouillard sans fin, les Deogen ont échappés aux chasseurs de fantômes pendant des années. Ces entités arrivent à trouver les proies les plus insaisissables avant de les traquer jusqu’à l’épuisement. Deogen, « De Ogen » signifiant « Les Yeux », portent bien leur nom. En effet, ils sont capables de repérer TOUS les joueurs dans le bâtiment, peu importe la distance ou là où ils se cachent. Ils deviennent cependant très lents une fois proches de leur victime.",
+		"anecdote": "Le Deogen est une entité du conte flamand (belge) de la fin du XVIIIe siècle appelé De Ogen (« les yeux » en néerlandais). Il s’agit de l’histoire d’un étrange brouillard aux yeux jaunes qui hante la forêt de Soignies et qui aime traquer ses victimes la nuit, se déplaçant lentement lorsqu’on le regarde et rapidement lorsque l’on détourne le regard.",
+		"difficulty": 60,
+		"power": 76,
+		"tools": 50,
+		"speed": 98,
+		"attackCL": 15,
+		"attackSM": 40,
+		"edvidencesID": ["evd6", "evd1", "evd2"],
+		"edvidences": ["6", "1", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (tradive): 40%",
+			"Vitesse fixe en chasse (joueur ciblé à plus de 3m): 3m/s (le 2e plus rapide du jeu apres le Moroi)",
+			"Vitesse fixe en chasse (joueur ciblé à moins de 2.5m): 0.4m/s (le plus lent du jeu)",
+			"Probabilité de réponse essoufflement (spirit box): 33%",
+			"Distance maximale pour une réponse essoufflement (spirit box): 1m"
+		],
+		"strategies": [
+			"Le Deogen est une entité capable de repérer l’ensemble des joueurs dans le bâtiment, y compris s’ils sont cachés et sans objet électronique allumé.",
+			"Il vous sera beaucoup plus facile d’obtenir les preuves Projecteur DOTS et Ecriture avec un Deogen.",
+			"Trouvez un endroit où vous pourrez tourner autour d’un élément du décor (élément de boucle) lors de la chasse.",
+			"Utilisez astucieusement les capteurs de mouvement, le sel, l’UV ou les apparitions pour vous assurer d’être sur l’entité quand vous lui posez la question sur la spirit box",
+			"Gardez en tête que le Deogen chassera plus tardivement que la plupart des entités.",
+			"Si vous entendez au loin une entité extrêmement rapide qui se rapproche à grand pas, sortez de votre cachette immédiatement (se cacher n’a aucun effet, gardez vos distances.). Vous pouvez le déterminer avec sa vitesse qui devient bien plus lent que l’entièreté des entités une fois proche de vous, preparez de l’encens pour vous sortir d’un cul-de-sac au cas ou il ne s'agit pas d'un Deogen.",
+			"Vous aurez donc la possibilité de deviner directement qu’il s’agit du Deogen s’il vous répond par un essoufflement (au spirit box)",
+			"Le Deogen aura toujours la preuve spirit box (en difficulte cauchemar)",
+			"Le joueur ciblé lors d’une chasse d’un Deogen est aléatoire quand la chasse commence, et le Deogen changera aléatoirement pour la personne la plus proche durant sa chasse."
+		],
+		"todoID": "todo-deogen",
+		"todo": [
+			"Preuves Projecteur DOTS et Ecriture (trouvés plus facilement)",
+			"Identification par l'utilisation du spirit box (essoufflement)",
+			"Utilisation des capteurs de mouvement, du sel, de l'UV ou des apparitions pour vous assurer d'être sur l'entité quand vous lui posez la question sur la spirit box",
+			"Chasse plus tardive que la plupart des entités",
+			"Identification par sa vitesse rapide qui devient très lente une fois proche"
+		]
+	},
+	{
+		"id": "e5",
+		"name": "Djinn",
+		"description": "Le Djinn est un fantôme territorial qui attaque lorsqu’il est menacé. Il est également connu pour pouvoir se déplacer à une vitesse significative. Le Djinn est une entité qui se nourrit de la puissance électrique du disjoncteur.  Tant que le courant est activé, il peut menacer toute personne trop proche de lui, et chasser à une vitesse plus élevée. Désactiver le disjoncteur empêchera le Djinn d’utiliser ses capacités.",
+		"anecdote": "Dans la mythologie, le Djinn est une sorte d’être du désert créé avant l’humanité à partir d’un feu sans fumée. Ils se présentent sous de nombreuses formes telles que des serpents, des êtres ailés, des géants, des insectes ou des humanoïdes et ils peuvent également posséder des humains vivants. Comme les humains d’après la mythologie, les Djinn ont été créés pour adorer Dieu, mais la plupart d’entre eux ont choisi de ne pas le faire.",
+		"difficulty": 50,
+		"power": 72,
+		"tools": 80,
+		"speed": 75,
+		"attackCL": 20,
 		"attackSM": 50,
-		"agressivity": 78,
-		"speed": 13,
-		"strengths": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"edvidencesID": ["evd3", "evd4", "evd7"],
+		"edvidences": ["3", "4", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse fixe en chasse (joueur visible à plus de 3m): 2.5m/s",
+			"Vitesse en chasse (pas de joueur visible ou joueur visible à moins de 3m): 1.7 ~ 2.5m/s",
+			"Portée du pouvoir de drain de santé mentale: 3m OU joueur dans la même pièce",
+			"Perte de santé mentale perdue à l’activation du drain de santé mentale (tous les joueurs dans la zone): 25%"
 		],
-		"weaknesses": [
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen",
-			"Doloribus architecto incidunt recusandae ut assumenda reprehen"
+		"strategies": [
+			"Le Djinn est capable de réduire la santé mentale de tous les joueurs à proximité de lui d’un important montant, laissant une trace EMF au niveau du disjoncteur.",
+			"Le Djinn se déplace également beaucoup plus vite en direction des joueurs qu’il repère, tant qu’ils sont loin de lui.",
+			"Désactiver le disjoncteur désactivera en même temps tous les pouvoirs du Djinn.",
+			"Le Djinn ne désactivera jamais de lui-même le disjoncteur.",
+			"Attention, le Djinn n’éteindra pas un disjoncteur allumé, mais peut provoquer son extinction en allumant l’interrupteur de trop.",
+			"Le « Trio de l’Ennui », symbolisé par le Djinn, l’Ombre et l’Oni (combinaison EMF5 + Températures Glaciales avec absence de Spirit Box) comporte trois entités assez difficiles à déterminer. armi ces trois entités, le Djinn est la plus grande menace, de part ses capacités. Si vous avez cette combinaison de preuves, pensez à désactiver le disjoncteur par sécurité.",
+			"Prenez garde car il a une fâcheuse tendance à pourchasser sa cible sans répit",
+			"Utiliser de l’encens ne l’empêchera pas d’utiliser son drain de santé mentale.",
+			"Se rendre dans sa pièce en conservant le disjoncteur allumé pour observer une potentielle coupure est le moyen le plus rapide d’obtenir les preuves pour le déterminer, et faire la différence entre cette entité et l’Oni."
 		],
-		"edvidencesID": ["evd2", "evd7", "evd4", "evd1"],
-		"edvidences": ["2", "7", "4", "1"]
+		"todoID": "todo-djinn",
+		"todo": [
+			"Identification par baise de santé mentale considerable sans chasse",
+			"Identification de l'EMF au niveau du disjoncteur, si celui-ci sonne sans que le disjoncteur ne saute, il s’agira forcément d’un Djinn (gardez l'EMF sur place pour confirmer)",
+			"Identification par sa vitesse de deplacement lorsqu'il a de l'electricite",
+			"Identification par sa faiblesse en cas de coupure d'electricite (perd ses pouvoirs)",
+			"Elimination si l'entité etteigne le disjoncteur en gardant en tete que le Djinn peut etteindre le disjoncteur en allumant l'interrupteur de trop (si c'est le cas, il peut s'agit d'un Oni)"
+		]
+	},
+	{
+		"id": "e6",
+		"name": "Esprit",
+		"description": "Les Esprits sont des entités très banales. Ils sont puissants mais passifs et attaquent seulement lorsqu’ils y sont obligés. Ils défendent le lieu de leur décès coûte que coûte, tuant quiconque abuserait de leur hospitalité. L’Esprit est un type d’entité très commun. Il est plus sensible à l’encens que les autres entités, et n’a aucun pouvoir particulier, ce qui le rend plus difficile à identifier.",
+		"anecdote": "L’Esprit est une incarnation spirituelle basique utilisée comme base pour décrire certaines autres entités paranormales. Bien que le journal nous informe qu’il s’agit d’une entité commune, il y a en réalité autant de chances que l’entité soit un Esprit que n’importe quelle autre.",
+		"difficulty": 50,
+		"power": 5,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 15,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd6", "evd1"],
+		"edvidences": ["3", "6", "1"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Efficacité de l’encens hors chasse: 180s (par defaut : 90s)"
+		],
+		"strategies": [
+			"L’Esprit est l’unique entité ne disposant d’aucune particularité ni d’aucun pouvoir.",
+			"L’Esprit est faible à l’encens, donc en dehors d’une chasse, la durée des effets de celui-ci est doublée.",
+			"L’Esprit fera donc davantage d’interactions durant trois minutes et ne pourra pas initier de chasse durant de temps.",
+			"Une stratégie courante pour déterminer un Esprit est de se positionner dans une fourchette de santé mentale suffisamment faible pour déclencher potentiellement une chasse (moins de 50% de santé mentale).",
+			"Il s’agit en réalité d’une des entités les plus simples à déterminer, grâce au test du bâton d’encens.",
+			"N’hésitez pas à vous mettre très bas en santé mentale avant d’effectuer le test, afin d’être certain que l’entité attaquera dès que l’encens ne fera plus effet et avoir les résultats les plus précis possibles."
+		],
+		"todoID": "todo-esprit",
+		"todo": [
+			"Identification par la diminution provoquee de la SM et l'utilisation de l'encens en comptant le temps de l'effet, si celui-ci dure plus de 180s (de protection | sans chasse) il s'agit forcement d'un Esprit (N'oublier pas de debarrasser tout crucifix et bougie avant de faire l'identification pour avoir le bon timing)",
+			"Elimination si l'entité attaque entre 90 et 180s après l’utilisation de l’encens"
+		]
+	},
+	{
+		"id": "e7",
+		"name": "Fantôme",
+		"description": "Un Fantôme peut posséder les vivants, le plus souvent invoqué par une planche Ouija. Il induit également la peur chez ceux qui l’entourent. Le Fantôme est une entité qui fait perdre beaucoup de santé mentale si on le regarde lorsqu’il apparaît.  Cependant, si le Fantôme est pris en photo, il disparaîtra instantanément.",
+		"anecdote": "D‘un point de vue étymologique, le Fantôme tire son nom de la Grèce avec le mot « φᾰντᾰ́ζω », ou « phantasma », qui signifie « apparition » ou « fantôme ». Cela pourrait aussi être traduit en quelque chose qui n’est pas réel en général, comme un rêve ou une illusion.",
+		"difficulty": 50,
+		"power": 60,
+		"tools": 20,
+		"speed": 50,
+		"attackCL": 15,
+		"attackSM": 50,
+		"edvidencesID": ["evd6", "evd4", "evd2"],
+		"edvidences": ["6", "4", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Fréquence d’apparition de l’entité durant la chasse (rapide): 0.5 à 1 fois/s"
+		],
+		"strategies": [
+			"Le Fantôme est une entité capable de se déplacer à proximité d’un des joueurs présents dans le bâtiment, sans avertissement. ",
+			"Durant ses apparitions, le Fantôme draine davantage la santé mentale des joueurs à proximité.",
+			"Le Fantôme n’aime pas être pris en photo, et disparaîtra visuellement immédiatement si l’un des joueurs le photographie.",
+			"Le Fantôme est connu pour être l’entité qui est la plus difficile à voir durant une chasse : elle a tendance à apparaître visuellement beaucoup moins souvent que les autres entités. ",
+			"Attention! Si vous êtes relativement proches de lui, dans les 10 à 15 mètres, le Fantôme peut se déplacer très discrètement jusqu’à vous et vous chasser depuis un endroit inattendu. ",
+			"Le Fantôme ne pourra pas se déplacer à proximité de vous si vous vous trouvez suffisamment loin (si le bâtiment le permet, évidemment), contrairement au Spectre.",
+			"Le Fantôme est souvent de pair avec le Poltergeist, une fois le Mimic écarté par l’absence d’orbe.",
+			"Effectuer un tas pour déterminer le Poltergeist par son kick est une stratégie viable, mais l’observer en chasse est une stratégie encore meilleure sur des plus grands bâtiments, ou si vous disposez d’un couloir assez long et d’un bâton d’encens.",
+			"Si l’entité semble être souvent autour de vous ou vous faire tourner en bourrique, essayez de faire le test du sel pour éliminer le Spectre, et donc différencier ces deux entités.",
+			"Le plus difficile est de le différencier de la Banshee et du Yokai.",
+			"Pour la Banshee, tenter d’obtenir son cri spécifique au micro parabolique est une option, mais pour le Yokai, le plus prudent est d’attendre une chasse et d’observer la fréquence d’apparition visuelle de l’entité."
+		],
+		"todoID": "todo-fantome",
+		"todo": [
+			"Identification par l'utilisation d'un appareil photo (invisible), durant la chasse ou pendant un evennement",
+			"Identification par son clignotement pendant la chasse (rapide/difficile a voir)",
+			"Elimination par le test de multithrows (si ce dernier est positif, il s'agit forcement d'un Poltergeist)",
+			"Elimination par le test de sel (si ce dernier ne laisse pas de trace, il s'agit forcement d'un Spectre)",
+			"Elimination par le test de micro parabolique (si ce dernier donne un effet de cri, il s'agit forcement d'un Banshee)"
+		]
+	},
+	{
+		"id": "e8",
+		"name": "Goryo",
+		"description": "Il vous faudra regarder à travers une caméra pour voir un Goryo passer dans le champ d’un projecteur D.O.T.S. Le Goryo est une entité casanière, qui ne bougera pas souvent de sa pièce favorite. Il sera également très rare de l’observer traverser un Projecteur de DOTS lorsque vous vous trouverez dans sa pièce. On l’observe plus facilement depuis une caméra vidéo via l’écran du camion.",
+		"anecdote": "Dans le folklore japonais, un Goryō (« esprit honorable ») est un esprit aristocratique vengeur, en particulier celui qui a été martyrisé. Leur pouvoir le plus important consiste à provoquer des catastrophes naturelles telles que la destruction de récoltes ou l’invocation de typhons ou de tremblements de terre.",
+		"difficulty": 80,
+		"power": 22,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 13,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd4", "evd2"],
+		"edvidences": ["3", "4", "2"],
+		"datas": [
+			"Santé mentale max. de la cible avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Probabilité de changement de pièce favorite (toutes difficultés): 0%"
+		],
+		"strategies": [
+			"Il est incapable de changer de pièce favorite, même aux difficultés les plus extrêmes.",
+			"En contrepartie, il apparaitra fréquemment aux projecteurs de DOTS, mais n’y sera pas visible à l’oeil nu.",
+			"Le Goryo n’a pas de pouvoir particulier, mais sera probablement plus difficile à observer sur les DOTS.",
+			"Un joueur au camion peut confirmer avoir vu le Goryo passer aux DOTS, alors que le joueur dans la pièce ne l’a pas vu",
+			"Le Goryo a toujours le D.O.T.S comme preuve dans tout les difficultes du jeu (sinon, il ne s'agit pas de lui)"
+		],
+		"todoID": "todo-goryo",
+		"todo": [
+			"Identification par 'favorite-room', si sa pièce favorite est connue, il est possible de l'observer depuis une caméra, si ce dernier apparait sur le projecteur de DOTS et n'apparait pas a l'oeil nu, c'est forcement un Goryo",
+			"Identification de sa pièce favorite par l'utilisation du mirroir maudit",
+			"Identification de sa pièce favorite par l'utilisation des capteurs de mouvement, placez en plusieurs pour savoir qui est le plus actif | s'il semble quasiment ne jamais activer les capteurs aux portes, et n’activer que ceux dans sa propre pièce, il s’agit probablement d’un Goryo"
+		]
+	},
+	{
+		"id": "e9",
+		"name": "Hantu",
+		"description": "Les Hantu sont des entités rares qui profitent des climats les plus froids, qui semble les rendre plus agressifs et puissants. En réalité, Le Hantu est un type d’entité qui apprécie beaucoup la chaleur. Il a donc tendance à se déplacer dans les zones chaudes, mais puisqu’il les refroidit, paradoxalement, il n’est jamais heureux et cherchera un autre endroit proche plus chaud. Lors d’une chasse, il ne s’attardera pas dans les zones froides, et accélèrera dans celles-ci, cependant il prendra davantage son temps dans les zones chaudes.",
+		"anecdote": "« Hantu » se traduit des langues indonésiennes par « esprit » ou « fantôme », et fait généralement référence aux esprits des morts, mais ils peuvent aussi être d’autres êtres surnaturels invisibles tels que les démons. Dans la mythologie, les Hantu varient considérablement et ne sont pas nécessairement mauvais.",
+		"difficulty": 14,
+		"power": 77,
+		"tools": 50,
+		"speed": 55,
+		"attackCL": 23,
+		"attackSM": 50,
+		"edvidencesID": ["evd4", "evd5", "evd7"],
+		"edvidences": ["4", "5", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse fixe en chasse (22 – 15°C): 1.4m/s",
+			"Vitesse fixe en chasse (15 – 12°C): 1.75m/s",
+			"Vitesse fixe en chasse (12 – 9°C): 2.1m/s",
+			"Vitesse fixe en chasse (9 – 6°C): 2.3m/s",
+			"Vitesse fixe en chasse (6 – 3°C): 2.5m/s (= Raiju explosant de puissance)",
+			"Vitesse fixe en chasse (3 – -10°C): 2.7m/s (presque Revenant en poursuite)"
+		],
+		"strategies": [
+			"Le Hantu est une entité dont la vitesse en chasse dépend de la température de la pièce où il se trouve.",
+			"Lorsqu’il chasse, un souffle d’air froid lui sort de la bouche.",
+			"Contrairement au Goryo, le Hantu est capable de changer de pièce favorite tres facilement.",
+			"Puisqu’il s’agit d’une entité ayant un Orbe, une stratégie simple mais efficace consiste à garder cet Orbe à l’oeil, grâce à des caméras sur trépied placés astucieusement dans la pièce favorite de l’entité et les pièces voisines. Placer astucieusement des capteurs de mouvement aux portes et dans les différentes pièces est aussi un moyen efficace de tracer ses déplacements.",
+			"Il n’est pas rare qu’un Hantu débute sa chasse hors de sa pièce de résidence, restez donc prudents sur votre stratégie de retraite.",
+			"Le Hantu accélère dans les pièces froides, pensez donc à rallumer le disjoncteur aussi tôt que possible, et à le maintenir allumé tout au long de la partie.",
+			"Le Hantu ne rallumera jamais le disjoncteur de lui-même, et a même tendance à davantage le faire sauter.",
+			"Le Hantu est une entité rapide dès lors que la température atteint moins de 12°C, maintenez le disjoncteur allumé et vérifiez la température des pièces avec le thermomètre régulièrement.",
+			"Il s’agit en conséquence de l’entité la plus simple à échapper en tournant autour de meubles dans une pièce chaude.",
+			"Le Hantu aura toujours la preuve Temperature glaciale dans tout les difficultés du jeu"
+		],
+		"todoID": "todo-hantu",
+		"todo": [
+			"Identification par le chagement de vitesse de deplacement en fonction de la temperature de la piece (plus la temperature est basse, plus sa vitesse augmente)",
+			"Identification par le souffle d'air froid qui sort de la bouche du Hantu, invisible dans les zones chaudes mais un preuve indeniable",
+			"Identification de sa pièce favorite par l'utilisation du mirroir maudit",
+			"Identification de sa pièce favorite par l'utilisation des capteurs de mouvement, placez en plusieurs pour savoir qui est le plus actif",
+			"Identification de sa pièce favorite par l'utilisation des cameras sur trepied, placez en plusieurs pour trouver grace a l'orbe",
+			"Identification par son point de depart de chasse, il n'est pas rare qu'il commence sa chasse hors de sa piece de residence",
+			"Identification par sa faiblesse en cas de fort courant electrique",
+			"Elimination si l'entité rallume le disjoncteur"
+		]
+	},
+	{
+		"id": "e10",
+		"name": "Les Jumeaux",
+		"description": "Ces entités ont été observées en train d’imiter les actions l’une de l’autre. Elles alternent leurs attaques pour déstabiliser leur proie. Les Jumeaux sont des entités qui vont souvent s’imiter dans leurs actions avec leur environnement. Ils disposent de la même pièce favorite mais se déplacent indépendamment l’une de l’autre. On dit que le Jumeau secondaire est difficile à repérer, et sera plus rapide s’il chasse à la place du Jumeau principal. ",
+		"anecdote": "« Les Jumeaux » seraient un duo d’esprits vengeurs morts simultanément dans une catastrophe ou un incident domestique, la plupart d’entre eux impliquant une maison familiale. La légende veut que des frères jumeaux soient décédés simultanément, et que leurs âmes se soient liés dans l’éternité pour faire subir leur vengeance à leurs ennemis. Il n’existe actuellement aucune représentation de ces entités dans les croyances, mais certaines œuvres littéraires ou cinématographiques peuvent y faire référence.",
+		"difficulty": 50,
+		"power": 70,
+		"tools": 0,
+		"speed": 55,
+		"attackCL": 20,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd6", "evd7"],
+		"edvidences": ["3", "6", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (jumeau principal): 13% inférieur | 1.5 ~ 2.5m/s",
+			"Vitesse en chasse (jumeau secondaire): 13% supérieur | 1.9 ~ 3.1m/s",
+			"Probabilité de chasse du jumeau secondaire: 50%"
+		],
+		"strategies": [
+			"Les Jumeaux ont toutes les deux la même pièce favorite, et la même apparence.",
+			"L’entité est en réalité une seule entité, disposant d’un point d’interaction séparé, pouvant se déplacer à sa guise. Par souci de clarté, on appellera dans cette page l’entité « Jumeau Principal », et le point d’interaction « Jumeau Secondaire ».",
+			"Seul le Jumeau Principal peut agir comme n’importe quelle autre entité. Tandis que le Jumeau Secondaire peut se déplacer librement et peut agir en même temps ou séparément de son Jumeau Principal.",
+			"Gardez en tête que le Jumeau Secondaire est un simple point d’interaction, pas une entité à part entière !",
+			"Le Jumeau Secondaire PEUT: Produire une trace EMF grâce à un lancer d’objet ou une interaction, et même produire un EMF de niveau 5 | Chasser à la place du Jumeau Principal, depuis son emplacement actuel",
+			"Cepedant, le Jumeau Secondaire NE PEUT PAS: Répondre à la Spirit Box | Faire baisser la température de sa pièce (ni produire de température glaciale) | Effectuer une Apparition ou un Evénement Paranormal | Parler dans un Microphone Parabolique | Être repéré grâce à du sel ou des capteurs de mouvement",
+			"Les facultEs du Jumeau Secondaire le rendent particulièrement dangereux quand il entre en chasse à la place du Jumeau Principal, puisqu’il est plus rapide et peut potentiellement couper la route aux joueurs mal préparés en commençant depuis un endroit inattendu.",
+			"Si durant votre partie, deux interactions se déroulent dans deux pièces différentes presqu’en même temps, il y a de grandes chances que vous ayez affaire à des Jumeaux.",
+			"Si elle semble jouer avec vos nerfs en se déplaçant beaucoup sans donner de preuve, le Jumeau Secondaire se baladant beaucoup un peu partout, il se pourrait que vous ayez affaire à des Jumeaux.",
+			"Essayez de repérer une pièce glaciale, le Jumeau Secondaire ne pouvant pas faire varier la température, vous obtiendrez plus facilement la vraie pièce favorite des Jumeaux, ainsi que le Jumeau Principal.",
+			"Lorsque vous aurez Spirit Box + Température Glaciale, il vous faudra éliminer la présence d’orbe pour le Mimic, puis placer des bougies dans la pièce en les maintenant allumées autant que possible, un début d’attaque à proximité d’une bougie vous permettra d’éliminer l’Onryo.",
+			"Pour la combinaison Spirit Box + EMF5, il vous suffira de faire les tests du sel et de l’encens.",
+			"Enfin, pour la combinaison EMF5 + Température Glaciale, il s’agit probablement de la pire des situations, puisqu’il vous faudra attendre que le disjoncteur saute et d’être entre 36 et 50 de santé mentale moyenne pour éliminer le Djinn et l’Ombre, cependant il peut être parfois compliqué de déterminer l’Oni."
+		],
+		"todoID": "todo-jumeaux",
+		"todo": [
+			"Identification par double interaction simultanée ou presque dans le tableau de bord du camion, si on a le EMF 5 (en plus) durant l'interaction, c'est forcement les jumeaux",
+			"Identification par le point de depart de chasse, il n'est pas rare qu'il commence sa chasse hors de sa piece de residence (pour le Jumeau Secondaire)",
+			"Identification par le fait que le Jumeau Secondaire se deplace beaucoup sans donner de preuve",
+			"Identification par le fait que le Jumeau Secondaire ne peut pas faire varier la temperature de sa piece favorite (toujours glaciale)",
+			"Elimination du Mimic par la presence d'orbe",
+			"Elimination de l'Onryo par une attaque a proximite d'une bougie (en essayant de la garder allumee le plus longtemps possible)",
+			"Elimination de l'esprit apres le test de l'encens",
+			"Elimination du Djinn et de l'Ombre apres le disjoncteur"
+		]
+	},
+	{
+		"id": "e11",
+		"name": "Le Mimic",
+		"description": "« Le Mimic est une entité insaisissable et mystérieuse qui imite les traits et comportements des autres, y compris d’autres entités. » Le Mimic est une entité capable de copier le comportement et les pouvoirs d’un autre type d’entité. Il est connu pour avoir des Orbes fantômatiques en plus de ses preuves habituelles. Face à ces maîtres des faux-semblants, un chasseur avisé prendra toujours garde à ne pas avoir affaire à un Mimic durant ses contrats.",
+		"anecdote": "Le Mimic semble tirer son inspiration du Doppelgänger, une entité prenant la forme d’une copie conforme d’un autre individu. Bien que ce concept d’alter ego maléfique est très commun dans de nombreuses cultures et croyances, sa présence est surtout notable dans la mythologie germanique et nordique. Le Doppelgänger est connu pour reproduire le comportement, l’apparence et les actions de sa cible afin de lui annoncer un mauvais présage, généralement des grands malheurs voire la mort de l’individu qui a le malheur de le croiser. On l’associe également au concept de « contrefacteur » dans le gnosticisme.",
+		"difficulty": 0,
+		"power": 0,
+		"tools": 0,
+		"speed": 0,
+		"attackCL": 0,
+		"attackSM": 0,
+		"edvidencesID": ["evd6", "evd4", "evd7", "evd5"],
+		"edvidences": ["6", "4", "7", "5"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50% (note: le Mimic copiera les caractéristiques de chasse de l’entité imitée)",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8 (note: le Mimic copiera les caractéristiques de vitesse de l’entité imitée)",
+			"Changement de pouvoir toutes les: 30 ~ 120s"
+		],
+		"strategies": [
+			"Le Mimic est capable de changer de pouvoir au fil de la partie.",
+			"Il dispose forcement d’une fausse Orbe Fantômatique dans sa pièce favorite (sur tout les difficultés du jeu), ce preuve est exclu dans le journal.",
+			"Pensez à vérifier l’entièreté des preuves du Mimic si vos seules preuves sont d’autres preuves du Mimic.",
+			"Vous n’aurez pas affaire au Mimic dans le cas où vous obtenez EMF5, Ecriture dans le livre fantômatique, ou DOTS, ou si vous n’avez aucune Orbe.",
+			"Au debut de la partie, le mimic ne copie aucun entitE avant déverrouillage de la porte (état), changera d'état a un autre quand la porte sera déverrouillée (toutes les 30 à 120s environ)",
+			"Il s’agit de l’entité la plus simple à déterminer en Cauchemar, puisqu’il dispose toujours de 3 preuves au lieu de 2."
+		],
+		"todoID": "todo-mimic",
+		"todo": [
+			"Identification par la presence d'une fausse Orbe Fantômatique (comme 4e preuve | 3e preuve en difficulté cauchemar)",
+			"Elimination si on a: EMF5 | Ecriture fantômatique | D.O.T.S | Absence d'une Orbe Fantômatique",
+			"Utiliser le [RESUME] est le meilleur moyen de faire face a un mimic",
+			"Identification par le changement d'etat en utilisant un timer (30 ~ 120s)",
+			"Identification par le nombre de preuve (3) en difficulté cauchemar (4 oar défaut)"
+		]
+	},
+	{
+		"id": "e12",
+		"name": "Moroï",
+		"description": "Le Moroï a émergé d’outre-monde afin de siphonner l’énergie des vivants. Ils maudissent leurs victimes et celles-ci ne peuvent guérir qu’avec des antidotes ou en déménageant très loin. Le Moroï est une entité capable de placer des malédictions sur un chasseur en lui parlant directement. Une fois une malédiction posée, le joueur atteint est condamné à perdre de la santé mentale de manière plus importante. Un chasseur maudit peut se soigner avec des médicaments.",
+		"anecdote": "Le Moroï (prononcé « mo-roy ») est un type de vampire dans le folklore roumain, qui pratiquait le vampirisme tout en étant encore en vie (par opposition au « Strigoï », qui est devenu un vampire après sa mort).",
+		"difficulty": 50,
+		"power": 72,
+		"tools": 75,
+		"speed": 99,
+		"attackCL": 20,
+		"attackSM": 50,
+		"edvidencesID": ["evd6", "evd1", "evd7"],
+		"edvidences": ["6", "1", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse: 1.5 ~ 3.7m/s (augmente graduellement tous les 5% de perte de SM moyenne de l'equipe, dès 45%). Ce qui fait l'entitE le plus rapide du jeu lorsqu'il atteint le max de sa vitesse",
+			"Perte de santé mentale supplémentaire si maudit: La même quantité que la perte passive de santé mentale",
+			"Durée de l’effet de l’encens en chasse: 12s (par defaut: 6s)"
+		],
+		"strategies": [
+			"Le Moroï est capable de placer une malédiction sur tout joueur à qui il parle via la Spirit Box ou le Microphone Parabolique.",
+			"Un joueur maudit perdra davantage de santé mentale tout au long de la partie.",
+			"Le Moroï accélère également quand la santé mentale moyenne des chasseurs diminue.",
+			"La malédiction d’un Moroï prend fin lorsque le joueur maudit prend une pilule calmante (mais elles ne vous évitent pas de vous faire maudire à nouveau).",
+			"La malédiction s’abattra sur tout joueur qui l’entendra à la Spirit Box ou au Microphone Parabolique.",
+			"Il est également possible de mettre l’effet de la malédiction en pause en sortant du bâtiment.",
+			"La malédiction vous fera également perdre de la santé mentale même si vous êtes dans la lumière ou tenez une bougie allumée.",
+			"Le Moroï sera désorienté pendant davantage de temps que les autres types d’entité si un bâton d’encens est brûlé à proximité de lui durant une chasse.",
+			"Le Moroï aura toujours la Spirit Box parmi ses deux preuves.",
+			"Le Moroï est parmi les plus difficiles à déterminer, mais il peut sembler que l’entité chasse très tôt dans la partie à cause de la santé mentale qui descend rapidement, sans (ou presque) moyen de vérifier sa santé mentale. (A ne pas confondre avec un Demon)",
+			"Le meilleur strategie contre le Moroi est de jouer avec sa SM et de determiner son effet par rapport a la malediction."
+		],
+		"todoID": "todo-moroi",
+		"todo": [
+			"Identification par la baisse de la SM apres avoir obtenir la Spirit Box ou Microphone Parabolique (malediction) -> chasse tres tot",
+			"Identification par l'augmentation de la vitesse de deplacement en chasse (augmente graduellement tous les 5% de perte de SM moyenne de l'equipe, dès 45%), puis prendre quelques pilules (vous récupérez 25% en difficulté cauchemar), et réécouter le rythme, qui devrait en conséquence être réduit.",
+			"Identification par la mise en pause de la malédiction en sortant du bâtiment (test collaboratif)",
+			"Identification par la destabilisation de l'entitE grace a un bâton d'encens brûlé à proximité de lui durant une chasse (12s au lieu de 6s)",
+			"Identification par la presence de la Spirit Box (obligatoire) parmi les preuves (2) en difficulté cauchemar",
+			"Identification par le declanchement de la malédiction en mettant la SM a 100% puis en parlant a l'entitE via Spirit Box ou Microphone Parabolique, puis se mettre a l'abri avec une bougie allumée pour voir si l'entitE attaque, et si oui, ce sera fort probablement un Moroï (test collaboratif)"
+		]
+	},
+	{
+		"id": "e13",
+		"name": "Myling",
+		"description": "Le Myling est une entité très active et bavarde. La rumeur prétend cependant qu’il devient silencieux quand il chasse. Le Myling est une entité qui sera plus encline à effectuer des bruits paranormaux, audibles au microphone parabolique. Lors d’une chasse, bien que sa voix soit toujours aussi audible, ses bruits de pas seront, en revanche, davantage étouffés.",
+		"anecdote": "Dans le folklore scandinave, les Myling (« mew-leeng ») sont des fantômes d’enfants non désirés tués par leurs parents. Puisqu’ils n’ont pas été baptisés, les Myling ne peuvent pas trouver le repos et sont obligés d’errer jusqu’à ce qu’ils puissent persuader un être vivant de les transporter, eux ou leur corps, vers des terres sacrées où ils pourront trouver un repos paisible. Une autre façon pour le Myling de trouver la paix est de trouver et de tuer sa mère.",
+		"difficulty": 100,
+		"power": 5,
+		"tools": 20,
+		"speed": 50,
+		"attackCL": 16,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd4", "evd1"],
+		"edvidences": ["3", "4", "1"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Distance des pas audibles en chasse: 10m (par defaut: 20m)",
+			"Volume des bruits de pas en chasse: plus faible que la normale (ex. 50% à 5m au lieu de 75%, 10% à 9m au lieu de 55%)"
+		],
+		"strategies": [
+			"Le Myling fera davantage de bruit dans le micro parabolique, et les valeurs obtenues seront plus élevées.",
+			"Il aura également davantage de chances de murmurer des paroles dans le micro parabolique. Cet outil vous permettra un peu plus facilement de repérer un Myling, car les sons paranormaux sont plus fréquents et mieux captés quand l’entité est un Myling.",
+			"Un meilleur strategie contre le Myling se fait comme suit: Préparez un EMF allumé aux étages où vous ne vous cacherez pas, de préférence immédiatement au dessus ou en dessous de la cachette où vous vous cacherez. Cachez-vous dans votre cachette, et laissez une lampe torche allumée à vos pieds. Attendez le début de la chasse. Si vous n’entendez aucun EMF, que vous entendez les bruits de pas, et que votre lampe torche ne grésille pas alors il ne s’agira PAS d’un Myling. En revanche, si vous n’entendez aucun EMF, mais que vous entendez les bruits de pas au moment où votre lampe torche commence à grésiller alors il s’agira d’un Myling",
+			"Le Myling dispose de l’une des pires combinaisons de preuves possibles. Si en difficulté Professionnel, vous n’obtenez aucune Orbe, aucune température glaciale, aucune Spirit box, et que vous galérez à trouver des empreintes (généralement, il s’agira de votre seule preuve), alors vous pouvez supposer avoir affaire à un Myling."
+		],
+		"todoID": "todo-myling",
+		"todo": [
+			"Identification par la distance des pas audibles en chasse (10m au lieu de 20m) et le volume des bruits de pas en chasse (plus faible que la normale) en utilisant le micro parabolique",
+			"Identification par le fait que le Myling murmure des paroles dans le micro parabolique (cet outil est tres utile pour repérer un Myling)",
+			"Identification par le test de l'EMF & Lampe Torche (voir strategies - faiblesse)",
+			"Identification par la difficulté à trouver des preuves (Orbes, température glaciale, Spirit box), seulement des empreintes (généralement, il s’agira de votre seule preuve)"
+		]
+	},
+	{
+		"id": "e14",
+		"name": "Obake",
+		"description": "Les Obake sont de terrifiants métamorphes capables de prendre de nombreuses formes. On les a vus prendre des formes humanoïdes pour attirer leurs proies. L‘Obake est une entité qui est capable de masquer ses empreintes lorsqu’il interagit avec les objets pouvant en porter. Il est également capable de ne pas laisser de trace EMF durant ses interactions. Cependant, de manière rare, elle laisse des empreintes caractéristiques à 6 doigts (portes et fenêtres), 2 doigts (interrupteurs, clavier) ou à 5 doigts (barreaux). Durant sa chasse, à certaines occasions, il transformera temporairement son apparence pour une autre.",
+		"anecdote": "Dans le folklore japonais, un Obake, ou parfois « Bakemono », serait une sorte de Yokai. Littéralement, les termes signifient « chose qui change », se référant à un état de transformation ou de métamorphose. Ces mots sont souvent traduits par « fantôme », mais ils font principalement référence à des êtres vivants ou surnaturels qui ont subi une transformation temporaire, et ces bakemono sont distincts des esprits des morts. Cependant, en tant qu’usage secondaire, le terme obake peut être synonyme de Yurei, le fantôme d’un être humain décédé.",
+		"difficulty": 52,
+		"power": 72,
+		"tools": 3,
+		"speed": 50,
+		"attackCL": 20,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd4", "evd5"],
+		"edvidences": ["3", "4", "5"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Chance de ne pas laisser de trace: 20%",
+			"Chance de laisser une empreinte speciale: 20%",
+			"Durée des empreintes: 60s (durée normale: 120s)",
+			"Chance d’effectuer une transformation: 6.66% à chaque clignotement (au min. 1 fois/chasse)"
+		],
+		"strategies": [
+			"L’Obake est la seule entité capable de camoufler temporairement ses preuves. (Par exemple, il peut toucher une porte sans laisser de trace EMF ou d’empreinte digitale.)",
+			"De plus, les empreintes digitales des Obake restent présentes deux fois moins longtemps que celles des autres entités.",
+			"L’Obake a également un pouvoir lui permettant de manière occasionnelle de diviser par deux tout les timers du jeu",
+			"Puisqu’il est capable de camoufler ses preuves, l’Obake va occasionnellement laisser une empreinte à 6 doigts sur les portes et fenêtres qu’il touche, 2 doigts sur les interrupteurs ou a 5 doigts le clavier d'ordinateur et grilles de prison",
+			"L’Obake peut se transformer une à plusieurs fois par chasse, changeant son skin d’entité durant un clignotement. Cette transformation arrive au moins une fois par chasse, à des moments définis aléatoirement.",
+			"Empreinte Digitale obligatoire comme preuve dans tout les difficultés du jeu",
+			"Il existe une combinaison Orbe + EMF5 qui laisse Obake et Raiju, il s’agira donc forcément du Raiju.",
+			"Pour la combinaison EMF5 + Empreintes, cela vous retire automatiquement le Goryo car il doit avoir les DOTS en difficulté Cauchemar et le Myling est déterminable par une écoute attentive des bruits de pas durant la chasse, et le Djinn ne disjonctera jamais, vous pourrez l’éliminer si l’entité fait sauter le courant.",
+			"Pour la dernière combinaison, Empreintes + Orbe, le Hantu sera impossible car il doit avoir les Températures glaciales en difficulté Cauchemar, la Banshee peut être écoutée à l’aide d’un micro parabolique, pour entendre son très rare gémissement, et le Mimic doit être éliminé en échouant à obtenir une réponse à la Spirit Box ou des Températures Glaciales."
+		],
+		"todoID": "todo-obake",
+		"todo": [
+			"Identification par l'interaction sans preuve (empreinte digitale, EMF)",
+			"Identification par la presente d'une empreinte digitale a 6 doigts (portes et fenêtres), 2 doigts (interrupteurs) ou a 5 doigts (clavier d'ordinateur et grilles de prison)",
+			"Indentification par la transformation de l'Obake (skin) durant un clignotement",
+			"Identification par la duree du timer (divise par 2) - Par exemple: disparition d'une empreinte digitale au bout de 60s au lieu de 120s",
+			"Elimination si on obtient la combinaison Orbe + EMF5 (C'est forcement le Raiju)",
+			"Elimination du Goryo si on obtient la combinaison EMF5 + Empreintes (Un Goryo doit avoir les DOTS en difficulté Cauchemar)",
+			"Elimination du Myling si on obtient la combinaison EMF5 + Empreintes (Un Myling est déterminable par une écoute attentive des bruits de pas durant la chasse)",
+			"Elimination du Djinn si on obtient la combinaison EMF5 + Empreintes (Un Djinn ne disjonctera jamais le courant)",
+			"Elimination de l'Hantu si on obtient la combinaison Empreintes + Orbe (Un Hantu doit avoir les Températures Glaciales en difficulté Cauchemar)",
+			"Elimination de la Banshee si on obtient la combinaison Empreintes + Orbe (Une Banshee peut être écoutée à l’aide d’un micro parabolique, pour entendre son très rare gémissement)",
+			"Elimination du Mimic si on obtient la combinaison Empreintes + Orbe (Un Mimic doit être éliminé en échouant à obtenir une réponse à la Spirit Box ou des Températures Glaciales)"
+		]
+	},
+	{
+		"id": "e15",
+		"name": "Ombre",
+		"description": "L’Ombre est une entité timide. Il semble qu’une Ombre cessera toute activité si plusieurs personnes sont à proximité. L’Ombre est une entité très timide, qui ne fera que très rarement des apparitions. Cette entité fera moins d’interactions que toutes les autres entités, et sera donc plus difficile à trouver. Elle chassera également beaucoup plus tardivement. Une entité ennuyeuse ? Possiblement une Ombre.",
+		"anecdote": "Les Ombres (lat. umbra, gr. σκιά), dans la mythologie de nombreuses civilisations, seraient les âmes de certains humains qui ne sont pas parvenus à trouver la paix.",
+		"difficulty": 93,
+		"power": 30,
+		"tools": 3,
+		"speed": 50,
+		"attackCL": 4,
+		"attackSM": 35,
+		"edvidencesID": ["evd3", "evd1", "evd7"],
+		"edvidences": ["3", "1", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (Très tardive): 35% (valeur normale des autres entités: 50%)",
+			"Vitesse en chasse: normale, 1.7 ~ 2.8m/s",
+			"Chances d’apparition physique – 100% de santé mentale moyenne: 0%",
+			"Chances d’apparition physique – 75% de santé mentale moyenne: 2 fois moins élevée que la normale",
+			"Chances d’apparition physique – 50% de santé mentale moyenne: normale",
+			"Chances de lancer d’objet – aucun joueur dans la même pièce: normale",
+			"Chances de lancer d’objet – au moins un joueur dans la même pièce: 0%"
+		],
+		"strategies": [
+			"L’Ombre fera moins d’apparitions que toute autre entité, particulièrement en début de partie.",
+			"L’Ombre ne lancera aucun objet lorsqu’au moins un joueur se situe dans la même pièce (et par conséquent, ne fera jamais de trace EMF de niveau 3 tant qu’un joueur se trouve dans la même pièce).",
+			"Si un joueur se situe suffisamment proche d’une Ombre, elle ne pourra pas rentrer en chasse.",
+			"L’Ombre a également moins de chances d’apparaître sous forme physique complète, et préfèrera une forme d’ombre ou translucide, même dans le Cercle d’Invocation.",
+			"La stratégie la plus efficace avec une Ombre est d’utiliser les méthodes basées sur la température. La pièce dans laquelle l’Ombre réside finira par abriter une Température Glaciale. Promenez-vous dans le bâtiment, et si vous avez affaire à une entité Température Glaciale très peu active, vous avez probablement affaire à une Ombre.",
+			"L'objet maudit sera un avantage pour trouver la piece de l'ombre",
+			"Lorsqu’elle voudra effectuer un événement paranormal, cette entité préfèrera effectuer un Souffle Malsain (si c'est le cas, vous pouvez eliminer directement l'Oni sans hésiter)",
+			"L’Ombre est la seule entité qui chasse très tardivement. Tant que vous ne déclenchez pas de Chasse Maudite (avec un Objet Maudit), une Ombre sera incapable de chasser avant que la santé mentale moyenne de l’équipe soit inférieure à 35%.",
+			"A partir de là ou on obitent la preuve du Temperature Glaciale, vérifiez les Orbes, les Empreintes digitales, la Spirit Box, les DOTS… Si vous n’avez que peu d’indices, peu d’interactions, aucune apparition et aucune Orbe ni réponse à la Spirit Box, vous devriez pouvoir deviner l’Ombre par élimination.",
+			"Dans le cas où l’entité semble toujours aussi peu active et n’attaque pas, il est très fort probable qu’il s’agisse d’une Ombre."
+		],
+		"todoID": "todo-ombre",
+		"todo": [
+			"Identification grace au cercle d'invocation pour l'apparence physique (Ombre ou translucide)",
+			"Identification de la frequences des apparitions si on est dans la meme piece",
+			"Elimination si on obtient EMF 3~5 dans sa piece + objet lancé",
+			"Identification par la presence d'une temperature glaciale dans la piece de l'ombre (assurez vous que ce dernier est tres peu actif)",
+			"Identification de sa piece favorite grace a l'objet maudit (miroir, ouija)",
+			"Identification par l'event de souffle malsain a plusieurs reprise (diminiue la SM)",
+			"Elimination directe de l'Oni par la presence d'un souffle malsain (brume maudite)",
+			"Identification par la verification reguilière de la SM par rapport au debut de la premiere chasse (35%)",
+			"Identification par une sequence d'elimination par preuve (Orbes, Empreintes digitales, Spirit Box, D.O.T.S) apres avoir obtenu la Temperature Glaciale",
+			"Elimination si l'entité attaque avant 35% de la SM"
+		]
+	},
+	{
+		"id": "e16",
+		"name": "Oni",
+		"description": "L’Oni adore effrayer le plus possible ses victimes avant d’attaquer. Ils sont souvent observés sous leur forme physique en train de garder le lieu de leur décès. L’Oni est une entité sociable, plus active lorsque beaucoup de personnes se trouvent dans sa pièce. Cette entité cherchera à s’amuser avec les personnes présentes en faisant des apparitions, et en cherchant à les rendre fou. ",
+		"anecdote": "Dans le folklore japonais, un Oni (鬼) est une sorte d’ogre ou de troll démoniaque, et peut être considéré comme un type de Yokai. Ils sont généralement représentés comme des personnages imposants avec des cornes sur la tête, des griffes et des défenses acérées, un teint étrange comme du rouge, du vert ou du bleu, et portant de grands gourdins en fer.",
+		"difficulty": 65,
+		"power": 5,
+		"tools": 3,
+		"speed": 50,
+		"attackCL": 13,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd7", "evd2"],
+		"edvidences": ["3", "7", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Niveau d'activitE (min. 2 joureurs a 3m ou moins): Doublé"
+		],
+		"strategies": [
+			"L’Oni apparaît beaucoup plus régulièrement que les autres entités, y compris en chasse. (contrairement à l’Ombre et le Fantôme)",
+			"Il est également plus actif quand il y a plusieurs joueurs autour de lui.",
+			"Il a également tendance à effectuer des apparitions en guise d’événement paranormal, et drainera deux fois plus la santé mentale des joueurs qui assistent à ses apparitions.",
+			"L’Oni apparaîtra plus souvent dans sa forme complète.",
+			"Il sera également plus actif si au moins deux joueurs se situent à proximité.",
+			"L’Oni dispose d’une des combinaisons de preuves les plus difficiles à obtenir. Il est souvent préférable de le deviner par élimination (Température glaciale + DOTS + absence d’Orbe par exemple).",
+			"L’Oni a également une tendance accrue à effectuer ses événements paranormaux sous sa forme physique, en tant qu’apparition.",
+			"Il existe deux moyens sûrs de différencier Djinn et Oni: Le premier moyen est d’attendre que le disjoncteur se fasse désactiver par l’entité, ce qui peut prendre un certain temps, mais si le disjoncteur saute, il ne s’agira pas d’un Djinn, vous permettant de vous rapprocher d’une déduction d’un Oni par élimination. Le deuxième, beaucoup plus pertinent mais risqué, est de se positionner dans un endroit à proximité de plusieurs portes, de les fermer, et de préparer une lampe à UV à cet endroit. Durant sa chasse, il va ouvrir les portes à proximité de l’emplacement où vous avez fermE, donc à la fin de la chasse, vérifiez grâce à la lampe UV précédemment préparée à proximité, la présence ou non d’Empreintes digitales. (Penssez a utiliser de l'encens pour se proteger)",
+			"Durant la chasse, vous pourrez plus facilement observer, suivre du regard et prendre en photo l’Oni, car il sera beaucoup plus visible et disparaîtra moins régulièrement. (contraire à l’Ombre et le Fantôme)"
+		],
+		"todoID": "todo-oni",
+		"todo": [
+			"Identification par la frequence de clignotement lent de l'entié durant la chasse",
+			"Elimination si l'entité clignote assez vite (un signe probable d'un fantome)",
+			"Identification par le drainage de la SM par rapport au ghost event",
+			"Elimination en cas d'un souffle malsain (brume maudite)",
+			"Identification par l'hyperactivité de l'entité (si plusieurs joueurs sont dans la meme piece)",
+			"Elimination du Djinn en attendant que le disjoncteur se désactive",
+			"Elimination en cas d'empreintes digitales sur les portes (apres le test de provocation)",
+			"Identification grace a l'appareil photo (preference sur la forme physique de l'Oni)"
+		]
+	},
+	{
+		"id": "e17",
+		"name": "Onryo",
+		"description": "L’Onryo est souvent décrit comme un ‘esprit furieux’. En quête de vengeance, il vole les âmes des corps de victimes mourantes. Cette entité est connue pour avoir peur de quelconque forme de feu, et fera tout pour s’en tenir éloignée. L’Onryo est une entité assez passive, n’aimant pas les intrus aggressifs. Cette entité est capable de chasser un peu plus tôt que prévu, et l’extinction d’une flamme a une probabilité de déclencher une chasse. Cependant, en présence d’une flamme à proximité de lui, l’Onryo sera incapable de commencer une chasse, à l’image de l’effet du Crucifix.",
+		"anecdote": "On a dit que le célèbre « fantôme rancunier » de la franchise Ju-On était un Onryō : il attaquait chaque fois que l’éclairage était allumé ou éteint dans une action rapide, comme un rappel de sa mort violente. Tout mouvement brusque produit devant cette entité pourrait être interprété comme hostile.",
+		"difficulty": 3,
+		"power": 68,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 89,
+		"attackSM": 60,
+		"edvidencesID": ["evd6", "evd5", "evd7"],
+		"edvidences": ["6", "5", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (anticipé): 60%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Probabilité de déclencher une chasse à un décompte de 0 (0 mort ou solo): 50%",
+			"Probabilité de déclencher une chasse à un décompte de 0 (1 mort): 75%",
+			"Probabilité de déclencher une chasse à un décompte de 0 (2 morts ou +): 100%"
+		],
+		"strategies": [
+			"L’Onryo peut chasser à une moyenne de santé mentale plus élevée que la plupart des entités.",
+			"L’Onryo est incapable d’initier une chasse à n’importe quelle moyenne de santé mentale à proximité d’une bougie ou d’un briquet quand ceux-ci sont allumés.",
+			"L’Onryo est capable d’initier une chasse sans tenir compte de la santé mentale moyenne si une flamme s’éteint à proximité de lui, mais cette chasse peut être bloquée par d’autres flammes ou un crucifix.",
+			"L’Onryo aura également davantage tendance à souffler les flammes, y compris le briquet.",
+			"Cumuler des bougies allumées et des crucifix dans sa pièce de résidence, puisque ceux-ci protègeront de son pouvoir si l’une des flammes s’éteint ou est soufflée, et il est possible de rallumer une bougie en utilisant la flamme d’une autre bougie ou avec un briquet.",
+			"L’Onryo commence à un décompte de 3. A chaque fois qu’une bougie s’éteint dans un rayon de 4 mètres de lui, son décompte réduit de 1.",
+			"A l’aide d’une lampe à UV, ou d’un bâton d’UV, confirmez l’absence d’empreintes digitales aussi tôt que possible, afin d’être sûrs de ne pas avoir affaire à un Mimic.",
+			"Gardez en tête que l’Onryo peut chasser plus tôt que la normale, et qu’il est préférable d’éviter d’utiliser des bougies dans sa pièce en début de partie.",
+			"Vous pourrez déterminer que vous avez affaire à un Onryo en étant bas en santé mentale et en plaçant stratégiquement des bougies dans sa pièce ou dans les pièces adjacentes, et en observant si l’Onryo chasse ou non.",
+			"Notez également qu’une flamme est prioritaire sur un crucifix pour bloquer une chasse, donc avec un crucifix au pied d’une bougie, si le crucifix est consommé sans que la bougie ne s’éteigne, il ne pourra pas s’agir d’un Onryo.",
+			"Si vous avez eu la sensation d’une attaque anticipée, tentez de garder le disjoncteur et la lumière allumés le plus souvent possible pour vérifier que vous n’avez pas affaire au Cauchemar, et faites attention aux portes et aux déplacements de l’entité pour vérifier le Yurei.",
+			"Prenez garde aux interactions doubles et faites confiance à vos oreilles afin de déterminer s’il s’agit de Jumeaux.",
+			"Enfin, en chasse, écoutez attentivement la fréquence des bruits de pas, cela pourrait vous aider à retirer le Revenant ou le Hantu de la liste.",
+			"Si lui parler semble faire augmenter son nombre d’interactions, il ne s’agira probablement pas d’un Onryo."
+		],
+		"todoID": "todo-onryo",
+		"todo": [
+			"Identification par une attaque anticipée avant 50% de santé mentale",
+			"Identification par sa tendance a souffler les flammes (y compris le briquet)",
+			"Identification par sa faiblesse a initialiser une chasse tant qu’il y a une flamme allumée (et surtout si ce dernier est placé de maniere stratégique)",
+			"Elimination du mimic en verifiant l’absence d’empreintes digitales",
+			"Elimination si le fait de lui parler semble faire augmenter son nombre d’interactions",
+			"Elimination si un crucifix est placé au pied d’une bougie et que ce dernier est consommé sans que la bougie ne s’éteigne (et inversement), la flamme est toujours prioritaire sur le crucifix",
+			"Elimination du Cauchemar en gardant le disjoncteur et la lumière allumés le plus souvent possible",
+			"Elimination du Yurei en observant les portes et les déplacements de l’entité",
+			"Elimunation du Jumeaux en faisant attention aux doubles interactions",
+			"Elimination du Revenant et Hauntu en écoutant attentivement la fréquence des bruits de pas durant la chasse"
+		]
+	},
+	{
+		"id": "e18",
+		"name": "Poltergeist",
+		"description": "L’une des entités les plus célèbres, il est connu pour manipuler les objets autour de ses victimes afin de les effrayer. Le Poltergeist est une entité qui est capable de manipuler une grande quantité d’objets à la fois. On dit que les lancers de ces esprits frappeurs sont capables de rendre fou ceux qui y assistent.",
+		"anecdote": "Un Poltergeist est un type d’entité connu pour causer des perturbations physiques, telles que des bruits forts et des déplacements ou destructions d’objets. Bien que les allégations de perturbations d’origine surnaturelle remontent au 1er siècle, les références aux Poltergeists sont devenues plus courantes au début des années 1600. Le mot Poltergeist vient des mots allemands poltern (« faire du bruit », « gronder ») et Geist (« fantôme », « esprit »), et le terme lui-même se traduit par « fantôme bruyant » ou « esprit bruyant ». Un synonyme inventé par René Sudre est le Thorybisme, du grec thorybein (« faire du bruit »)",
+		"difficulty": 65,
+		"power": 30,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 23,
+		"attackSM": 50,
+		"edvidencesID": ["evd6", "evd4", "evd1"],
+		"edvidences": ["6", "4", "1"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Perte de santé mentale des joueurs dans la même pièce par objet lancé: 2%",
+			"Chances de lancer un objet toutes les 0.5s de chasse: 100% (par defaut: 50%)",
+			"Chances de lancer puissant: 20%"
+		],
+		"strategies": [
+			"Le Poltergeist est une entité qui a une tendance accrue à lancer des objets.",
+			"Il est capable de lancer un grand nombre d’objets en un coup.",
+			"Le Poltergeist est également la seule entité à pouvoir lancer des objets avec une puissance accrue, de manière plus rare.",
+			"Durant la chasse, le Poltergeist lancera frénétiquement tous les objets qui lui passent sous la main toutes les demi-secondes.",
+			"Lorsqu’un joueur se trouve dans la même pièce qu’un ou plusieurs objet(s) lancé(s) par un Poltergeist, il perd un petit montant de santé mentale par objet lancé. Lorsqu’il lance plusieurs objets à la fois, cette perte est multipliée par le nombre d’objets lancés, et les objets portent une trace EMF 2 au lieu d’une trace EMF 3. Lorsqu’il n’a rien à lancer, le Poltergeist devient relativement inoffensif.",
+			"L’une des stratégies les plus courantes pour déterminer un Poltergeist est d’effectuer plusieurs tas d’objets dans la pièce de résidence de l’entité. Celui-ci a la possibilité d’en lancer plusieurs d’un coup (n’oubliez pas que la contrepartie d’observer un tel spectacle consiste en une perte significative de santé mentale.)",
+			"Lors d’un « kick de Poltergeist » (multithrow), les objets déclenchent un EMF de niveau 2 (interaction) au lieu d’un EMF de niveau 3 (lancer d’objets).",
+			"Le Poltergeist va parfois lancer un objet beaucoup plus loin que la normale. Si vous assistez à ce genre de lancer, vous savez que vous avez affaire à un Poltergeist."
+		],
+		"todoID": "todo-poltergeist",
+		"todo": [
+			"Identification par le fait que le Poltergeist est capable de lancer plusieurs objets en même temps (hors chasse et/ou pendant la chasse)",
+			"Identification par le drainage de la SM par rapport au ghost event (objet lancé)",
+			"Identification par le regroupement des tas d’objets (pour tester le multithrow)",
+			"Identification par le niveau d’EMF pendant le multithrow (nv2 au lieu de nv3)",
+			"Identification par la distance de lancer d’objets (plus long que la normale)"
+		]
+	},
+	{
+		"id": "e19",
+		"name": "Raiju",
+		"description": "Le Raiju est un démon qui profite des courants électriques. Bien que généralement calme, il peut devenir agité quand il est submergé de puissance. Le Raiju est l’une des entités les plus dangereuses que vous affronterez. La présence de vos appareils électroniques allumés à proximité de cette entité lui permettra de chasser plus tôt et de vous pourchasser à une vitesse plus élevée.  Plus le nombre d’équipements est élevé, plus il chassera tôt et sa vitesse sera élevée.",
+		"anecdote": "Le Raiju est une espèce de bête originaire du Japon, qui s’est propagée dans le monde entier. Traduit du japonais, le nom Raiju signifie littéralement « bête du tonnerre ». Le Raiju ressemble fondamentalement à de banals loups, cependant, ils ont quelques qualités qui les rendent différents des loups classiques. D’une part, ils sont plutôt gros, et l’on raconte qu’ils sont très beaux, et qu’ils possèdent une fourrure grise argentée sur tout le corps.",
+		"difficulty": 65,
+		"power": 65,
+		"tools": 100,
+		"speed": 75,
+		"attackCL": 60,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd5", "evd2"],
+		"edvidences": ["3", "5", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Santé mentale max. avant chasse (objet électronique à proximité): 65%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.5m/s",
+			"Vitesse fixe en chasse (objet électronique à proximité): 2.5m/s",
+			"Distance de « proximité » des objets électroniques (petites maps): 6m",
+			"Distance de « proximité » des objets électroniques (maps moyennes): 8m",
+			"Distance de « proximité » des objets électroniques (grandes maps): 10m",
+			"Distance de dysfonctionnement des objets électroniques et lumières de bâtiment (au même étage): 15 m (par defaut: 10m)"
+		],
+		"strategies": [
+			"Un Raiju est une entité qui pourra chasser tôt lorsqu’au moins un équipement électronique est allumé, et suffisamment proche de lui. Sa vitesse en chasse est plus importante s’il y a des équipements électroniques à proximité de lui.",
+			"Voici ce qui compte ou pas: Les équipements de la maison (lumières de bâtiment, radio, ventilateur,…) ne comptent pas | Les équipements non-électroniques (bâtons d’UV, encens, briquets, bougies,…) ne comptent pas. | Les équipements éteints, lorsqu’ils peuvent être éteints, ne comptent pas. | De manière globale, à part la caméra frontale, tout équipement allumé pouvant dysfonctionner en chasse compte, y compris la lampe torche.",
+			"Exception: les projecteur DOTS, le capteur sonore, et le capteur de mouvements comptent s’ils sont posés, mais ne comptent pas s’ils sont dans l’inventaire ou dans la main.",
+			"Réduire le nombre d’équipements électroniques allumés à proximité ou à l’intérieur de sa pièce réduit drastiquement le risque que présente cette entité.",
+			"Éteindre ou mettre dans l’inventaire les équipements suffit pour que le Raiju ne puisse plus en profiter.",
+			"Si vous obtenez le combo Orbe + D.O.T.S ou Orbe + EMF5, pensez déjà à limiter le nombre d’appareils électroniques dans les environs.",
+			"Durant la chasse, des bruits de pas très rapprochés et frénétiques est le son signature d’un Raiju en pleine explosion de puissance. Les chasseurs les plus intrépides pourront également, à l’aide d’un encens, admirer ses variations de vitesse durant la chasse pour le déterminer.",
+			"Les équipements électronique et les lumières de bâtiment dysfonctionnent à une distance de 15m au lieu de 10m lorsque l’entité est un Raiju.",
+			"La combinaison EMF5 + Orbe est une preuve irréfutable d’un Raiju, car en difficulté Cauchemar, l’Obake aura toujours les empreintes parmi ses deux preuves. Etant les deux seules entités qui présentent cette combinaison de preuves, il s’agit alors forcément d’un Raiju."
+		],
+		"todoID": "todo-raiju",
+		"todo": [
+			"Identification par l'augmentation de puissance/vitesse de l'entité lorsqu'il y a des objets électroniques à proximité. (test a faire)",
+			"Diminution du nombre d'objets électroniques à proximité si on obtient le combo Orbe + EMF5 ou Orbe + D.O.T.S.",
+			"Identification par la combinaison EMF5 + Orbe en difficulté Cauchemar. (car on a seulement 2 preuves possibles)",
+			"Elimination de l'Obake par l'absence d'empreintes digitales en difficulté Cauchemar."
+		]
+	},
+	{
+		"id": "e20",
+		"name": "Revenant",
+		"description": "Le Revenant est une entité violente qui attaquera sans distinction. Leur vitesse de déplacement peut être trompeuse puisqu’ils sont lents au repos mais incroyablement rapides lorsqu’ils chassent. Le Revenant est une entité très dangereuse, une championne du sprint de l’au-delà. Extrêmement lente lorsqu’elle entre en chasse, elle se déplacera extrêmement vite dès qu’elle verra un joueur. Il est possible de s’en échapper mais il est indispensable de savoir s’en cacher. Tous les chasseurs vétérans ont appris à s’en méfier.",
+		"anecdote": "Le terme « Revenant » est un terme courant pour décrire un esprit qui revient dans le monde des vivants, car le mot lui-même est tiré du mot latin « reveniens », signifiant « revenir ».",
+		"difficulty": 50,
+		"power": 10,
+		"tools": 100,
+		"speed": 96,
+		"attackCL": 20,
+		"attackSM": 50,
+		"edvidencesID": ["evd1", "evd5", "evd7"],
+		"edvidences": ["1", "5", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse fixe en chasse (pas dans sa champ de vision): 1m/s - ce qui fait du Revenant l'entitE le plus lent du jeu",
+			"Vitesse de poursuite (vitesse fixe en chasse quand joueur repéré): 3m/s (par defaut: 1.7m/s) - ce qui fait le Revant l'un des entitE le plus rapide du jeu apres le Moroi",
+			"Durée de vitesse améliorée après avoir perdu un joueur : 2.7s"
+		],
+		"strategies": [
+			"Durant sa chasse, le Revenant sera plus lent que n’importe quelle autre entité. S’il pourchasse un joueur, le Revenant sera extrêmement rapide.",
+			"Le Revenant ralentit fortement quand il ne voit personne. Coupez aux intersections et cachez-vous là où il ne vous voit pas entrer.",
+			"Le Revenant obtient un boost de vitesse dès qu’AU MINIMUM une des conditions suivantes est remplie:  Le Revenant a une ligne de vue dégagée sur vous | Le Revenant avait une ligne de vue dégagée sur vous il y a moins de 2.7s | Le Revenant vous a entendu parler | Le Revenant a ressenti l’un de vos équipements électroniques",
+			"Le Revenant n’a que les Orbes en tant que preuve en commun avec le Raiju, qui n’est pas une entité glaciale.",
+			"Le Revenant partage également qu’une seule preuve commune avec le Djinn, température glaciale, qui n’aura donc pas d’orbe.",
+			"Durant la chasse, cachez-vous et écoutez les pas de l’entité. Si ces bruits sont espacés de plus d’une seconde, vous êtes certains d’avoir affaire à un Revenant, car il s’agit de la seule entité aussi lente en chasse.",
+			"Si malgré le test de lenteur, vous avez encore une hésitation avec le Hantu, armez-vous d’un encens et d’un briquet. Placez-vous au fond d’une ligne droite de moyenne distance et observez si l’entité accélère fortement quand elle vous voit. Si tel est le cas, il s’agit d’un Revenant, sinon il s’agira d’un Hantu.",
+			"Attention car en difficulté Cauchemar, l’entité est capable d’enchaîner des meurtres, donc prudence dans les grandes lignes droites de l’Ecole ou l’Asile.",
+			"Dans de grands couloirs comme ceux de l’Ecole ou l’Asile, vous pouvez également mettre des capteurs de mouvement sur le mur, en les plaçant de préférence près du sol pour capter les entités rampantes. Calculez le temps que vous mettez en marchant de l’un à l’autre et positionnez-vous à bonne distance, armé d’un briquet et d’un encens, à proximité d’un lieu où vous réfugier. Comptez le temps que met l’entité à traverser les deux capteurs de mouvement, les flashs lumineux devraient vous aider. Si vous avez parcouru la distance en plus ou moins le double du temps de l’entité (par exemple environ 4 secondes et que l’entité l’a parcouru en environ 2 secondes), il s’agit d’une entité rapide, donc Revenant, Raiju ou Djinn, donc avec deux preuves et une bonne utilisation du disjoncteur, vous devriez pouvoir conclure au Revenant sans soucis."
+		],
+		"todoID": "todo-revenant",
+		"todo": [
+			"Identification par le test de vitesse basique (rapidite/lenteur) en se basant sur la vitesse de pas de l’entité (espacE de plus d’une seconde entre chaque pas)",
+			"Identification par test de vitesse avance (rapidite/lenteur) en se basant sur le temps de parcours d’un capteur de mouvement a l’autre",
+			"Elimination de Raiju en presence de la preuve de Temperature Glaciale (mais Orb)",
+			"Elimination de Djinn en presence de la preuve Orb (mais Temperature Glaciale)",
+			"Elimination de l'Hantu en testant la rapidite de l’entite (beaucoup plus lent que le Revenant durant la poursuite d’un joueur)"
+		]
+	},
+	{
+		"id": "e21",
+		"name": "Spectre",
+		"description": "Les Spectres font partie des entités les plus dangereuses que vous pouvez rencontrer. Il s’agit de la seule entité connue pour savoir voler et traverser les murs. Le Spectre est une entité capable de se téléporter à un joueur aléatoire présent dans le bâtiment. Cette entité est entièrement incapable de marcher dans le sel, ne déclenchant aucune empreinte de pas dans les tas de sel. Son pouvoir est extrêmement dangereux, car il peut chasser tout chasseur inattentif depuis un emplacement inattendu.",
+		"anecdote": "Un Spectre est une entité mort-vivant dont le nom provient du folklore écossais. Type de fantôme ou d’esprit, les spectres étaient traditionnellement considérés comme l’incarnation d’âmes qui sont soit sur le point de mourir, soit qui sont récemment décédées. Par la suite, le concept de Spectre est plus susceptible de se référer à un esprit maléfique, qui a des tâches inachevées dans le royaume des mortels. Ils sont généralement représentés comme des figures squelettiques drapées de chiffons en lambeaux et sont le plus souvent associés à des cimetières ou à d’autres lieux hantés. La perception moderne d’un Spectre est celle d’une entité qui cherche activement à nuire à ceux qu’elle rencontre, quelle que soit leur motivation.",
+		"difficulty": 58,
+		"power": 70,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 25,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd6", "evd2"],
+		"edvidences": ["3", "6", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s"
+		],
+		"strategies": [
+			"Le Spectre est capable de se téléporter à n’importe quel joueur présent dans le bâtiment, effectuant immédiatement après une trace EMF de niveau 2.",
+			"Le Spectre est très sensible au sel, ainsi, il esquivera tous les tas de sel qui seront laissés par les joueurs, et ne marchera jamais dedans. Lorsqu’il les traversera, il les enjambera pour les éviter, ne laissant jamais de trace dedans.",
+			"Une stratégie courante pour déterminer un Spectre est de placer une ligne de sel dans sa pièce de résidence sur un couloir peu large. Placer ensuite un capteur de mouvements sur le mur, de sorte à ce qu’il soit sur la même ligne que le sel. Lorsque l’entité traverse le « mur » de sel, il sera donc détecté par le capteur de mouvements. Si suite à ça, le sel est toujours intact, il s’agira forcément d’un Spectre.",
+			"Le Spectre est redoutable quand sa pièce favorite est très grande, car les entités ont tendance à peu souvent se déplacer sur les tas de sel dans de telles salles. Ainsi, il est assez difficile d’être sûr d’avoir affaire à un Spectre.",
+			"Dans les plus grandes maps, si vous soupçonnez un Spectre, gardez un lecteur EMF à la main lors de vos enquêtes. Si le Spectre se téléporte sur vous, même à l’autre bout de la map, si vous obtenez une trace EMF 2 ou EMF 5 sans aucune raison, il est très probable qu’il s’agisse d’un Spectre.",
+			"Il s’agit d’une des entités les plus difficiles à déterminer, il est indispensable de faire le test du sel a des emplacements stratégiques pour être sûr de son identité."
+		],
+		"todoID": "todo-spectre",
+		"todo": [
+			"Identification par la sensibiliE du spectre sur le sel + utilisation d'un capteur de mouvements dans un emplacement stratégique (pour confirmE que le Spectre est bien présent sans laisser de trace dans le sel avec la lampe UV)",
+			"Elimination en cas de presence de trace de pas apres avoir utilise le sel",
+			"Identification par la teleportation du Spectre par l'obtention d'une trace EMF 2 ou 5 sans raison"
+		]
+	},
+	{
+		"id": "e22",
+		"name": "Thayé",
+		"description": "Le Thayé est connu pour vieillir rapidement, même dans l’au-delà. D’après ce que nous savons, ils semblent se détériorer plus rapidement en présence des vivants. Le Thayé est une entité qui sera très active au début de la partie, et donc plus facile à repérer, cependant il sera une plus grande menace pour les chasseurs. Au fil du temps, le Thayé va perdre en agressivité, et sera de moins en moins actif et rapide.",
+		"anecdote": "Les Thayé (prononcé / θəjɛ́ / « thuh-yeh ») sont également connus sous le nom de Sarai et Tasei en birman (écrit သရဲ) sont des esprits désincarnés dans le folklore du Myanmar qui ont plusieurs formes à la fois, selon la personne qui l’observe. Ils arrivent au cœur de la nuit et causent des nuisances mineures.",
+		"difficulty": 72,
+		"power": 80,
+		"tools": 50,
+		"speed": 85,
+		"attackCL": 92,
+		"attackSM": 75,
+		"edvidencesID": ["evd5", "evd1", "evd2"],
+		"edvidences": ["5", "1", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (très anticipée): 75%",
+			"Perte de capacité de chasse anticipée par niveau de vieillissement: 6% (minimum atteint à 10 niveaux de vieillissement:  15%)",
+			"Vitesse fixe en chasse: 2.75m/s (juste un peu plus lent que le revenant - ce qui fait le 3e entité la plus rapide du jeu)",
+			"Perte de vitesse par niveau de vieillissement: 0.175 (minimum atteint à 10 niveaux de vieillissement:  1.00)",
+			"Niveau d’activité (probabilité d’interaction et d’apparition): 200% (par defaut: 100%)",
+			"Perte de niveau d’activité par niveau de vieillissement: 15% (minimum atteint à 10 niveaux de vieillissement:  50%)",
+			"Niveau de vieillissement: de 0 à 10"
+		],
+		"strategies": [
+			"Au début de la partie, le Thayé sera beaucoup plus actif que les autres entités, pourra chasser tôt, et courir vite.",
+			"Progressivement au fil de la partie, si les joueurs sont à proximité, le Thayé vieillira, abaissant son taux d’activité et sa menace.",
+			"Il vous sera beaucoup plus facile d’obtenir les preuves Projecteur DOTS et Ecriture avec un Thayé (Hyperactivité).",
+			"Le Thayé restera dangereux si les chasseurs sont éloignés de lui. En effet, il ne vieillit que si au moins un chasseur vivant est dans la même pièce que lui.",
+			"Il fera des souffles malsains, des interactions et des apparitions deux fois plus souvent que les autres types d’entité, ce qui le rendra facile à trouver.",
+			"Si un chasseur se trouve dans la même pièce qu’un Thayé, celui-ci vieillira et perdra en puissance. En revanche, le Thayé cessera de vieillir si aucun vivant ne se trouve dans la même pièce que lui.",
+			"Il vous sera possible de traquer si vous avez affaire à un Thayé via une planche ouija si vous en avez une, car celui-ci répondra différemment à la question « quel âge avez-vous » en fonction de son niveau de vieillissement.",
+			"En jouant à la bougie dans sa pièce, le Thayé perdra tellement rapidement en niveau d’activité sans que vous ne perdiez de santé mentale qu’il lui sera incapable de chasser pendant la quasi intégralité de la partie.",
+			"Le meilleur strategie contre le Thaye est de trouver le plutot possible sa residence et à rester dans sa pièce, le Thayé perdra fortement en activité et en capacité de chasse anticipée.",
+			"Lorsqu'il vieillit, le Thayé perd en agressivité et en capacité et devient plus lent même s’il vous repère. (contrairement a un Revenant)"
+		],
+		"todoID": "todo-thaye",
+		"todo": [
+			"Identification par l'utilisation d'une planche ouija en questionnant le Thayé sur son âge.",
+			"Identification par la diminution de la chasse anticipée (en restant dans sa pièce) et de la vitesse du Thayé (durant une chasse)",
+			"Identification par l'hyperactivité de l'entité (en dehors de sa pièce) avec l'obtention de preuves Projecteur DOTS et Ecriture.",
+			"Identification par l'arret total d'activité de l'entité si vous restez dans sa pièce (en jouant à la bougie)."
+		]
+	},
+	{
+		"id": "e23",
+		"name": "Yokai",
+		"description": "Les Yokai sont des entités banales attirées par les voix humaines. Ils hantent très souvent les maisons familiales. Le Yokai est une entité sensible aux voix des joueurs.  Lorsqu’il se situe à proximité d’un joueur qui parle, il a une chance de déclencher une chasse anticipée. Lorsqu’il chasse, son audition est fortement réduite, entendant les objets électroniques et les voix très proches de lui.",
+		"anecdote": "Le mot « Yokai » vient des yōkai du folklore japonais (妖怪、ようかい), qui peut se traduire par « monstres étranges ». Ils sont réputés pour prendre possession des objets domestiques pour certains, et des esprits des vivants pour d’autres. Il est parfois raconté aux jeunes enfants que les Yokai sont souvent la source des sentiments négatifs dans le cœur des humains comme la colère.",
+		"difficulty": 30,
+		"power": 70,
+		"tools": 5,
+		"speed": 55,
+		"attackCL": 86,
+		"attackSM": 50,
+		"edvidencesID": ["evd6", "evd5", "evd2"],
+		"edvidences": ["6", "5", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Santé mentale max. avant chasse si un joueur parle à proximité (anticipée): 80%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Distance d’écoute en chasse: 2m (au lieu de 8m pour toutes les autres entités)"
+		],
+		"strategies": [
+			"Le Yokai a quelques chances de déclencher une chasse si la santé mentale moyenne est un peu diminuée, et qu’au moins un joueur parle à proximité (y compris lorsque vous parlez dans la Spirit Box).",
+			"Durant sa chasse, seules les voix proches et les appareils électroniques proches ne pourront être entendus par un Yokai.",
+			"Le Yokai ayant la particularité de ne vous entendre que s’il est à deux mètres de vous durant sa chasse, il est probable que vous ayez l’impression d’avoir affaire à une entité stupide qui ne vient même pas vous tuer, particulièrement si vous attendez volontairement avec la lumière allumée, un encens à la main, afin de terminer une mission.",
+			"Il est préférable d’évaluer le Yokai par élimination, tout en faisant preuve d’une très grande prudence.",
+			"Lorsque vous avez la combinaison Spirit Box + DOTS, il vous sera possible de le déterminer assez facilement.",
+			"Attention cependant car avec Spirit Box + Orbe, vous aurez affaire à 3 champions des chasses rapides, il vous sera donc plus difficile de le deviner.",
+			"Pire encore, la combinaison Orbe + DOTS vous impose de faire attention au Raiju et au Yurei, deux entités capables de vous chasser plus tôt que prévu, l’un grâce à vous objets électroniques, l’autre en siphonnant davantage votre santé mentale.",
+			"Le stategie contre le Yokai est de volontairement se faire entendre de l’entité. Mettez vous avec un briquet et un encens à une distance plus ou moins de 6 à 8 mètres d’un point de passage fréquent de l’entité, hors de vue, lampe torche allumée. En chasse, une entité normale vous courra dessus même si vous êtes caché grâce au fait d’avoir senti la lampe torche. Le Yokai en revanche, vous ignorera et continuera de vous chercher sans dévier de sa direction."
+		],
+		"todoID": "todo-yokai",
+		"todo": [
+			"Identification par la chasse anticipée si un joueur parle à proximité (dans sa residence).",
+			"Identification par le test d'audition reduite en chasse. (pas plus de 2m).",
+			"Identification par le combo Spirit Box + D.O.T.S. (Attention a la combinaison Spirit Box + Orbe OU Orbe + D.O.T.S)"
+		]
+	},
+	{
+		"id": "e24",
+		"name": "Yurei",
+		"description": "Le Yurei est une entité qui est revenue dans le monde physique dans une optique de vengeance ou par pure haine. Le Yurei est une entité capable de drainer plus rapidement la santé mentale des joueurs à proximité. Il est également connu pour sa faculté à drainer la santé mentale d’une cible proche, causant la fermeture complète d’une porte proche.",
+		"anecdote": "Les Yūrei sont des entités du folklore japonais connus pour hanter un lieu spécifique à un moment précis (correspondant généralement à l’heure de leur mort). Ils sont célèbres pour avoir une apparence qui fait peur à leurs ennemis, entraînant souvent l’automutilation ou le suicide.",
+		"difficulty": 30,
+		"power": 52,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 26,
+		"attackSM": 50,
+		"edvidencesID": ["evd5", "evd7", "evd2"],
+		"edvidences": ["5", "7", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Durée de blocage dans sa pièce si utilisation d’un encens: 90s",
+			"Perte de santé mentale à l’utilisation du pouvoir: 15%"
+		],
+		"strategies": [
+			"Le Yurei peut réduire la santé mentale du joueur le plus proche tout en fermant entièrement une porte à proximité.",
+			"Il ne pourra pas utiliser son pouvoir dans une pièce sans aucune porte.",
+			"Notez que la porte d’entrée ne peut être fermée que par une chasse, une apparition ou ce pouvoir.",
+			"Le Yurei fait partie des entités capables de beaucoup se déplacer entre leur pièce favorite et les pièces adjacentes, et peut changer facilement de pièce favorite dans les difficultés plus élevées.",
+			"L’utilisation d’encens l’empêchera de quitter sa pièce favorite pendant quelques temps.",
+			"Parmi les trois preuves du Yurei, deux sont des preuves faciles à obtenir à presque n’importe quel moment de la partie, les Orbes et les Températures Glaciales.",
+			"En difficulté Professionnelle, pensez à surveiller l’orbe pour déterminer si le Yurei change de pièce favorite.",
+			"Il existe un test simple pour déterminer un Yurei, et qui se base sur les capteurs de mouvement. N’hésitez pas à en placer deux ou trois dans sa pièce, et les autres à l’extérieur, pour déterminer s’il est fréquent pour lui de sortir de sa pièce favorite. Faîtes brûler ensuite un bâton d’encens dans sa pièce, et observez à nouveau les capteurs de mouvement. S’il ne semble plus du tout activer les capteurs à l’extérieur de sa pièce, il semblerait que vous ayez affaire à un Yurei.",
+			"Notez qu’il est presque impossible pour une entité classique de toucher une porte totalement ouverte et de la fermer totalement, c’est donc votre meilleur atout pour déterminer rapidement qu’il s’agit d’un Yurei.",
+			"Puisqu’il possède beaucoup de preuves en commun avec beaucoup d’entités, la manière la plus simple de le déterminer est d’observer l’utilisation de son pouvoir de fermeture de porte, ou par élimination de toutes les autres entités.",
+			"Si vous avez Orbe et Température, utilisez la spirit box et l’UV pour vous assurer qu’il ne s’agisse pas d’un Mimic.",
+			"Avec le test de l’encens, vous pourrez évaluer s’il s’agit d’un Hantu ou non, puisque le Hantu bougera peu importe l’effet de l’encens.",
+			"Le Revenant et le Raiju seront faciles à déterminer en écoutant l’espacement des bruits de ses pas en chasse.",
+			"Si l’entité semble de moins en moins active, essayez d’utiliser des bougies afin de déterminer s’il s’agit d’un Onryo, qui sera incapable de chasser tant que plusieurs bougies seront allumées à côté de lui.",
+			"Quand vous avez le choix entre Oni et Yurei, essayez d’observer un lancer d’objet très puissant, ou d’avoir un événement paranormal de souffle malsain, car le Yurei sera plus enclin à le faire à mesure que la partie s’éternise, là où l’Oni privilégiera toujours les apparitions.",
+			"Pour le différencier de la Banshee, cette dernière a une faible chance d’effectuer des bruits spéciaux au microphone parabolique.",
+			"Enfin, pour le différencier du Yokai, essayez de vous placer à un endroit isolé visuellement avec de l’encens, un briquet et une lampe torche, laissez votre lampe torche allumée, et voyez si l’entité semble dévier de sa trajectoire pour venir vous trouver (Yurei) ou non (Yokai)."
+		],
+		"todoID": "todo-yurei",
+		"todo": [
+			"Identification par la fermeture soudaine d’une porte et drain de SM - Preuve irréfutable puisque l’entité classique ne peut pas fermer une porte ouverte",
+			"Identification par le changement de pièce favorite (presence d’orbe)",
+			"Identification par l'obtention de l'orbe et Température Glaciales comme preuves (facile a obtenir)",
+			"Identification par le test de capteurs de mouvement a l'extérieur de sa pièce favorite + encens a l'interieur - Si les capteurs ne sont plus actifs, il s'agit d'un Yurei",
+			"Identification par la déviation de trajectoire pour venir vous trouver grace au test d'audition reduite en chasse (Yurei) sinon c'est forcement un Yokai",
+			"Elimination si le test de bougie rend l'entitE de moins en moins actif (Il s'agit probablement d'un Onryo)",
+			"Elimination en cas d'echec du test de capteurs de mouvement + encens (Il s'agit probablement d'un Hantu)",
+			"Elimination du Mimic par l'absence de preuve d'empreintes digitales et Spirit Box",
+			"Elimination de l'Oni en cas d'absence d'apparition physique frequent et de lancer d'objet puissant ou bien la présence d'un souffle malsain",
+			"Elimination de la Banshee si on obtient pas de bruit spécial au microphone parabolique"
+		]
 	}
 ]

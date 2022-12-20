@@ -1,4 +1,4 @@
-import { FaObjectGroup, FaGhost } from 'react-icons/fa';
+import { FaGhost, FaMapMarkerAlt } from 'react-icons/fa';
 
 /* common */
 import { IconRender } from '../common/icons';
@@ -19,26 +19,29 @@ type BannerType = {
 export const banner: BannerType = {
 	bannerInformation: [
 		"Phasmophobia est un jeu réalisé par Kinetic Games sorti le 18 septempre 2020 sur Steam en accès anticipé. C'est un jeu d'horreur psychologique en ligne coopératif à 4 joueurs où vous et vos coéquipiers enquêteurs dans le paranormal explorerez des lieux hantés remplis d'activité paranormale et rassemblerez autant de preuves du paranormal que possible. Vous utiliserez votre équipement de chasse aux fantômes pour rechercher et enregistrer les preuves de toute entité qui hante les lieux et les vendre à une équipe d'extermination des fantômes.",
-		"Phasmophobia tools vous aidera à trouver des indices, des stratégies contre les entités, connaître les emplacements d'objets maudits et bien d'autres astuces et outils utiles pour devenir un chasseur de fantômes professionnel... Découvrez tout cela en cliquant sur le bouton ci-dessous !",
+		"Phasmophobia Tools, l'expérience ultime de chasse aux fantômes! Découvrez tous les outils et astuces dont vous avez besoin pour devenir un expert dans la capture des entités paranormales grâce à Phasmophobia Tools. Nous vous fournirons toutes les informations sur les capacités, les forces et les faiblesses des entités, ainsi que sur les meilleures stratégies pour les traquer et les capturer. Rejoignez-nous maintenant et devenez un chasseur de fantômes de renom!",
 	],
 	features: [
 		{
 			title: 'Entités',
 			icon: IconRender({ icon: <FaGhost />, size: '77' }),
 			lists: [
-				'Trouver des indices sur chaque entité et différentes stratégies pour les traquer',
-				'Découvrez leurs faiblesses et leurs points forts',
-				'Les caractéristiques spécifiques de chaque entité',
-				'Les preuves de leur présence grace à un système de détection par evidence',
+				'Généralités: decouvrez les generalités du jeu et diverses informations utiles (surtout pour les débutants)',
+				'Todo: un résumé des tâches à effectuer pour vous aider à progresser dans le jeu ainsi adopter une stratégie efficace',
+				'Timer & Chrono: un chronomètre et un minuteur pour vous aider à gérer votre temps, le timing est très important dans ce jeu',
+				'Tracker: votre outil ultime pour traquer les entités',
+				'Notes: un outil pour prendre des notes durant vos parties',
+				'Questions/Réponses: un serie de questions/réponses lors de votre enquête paranormale avec un Spirit Box',
 			],
 		},
 		{
-			title: 'Objets',
-			icon: IconRender({ icon: <FaObjectGroup />, size: '77' }),
+			title: 'Maps',
+			icon: IconRender({ icon: <FaMapMarkerAlt />, size: '77' }),
 			lists: [
-				'Trouvez les emplacements des objets maudits sur toutes les maps',
-				'Découvrez leurs effets',
-				'Exploitez les pour votre avantage',
+				'Apprendre d\'avantage sur les lieux où vous allez enquêter',
+				'Apprenez à vous repérer dans les lieux',
+				'Apprenez à utiliser les objets maudits pour vous aider à capturer les entités',
+				'Connaissez la taille, la difficulté et l\'accessibilité des cachettes sur chaque map',
 			],
 		},
 	],

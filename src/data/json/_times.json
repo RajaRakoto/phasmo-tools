@@ -1,5 +1,9 @@
 [
-	{ "text": "10s", "second": 10, "status": false },
 	{ "text": "20s", "second": 20, "status": false },
-	{ "text": "30s", "second": 30, "status": false }
+	{ "text": "25s", "second": 25, "status": false },
+	{ "text": "30s", "second": 30, "status": false },
+	{ "text": "60s", "second": 60, "status": false },
+	{ "text": "90s", "second": 90, "status": false },
+	{ "text": "120s", "second": 120, "status": false },
+	{ "text": "180s", "second": 180, "status": false }
 ]

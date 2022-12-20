@@ -11,10 +11,7 @@ export default function Report() {
 			<section>
 				<div className="content">
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
-						facere neque fugiat suscipit accusantium nesciunt, voluptates
-						molestias enim, reiciendis totam temporibus unde dolor ut! Ullam
-						sequi recusandae incidunt minus officia.
+						Cette page n'est pas encore disponible (en cours de refonte ...) !
 					</p>
 				</div>
 			</section>

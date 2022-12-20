@@ -639,7 +639,7 @@ export const big_maps = [
 		cover: azile_cover,
 		description:
 			'L’asile est la plus grande carte du jeu Phasmophobia. De ce fait, il est plus difficile d’y mener une enquête. Elle est composée de deux étages avec des dizaines de pièces de part et d’autre. L’ambiance, les longs couloirs, le décor… tout est mis en œuvre pour faire sentir au joueur qu’il est minuscule par rapport à l’immensité du lieu.',
-		prime: 50,
+		prime: 40,
 		stat: {
 			size: 95,
 			level: 92,

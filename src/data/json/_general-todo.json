@@ -1,0 +1,16 @@
+{
+	"todo": [
+		"Connaître la stratégie à adopter dans la map au début de la partie (emplacements possibles de cachettes, emplacements des objets maudits, emplacement du disjoncteur, etc.).",
+		"Trouver la pièce de l'entité en priorité (séparer les taches en co-op).",
+		"Respecter le nombre maximum de lumières pour éviter de faire sauter le disjoncteur.",
+		"Garder toutes les portes fermées pour savoir quelle porte a été ouverte (par l'entité). Cependant, si vous avez des doutes sur le Yurei, il faut laisser la porte ouverte (pour tester son pouvoir).",
+		"Toujours penser à placer les équipements dans un endroit stratégique.",
+		"N'hesitez pas a utiliser [RESUME] dans l'outil tracker pour avoir un indice rapide. Ainsi pour les autres outils a votre disposition (timer & chrono | notes | maps details | strategies ...)",
+		"Ne pas oublier de prendre en photo les interactions possibles, l'os, les objets maudits, ou même l'entité en chasse ou pendant le GhostEvent.",
+		"Utiliser le sel (+ UV) dans un endroit stratégique (entrées de porte ou le haut d'un escalier) pour avoir une indication précise des mouvements du fantôme.",
+		"Interroger de manière humble et précise, choisir bien vos questions (ne pas mettre son nom dans vos questions pour être sûr que la reconnaissance vocale fonctionne de manière optimale).",
+		"Procéder par élimination en cas de difficulté à trouver la bonne preuve.",
+		"Ne pas oublier de faire les quêtes secondaires.",
+		"Ne jamais oublier de faire un test sur le mimic dans chaque partie."
+	]
+}
