@@ -120,6 +120,10 @@ const initialState: initialStateType = [
 	{
 		id: 'todo-poltergeist',
 		todo: getTodoFormat(__entitiesTodo__[17].todo),
+	},	
+	{
+		id: 'todo-raiju',
+		todo: getTodoFormat(__entitiesTodo__[18].todo),
 	},
 ];
 
