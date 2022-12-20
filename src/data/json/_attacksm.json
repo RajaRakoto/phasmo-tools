@@ -1,6 +1,5 @@
 [
 	{
-		"id": 1,
 		"percentage": "100%",
 		"lists": [
 			"Démon (avec pouvoir)",
@@ -9,32 +8,26 @@
 		]
 	},
 	{
-		"id": 2,
 		"percentage": "80%",
 		"lists": ["Yokai (avec pouvoir) "]
 	},
 	{
-		"id": 3,
 		"percentage": "75%",
 		"lists": ["Thayé (avec toute son énergie)"]
 	},
 	{
-		"id": 4,
 		"percentage": "70%",
 		"lists": ["Démon (naturellement) "]
 	},
 	{
-		"id": 5,
 		"percentage": "65%",
 		"lists": ["Raiju (avec équipement électronique allumé proche) "]
 	},
 	{
-		"id": 6,
 		"percentage": "60%",
 		"lists": ["Cauchemar (lumière éteinte)", "Onryo (naturellement) "]
 	},
 	{
-		"id": 7,
 		"percentage": "50%",
 		"lists": [
 			"Banshee (santé mentale de sa cible actuelle)",
@@ -56,22 +49,18 @@
 		]
 	},
 	{
-		"id": 8,
 		"percentage": "40%",
 		"lists": ["Cauchemar (lumière allumée)", "Deogen (naturellement)"]
 	},
 	{
-		"id": 9,
 		"percentage": "35%",
 		"lists": ["Ombre (naturellement)"]
 	},
 	{
-		"id": 10,
 		"percentage": "15%",
 		"lists": ["Thayé (à son niveau de vieillissement maximal)"]
 	},
 	{
-		"id": 11,
 		"percentage": "0% (Ne peut pas chasser)",
 		"lists": [
 			"Onryo (avec au moins une bougie allumée à moins de 4m)",
