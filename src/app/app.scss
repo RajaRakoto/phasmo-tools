@@ -843,6 +843,7 @@ section {
 .banner {
 	.swiper {
 		max-width: __convertToRem($value: 350px);
+		height: __convertToRem($value: 800px);
 		margin-top: 2rem;
 		margin-bottom: 3.2rem;
 
