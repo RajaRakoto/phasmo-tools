@@ -229,7 +229,6 @@ export default function Maps() {
 				<div id="bigmap-link">
 					<MapsWrapper category="GRANDES MAPS" maps={big_maps} />
 				</div>
-				ink
 			</div>
 		</React.Fragment>
 	);
