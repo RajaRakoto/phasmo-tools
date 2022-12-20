@@ -141,6 +141,10 @@ const initialState: initialStateType = [
 		id: 'todo-yokai',
 		todo: getTodoFormat(__entitiesTodo__[22].todo),
 	},
+	{
+		id: 'todo-yurei',
+		todo: getTodoFormat(__entitiesTodo__[23].todo),
+	}
 ];
 
 // slice - todo
