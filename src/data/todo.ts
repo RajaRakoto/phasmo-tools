@@ -117,6 +117,10 @@ const initialState: initialStateType = [
 		id: 'todo-onryo',
 		todo: getTodoFormat(__entitiesTodo__[16].todo),
 	},
+	{
+		id: 'todo-poltergeist',
+		todo: getTodoFormat(__entitiesTodo__[17].todo),
+	},
 ];
 
 // slice - todo

@@ -727,22 +727,43 @@
 		]
 	},
 	{
-		"id": "e",
-		"name": "",
-		"description": "",
-		"anecdote": "",
-		"difficulty": 0,
-		"power": 0,
-		"tools": 0,
-		"speed": 0,
-		"attackCL": 0,
-		"attackSM": 0,
-		"edvidencesID": ["evd", "evd", "evd"],
-		"edvidences": ["", "", ""],
-		"datas": ["", "", "", ""],
-		"strategies": ["", "", "", ""],
-		"todoID": "todo-",
-		"todo": ["", "", "", ""]
+		"id": "e17",
+		"name": "Poltergeist",
+		"description": "L’une des entités les plus célèbres, il est connu pour manipuler les objets autour de ses victimes afin de les effrayer. Le Poltergeist est une entité qui est capable de manipuler une grande quantité d’objets à la fois. On dit que les lancers de ces esprits frappeurs sont capables de rendre fou ceux qui y assistent.",
+		"anecdote": "Un Poltergeist est un type d’entité connu pour causer des perturbations physiques, telles que des bruits forts et des déplacements ou destructions d’objets. Bien que les allégations de perturbations d’origine surnaturelle remontent au 1er siècle, les références aux Poltergeists sont devenues plus courantes au début des années 1600. Le mot Poltergeist vient des mots allemands poltern (« faire du bruit », « gronder ») et Geist (« fantôme », « esprit »), et le terme lui-même se traduit par « fantôme bruyant » ou « esprit bruyant ». Un synonyme inventé par René Sudre est le Thorybisme, du grec thorybein (« faire du bruit »)",
+		"difficulty": 65,
+		"power": 30,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 23,
+		"attackSM": 50,
+		"edvidencesID": ["evd6", "evd4", "evd1"],
+		"edvidences": ["6", "4", "1"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s",
+			"Perte de santé mentale des joueurs dans la même pièce par objet lancé: 2%",
+			"Chances de lancer un objet toutes les 0.5s de chasse: 100% (par defaut: 50%)",
+			"Chances de lancer puissant: 20%"
+		],
+		"strategies": [
+			"Le Poltergeist est une entité qui a une tendance accrue à lancer des objets.",
+			"Il est capable de lancer un grand nombre d’objets en un coup.",
+			"Le Poltergeist est également la seule entité à pouvoir lancer des objets avec une puissance accrue, de manière plus rare.",
+			"Durant la chasse, le Poltergeist lancera frénétiquement tous les objets qui lui passent sous la main toutes les demi-secondes.",
+			"Lorsqu’un joueur se trouve dans la même pièce qu’un ou plusieurs objet(s) lancé(s) par un Poltergeist, il perd un petit montant de santé mentale par objet lancé. Lorsqu’il lance plusieurs objets à la fois, cette perte est multipliée par le nombre d’objets lancés, et les objets portent une trace EMF 2 au lieu d’une trace EMF 3. Lorsqu’il n’a rien à lancer, le Poltergeist devient relativement inoffensif.",
+			"L’une des stratégies les plus courantes pour déterminer un Poltergeist est d’effectuer plusieurs tas d’objets dans la pièce de résidence de l’entité. Celui-ci a la possibilité d’en lancer plusieurs d’un coup (n’oubliez pas que la contrepartie d’observer un tel spectacle consiste en une perte significative de santé mentale.)",
+			"Lors d’un « kick de Poltergeist » (multithrow), les objets déclenchent un EMF de niveau 2 (interaction) au lieu d’un EMF de niveau 3 (lancer d’objets).",
+			"Le Poltergeist va parfois lancer un objet beaucoup plus loin que la normale. Si vous assistez à ce genre de lancer, vous savez que vous avez affaire à un Poltergeist."
+		],
+		"todoID": "todo-poltergeist",
+		"todo": [
+			"Identification par le fait que le Poltergeist est capable de lancer plusieurs objets en même temps (hors chasse et/ou pendant la chasse)",
+			"Identification par le drainage de la SM par rapport au ghost event (objet lancé)",
+			"Identification par le regroupement des tas d’objets (pour tester le multithrow)",
+			"Identification par le niveau d’EMF pendant le multithrow (nv2 au lieu de nv3)",
+			"Identification par la distance de lancer d’objets (plus long que la normale)"
+		]
 	},
 	{
 		"id": "e",
