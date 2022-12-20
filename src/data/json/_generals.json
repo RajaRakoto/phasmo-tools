@@ -65,6 +65,10 @@
 			{
 				"subtitle": "Commune 11",
 				"item": "On n'a que 2 preuves (3 par défaut) en difficulté cauchemar pour tout les entitEs sauf le mimic qui en a 3 preuves dans ce level. (4 par défaut)"
+			},
+			{
+				"subtitle": "Commune 12",
+				"item": "Attention, les apparences des entités ne déterminent pas leur nature. A l'exception de l'Ombre qui se presente sous sa forme ombre/translucide, l'Oni qui a une grande preference sur la forme physique et apparaîtra plus souvent dans sa forme complète et l'Obake qui peut changer de skin pendant une chasse"
 			}
 		],
 		"post": ""
