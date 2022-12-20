@@ -129,6 +129,10 @@ const initialState: initialStateType = [
 		id: 'todo-revenant',
 		todo: getTodoFormat(__entitiesTodo__[19].todo),
 	},
+	{
+		id: 'todo-spectre',
+		todo: getTodoFormat(__entitiesTodo__[20].todo),
+	},
 ];
 
 // slice - todo

@@ -847,22 +847,36 @@
 		]
 	},
 	{
-		"id": "e",
-		"name": "",
-		"description": "",
-		"anecdote": "",
-		"difficulty": 0,
-		"power": 0,
-		"tools": 0,
-		"speed": 0,
-		"attackCL": 0,
-		"attackSM": 0,
-		"edvidencesID": ["evd", "evd", "evd"],
-		"edvidences": ["", "", ""],
-		"datas": ["", "", "", ""],
-		"strategies": ["", "", "", ""],
-		"todoID": "todo-",
-		"todo": ["", "", "", ""]
+		"id": "e20",
+		"name": "Spectre",
+		"description": "Les Spectres font partie des entités les plus dangereuses que vous pouvez rencontrer. Il s’agit de la seule entité connue pour savoir voler et traverser les murs. Le Spectre est une entité capable de se téléporter à un joueur aléatoire présent dans le bâtiment. Cette entité est entièrement incapable de marcher dans le sel, ne déclenchant aucune empreinte de pas dans les tas de sel. Son pouvoir est extrêmement dangereux, car il peut chasser tout chasseur inattentif depuis un emplacement inattendu.",
+		"anecdote": "Un Spectre est une entité mort-vivant dont le nom provient du folklore écossais. Type de fantôme ou d’esprit, les spectres étaient traditionnellement considérés comme l’incarnation d’âmes qui sont soit sur le point de mourir, soit qui sont récemment décédées. Par la suite, le concept de Spectre est plus susceptible de se référer à un esprit maléfique, qui a des tâches inachevées dans le royaume des mortels. Ils sont généralement représentés comme des figures squelettiques drapées de chiffons en lambeaux et sont le plus souvent associés à des cimetières ou à d’autres lieux hantés. La perception moderne d’un Spectre est celle d’une entité qui cherche activement à nuire à ceux qu’elle rencontre, quelle que soit leur motivation.",
+		"difficulty": 58,
+		"power": 70,
+		"tools": 5,
+		"speed": 50,
+		"attackCL": 25,
+		"attackSM": 50,
+		"edvidencesID": ["evd3", "evd6", "evd2"],
+		"edvidences": ["3", "6", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse en chasse (normale): 1.7 ~ 2.8m/s"
+		],
+		"strategies": [
+			"Le Spectre est capable de se téléporter à n’importe quel joueur présent dans le bâtiment, effectuant immédiatement après une trace EMF de niveau 2.",
+			"Le Spectre est très sensible au sel, ainsi, il esquivera tous les tas de sel qui seront laissés par les joueurs, et ne marchera jamais dedans. Lorsqu’il les traversera, il les enjambera pour les éviter, ne laissant jamais de trace dedans.",
+			"Une stratégie courante pour déterminer un Spectre est de placer une ligne de sel dans sa pièce de résidence sur un couloir peu large. Placer ensuite un capteur de mouvements sur le mur, de sorte à ce qu’il soit sur la même ligne que le sel. Lorsque l’entité traverse le « mur » de sel, il sera donc détecté par le capteur de mouvements. Si suite à ça, le sel est toujours intact, il s’agira forcément d’un Spectre.",
+			"Le Spectre est redoutable quand sa pièce favorite est très grande, car les entités ont tendance à peu souvent se déplacer sur les tas de sel dans de telles salles. Ainsi, il est assez difficile d’être sûr d’avoir affaire à un Spectre.",
+			"Dans les plus grandes maps, si vous soupçonnez un Spectre, gardez un lecteur EMF à la main lors de vos enquêtes. Si le Spectre se téléporte sur vous, même à l’autre bout de la map, si vous obtenez une trace EMF 2 ou EMF 5 sans aucune raison, il est très probable qu’il s’agisse d’un Spectre.",
+			"Il s’agit d’une des entités les plus difficiles à déterminer, il est indispensable de faire le test du sel a des emplacements stratégiques pour être sûr de son identité."
+		],
+		"todoID": "todo-spectre",
+		"todo": [
+			"Identification par la sensibiliE du spectre sur le sel + utilisation d'un capteur de mouvements dans un emplacement stratégique (pour confirmE que le Spectre est bien présent sans laisser de trace dans le sel avec la lampe UV)",
+			"Elimination en cas de presence de trace de pas apres avoir utilise le sel",
+			"Identification par la teleportation du Spectre par l'obtention d'une trace EMF 2 ou 5 sans raison"
+		]
 	},
 	{
 		"id": "e",
