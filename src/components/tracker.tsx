@@ -18,6 +18,8 @@ import uuid from 'react-uuid';
 
 /* json data */
 import evd from '../data/json/_edvidences.json';
+import attacksm from '../data/json/_attacksm.json';
+import resumes from '../data/json/_resumes.json';
 
 /* common */
 import { IconRender } from '../common/icons';
@@ -34,6 +36,7 @@ import thermometer_icon from '../assets/icons/thermometer_icon.png';
 
 /* components */
 import Todo from './todo';
+import { TableAttackSM, TableResume } from './table';
 
 /* store */
 import { useStoreSelector, useStoreDispatch } from '../data/hooks';
@@ -90,6 +93,7 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 	// get local storage and set it to edvidences state
 	const [edvidences, setEdvidences] = useState(evd);
 	const local = JSON.parse(localStorage.getItem('tracker__edvidences')!);
+	const reactSwal = withReactContent(Swal);
 
 	// set local storage to edvidences state
 	useEffect(() => {
@@ -155,6 +159,42 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 				return item;
 			}),
 		);
+	};
+
+	// modal for 2 specs tracker btn (RESUME + SM PALETTE)
+	const SweetAlert = async ({
+		title,
+		description,
+		subComponent,
+	}: {
+		title: string;
+		description: string;
+		subComponent: ReactElement<any, any>;
+	}) => {
+		reactSwal.fire({
+			title:
+				"<h2 style='font-size: 35px'>" +
+				title +
+				'</h2>' +
+				"<hr style='margin-top: 1.2rem'>" +
+				'<br>' +
+				'<center>' +
+				'<p>' +
+				description +
+				'</p>' +
+				'</center>',
+			html: <>{subComponent}</>,
+			showCloseButton: true,
+			showClass: {
+				popup: 'swal--anim-show',
+			},
+			hideClass: {
+				popup: 'swal--anim-hide',
+			},
+			customClass: {
+				container: 'swal--table',
+			},
+		});
 	};
 
 	return (
@@ -226,6 +266,32 @@ function TrackerHeader({ title, REDUX }: { title: string; REDUX: any }) {
 				/>
 			</div>
 			<hr />
+			<div>
+				<button
+					onClick={() =>
+						SweetAlert({
+							title: 'RESUME',
+							description:
+								'Resumer sur les specificités (forces | faiblesses) de chaque entité',
+							subComponent: <TableResume data={resumes} />,
+						})
+					}
+				>
+					RESUME
+				</button>
+				<button
+					onClick={() =>
+						SweetAlert({
+							title: 'SM PALETTE',
+							description:
+								"Liste de toute les SM max (moyenne) pour qu'un entité effectue sa première chasse (en fonction d'un certain nombre de critères)",
+							subComponent: <TableAttackSM data={attacksm} />,
+						})
+					}
+				>
+					SM PALETTE
+				</button>
+			</div>
 			<div className="d-flex justify-content-center">
 				<button
 					style={{
@@ -412,7 +478,10 @@ function TrackerItem({
 				<div style={{ marginTop: 8 }}>
 					<ProgressBar percent={difficulty} label={'Difficulté (preuves)'} />
 					<ProgressBar percent={attackCL} label={'Attaque classique'} />
-					<ProgressBar percent={attackSM} label={'Attaque SM (naturellement)'} />
+					<ProgressBar
+						percent={attackSM}
+						label={'Attaque SM (naturellement)'}
+					/>
 					<ProgressBar percent={power} label={'Dangerosité du pouvoir'} />
 					<ProgressBar percent={speed} label={'Vitesse (naturellement)'} />
 					<ProgressBar
