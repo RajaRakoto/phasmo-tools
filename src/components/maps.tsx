@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 
 /* libs */
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import {BiDollar} from 'react-icons/bi';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import uuid from 'react-uuid';
@@ -152,7 +153,7 @@ function MapsWrapper({
 						<div className="items">
 							<div className="header">
 								<h3>{map.name}</h3>
-								<h4>Prime: {map.prime}$</h4>
+								<h4>Prime: {map.prime}<BiDollar/></h4>
 								<img src={map.cover} alt="map cover" />
 								<p>{map.description}</p>
 							</div>
