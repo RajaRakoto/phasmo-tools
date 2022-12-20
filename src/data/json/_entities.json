@@ -879,22 +879,46 @@
 		]
 	},
 	{
-		"id": "e",
-		"name": "",
-		"description": "",
-		"anecdote": "",
-		"difficulty": 0,
-		"power": 0,
-		"tools": 0,
-		"speed": 0,
-		"attackCL": 0,
-		"attackSM": 0,
-		"edvidencesID": ["evd", "evd", "evd"],
-		"edvidences": ["", "", ""],
-		"datas": ["", "", "", ""],
-		"strategies": ["", "", "", ""],
-		"todoID": "todo-",
-		"todo": ["", "", "", ""]
+		"id": "e21",
+		"name": "Thayé",
+		"description": "Le Thayé est connu pour vieillir rapidement, même dans l’au-delà. D’après ce que nous savons, ils semblent se détériorer plus rapidement en présence des vivants. Le Thayé est une entité qui sera très active au début de la partie, et donc plus facile à repérer, cependant il sera une plus grande menace pour les chasseurs. Au fil du temps, le Thayé va perdre en agressivité, et sera de moins en moins actif et rapide.",
+		"anecdote": "Les Thayé (prononcé / θəjɛ́ / « thuh-yeh ») sont également connus sous le nom de Sarai et Tasei en birman (écrit သရဲ) sont des esprits désincarnés dans le folklore du Myanmar qui ont plusieurs formes à la fois, selon la personne qui l’observe. Ils arrivent au cœur de la nuit et causent des nuisances mineures.",
+		"difficulty": 72,
+		"power": 80,
+		"tools": 50,
+		"speed": 85,
+		"attackCL": 92,
+		"attackSM": 75,
+		"edvidencesID": ["evd5", "evd1", "evd2"],
+		"edvidences": ["5", "1", "2"],
+		"datas": [
+			"Santé mentale max. avant chasse (très anticipée): 75%",
+			"Perte de capacité de chasse anticipée par niveau de vieillissement: 6% (minimum atteint à 10 niveaux de vieillissement:  15%)",
+			"Vitesse fixe en chasse: 2.75m/s (juste un peu plus lent que le revenant - ce qui fait le 3e entité la plus rapide du jeu)",
+			"Perte de vitesse par niveau de vieillissement: 0.175 (minimum atteint à 10 niveaux de vieillissement:  1.00)",
+			"Niveau d’activité (probabilité d’interaction et d’apparition): 200% (par defaut: 100%)",
+			"Perte de niveau d’activité par niveau de vieillissement: 15% (minimum atteint à 10 niveaux de vieillissement:  50%)",
+			"Niveau de vieillissement: de 0 à 10"
+		],
+		"strategies": [
+			"Au début de la partie, le Thayé sera beaucoup plus actif que les autres entités, pourra chasser tôt, et courir vite.",
+			"Progressivement au fil de la partie, si les joueurs sont à proximité, le Thayé vieillira, abaissant son taux d’activité et sa menace.",
+			"Il vous sera beaucoup plus facile d’obtenir les preuves Projecteur DOTS et Ecriture avec un Thayé (Hyperactivité).",
+			"Le Thayé restera dangereux si les chasseurs sont éloignés de lui. En effet, il ne vieillit que si au moins un chasseur vivant est dans la même pièce que lui.",
+			"Il fera des souffles malsains, des interactions et des apparitions deux fois plus souvent que les autres types d’entité, ce qui le rendra facile à trouver.",
+			"Si un chasseur se trouve dans la même pièce qu’un Thayé, celui-ci vieillira et perdra en puissance. En revanche, le Thayé cessera de vieillir si aucun vivant ne se trouve dans la même pièce que lui.",
+			"Il vous sera possible de traquer si vous avez affaire à un Thayé via une planche ouija si vous en avez une, car celui-ci répondra différemment à la question « quel âge avez-vous » en fonction de son niveau de vieillissement.",
+			"En jouant à la bougie dans sa pièce, le Thayé perdra tellement rapidement en niveau d’activité sans que vous ne perdiez de santé mentale qu’il lui sera incapable de chasser pendant la quasi intégralité de la partie.",
+			"Le meilleur strategie contre le Thaye est de trouver le plutot possible sa residence et à rester dans sa pièce, le Thayé perdra fortement en activité et en capacité de chasse anticipée.",
+			"Lorsqu'il vieillit, le Thayé perd en agressivité et en capacité et devient plus lent même s’il vous repère. (contrairement a un Revenant)"
+		],
+		"todoID": "todo-thaye",
+		"todo": [
+			"Identification par l'utilisation d'une planche ouija en questionnant le Thayé sur son âge.",
+			"Identification par la diminution de la chasse anticipée (en restant dans sa pièce) et de la vitesse du Thayé (durant une chasse)",
+			"Identification par l'hyperactivité de l'entité (en dehors de sa pièce) avec l'obtention de preuves Projecteur DOTS et Ecriture.",
+			"Identification par l'arret total d'activité de l'entité si vous restez dans sa pièce (en jouant à la bougie)."
+		]
 	},
 	{
 		"id": "e",

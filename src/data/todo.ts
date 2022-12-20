@@ -133,6 +133,10 @@ const initialState: initialStateType = [
 		id: 'todo-spectre',
 		todo: getTodoFormat(__entitiesTodo__[20].todo),
 	},
+	{
+		id: 'todo-thaye',
+		todo: getTodoFormat(__entitiesTodo__[21].todo),
+	},
 ];
 
 // slice - todo
