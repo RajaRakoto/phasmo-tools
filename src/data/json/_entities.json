@@ -808,22 +808,43 @@
 		]
 	},
 	{
-		"id": "e",
-		"name": "",
-		"description": "",
-		"anecdote": "",
-		"difficulty": 0,
-		"power": 0,
-		"tools": 0,
-		"speed": 0,
-		"attackCL": 0,
-		"attackSM": 0,
-		"edvidencesID": ["evd", "evd", "evd"],
-		"edvidences": ["", "", ""],
-		"datas": ["", "", "", ""],
-		"strategies": ["", "", "", ""],
-		"todoID": "todo-",
-		"todo": ["", "", "", ""]
+		"id": "e19",
+		"name": "Revenant",
+		"description": "Le Revenant est une entité violente qui attaquera sans distinction. Leur vitesse de déplacement peut être trompeuse puisqu’ils sont lents au repos mais incroyablement rapides lorsqu’ils chassent. Le Revenant est une entité très dangereuse, une championne du sprint de l’au-delà. Extrêmement lente lorsqu’elle entre en chasse, elle se déplacera extrêmement vite dès qu’elle verra un joueur. Il est possible de s’en échapper mais il est indispensable de savoir s’en cacher. Tous les chasseurs vétérans ont appris à s’en méfier.",
+		"anecdote": "Le terme « Revenant » est un terme courant pour décrire un esprit qui revient dans le monde des vivants, car le mot lui-même est tiré du mot latin « reveniens », signifiant « revenir ».",
+		"difficulty": 50,
+		"power": 10,
+		"tools": 100,
+		"speed": 96,
+		"attackCL": 20,
+		"attackSM": 50,
+		"edvidencesID": ["evd1", "evd5", "evd7"],
+		"edvidences": ["1", "5", "7"],
+		"datas": [
+			"Santé mentale max. avant chasse (normale): 50%",
+			"Vitesse fixe en chasse (pas dans sa champ de vision): 1m/s - ce qui fait du Revenant l'entitE le plus lent du jeu",
+			"Vitesse de poursuite (vitesse fixe en chasse quand joueur repéré): 3m/s (par defaut: 1.7m/s) - ce qui fait le Revant l'un des entitE le plus rapide du jeu apres le Moroi",
+			"Durée de vitesse améliorée après avoir perdu un joueur : 2.7s"
+		],
+		"strategies": [
+			"Durant sa chasse, le Revenant sera plus lent que n’importe quelle autre entité. S’il pourchasse un joueur, le Revenant sera extrêmement rapide.",
+			"Le Revenant ralentit fortement quand il ne voit personne. Coupez aux intersections et cachez-vous là où il ne vous voit pas entrer.",
+			"Le Revenant obtient un boost de vitesse dès qu’AU MINIMUM une des conditions suivantes est remplie:  Le Revenant a une ligne de vue dégagée sur vous | Le Revenant avait une ligne de vue dégagée sur vous il y a moins de 2.7s | Le Revenant vous a entendu parler | Le Revenant a ressenti l’un de vos équipements électroniques",
+			"Le Revenant n’a que les Orbes en tant que preuve en commun avec le Raiju, qui n’est pas une entité glaciale.",
+			"Le Revenant partage également qu’une seule preuve commune avec le Djinn, température glaciale, qui n’aura donc pas d’orbe.",
+			"Durant la chasse, cachez-vous et écoutez les pas de l’entité. Si ces bruits sont espacés de plus d’une seconde, vous êtes certains d’avoir affaire à un Revenant, car il s’agit de la seule entité aussi lente en chasse.",
+			"Si malgré le test de lenteur, vous avez encore une hésitation avec le Hantu, armez-vous d’un encens et d’un briquet. Placez-vous au fond d’une ligne droite de moyenne distance et observez si l’entité accélère fortement quand elle vous voit. Si tel est le cas, il s’agit d’un Revenant, sinon il s’agira d’un Hantu.",
+			"Attention car en difficulté Cauchemar, l’entité est capable d’enchaîner des meurtres, donc prudence dans les grandes lignes droites de l’Ecole ou l’Asile.",
+			"Dans de grands couloirs comme ceux de l’Ecole ou l’Asile, vous pouvez également mettre des capteurs de mouvement sur le mur, en les plaçant de préférence près du sol pour capter les entités rampantes. Calculez le temps que vous mettez en marchant de l’un à l’autre et positionnez-vous à bonne distance, armé d’un briquet et d’un encens, à proximité d’un lieu où vous réfugier. Comptez le temps que met l’entité à traverser les deux capteurs de mouvement, les flashs lumineux devraient vous aider. Si vous avez parcouru la distance en plus ou moins le double du temps de l’entité (par exemple environ 4 secondes et que l’entité l’a parcouru en environ 2 secondes), il s’agit d’une entité rapide, donc Revenant, Raiju ou Djinn, donc avec deux preuves et une bonne utilisation du disjoncteur, vous devriez pouvoir conclure au Revenant sans soucis."
+		],
+		"todoID": "todo-revenant",
+		"todo": [
+			"Identification par le test de vitesse basique (rapidite/lenteur) en se basant sur la vitesse de pas de l’entité (espacE de plus d’une seconde entre chaque pas)",
+			"Identification par test de vitesse avance (rapidite/lenteur) en se basant sur le temps de parcours d’un capteur de mouvement a l’autre",
+			"Elimination de Raiju en presence de la preuve de Temperature Glaciale (mais Orb)",
+			"Elimination de Djinn en presence de la preuve Orb (mais Temperature Glaciale)",
+			"Elimination de l'Hantu en testant la rapidite de l’entite (beaucoup plus lent que le Revenant durant la poursuite d’un joueur)"
+		]
 	},
 	{
 		"id": "e",

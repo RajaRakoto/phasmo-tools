@@ -125,6 +125,10 @@ const initialState: initialStateType = [
 		id: 'todo-raiju',
 		todo: getTodoFormat(__entitiesTodo__[18].todo),
 	},
+	{
+		id: 'todo-revenant',
+		todo: getTodoFormat(__entitiesTodo__[19].todo),
+	},
 ];
 
 // slice - todo
