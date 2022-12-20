@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 
 /* libs */
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import {BiDollar} from 'react-icons/bi';
+import { BiDollar } from 'react-icons/bi';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import uuid from 'react-uuid';
@@ -153,7 +153,10 @@ function MapsWrapper({
 						<div className="items">
 							<div className="header">
 								<h3>{map.name}</h3>
-								<h4>Prime: {map.prime}<BiDollar/></h4>
+								<h4>
+									Prime: {map.prime}
+									<BiDollar />
+								</h4>
 								<img src={map.cover} alt="map cover" />
 								<p>{map.description}</p>
 							</div>
@@ -216,10 +219,17 @@ function MapsWrapper({
 export default function Maps() {
 	return (
 		<React.Fragment>
-			<div id="map-link" className="maps">
-				<MapsWrapper category="PETITES MAPS" maps={little_maps} />
-				<MapsWrapper category="MOYENNES MAPS" maps={middle_maps} />
-				<MapsWrapper category="GRANDES MAPS" maps={big_maps} />
+			<div className="maps">
+				<div id="littlemap-link">
+					<MapsWrapper category="PETITES MAPS" maps={little_maps} />
+				</div>
+				<div id="middlemap-link">
+					<MapsWrapper category="MOYENNES MAPS" maps={middle_maps} />
+				</div>
+				<div id="bigmap-link">
+					<MapsWrapper category="GRANDES MAPS" maps={big_maps} />
+				</div>
+				ink
 			</div>
 		</React.Fragment>
 	);
