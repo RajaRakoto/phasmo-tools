@@ -27,3 +27,5 @@ dist-ssr
 tmp
 backups
 scripts
+# Local Netlify folder
+.netlify
