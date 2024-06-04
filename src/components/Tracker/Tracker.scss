@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+@import "@raja-rakoto/plum/plum";
+@import "@raja-rakoto/plum/modules/magic";
+
+@import "../../styles/sass/mixins";
+@import "../../styles/sass/colors";
+
+.tracker {
+	@include box-props();
+	padding: 2rem;
+	border-radius: 10px;
+	max-width: 95%;
+	min-width: __convertToRem($value: 845px);
+	margin: 2.2rem;
+
+	@include breakpoint(max, 845px) {
+		min-width: 100%;
+	}
+
+	@include breakpoint(max, 444px) {
+		min-width: __convertToRem($value: 348px);
+	}
+
+	.highlighted {
+		position: relative;
+		background-color: transparent;
+	}
+
+	.highlighted:before {
+		@include magic-spaceInLeft($duration: 0.3s, $delay: 1s);
+		width: 50%;
+		content: "";
+		position: absolute;
+		top: 40%;
+		left: 25%;
+		right: 25%;
+		height: 3px;
+		background-color: rgba(194, 194, 194, 0.533);
+		z-index: 1;
+		border-radius: 70%;
+	}
+
+	&-header {
+		min-width: __convertToRem($value: 215px);
+		padding: 1rem;
+
+		svg {
+			margin-top: -3rem;
+		}
+
+		h2 {
+			font-size: __convertToRem($value: 23px);
+			text-align: center;
+		}
+
+		div {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+
+			button {
+				@include btn-style($theme: $theme3);
+				margin: 0.5rem;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				padding-left: 1.3rem;
+				padding-right: 1.3rem;
+
+				img {
+					@include image-responsive($height: 50px);
+				}
+			}
+
+			.btn-clicked-include {
+				background-color: #46b678;
+			}
+
+			.btn-clicked-exclude {
+				background-color: #b66646;
+			}
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		box-sizing: border-box;
+		max-height: __convertToRem($value: 500px);
+		overflow-y: scroll;
+		width: 100%;
+
+		.item {
+			border: solid #eee 1px;
+			border-radius: 10px;
+			width: fit-content;
+			max-width: __convertToRem($value: 300px);
+			padding: 1rem;
+			margin: 1rem;
+			transition: all 0.3s;
+
+			&:hover {
+				@include effect-box-shadow-inset($opacity: none);
+				@include animation-scale($scaleValue: 1.03);
+				background-color: $theme-bg;
+			}
+
+			h3 {
+				text-align: center;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				gap: 0.5rem;
+				flex-wrap: wrap;
+				list-style-type: none;
+				margin-left: -2rem;
+				margin-right: 0.2rem;
+
+				li {
+					padding: 0.5rem;
+					border-radius: 5px;
+				}
+			}
+
+			button {
+				opacity: 50%;
+				border-radius: 100%;
+				padding-top: 0.3rem;
+				border: none;
+				margin: 0.3rem;
+
+				&:hover {
+					opacity: 85%;
+				}
+
+				&:active {
+					transition: 0.02s;
+					transform: scale(0.95);
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+				}
+			}
+		}
+	}
+}

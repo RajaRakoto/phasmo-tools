@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+@import "@raja-rakoto/plum/plum";
+
+@import "../../styles/sass/mixins";
+@import "../../styles/sass/colors";
+
+.note {
+	@include box-props();
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	margin: 2rem;
+	min-width: __convertToRem($value: 500px);
+
+	@include breakpoint(max, 585px) {
+		width: 90%;
+		min-width: __convertToRem($value: 200px);
+	}
+
+	&-header {
+		text-align: center;
+
+		h2 {
+			text-align: center;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+
+	&-content {
+		width: 100%;
+		margin-top: 1.6rem;
+
+		textarea {
+			resize: vertical;
+			width: 100%;
+			min-height: __convertToRem($value: 100px);
+			max-height: __convertToRem($value: 250px);
+			padding: 12px 20px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			background-color: rgb(212, 212, 212);
+			color: #444;
+		}
+	}
+
+	&-footer {
+		@include flex-center();
+		margin-left: 3.8rem;
+		align-items: baseline;
+		width: 80%;
+
+		button {
+			background-color: #646464;
+			border-radius: 10px;
+			margin-top: 1rem;
+			padding: 0.5rem;
+			margin: 0.8rem;
+
+			&:hover {
+				background-color: $theme1;
+			}
+
+			span {
+				@include flex-center();
+				gap: 0.5rem;
+			}
+		}
+
+		input[type="file"] {
+			appearance: button;
+			width: 100%;
+		}
+	}
+}

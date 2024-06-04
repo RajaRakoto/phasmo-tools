@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+@import "@raja-rakoto/plum/plum";
+
+@import "../../styles/sass/mixins";
+@import "../../styles/sass/colors";
+
+.todo {
+	@include box-props();
+	width: fit-content;
+	max-width: __convertToRem($value: 800px);
+	height: auto;
+	padding: 1.5rem;
+	margin: 1.5rem;
+	padding-right: 2.8rem;
+
+	@include breakpoint(min, 720px) {
+		min-width: __convertToRem($value: 558px);
+	}
+
+	ul {
+		font-size: __convertToRem($value: 12px) !important;
+		flex-direction: column;
+		list-style-type: none;
+		max-height: __convertToRem($value: 200px);
+		overflow-y: scroll;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+
+		li {
+			border: solid #eee 1px;
+			width: fit-content;
+			max-width: __convertToRem($value: 400px);
+			margin: 0.5rem;
+			padding-top: 0.8rem;
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+			border-radius: 10px;
+			transition: all 0.3s;
+
+			&:hover {
+				@include effect-box-shadow-inset($opacity: none);
+				@include animation-scale($scaleValue: 1.05);
+				background-color: $theme-bg;
+			}
+		}
+	}
+
+	&-header {
+		@include flex-center();
+		margin-left: 1.3rem;
+		flex-direction: column;
+	}
+
+	&-list {
+		margin-right: 1rem;
+	}
+
+	&-footer {
+		@include flex-center();
+		flex-direction: column;
+		gap: 1.8rem;
+		margin-top: 1rem;
+		margin-left: -3.5rem;
+
+		button {
+			@include btn-style();
+			margin-left: 3.8rem;
+		}
+	}
+}

@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import "colors";
+
+// button base styles
+.phasmo-btn--enter {
+	align-items: center;
+	appearance: none;
+	background: none;
+	border: none;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	flex-direction: row;
+	flex-shrink: 0;
+	font-family: Eina01, sans-serif;
+	font-size: 16px;
+	font-weight: 800;
+	justify-content: center;
+	line-height: 24px;
+	margin: 0;
+	min-height: 64px;
+	outline: none;
+	overflow: visible;
+	padding: 19px 26px;
+	pointer-events: auto;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	width: auto;
+	word-break: keep-all;
+	z-index: 0;
+
+	// button pseudo-elements base styles
+	&:before,
+	&:after {
+		border-radius: 80px;
+		position: absolute;
+	}
+
+	// button pseudo-element styles
+	&:before {
+		background-image: linear-gradient(92.83deg, $theme1 0, #f93a13 100%);
+		content: "";
+		display: block;
+		height: 100%;
+		left: 0;
+		overflow: hidden;
+		top: 0;
+		width: 100%;
+		z-index: -2;
+	}
+
+	&:after {
+		background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+		bottom: 4px;
+		content: "";
+		display: block;
+		left: 4px;
+		overflow: hidden;
+		right: 4px;
+		top: 4px;
+		transition: all 100ms ease-out;
+		z-index: -1;
+	}
+
+	// button hover styles
+	&:hover:not(:disabled) {
+		&:before {
+			background: linear-gradient(
+				92.83deg,
+				rgb(255, 116, 38) 0%,
+				rgb(249, 58, 19) 100%
+			);
+		}
+
+		&:after {
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			transition-timing-function: ease-in;
+			opacity: 0;
+		}
+	}
+
+	// button active styles
+	&:active:not(:disabled) {
+		color: #ccc;
+
+		&:before {
+			background-image: linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.2),
+					rgba(0, 0, 0, 0.2)
+				),
+				linear-gradient(92.83deg, $theme1 0, #f93a13 100%);
+		}
+
+		&:after {
+			background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+			bottom: 4px;
+			left: 4px;
+			right: 4px;
+			top: 4px;
+		}
+	}
+
+	// button disabled styles
+	&:disabled {
+		cursor: default;
+		opacity: 0.24;
+	}
+}
+
+// button media query
+@media (min-width: 768px) {
+	.phasmo-btn--enter {
+		padding: 19px 32px;
+	}
+}

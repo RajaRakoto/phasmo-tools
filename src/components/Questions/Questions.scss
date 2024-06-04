@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@import "@raja-rakoto/plum/plum";
+
+@import "../../styles/sass/mixins";
+@import "../../styles/sass/colors";
+
+.questions {
+	@include box-props();
+	margin: 2rem;
+	padding: 5rem;
+	width: auto;
+	min-width: __convertToRem($value: 400px);
+
+	.overflow-fix {
+		max-height: __convertToRem($value: 400px);
+		box-sizing: border-box;
+		overflow-y: scroll;
+		padding-right: 1rem;
+	}
+
+	&-header {
+		@include flex-center();
+		flex-direction: column;
+		text-align: center;
+
+		svg {
+			margin-top: -3rem;
+		}
+
+		h2 {
+			font-size: __convertToRem($value: 30px);
+		}
+
+		hr {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&-content {
+		width: __convertToRem($value: 430px);
+
+		.accordion {
+			border-radius: 10px;
+			max-width: __convertToRem($value: 370px);
+
+			h3 {
+				font-size: __convertToRem($value: 20px);
+			}
+
+			ul {
+				li {
+					font-size: __convertToRem($value: 20px);
+				}
+			}
+		}
+
+		.accordion__item + .accordion__item {
+			border-top: 10px solid rgba(0, 0, 0, 0);
+		}
+
+		.accordion__button {
+			background-color: #dbdbdb;
+			color: #444;
+			cursor: pointer;
+			padding: 15px;
+			width: 105%;
+			text-align: left;
+			border-radius: 12px;
+			transition: all 0.3s;
+			font-weight: bolder;
+
+			&:hover {
+				background-color: $theme2;
+				color: #eee;
+			}
+
+			&:before {
+				display: inline-block;
+				content: "";
+				height: 10px;
+				width: 10px;
+				margin-right: 12px;
+				border-bottom: 2px solid currentColor;
+				border-right: 2px solid currentColor;
+				transform: rotate(-45deg);
+			}
+		}
+
+		.accordion__button[aria-expanded="true"]::before,
+		.accordion__button[aria-selected="true"]::before {
+			transform: rotate(45deg);
+		}
+
+		[hidden] {
+			display: none;
+		}
+
+		.accordion__panel {
+			padding: 20px;
+			@include animation-pulse();
+		}
+	}
+}

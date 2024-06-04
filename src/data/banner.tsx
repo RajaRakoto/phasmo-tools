@@ -1,47 +1,46 @@
-import { FaGhost, FaMapMarkerAlt } from 'react-icons/fa';
+/* libs */
+import { FaGhost, FaMapMarkerAlt, FaGithub } from "react-icons/fa";
 
 /* common */
-import { IconRender } from '../common/icons';
+import { IconRender } from "@/common/IconRender";
 
-// typing - banner
-type FeaturesType = {
-	title: String;
-	icon: any;
-	lists: String[];
-}[];
+/* types */
+import type { I_Banner } from "@/@types";
 
-type BannerType = {
-	bannerInformation: String[];
-	features: FeaturesType;
-};
+// =======================================
 
-// exportation - banner
-export const banner: BannerType = {
+export const banner: I_Banner = {
 	bannerInformation: [
-		"Phasmophobia est un jeu réalisé par Kinetic Games sorti le 18 septempre 2020 sur Steam en accès anticipé. C'est un jeu d'horreur psychologique en ligne coopératif à 4 joueurs où vous et vos coéquipiers enquêteurs dans le paranormal explorerez des lieux hantés remplis d'activité paranormale et rassemblerez autant de preuves du paranormal que possible. Vous utiliserez votre équipement de chasse aux fantômes pour rechercher et enregistrer les preuves de toute entité qui hante les lieux et les vendre à une équipe d'extermination des fantômes.",
-		"Phasmophobia Tools, l'expérience ultime de chasse aux fantômes! Découvrez tous les outils et astuces dont vous avez besoin pour devenir un expert dans la capture des entités paranormales grâce à Phasmophobia Tools. Nous vous fournirons toutes les informations sur les capacités, les forces et les faiblesses des entités, ainsi que sur les meilleures stratégies pour les traquer et les capturer. Rejoignez-nous maintenant et devenez un chasseur de fantômes de renom!",
+		"Phasmophobia est un jeu d'horreur coopératif qui vous plongera au cœur de l'inconnu. Avec vos amis, vous incarnez des enquêteurs paranormaux et explorez des lieux hantés infestés d'esprits. Munis de votre équipement de chasseurs de fantômes, vous devrez identifier et capturer les preuves de l'activité paranormale qui règne dans ces endroits glaçants. Collaborez, analysez les indices et triomphez de la peur pour remporter la partie !",
+		"Maîtrisez l'art de la chasse aux fantômes grâce à nos outils et nos guides complets pour devenir un expert dans la capture des entités paranormales. Découvrez les secrets des fantômes, leurs capacités, leurs forces et leurs faiblesses. Apprenez les meilleures stratégies pour les traquer et les identifier, et devenez un chasseur de fantômes de renom ...",
 	],
+	contrib: {
+		message:
+			"Ce site est un projet en open-source, n'hésitez pas à contribuer sur GitHub si vous etes familier avec React/TypeScript",
+		url: "https://github.com/RajaRakoto/phasmo-tools",
+		icon: IconRender({ icon: <FaGithub />, size: "44" }),
+	},
 	features: [
 		{
-			title: 'Entités',
-			icon: IconRender({ icon: <FaGhost />, size: '77' }),
+			title: "Entités",
+			icon: IconRender({ icon: <FaGhost />, size: "77" }),
 			lists: [
-				'Généralités: decouvrez les generalités du jeu et diverses informations utiles (surtout pour les débutants)',
-				'Todo: un résumé des tâches à effectuer pour vous aider à progresser dans le jeu ainsi adopter une stratégie efficace',
-				'Timer & Chrono: un chronomètre et un minuteur pour vous aider à gérer votre temps, le timing est très important dans ce jeu',
-				'Tracker: votre outil ultime pour traquer les entités',
-				'Notes: un outil pour prendre des notes durant vos parties',
-				'Questions/Réponses: un serie de questions/réponses lors de votre enquête paranormale avec un Spirit Box',
+				"Guides: Explorez les guides du jeu et découvrez plein d'infos utiles, parfaites pour les nouveaux joueurs",
+				"Todo: Un résumé des tâches à accomplir pour vous aider à avancer dans le jeu et adopter une stratégie gagnante",
+				"Timer: Un chronomètre pour bien gérer votre temps, car le timing est essentiel dans ce jeu",
+				"Tracker: Votre outil ultime pour tracker les entités",
+				"Notes: Prenez des notes pendant vos parties pour ne rien oublier",
+				"Questions/Réponses: Une série de questions/réponses pour votre enquête paranormale avec la Spirit Box",
 			],
 		},
 		{
-			title: 'Maps',
-			icon: IconRender({ icon: <FaMapMarkerAlt />, size: '77' }),
+			title: "Maps",
+			icon: IconRender({ icon: <FaMapMarkerAlt />, size: "77" }),
 			lists: [
-				'Apprendre d\'avantage sur les lieux où vous allez enquêter',
-				'Apprenez à vous repérer dans les lieux',
-				'Apprenez à utiliser les objets maudits pour vous aider à capturer les entités',
-				'Connaissez la taille, la difficulté et l\'accessibilité des cachettes sur chaque map',
+				"Découvrez tout sur les lieux de vos enquêtes avant de vous y aventurer",
+				"Maîtrisez l'art de vous orienter dans chaque lieu",
+				"Apprenez à utiliser les objets maudits pour capturer les entités avec efficacité",
+				"Connaissez la taille, la difficulté et l'accessibilité des cachettes sur chaque carte",
 			],
 		},
 	],

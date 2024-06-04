@@ -1,0 +1,149 @@
+[
+	{
+		"title": "Debut du jeu",
+		"description": "Au tout debut du jeu",
+		"lists": [
+			{
+				"subtitle": "Debut 1",
+				"item": "Dès le début de la partie, l’entité choisit un skin d’entité défini ainsi que son râle de chasse, bruit qu’elle fera à chaque chasse. Tous les autres râles que vous entendrez correspondront à une apparition, retenir le râle de chasse de l’entité vous permettra de vous protéger rapidement en cas de danger, ou de profiter de cette information pour prendre la photo de l’entité durant un moment où elle décide de se montrer. A part durant ses apparitions et chasses, l’entité sera toujours invisible durant les phases de gameplay."
+			},
+			{
+				"subtitle": "Debut 2",
+				"item": "L’entité débute dans sa pièce favorite, et commence à être active dès le déverrouillage de la porte d’entrée. L’entité commence alors à changer d’état, ce qui lui permet de se déplacer, et d’effectuer des interactions, ce qui permet par la même occasion aux joueurs de commencer à trouver des indices sur sa position et ses preuves. De plus, la température des pièces commence à varier seulement au moment où la porte d’entrée est déverrouillée, et la température de départ de chaque pièce dépend de la difficulté à laquelle vous jouez & de si le disjoncteur est allumé ou non au début de la partie."
+			},
+			{
+				"subtitle": "Debut 3",
+				"item": "Notez qu’il est déjà possible d’obtenir certaines preuves avant même de déverrouiller la porte : l’Orbe apparaît déjà dans la pièce favorite de l’entité avant même de déverrouiller la porte d’entrée, ce qui peut permettre aussi de trouver la pièce de l’entité avant même de commencer l’enquête dans certaines maps ayant des caméras intérieures comme Brownstone High School et Prison."
+			}
+		],
+		"post": ""
+	},
+	{
+		"title": "Commune",
+		"description": "La plupart des entités ont des comportements similaires en chasse. Certaines entités ont des comportements spécifiques",
+		"lists": [
+			{
+				"subtitle": "Commune 1",
+				"item": "La plupart des entités ne peuvent chasser qu’à partir du moment où la santé mentale moyenne de tous les joueurs vivants passe sous la barre de 50%. Plus la SM est basse, plus les entités deviennent forts, plus vous risquez d'etre chassé par l'un d'eux"
+			},
+			{
+				"subtitle": "Commune 2",
+				"item": "Certaines entités comme le Démon ont la faculté de chasser plus tôt, alors que d’autres comme l’Ombre chasseront plus tard."
+			},
+			{
+				"subtitle": "Commune 3",
+				"item": "La plupart des entités ont une vitesse en chasse de 1.7 m/s, ce qui est légèrement supérieur à la vitesse de marche des joueurs (1.6 m/s)."
+			},
+			{
+				"subtitle": "Commune 4",
+				"item": "La plupart des entités accélèrent quand elles voient directement un joueur, pouvant augmenter leur vitesse jusqu’à 65% bonus."
+			},
+			{
+				"subtitle": "Commune 5",
+				"item": "Certaines entités ont la faculté d’aller plus vite ou moins vite selon les conditions et leur comportement."
+			},
+			{
+				"subtitle": "Commune 6",
+				"item": "Les comprendre et les analyser vous permettra de déterminer le type de certaines entités en fonction de leur comportement en chasse."
+			},
+			{
+				"subtitle": "Commune 7",
+				"item": "Les bruits de pas accompagnant les entités en chasse sont audibles à 20 mètres de toute entité, et frappent à un rythme régulier de plus ou moins 2 pas par seconde si l’entité est à une vitesse de 1.7m/s."
+			},
+			{
+				"subtitle": "Commune 8",
+				"item": "Les entitEs ne peuvent pas attaquer pendant l'utilisation d'une protection (encens, crucifix, etc ...). La durée de la protection est de 5~7 secondes environ selon l'objet"
+			},
+			{
+				"subtitle": "Commune 9",
+				"item": "Si une lampe torche commence a clignoter lors d'une chasse, c'est que le fantome est a peu pres a 10m de sa cible."
+			},
+			{
+				"subtitle": "Commune 10",
+				"item": "Les apparences des entités ne déterminent pas leur nature."
+			},
+			{
+				"subtitle": "Commune 11",
+				"item": "On n'a que 2 preuves (3 par défaut) en difficulté cauchemar pour tout les entitEs sauf le mimic qui en a 3 preuves dans ce level. (4 par défaut)"
+			},
+			{
+				"subtitle": "Commune 12",
+				"item": "Attention, les apparences des entités ne déterminent pas leur nature. A l'exception de l'Ombre qui se presente sous sa forme ombre/translucide, l'Oni qui a une grande preference sur la forme physique et apparaîtra plus souvent dans sa forme complète et l'Obake qui peut changer de skin pendant une chasse"
+			}
+		],
+		"post": ""
+	},
+	{
+		"title": "Hors chasse",
+		"description": "L’entité peut varier entre divers états à une vitesse dépendante de son taux d’activité, lui permettant certaines actions. Certaines entités sont plus enclines à passer dans certains états que d’autres sous certaines conditions ou non. Les différents états sont :",
+		"lists": [
+			{
+				"subtitle": "Immobilité (Idle)",
+				"item": "L’entité s’immobilise durant un temps aléatoire, et choisit sa prochaine action selon ses probabilités propres, dépendantes des paramètres de la partie. Toute entité a part le démon a un countdown de 25s avant d'attaquer a nouveau sa proie."
+			},
+			{
+				"subtitle": "Déplacement (Wander)",
+				"item": "L’entité choisit un point autour de lui, et s’y rend. L’entité peut décider d’en faire sa nouvelle pièce favorite si la santé mentale moyenne & les paramétrages de la partie le permettent."
+			},
+			{
+				"subtitle": "Retour (FavoriteRoom)",
+				"item": "L’entité retourne dans sa pièce favorite. Si elle y est déjà, elle se déplace à un autre endroit de sa pièce favorite."
+			},
+			{
+				"subtitle": "Interaction",
+				"item": "L’entité choisit un objet autour de lui, et interagit avec. S’il s’agit d’un objet pouvant porter des empreintes, il peut également y déposer une empreinte digitale. Si l’objet dispose d’une action d’interaction (interrupteur, radio, évier,…) alors il l’utilisera, sinon il pourra jeter l’objet ou interagir différemment avec."
+			},
+			{
+				"subtitle": "Événement (GhostEvent)",
+				"item": "L’entité effectue une apparition ou une brume maudite. Le type d’apparition ou d’événement, ainsi que son apparence (translucide, ombre, complète) durant cet événement, dépendent de son type d’entité & d’un facteur aléatoire. L'apparition d'une fantome (sans attaquer) signifie une avertissement (periode de grace)"
+			},
+			{
+				"subtitle": "Pouvoir (GhostAbility)",
+				"item": "L’entité utilise son pouvoir paranormal. Celui-ci dépend entièrement de son type d’entité."
+			},
+			{
+				"subtitle": "Chasse (GhostHunt)",
+				"item": "L’entité démarre une chasse et se conforme au comportement supposé de son type d’entité. Échoue si les conditions ne sont pas requises, comme une santé mentale moyenne trop haute, un encens ayant été utilisé récemment, ou une chasse qui s’est terminée trop récemment. Si l’entité tente d’entrer dans cet état alors qu’un crucifix disposant encore d’au moins une charge se situe à proximité, elle repasse en Idle et retire une charge au crucifix le plus proche."
+			}
+		],
+		"post": "Après avoir choisi un état autre que Idle, l’entité est forcée à revenir dans l’état Idle dès que son action est terminée. Occasionnellement, l’entité émettra un son paranormal audible avec le microphone parabolique. Le Myling sera plus enclin à en faire, tandis que la Banshee aura son propre cri."
+	},
+	{
+		"title": "En chasse",
+		"description": "L’entité ne peut pas chasser durant la phase d’introduction, qui est une phase de préparation à l’enquête. Ce temps est de 5mn en amateur, 2mn en intermédiaire, tandis qu’il est de 0s en Professionnel et en Cauchemar. Durant la chasse, les objets électroniques et les lumières de bâtiment dysfonctionnent à 10 mètres de l’entité au même étage, et les bruits de pas de l’entité sont audibles à 20 mètres de l’entité. Tout contact avec l’entité tuera le joueur ! La chasse dure entre 20 et 60 secondes selon les paramètres de la partie, et d’un facteur aléatoire. En difficulté Cauchemar ou si la personnalisation de la partie l’autorise, l’entité peut continuer de chasser avec un temps accru après avoir tué un joueur, sinon la chasse prend fin à la mort d’un des joueurs, peu importe le temps de chasse restant. Lors du déclenchement de la chasse, l’entité suit trois étapes :",
+		"lists": [
+			{
+				"subtitle": "Phase de commencement",
+				"item": "L’entité commence son râle de chasse, est invisible et ne peut pas tuer. Les objets électroniques commencent à dysfonctionner et la porte d’entrée se verrouille. Sur Sunny Meadows, les ailes se verrouillent également. En amateur, cette phase dure 5 secondes, en intermédiaire 4 secondes, en professionnel 3 secondes, et en cauchemar 2 secondes. Ce temps est paramétrable en partie personnalisée. A l’issue de cette phase, l’entité passe en Phase de recherche pendant le reste du temps de chasse."
+			},
+			{
+				"subtitle": "Phase de recherche",
+				"item": "L’entité se met à l’écoute de toute voix ou appareil électronique allumé tenu par les joueurs dans un rayon de 8 mètres en plaçant des points de passage aléatoires à travers la maison. L’entité a 50% de chances de commencer par le dernier endroit où elle a vu un joueur disparaître à la précédente chasse. Durant la chasse, elle ouvrira certains placards, regardera derrière certaines portes, et jettera certains objets."
+			},
+			{
+				"subtitle": "Phase de poursuite ",
+				"item": "Cette phase commence au moment où au moins un joueur est à portée de vue de l’entité. L’entité pourchassera tout joueur dans son champ de vision, en priorisant le joueur le plus proche. Certaines entités peuvent cependant avoir un comportement différent, comme la Banshee. Lorsqu’elle pourchasse un joueur, l’entité accélère progressivement jusqu’à obtenir un maximum de 65% de vitesse bonus. Si l’entité perd le joueur de vue, elle se rend immédiatement à l’endroit où il a disparu, et si elle ne le retrouve pas, elle place plusieurs points de passage autour de cet endroit. Ensuite, elle repasse en Phase de recherche, diminuant à nouveau progressivement sa vitesse de déplacement."
+			}
+		],
+		"post": ""
+	},
+	{
+		"title": "Les maps",
+		"description": "Ce que vous devez savoir sur les maps de Phasmophobia (en générale).",
+		"lists": [
+			{
+				"subtitle": "Les éléments de boucle",
+				"item": "Les éléments de boucle sont utiles contre les entités lentes n’accélérant pas, un Hantu dans la chaleur par exemple. Ils sont TOUJOURS à garder en tête contre un Deogen."
+			},
+			{
+				"subtitle": "Les portes",
+				"item": "Attention, vous cacher derrière des portes est extrêmement risqué car l’entité a 50% de chances de regarder derrière la porte lorsqu’il passe à côté, et 100% de chances s’il vous a vu disparaître à proximité."
+			},
+			{
+				"subtitle": "Le courant",
+				"item": "On ne peut allumer que 9 lumieres sur les petites maps, 8 lumieres pour les moyennes maps et 7 lumieres pour les grandes maps. Attention, le courant est très important, il faut donc bien le gérer pour ne pas se retrouver dans le noir."
+			}
+		],
+		"post": ""
+	}
+]

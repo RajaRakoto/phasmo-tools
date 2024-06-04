@@ -1,15 +1,21 @@
+// eslint-disable-next-line
 // @ts-nocheck
-import React from 'react';
-import StopwatchDisplay from './_stopwatchDisplay';
-import StopwatchHistory from './_stopwatchHistory';
-
-/* common */
-import { IconRender } from '../../common/icons';
+import React from "react";
 
 /* libs */
-import { BiTimer } from 'react-icons/bi';
+import { BiTimer } from "react-icons/bi";
 
-// ================================================
+/* common */
+import { IconRender } from "@/common/IconRender";
+
+/* extras */
+import StopwatchDisplay from "@/extras/chrono/_stopwatchDisplay";
+import StopwatchHistory from "@/extras/chrono/_stopwatchHistory";
+
+/* types */
+import type { T_FunctionComponent } from "@/@types";
+
+// =======================================
 
 export default class Stopwatch extends React.Component {
 	constructor(props) {
@@ -23,30 +29,30 @@ export default class Stopwatch extends React.Component {
 		};
 	}
 
-	formatTime = (val, ...rest) => {
+	formatTime = (val, ...rest): string => {
 		let value = val.toString();
 		if (value.length < 2) {
-			value = '0' + value;
+			value = "0" + value;
 		}
-		if (rest[0] === 'ms' && value.length < 3) {
-			value = '0' + value;
+		if (rest[0] === "ms" && value.length < 3) {
+			value = "0" + value;
 		}
 		return value;
 	};
 
-	start = () => {
+	start = (): void => {
 		if (!this.state.running) {
 			this.setState({ running: true });
 			this.watch = setInterval(() => this.pace(), 10);
 		}
 	};
 
-	stop = () => {
+	stop = (): void => {
 		this.setState({ running: false });
 		clearInterval(this.watch);
 	};
 
-	pace = () => {
+	pace = (): void => {
 		this.setState({ currentTimeMs: this.state.currentTimeMs + 10 });
 		if (this.state.currentTimeMs >= 1000) {
 			this.setState({ currentTimeSec: this.state.currentTimeSec + 1 });
@@ -58,7 +64,7 @@ export default class Stopwatch extends React.Component {
 		}
 	};
 
-	reset = () => {
+	reset = (): void => {
 		this.setState({
 			currentTimeMs: 0,
 			currentTimeSec: 0,
@@ -66,14 +72,14 @@ export default class Stopwatch extends React.Component {
 		});
 	};
 
-	render() {
+	render(): T_FunctionComponent {
 		return (
-			<div className={'stopwatch'}>
-				{IconRender({ icon: <BiTimer />, size: '42' })}
+			<div className={"stopwatch"}>
+				{IconRender({ icon: <BiTimer />, size: "42" })}
 				<h2
 					style={{
 						fontSize: 26,
-						textDecoration: 'underline',
+						textDecoration: "underline",
 					}}
 				>
 					Chrono
@@ -88,19 +94,19 @@ export default class Stopwatch extends React.Component {
 				<span>
 					{this.state.running === false && (
 						<button
-							style={{ backgroundColor: 'rgb(80, 165, 121)' }}
+							style={{ backgroundColor: "rgb(80, 165, 121)" }}
 							onClick={this.start}
 						>
 							Start
 						</button>
 					)}
 					{this.state.running === true && (
-						<button style={{ backgroundColor: '#bd654a' }} onClick={this.stop}>
+						<button style={{ backgroundColor: "#bd654a" }} onClick={this.stop}>
 							Stop
 						</button>
 					)}
 					<button
-						style={{ backgroundColor: 'rgb(194, 154, 67)' }}
+						style={{ backgroundColor: "rgb(194, 154, 67)" }}
 						onClick={this.reset}
 					>
 						Restart

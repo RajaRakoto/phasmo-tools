@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@import "@raja-rakoto/plum/plum";
+@import "@raja-rakoto/plum/modules/bootstrap-grid";
+
+@import "sass/buttons";
+@import "sass/colors";
+@import "sass/mixins";
+@import "sass/typography";
+
+@include normalize();
+@include loadify(init);
+
+// all styles
+* {
+	color: #eee;
+	font-family: IndieFlower;
+	font-size: __convertToRem(18px);
+}
+
+// scroll behavior
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+// HTML styles
+html {
+	background:
+		linear-gradient(0deg, rgba(60, 60, 60, 0.548), rgba(60, 60, 60, 0.548)),
+		url(/images/phasmo-bg.png) no-repeat center center fixed;
+	background-size: cover;
+
+	@include bar-scrolling(
+		$bar-color: $theme1,
+		$bar-color-hover: $theme2,
+		$bg-color: rgb(129, 129, 129)
+	);
+
+	@include breakpoint(min, small) {
+		overflow-x: hidden;
+	}
+}
+
+// body styles
+body {
+	button {
+		transition: all 0.3s;
+
+		&:hover {
+			@include animation-scale(1.035);
+			cursor: pointer;
+		}
+	}
+
+	hr {
+		@include hr-style();
+	}
+}
+
+// heading styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $theme1;
+}
+
+// scrollup styles
+.sc-dkrFOg,
+.buoFnq {
+	svg {
+		font-size: __convertToRem(50px) !important;
+		color: $theme1 !important;
+	}
+}

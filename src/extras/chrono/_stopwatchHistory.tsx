@@ -1,11 +1,14 @@
+// eslint-disable-next-line
 // @ts-nocheck
-import React from 'react';
+import React from "react";
 
-// utils
-function getTime(timeString) {
-	const timeIndex = timeString.lastIndexOf('::');
-	return timeString.substr(timeIndex + 2, 6);
-}
+/* utils */
+import { getTime } from "@/utils";
+
+/* types */
+import type { T_FunctionComponent } from "@/@types";
+
+// =======================================
 
 export default class StopwatchHistory extends React.Component {
 	constructor(props) {
@@ -16,57 +19,57 @@ export default class StopwatchHistory extends React.Component {
 		};
 	}
 
-	componentDidMount() {
+	componentDidMount(): void {
 		this.setHistoryState();
 	}
 
-	setHistoryState = () => {
+	setHistoryState = (): void => {
 		if (localStorage.times) {
-			this.setState({ history: localStorage.times.split('|') });
+			this.setState({ history: localStorage.times.split("|") });
 		} else {
 			this.setState({ history: [] });
 		}
 	};
 
-	saveToLocalStorage = () => {
+	saveToLocalStorage = (): void => {
 		if (localStorage.times) {
 			localStorage.times =
 				`${Date().toString()} :: ${this.props.formatTime(
 					this.props.currentTimeMin,
 				)}:${this.props.formatTime(
 					this.props.currentTimeSec,
-				)}:${this.props.formatTime(this.props.currentTimeMs, 'ms')}|` +
+				)}:${this.props.formatTime(this.props.currentTimeMs, "ms")}|` +
 				localStorage.times;
 		} else {
 			localStorage.times = `${Date().toString()} :: ${this.props.formatTime(
 				this.props.currentTimeMin,
 			)}:${this.props.formatTime(
 				this.props.currentTimeSec,
-			)}:${this.props.formatTime(this.props.currentTimeMs, 'ms')}|`;
+			)}:${this.props.formatTime(this.props.currentTimeMs, "ms")}|`;
 		}
 	};
 
-	saveTime = () => {
-		if (typeof Storage !== 'undefined') {
+	saveTime = (): void => {
+		if (typeof Storage !== "undefined") {
 			this.saveToLocalStorage();
 		} else {
-			console.error('local storage not supported');
+			console.error("local storage not supported");
 		}
 		this.setHistoryState();
 	};
 
-	resetHistory = () => {
+	resetHistory = (): void => {
 		if (localStorage.times) {
-			localStorage.removeItem('times');
+			localStorage.removeItem("times");
 		}
 		this.setHistoryState();
 	};
 
-	render() {
+	render(): T_FunctionComponent {
 		return (
-			<div className={'stopwatch__history'}>
+			<div className={"stopwatch__history"}>
 				<button
-					style={{ backgroundColor: 'rgb(96, 157, 198)' }}
+					style={{ backgroundColor: "rgb(96, 157, 198)" }}
 					onClick={this.saveTime}
 				>
 					Save history
